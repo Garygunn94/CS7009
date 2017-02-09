@@ -94,6 +94,7 @@ library
                  , yesod-auth-oauth2
                  , github
                  , utf8-string
+                 , aeson
 
 executable         Lab1
     if flag(library-only)
