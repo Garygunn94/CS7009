@@ -24,6 +24,7 @@ library
                      Handler.Home
                      Handler.Comment
                      Handler.Profile
+                     MongodbHelpers
 
     if flag(dev) || flag(library-only)
         cpp-options:   -DDEVELOPMENT
@@ -95,6 +96,11 @@ library
                  , github
                  , utf8-string
                  , aeson
+                 , mongoDB
+                 , transformers
+                 , resourcet
+                 , hslogger
+                 , bson-generic
 
 executable         Lab1
     if flag(library-only)
