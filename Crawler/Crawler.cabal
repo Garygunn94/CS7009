@@ -1,0 +1,76 @@
+name:                Crawler
+version:             0.1.0.0
+-- synopsis:
+-- description:
+homepage:            https://github.com/githubuser/Crawler#readme
+license:             BSD3
+license-file:        LICENSE
+author:              Author name here
+maintainer:          example@example.com
+copyright:           2017 Author name here
+category:            Web
+build-type:          Simple
+extra-source-files:  README.md
+cabal-version:       >=1.10
+
+library
+  hs-source-dirs:      src
+  exposed-modules:     Crawler
+  build-depends:       base >= 4.7 && < 5
+                     , github
+                     , CommonResources
+                     , mongoDB
+                     , servant == 0.9.*
+                     , servant-server
+                     , servant-client
+                     , aeson
+                     , CommonResources
+                     , cipher-aes
+                     , HsOpenSSL
+                     , bcrypt
+                     , RSA
+                     , DRBG
+                     , directory  
+                     , warp
+                     , wai
+                     , transformers
+                     , random
+                     , wai-logger
+                     , mongoDB
+                     , hslogger
+                     , time
+                     , bson-generic
+                     , resourcet
+                     , text
+                     , bytestring
+                     , bson
+                     , mtl
+                     , http-client
+                     , process
+                     , uuid
+                     , split
+                     , containers
+                     , stm
+
+  default-language:    Haskell2010
+
+executable Crawler-exe
+  hs-source-dirs:      app
+  main-is:             Main.hs
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base
+                     , Crawler
+  default-language:    Haskell2010
+
+test-suite Crawler-test
+  type:                exitcode-stdio-1.0
+  hs-source-dirs:      test
+  main-is:             Spec.hs
+  build-depends:       base
+                     , Crawler
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  default-language:    Haskell2010
+
+source-repository head
+  type:     git
+  location: https://github.com/githubuser/Crawler

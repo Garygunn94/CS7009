@@ -1,0 +1,56 @@
+
+
+
+{-# LANGUAGE DataKinds            #-}
+{-# LANGUAGE DeriveAnyClass       #-}
+{-# LANGUAGE DeriveGeneric        #-}
+{-# LANGUAGE FlexibleContexts     #-}
+{-# LANGUAGE FlexibleInstances    #-}
+{-# LANGUAGE OverloadedStrings    #-}
+{-# LANGUAGE StandaloneDeriving   #-}
+{-# LANGUAGE TemplateHaskell      #-}
+{-# LANGUAGE TypeOperators        #-}
+{-# LANGUAGE TypeSynonymInstances #-}
+module Handler.Profile where
+
+import Import hiding (unpack, pack)
+import Data.List hiding(intercalate, map, lookup)
+import Data.Maybe
+import Data.ByteString.Char8 as DBC
+import Data.Bson.Generic
+import Data.Aeson
+import Data.Text.Encoding
+import Data.Vector as V hiding (mapM, map, mapM_)
+import Data.Text hiding(intercalate, map) as DT
+import CommonResources
+import Control.Concurrent
+import              Servant
+import              Servant.API
+import              Servant.Client
+import qualified Data.Map as M hiding (split)
+import Prelude (read)
+
+crawlerApi :: Servant.Proxy CrawlerApi
+crawlerApi = Servant.Proxy
+
+starter :: CommonResources.User -> ClientM CommonResources.Response
+end :: CommonResources.User -> ClientM CommonResources.Response
+
+starter :<|> end = client crawlerApi
+
+getProfileR :: Import.Handler Html
+getProfileR = do
+    (_, user) <- requireAuthPair
+    manager <- newManager defaultManagerSettings
+    defaultLayout $ do
+    	sess <- getSession
+    	let access_token = DBC.unpack $ fromJust $ lookup "access_token" sess
+    	let uname = DBC.unpack fromJust $ lookup "login" sess
+        let userdata = CommonResources.User (uname) (access_token)
+        
+        let res = liftIO $ runClientM (starter userdata) (ClientEnv manager (BaseUrl Http crawlerhost (read(crawlerport) :: Int) ""))
+        case res of
+          Left err -> putStrLn $ "Error: "
+          Right response -> do
+            setTitle . toHtml $ (DT.pack uname) <> "'s User page"
+            $(widgetFile "profile")

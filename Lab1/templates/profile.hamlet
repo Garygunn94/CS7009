@@ -1,15 +1,25 @@
-<div .ui.container>
+<html>
+    <body>
+        <div .ui.container>
 
-    <h1>
-      Access granted!
+            <h1>
+              Access granted!
 
-    <p>
-      This page is protected and access is allowed only for authenticated users.
+            <p>
+              This page is protected and access is allowed only for authenticated users.
 
-    <p>
-      Your data is protected with us <strong><span class="username">#{show "deets"}</span></strong>!
+            <p>
+              Your data is protected with us <strong><span class="username">#{show "deets"}</span></strong>!
 
-<div>
-<!-- load the d3.js library -->    
-<script src="http://d3js.org/d3.v3.min.js"></script>
+        <div>
 
+        <script src="http://d3js.org/d3.v3.min.js"></script>
+        <script src="http://requirejs.org/docs/release/2.2.0/minified/require.js"></script>
+
+        <script>
+           var databaseUrl = "USEHASKELLDB"; // "username:password@example.com/mydb"
+           var collections = ["Node_RECORD", "Link_RECORD"]
+           var db = require(["mongojs"]).connect(databaseUrl, collections);
+        <script>
+    <body>
+<html>

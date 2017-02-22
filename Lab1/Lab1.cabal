@@ -24,8 +24,7 @@ library
                      Handler.Home
                      Handler.Comment
                      Handler.Profile
-                     MongodbHelpers
-
+            
     if flag(dev) || flag(library-only)
         cpp-options:   -DDEVELOPMENT
         ghc-options:   -Wall -fwarn-tabs -O0
@@ -101,6 +100,11 @@ library
                  , resourcet
                  , hslogger
                  , bson-generic
+                 , servant == 0.9.*
+                 , servant-server
+                 , servant-client
+                 , CommonResources
+                 , http-client
 
 executable         Lab1
     if flag(library-only)
