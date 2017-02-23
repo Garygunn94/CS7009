@@ -1,11 +1,11 @@
 
 ==================== FINAL INTERFACE ====================
-2017-02-22 19:00:07.9855 UTC
+2017-02-23 15:49:32.323818 UTC
 
 interface main@main:Main 8001
-  interface hash: 634d3b82ea31067de7e5d5574f63b734
-  ABI hash: fff58c4cb31b3f60b05e916342c64208
-  export-list hash: e35f1a17da1588ea291bae82ad4e5fd1
+  interface hash: 8023aed677955b0e5dfafac05f3d9f6c
+  ABI hash: d71cff9658cb747d71c9775dcbec01cb
+  export-list hash: b1d99965e2d39b29d5168c15b81ecbc5
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: fe8d16d94b75171a327f4ad67712f044
   sig of: Nothing
@@ -14,8 +14,8 @@ interface main@main:Main 8001
 exports:
   Main.main
 module dependencies:
-package dependencies: CommonResources-0.1.0.0@CommonResources-0.1.0.0-2hAoDRm32jf136sTU7I7w0
-                      Crawler-0.1.0.0@Crawler-0.1.0.0-9xSvQ0HWqlG1rgWKIvrrEA
+package dependencies: CommonResources-0.1.0.0@CommonResources-0.1.0.0-LpQja3yDL15K7T7dUigrkK
+                      Crawler-0.1.0.0@Crawler-0.1.0.0-E2DzjZCiWdrD8VXmujeLY4
                       MonadRandom-0.4.2.3@MonadRandom-0.4.2.3-8TfCm6PGvGYB7omozORhov
                       StateVar-1.1.0.4@StateVar-1.1.0.4-CJpWsiXJdd89SnV9dZtTwc
                       adjunctions-4.3@adjunctions-4.3-3ol9sWZt3In19pwXwPv3Xc
@@ -157,8 +157,8 @@ package dependencies: CommonResources-0.1.0.0@CommonResources-0.1.0.0-2hAoDRm32j
                       x509-system-1.6.4@x509-system-1.6.4-GZ2eHV03TV52Kz7CzPq5ks
                       x509-validation-1.6.5@x509-validation-1.6.5-CWrkfsWQ7JuF1tW2ozdqZN
                       zlib-0.6.1.2@zlib-0.6.1.2-4CWLN1T27kOJhNvXgy46ZV
-orphans: CommonResources-0.1.0.0@CommonResources-0.1.0.0-2hAoDRm32jf136sTU7I7w0:CommonResources
-         Crawler-0.1.0.0@Crawler-0.1.0.0-9xSvQ0HWqlG1rgWKIvrrEA:Crawler
+orphans: CommonResources-0.1.0.0@CommonResources-0.1.0.0-LpQja3yDL15K7T7dUigrkK:CommonResources
+         Crawler-0.1.0.0@Crawler-0.1.0.0-E2DzjZCiWdrD8VXmujeLY4:Crawler
          MonadRandom-0.4.2.3@MonadRandom-0.4.2.3-8TfCm6PGvGYB7omozORhov:Control.Monad.Random
          aeson-0.11.2.1@aeson-0.11.2.1-5ZQWuTFmffALcfpzDCXoOz:Data.Aeson.Types.Generic
          aeson-0.11.2.1@aeson-0.11.2.1-5ZQWuTFmffALcfpzDCXoOz:Data.Aeson.Types.Instances
@@ -186,8 +186,8 @@ orphans: CommonResources-0.1.0.0@CommonResources-0.1.0.0-2hAoDRm32jf136sTU7I7w0:
          vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Unboxed
          vector-binary-instances-0.2.3.3@vector-binary-instances-0.2.3.3-ITLfSosnCjgDHIm70KxMIu:Data.Vector.Binary
          vector-instances-3.3.1@vector-instances-3.3.1-I6TdtGyV4ig2RKtxblZRcS:Data.Vector.Instances
-family instance modules: CommonResources-0.1.0.0@CommonResources-0.1.0.0-2hAoDRm32jf136sTU7I7w0:CommonResources
-                         Crawler-0.1.0.0@Crawler-0.1.0.0-9xSvQ0HWqlG1rgWKIvrrEA:Crawler
+family instance modules: CommonResources-0.1.0.0@CommonResources-0.1.0.0-LpQja3yDL15K7T7dUigrkK:CommonResources
+                         Crawler-0.1.0.0@Crawler-0.1.0.0-E2DzjZCiWdrD8VXmujeLY4:Crawler
                          adjunctions-4.3@adjunctions-4.3-3ol9sWZt3In19pwXwPv3Xc:Data.Functor.Rep
                          attoparsec-0.13.1.0@attoparsec-0.13.1.0-5Olk1S76r1CDYzFS6V3sZR:Data.Attoparsec.Internal.Types
                          base-4.9.0.0:Control.Applicative base-4.9.0.0:Data.Complex
@@ -274,7 +274,7 @@ family instance modules: CommonResources-0.1.0.0@CommonResources-0.1.0.0-2hAoDRm
                          vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Unboxed.Base
                          vector-instances-3.3.1@vector-instances-3.3.1-I6TdtGyV4ig2RKtxblZRcS:Data.Vector.Instances
                          zlib-0.6.1.2@zlib-0.6.1.2-4CWLN1T27kOJhNvXgy46ZV:Codec.Compression.Zlib.Stream
-import  -/  Crawler-0.1.0.0@Crawler-0.1.0.0-9xSvQ0HWqlG1rgWKIvrrEA:Crawler c8a1be1e9882d2863be5a4e0c2b5b93b
+import  -/  Crawler-0.1.0.0@Crawler-0.1.0.0-E2DzjZCiWdrD8VXmujeLY4:Crawler bc66feb29ad19e8d020b466188934730
 import  -/  base-4.9.0.0:Prelude b9bddb97799837fe67a8d00939a5b6c3
 import  -/  ghc-prim-0.5.0.0:GHC.Types 7378e41b7749213c8c88ceb6b0665d4c
 d6831ef04cb9301b090dfae6f7bb7ec7
@@ -289,12 +289,12 @@ d6831ef04cb9301b090dfae6f7bb7ec7
   $trModule2 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "main"#) -}
-3059c66552ce180b7e22f9f951918d27
+1c0c7f5b8a75744ade2f4556aefcfd02
   main :: GHC.Types.IO ()
   {- Arity: 1, Strictness: <S,U>,
      Unfolding: InlineRule (0, True, True)
                 Crawler.mkApp1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
-0267574a030b68de21d1aec774cbe57e
+42ce7f50e92adac3f9a57f437310d849
   main1 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)

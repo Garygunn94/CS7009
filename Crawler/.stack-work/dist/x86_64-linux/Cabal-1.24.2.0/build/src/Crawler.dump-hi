@@ -1,12 +1,12 @@
 
 ==================== FINAL INTERFACE ====================
-2017-02-22 18:59:42.182799 UTC
+2017-02-23 15:49:23.756664 UTC
 
-interface Crawler-0.1.0.0-9xSvQ0HWqlG1rgWKIvrrEA:Crawler [orphan module] [family instance module] 8001
-  interface hash: d392a6a8b2b44670982707945842006c
-  ABI hash: c8a1be1e9882d2863be5a4e0c2b5b93b
-  export-list hash: 20a3adc340c69cdc98f83ef26ea1e1bc
-  orphan hash: 089e9e51c0756719ad7fe496fa1cad6a
+interface Crawler-0.1.0.0-E2DzjZCiWdrD8VXmujeLY4:Crawler [orphan module] [family instance module] 8001
+  interface hash: c60060d2320378ae390db9a8441ed142
+  ABI hash: bc66feb29ad19e8d020b466188934730
+  export-list hash: 54d28c3893c85cd8f4c0741889a0c94f
+  orphan hash: 179ff02fbd1d994ccf5ca93d9dac473e
   flag hash: befc830e2f81db4375ecfe4034bd792a
   sig of: Nothing
   used TH splices: False
@@ -30,7 +30,7 @@ exports:
   Crawler.State{Crawler.State nodes}
   Crawler.Task{Crawler.Task running tskAuthToken tskUsername}
 module dependencies:
-package dependencies: CommonResources-0.1.0.0@CommonResources-0.1.0.0-2hAoDRm32jf136sTU7I7w0
+package dependencies: CommonResources-0.1.0.0@CommonResources-0.1.0.0-LpQja3yDL15K7T7dUigrkK
                       MonadRandom-0.4.2.3@MonadRandom-0.4.2.3-8TfCm6PGvGYB7omozORhov
                       StateVar-1.1.0.4@StateVar-1.1.0.4-CJpWsiXJdd89SnV9dZtTwc
                       adjunctions-4.3@adjunctions-4.3-3ol9sWZt3In19pwXwPv3Xc
@@ -172,7 +172,7 @@ package dependencies: CommonResources-0.1.0.0@CommonResources-0.1.0.0-2hAoDRm32j
                       x509-system-1.6.4@x509-system-1.6.4-GZ2eHV03TV52Kz7CzPq5ks
                       x509-validation-1.6.5@x509-validation-1.6.5-CWrkfsWQ7JuF1tW2ozdqZN
                       zlib-0.6.1.2@zlib-0.6.1.2-4CWLN1T27kOJhNvXgy46ZV
-orphans: CommonResources-0.1.0.0@CommonResources-0.1.0.0-2hAoDRm32jf136sTU7I7w0:CommonResources
+orphans: CommonResources-0.1.0.0@CommonResources-0.1.0.0-LpQja3yDL15K7T7dUigrkK:CommonResources
          MonadRandom-0.4.2.3@MonadRandom-0.4.2.3-8TfCm6PGvGYB7omozORhov:Control.Monad.Random
          aeson-0.11.2.1@aeson-0.11.2.1-5ZQWuTFmffALcfpzDCXoOz:Data.Aeson.Types.Generic
          aeson-0.11.2.1@aeson-0.11.2.1-5ZQWuTFmffALcfpzDCXoOz:Data.Aeson.Types.Instances
@@ -200,7 +200,7 @@ orphans: CommonResources-0.1.0.0@CommonResources-0.1.0.0-2hAoDRm32jf136sTU7I7w0:
          vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Unboxed
          vector-binary-instances-0.2.3.3@vector-binary-instances-0.2.3.3-ITLfSosnCjgDHIm70KxMIu:Data.Vector.Binary
          vector-instances-3.3.1@vector-instances-3.3.1-I6TdtGyV4ig2RKtxblZRcS:Data.Vector.Instances
-family instance modules: CommonResources-0.1.0.0@CommonResources-0.1.0.0-2hAoDRm32jf136sTU7I7w0:CommonResources
+family instance modules: CommonResources-0.1.0.0@CommonResources-0.1.0.0-LpQja3yDL15K7T7dUigrkK:CommonResources
                          adjunctions-4.3@adjunctions-4.3-3ol9sWZt3In19pwXwPv3Xc:Data.Functor.Rep
                          attoparsec-0.13.1.0@attoparsec-0.13.1.0-5Olk1S76r1CDYzFS6V3sZR:Data.Attoparsec.Internal.Types
                          base-4.9.0.0:Control.Applicative base-4.9.0.0:Data.Complex
@@ -287,8 +287,8 @@ family instance modules: CommonResources-0.1.0.0@CommonResources-0.1.0.0-2hAoDRm
                          vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Unboxed.Base
                          vector-instances-3.3.1@vector-instances-3.3.1-I6TdtGyV4ig2RKtxblZRcS:Data.Vector.Instances
                          zlib-0.6.1.2@zlib-0.6.1.2-4CWLN1T27kOJhNvXgy46ZV:Codec.Compression.Zlib.Stream
-import  -/  CommonResources-0.1.0.0@CommonResources-0.1.0.0-2hAoDRm32jf136sTU7I7w0:CommonResources 59c18575af1cccb961a89a928c11ba02
-import  -/  CommonResources-0.1.0.0@CommonResources-0.1.0.0-2hAoDRm32jf136sTU7I7w0:MongodbHelpers f6dde8f3c354dde042a2d52c41b8d6f2
+import  -/  CommonResources-0.1.0.0@CommonResources-0.1.0.0-LpQja3yDL15K7T7dUigrkK:CommonResources 699397758d81567741cbfbf271019ed1
+import  -/  CommonResources-0.1.0.0@CommonResources-0.1.0.0-LpQja3yDL15K7T7dUigrkK:MongodbHelpers 4daa66e428083494a6336cb109bd67ac
 import  -/  aeson-0.11.2.1@aeson-0.11.2.1-5ZQWuTFmffALcfpzDCXoOz:Data.Aeson 94b59824488f369f190c261b6e39e7ba
 import  -/  aeson-0.11.2.1@aeson-0.11.2.1-5ZQWuTFmffALcfpzDCXoOz:Data.Aeson.TH 869262ef224a0287f5d5fc093506acd2
 import  -/  aeson-0.11.2.1@aeson-0.11.2.1-5ZQWuTFmffALcfpzDCXoOz:Data.Aeson.Types.Class c9d74667288c52e23279e16b75c64023
@@ -353,13 +353,13 @@ import  -/  wai-3.2.1.1@wai-3.2.1.1-f77bMYZGLQBAD3XJrvGiW:Network.Wai f10fb472d6
 import  -/  wai-logger-2.3.0@wai-logger-2.3.0-IfusT8I9ees2102USHAF8e:Network.Wai.Logger 676219d60f680a2e3b4c9a3bb9537896
 import  -/  warp-3.2.9@warp-3.2.9-1srGDEsq7RWF9RsucFj6bw:Network.Wai.Handler.Warp 3da15d24b266d35965cd5350be944ee3
 import  -/  warp-3.2.9@warp-3.2.9-1srGDEsq7RWF9RsucFj6bw:Network.Wai.Handler.Warp.Run ef3cbc0ed9598c9652e6b6b9671eb6f3
-12e1bd8144fb0479fdebd5792c7eccc8
+ccd63352d0929d534dde308d9ee2d1b3
   $fEqTask :: GHC.Classes.Eq Crawler.Task
   DFunId
   {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
      Unfolding: DFun:.
                   @ Crawler.Task Crawler.$fEqTask_$c== Crawler.$fEqTask_$c/= -}
-12e1bd8144fb0479fdebd5792c7eccc8
+ccd63352d0929d534dde308d9ee2d1b3
   $fEqTask_$c/= :: Crawler.Task -> Crawler.Task -> GHC.Types.Bool
   {- Arity: 2, HasNoCafRefs,
      Strictness: <S(SLL),1*U(1*U,1*U,1*U)><S(SLL),1*U(1*U,1*U,1*U)>,
@@ -368,7 +368,7 @@ import  -/  warp-3.2.9@warp-3.2.9-1srGDEsq7RWF9RsucFj6bw:Network.Wai.Handler.War
                  case Crawler.$fEqTask_$c== a b of wild {
                    GHC.Types.False -> GHC.Types.True
                    GHC.Types.True -> GHC.Types.False }) -}
-12e1bd8144fb0479fdebd5792c7eccc8
+ccd63352d0929d534dde308d9ee2d1b3
   $fEqTask_$c== :: Crawler.Task -> Crawler.Task -> GHC.Types.Bool
   {- Arity: 2, HasNoCafRefs,
      Strictness: <S(SLL),1*U(1*U,1*U,1*U)><S(SLL),1*U(1*U,1*U,1*U)>,
@@ -378,7 +378,7 @@ import  -/  warp-3.2.9@warp-3.2.9-1srGDEsq7RWF9RsucFj6bw:Network.Wai.Handler.War
                  case w of ww { Crawler.Task ww1 ww2 ww3 ->
                  case w1 of ww4 { Crawler.Task ww5 ww6 ww7 ->
                  Crawler.$w$c== ww1 ww2 ww3 ww5 ww6 ww7 } }) -}
-850c1628f856023c83cccedcff0e37f3
+853bc2df585b9d06f18d5d58cafeece1
   $fFromBSONBool :: Data.Bson.Generic.FromBSON GHC.Types.Bool
   DFunId
   {- Arity: 1, Strictness: <L,U>, Inline: INLINE (sat-args=0),
@@ -386,7 +386,7 @@ import  -/  warp-3.2.9@warp-3.2.9-1srGDEsq7RWF9RsucFj6bw:Network.Wai.Handler.War
                 Crawler.$fFromBSONBool_$cfromBSON
                   `cast`
                 (Sym (Data.Bson.Generic.N:FromBSON[0] <GHC.Types.Bool>_N)) -}
-0e02c8777a906b59ae2e19473f073b85
+f5dc7798c57b06a303e72c269916181e
   $fFromBSONBool1 ::
     GHC.Types.Int
     -> Data.Bson.Document
@@ -408,7 +408,7 @@ import  -/  warp-3.2.9@warp-3.2.9-1srGDEsq7RWF9RsucFj6bw:Network.Wai.Handler.War
                 (\ @ a1 (w :: GHC.Types.Int) (w1 :: Data.Bson.Document) ->
                  case w of ww { GHC.Types.I# ww1 ->
                  Crawler.$w$dGFromBSON @ a1 ww1 w1 }) -}
-85052a2fca8c47e0cc346c73b97425c2
+c88d6f91cac0e7f96f20c574b4b9eb61
   $fFromBSONBool2 ::
     GHC.Base.Maybe
       ((GHC.Generics.:+:)
@@ -439,7 +439,7 @@ import  -/  warp-3.2.9@warp-3.2.9-1srGDEsq7RWF9RsucFj6bw:Network.Wai.Handler.War
                            GHC.Generics.U1)
                         a1)
                    (Crawler.$fFromBSONBool3 @ a1)) -}
-e6f4a2f23e909cd91f7e42ca46aab347
+337254884210e728c847660210915002
   $fFromBSONBool3 ::
     (GHC.Generics.:+:)
       (GHC.Generics.M1
@@ -474,10 +474,10 @@ e6f4a2f23e909cd91f7e42ca46aab347
                              <'GHC.Generics.MetaCons
                                 "False" 'GHC.Generics.PrefixI 'GHC.Types.False>_P
                              <GHC.Generics.U1>_R) <a1>_N)) -}
-ce70f7527cf047a18f185f7e9c788f37
+c2744e6f15e63a37d931618a88072527
   $fFromBSONBool4 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "False"#) -}
-6b41e74e5d421c400dee73c3e6b9b4e5
+ea98ef8b19a8a5e7149f6b4705c187a0
   $fFromBSONBool5 ::
     GHC.Base.Maybe
       ((GHC.Generics.:+:)
@@ -508,7 +508,7 @@ ce70f7527cf047a18f185f7e9c788f37
                            GHC.Generics.U1)
                         a1)
                    (Crawler.$fFromBSONBool6 @ a1)) -}
-793efe5c6e9a41e751d53cb51a05e8a9
+63f797d825da22b6be094905f168f82a
   $fFromBSONBool6 ::
     (GHC.Generics.:+:)
       (GHC.Generics.M1
@@ -543,10 +543,10 @@ ce70f7527cf047a18f185f7e9c788f37
                              <'GHC.Generics.MetaCons
                                 "True" 'GHC.Generics.PrefixI 'GHC.Types.False>_P
                              <GHC.Generics.U1>_R) <a1>_N)) -}
-7c74d08f67e105065f00cabd7c2b3e66
+831d0e549166a85f72e04ba11b428124
   $fFromBSONBool7 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "True"#) -}
-03eb7a163777ce65990f9e77867dd456
+5480b38925ffe9a0132092e47aed1fda
   $fFromBSONBool_$cfromBSON ::
     Data.Bson.Document -> GHC.Base.Maybe GHC.Types.Bool
   {- Arity: 1, Strictness: <L,U>,
@@ -579,10 +579,10 @@ ce70f7527cf047a18f185f7e9c788f37
                                                                  'GHC.Types.False)
                                                               GHC.Generics.U1>_R))
                                 (Sub (Sym (GHC.Generics.Rep_Bool[0]))) <GHC.Prim.Any>_N)) }) -}
-3b02b9231a4ddb0f18017f11d791ce31
+b176fd0ad1eea33a38bfc575849dd270
   $fFromBSONBool_lvl47 :: GHC.Types.Int
   {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 2#) -}
-12e1bd8144fb0479fdebd5792c7eccc8
+ccd63352d0929d534dde308d9ee2d1b3
   $fFromBSONTask :: Data.Bson.Generic.FromBSON Crawler.Task
   DFunId
   {- Arity: 1, Strictness: <S,U>, Inline: INLINE (sat-args=0),
@@ -590,7 +590,7 @@ ce70f7527cf047a18f185f7e9c788f37
                 Crawler.$fFromBSONTask_$cfromBSON
                   `cast`
                 (Sym (Data.Bson.Generic.N:FromBSON[0] <Crawler.Task>_N)) -}
-29b3990f5a5751ca166af352e0e72471
+c3dd3bba22022a91a3a36dcd270c4119
   $fFromBSONTask1 ::
     GHC.Types.Int
     -> Data.Bson.Document
@@ -623,7 +623,7 @@ ce70f7527cf047a18f185f7e9c788f37
      Unfolding: InlineRule (2, True, True)
                 (\ @ a1 (w :: GHC.Types.Int) (w1 :: Data.Bson.Document) ->
                  Crawler.$w$dGFromBSON1 @ a1 w1) -}
-e00b6b1cf0a3452ccb38cf17a62d391f
+ca051176e62d1d0547915faa1b823de6
   $fFromBSONTask10 ::
     GHC.Generics.SingI ('GHC.Base.Just "tskUsername")
   {- Unfolding: InlineRule (0, True, True)
@@ -634,7 +634,7 @@ e00b6b1cf0a3452ccb38cf17a62d391f
                      (Sym (GHC.Generics.N:SingI[0]) <GHC.Base.Maybe
                                                        GHC.Types.Symbol>_N) <'GHC.Base.Just
                                                                                "tskUsername">_N) -}
-6d680fce15f5cc842c80ddae88d26d96
+3370b1db072b43fc6fb4ddee1d7064c4
   $fFromBSONTask11 ::
     GHC.Generics.R:SingMaybeb
       GHC.Types.Symbol ('GHC.Base.Just "tskUsername")
@@ -646,7 +646,7 @@ e00b6b1cf0a3452ccb38cf17a62d391f
                    Crawler.$fFromBSONTask12
                      `cast`
                    (Sym (GHC.Generics.D:R:SingSymbols0[0]) <"tskUsername">_N)) -}
-ebe90ea9546fd02ade2de360d65b2a6d
+e6d2e05896c67b91e59973eae1d06bc5
   $fFromBSONTask12 :: GHC.Generics.R:SingSymbols "tskUsername"
   {- Strictness: m,
      Unfolding: (GHC.Generics.SSym
@@ -656,10 +656,10 @@ ebe90ea9546fd02ade2de360d65b2a6d
                    (Trans
                         (Sym (GHC.TypeLits.N:SSymbol[0] <"tskUsername">_P))
                         (Sym (GHC.TypeLits.N:KnownSymbol[0]) <"tskUsername">_N))) -}
-2b739bfa53684a66f1e4fec18dd89d05
+7d061ef3b500792e4a8f1f1f7660fc15
   $fFromBSONTask13 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "tskUsername"#) -}
-bf1bd79dbb5bdfee16e7c6060d45c47e
+5dc8bc5bb526700cb7561619115409e1
   $fFromBSONTask2 :: GHC.Generics.SingI ('GHC.Base.Just "running")
   {- Unfolding: InlineRule (0, True, True)
                 Crawler.$fFromBSONTask3
@@ -669,7 +669,7 @@ bf1bd79dbb5bdfee16e7c6060d45c47e
                      (Sym (GHC.Generics.N:SingI[0]) <GHC.Base.Maybe
                                                        GHC.Types.Symbol>_N) <'GHC.Base.Just
                                                                                "running">_N) -}
-67ad0919df0ae68fa90d677836b39dd1
+7f916fe9c08a0db33864705960f2f3c6
   $fFromBSONTask3 ::
     GHC.Generics.R:SingMaybeb
       GHC.Types.Symbol ('GHC.Base.Just "running")
@@ -681,7 +681,7 @@ bf1bd79dbb5bdfee16e7c6060d45c47e
                    Crawler.$fFromBSONTask4
                      `cast`
                    (Sym (GHC.Generics.D:R:SingSymbols0[0]) <"running">_N)) -}
-e21656aec14a1dc7f1a5d04bbf78cafb
+e1e7efe964522a8af6de767cf88f42dd
   $fFromBSONTask4 :: GHC.Generics.R:SingSymbols "running"
   {- Strictness: m,
      Unfolding: (GHC.Generics.SSym
@@ -691,10 +691,10 @@ e21656aec14a1dc7f1a5d04bbf78cafb
                    (Trans
                         (Sym (GHC.TypeLits.N:SSymbol[0] <"running">_P))
                         (Sym (GHC.TypeLits.N:KnownSymbol[0]) <"running">_N))) -}
-4a486221bf6830555680cb8c7b1ab9d8
+49c8c490b3f0444734827f9d35a98289
   $fFromBSONTask5 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "running"#) -}
-a0dec9ba7dc2b2fb64d52f9906e515c9
+6a4d6d3c2fe1499bbbab3b128c613909
   $fFromBSONTask6 ::
     GHC.Generics.SingI ('GHC.Base.Just "tskAuthToken")
   {- Unfolding: InlineRule (0, True, True)
@@ -705,7 +705,7 @@ a0dec9ba7dc2b2fb64d52f9906e515c9
                      (Sym (GHC.Generics.N:SingI[0]) <GHC.Base.Maybe
                                                        GHC.Types.Symbol>_N) <'GHC.Base.Just
                                                                                "tskAuthToken">_N) -}
-3ef18948b165298e1d7c3855f439805d
+9942a9f234da09a8524aeba3e0d84637
   $fFromBSONTask7 ::
     GHC.Generics.R:SingMaybeb
       GHC.Types.Symbol ('GHC.Base.Just "tskAuthToken")
@@ -717,7 +717,7 @@ a0dec9ba7dc2b2fb64d52f9906e515c9
                    Crawler.$fFromBSONTask8
                      `cast`
                    (Sym (GHC.Generics.D:R:SingSymbols0[0]) <"tskAuthToken">_N)) -}
-647ed93edb247f4e29adf535b5b21b1e
+cc6b027488a45d9cacb8df80309655a1
   $fFromBSONTask8 :: GHC.Generics.R:SingSymbols "tskAuthToken"
   {- Strictness: m,
      Unfolding: (GHC.Generics.SSym
@@ -727,10 +727,10 @@ a0dec9ba7dc2b2fb64d52f9906e515c9
                    (Trans
                         (Sym (GHC.TypeLits.N:SSymbol[0] <"tskAuthToken">_P))
                         (Sym (GHC.TypeLits.N:KnownSymbol[0]) <"tskAuthToken">_N))) -}
-00c6d18c86886824e5e951bea304bb30
+cdb24b7dd70bbb653ec4b8a977afb302
   $fFromBSONTask9 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "tskAuthToken"#) -}
-12e1bd8144fb0479fdebd5792c7eccc8
+ccd63352d0929d534dde308d9ee2d1b3
   $fFromBSONTask_$cfromBSON ::
     Data.Bson.Document -> GHC.Base.Maybe Crawler.Task
   {- Arity: 1, Strictness: <S,U>,
@@ -781,7 +781,7 @@ a0dec9ba7dc2b2fb64d52f9906e515c9
                                                <'GHC.Generics.MetaData
                                                   "Task"
                                                   "Crawler"
-                                                  "Crawler-0.1.0.0-9xSvQ0HWqlG1rgWKIvrrEA"
+                                                  "Crawler-0.1.0.0-E2DzjZCiWdrD8VXmujeLY4"
                                                   'GHC.Types.False>_P
                                                <GHC.Generics.M1
                                                   GHC.Generics.C
@@ -813,7 +813,7 @@ a0dec9ba7dc2b2fb64d52f9906e515c9
                                                                                         (GHC.Generics.Rec0
                                                                                            GHC.Types.Bool)))>_R))
                                      (Sub (Sym (Crawler.Rep_Task[0])))) <GHC.Prim.Any>_N)) }) -}
-12e1bd8144fb0479fdebd5792c7eccc8
+ccd63352d0929d534dde308d9ee2d1b3
   $fFromBSONTask_$cto ::
     GHC.Generics.Rep Crawler.Task x -> Crawler.Task
   {- Arity: 1, HasNoCafRefs, Strictness: <S(LS),1*U(U,1*U(U,U))>m,
@@ -829,7 +829,7 @@ a0dec9ba7dc2b2fb64d52f9906e515c9
                                      <'GHC.Generics.MetaData
                                         "Task"
                                         "Crawler"
-                                        "Crawler-0.1.0.0-9xSvQ0HWqlG1rgWKIvrrEA"
+                                        "Crawler-0.1.0.0-E2DzjZCiWdrD8VXmujeLY4"
                                         'GHC.Types.False>_P
                                      <GHC.Generics.M1
                                         GHC.Generics.C
@@ -936,7 +936,7 @@ a0dec9ba7dc2b2fb64d52f9906e515c9
                              <GHC.Generics.K1 GHC.Generics.R GHC.Types.Bool>_R <x>_N)
                         (GHC.Generics.N:K1[0]
                              <GHC.Generics.R>_P <GHC.Types.Bool>_R <x>_P)) } }) -}
-e6dbb9101eb90b0cbe34a4fdaeb3e7e6
+156d088a641f91fc8c063ddfcac2c00d
   $fFromBSONTask_$s$fSelectorMetaMetaSel ::
     GHC.Generics.Selector
       ('GHC.Generics.MetaSel
@@ -998,7 +998,7 @@ e6dbb9101eb90b0cbe34a4fdaeb3e7e6
                      GHC.Generics.$WSDecidedLazy
                        `cast`
                      (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.DecidedStrictness>_N <'GHC.Generics.DecidedLazy>_N)) -}
-e18a56f058fc7b7496eca3d514cb2292
+05701be8e4850e289b97a791c2f0de4b
   $fFromBSONTask_$s$fSelectorMetaMetaSel1 ::
     GHC.Generics.Selector
       ('GHC.Generics.MetaSel
@@ -1060,7 +1060,7 @@ e18a56f058fc7b7496eca3d514cb2292
                      GHC.Generics.$WSDecidedLazy
                        `cast`
                      (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.DecidedStrictness>_N <'GHC.Generics.DecidedLazy>_N)) -}
-5c9528cb30f79cb56d7e7bcb1079b696
+9bac798b2f10642c6b20f23c9d3cee7c
   $fFromBSONTask_$s$fSelectorMetaMetaSel2 ::
     GHC.Generics.Selector
       ('GHC.Generics.MetaSel
@@ -1122,7 +1122,7 @@ e18a56f058fc7b7496eca3d514cb2292
                      GHC.Generics.$WSDecidedLazy
                        `cast`
                      (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.DecidedStrictness>_N <'GHC.Generics.DecidedLazy>_N)) -}
-d82c61399120a3312a328ca231b0266d
+b3eb935ff6bdff22f22a400358186a43
   $fFromBSONTask_$s$fSelectorMetaMetaSel_$cselName ::
     forall k (t :: GHC.Generics.Meta
                    -> (GHC.Types.* -> GHC.Types.*) -> k -> *) (f :: GHC.Types.*
@@ -1146,7 +1146,7 @@ d82c61399120a3312a328ca231b0266d
                                 'GHC.Generics.NoSourceStrictness
                                 'GHC.Generics.DecidedLazy) f a) ->
                  Crawler.$fFromBSONTask5) -}
-8dd4ab98a09df642201e1a07262b3b04
+00f4b743b37819dd6d3d8daa31c0eb83
   $fFromBSONTask_$s$fSelectorMetaMetaSel_$cselName1 ::
     forall k (t :: GHC.Generics.Meta
                    -> (GHC.Types.* -> GHC.Types.*) -> k -> *) (f :: GHC.Types.*
@@ -1170,7 +1170,7 @@ d82c61399120a3312a328ca231b0266d
                                 'GHC.Generics.NoSourceStrictness
                                 'GHC.Generics.DecidedLazy) f a) ->
                  Crawler.$fFromBSONTask9) -}
-fef8872ef981229495bf70c2d20f5a50
+f0698b4b41dec489a951a56bf448bb11
   $fFromBSONTask_$s$fSelectorMetaMetaSel_$cselName2 ::
     forall k (t :: GHC.Generics.Meta
                    -> (GHC.Types.* -> GHC.Types.*) -> k -> *) (f :: GHC.Types.*
@@ -1194,7 +1194,7 @@ fef8872ef981229495bf70c2d20f5a50
                                 'GHC.Generics.NoSourceStrictness
                                 'GHC.Generics.DecidedLazy) f a) ->
                  Crawler.$fFromBSONTask13) -}
-12e1bd8144fb0479fdebd5792c7eccc8
+ccd63352d0929d534dde308d9ee2d1b3
   $fFromJSONTask :: Data.Aeson.Types.Class.FromJSON Crawler.Task
   DFunId
   {- Arity: 1, Strictness: <L,U>, Inline: INLINE (sat-args=0),
@@ -1202,7 +1202,7 @@ fef8872ef981229495bf70c2d20f5a50
                 Crawler.$fFromJSONTask_$cparseJSON
                   `cast`
                 (Sym (Data.Aeson.Types.Class.N:FromJSON[0] <Crawler.Task>_N)) -}
-2fc07546f35ebd108c21d483bfdd7e03
+40cb1122151659bdaa7c49f4bcde667a
   $fFromJSONTask1 ::
     Data.Aeson.Types.Internal.Options
     -> GHC.Base.Maybe Data.Text.Internal.Text
@@ -1241,7 +1241,7 @@ fef8872ef981229495bf70c2d20f5a50
                    (w1 :: GHC.Base.Maybe Data.Text.Internal.Text)
                    (w2 :: Data.Aeson.Types.Internal.Value) ->
                  Crawler.$w$dConsFromJSON' @ a w w2) -}
-51ad32d86081454b693273b5f726fdff
+6f7380a61713cafc430cf5aecfa16017
   $fFromJSONTask2 ::
     Data.Aeson.Types.Internal.Options
     -> Data.Aeson.Types.Internal.Value
@@ -1253,10 +1253,10 @@ fef8872ef981229495bf70c2d20f5a50
                    (w :: Data.Aeson.Types.Internal.Options)
                    (w1 :: Data.Aeson.Types.Internal.Value) ->
                  Crawler.$w$dGFromJSON @ a1 w1) -}
-69221ff4719eb41f4849c13a928c2ea8
+f5a878f97af9d5ce21f6de292e8aaac8
   $fFromJSONTask3 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "String"#) -}
-041593c1a6a17a582d60d4f4ed50ca73
+a12239d0fa437dcbe33176bd53f2dafe
   $fFromJSONTask4 ::
     Data.Aeson.Types.Internal.Options
     -> Data.Aeson.Types.Internal.Value
@@ -1268,10 +1268,10 @@ fef8872ef981229495bf70c2d20f5a50
                    (w :: Data.Aeson.Types.Internal.Options)
                    (w1 :: Data.Aeson.Types.Internal.Value) ->
                  Crawler.$w$dGFromJSON1 @ a1 w1) -}
-a6794dbd4aa5d86e083902850697a009
+e4c4a326ae449314d370526c91a441c8
   $fFromJSONTask5 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "Bool"#) -}
-459331989f9d05e4e434fc77241b10dc
+d33c42154ceb0d0f938ce50439fd5dd6
   $fFromJSONTask6 ::
     (GHC.Generics.:*:)
       (GHC.Generics.M1
@@ -1326,7 +1326,7 @@ a6794dbd4aa5d86e083902850697a009
                                                  (GHC.Generics.Rec0 GHC.Types.Bool))
                              a) ->
                  GHC.Types.False) -}
-12e1bd8144fb0479fdebd5792c7eccc8
+ccd63352d0929d534dde308d9ee2d1b3
   $fFromJSONTask_$cparseJSON ::
     Data.Aeson.Types.Internal.Value
     -> Data.Aeson.Types.Internal.Parser Crawler.Task
@@ -1533,7 +1533,7 @@ a6794dbd4aa5d86e083902850697a009
                                               <'GHC.Generics.MetaData
                                                  "Task"
                                                  "Crawler"
-                                                 "Crawler-0.1.0.0-9xSvQ0HWqlG1rgWKIvrrEA"
+                                                 "Crawler-0.1.0.0-E2DzjZCiWdrD8VXmujeLY4"
                                                  'GHC.Types.False>_P
                                               <GHC.Generics.M1
                                                  GHC.Generics.C
@@ -1567,7 +1567,7 @@ a6794dbd4aa5d86e083902850697a009
                                     (Sub (Sym (Crawler.Rep_Task[0])))) <GHC.Prim.Any>_N))))
                    `cast`
                  (Sym (Data.Aeson.Types.Internal.N:Parser[0] <Crawler.Task>_R))) -}
-12e1bd8144fb0479fdebd5792c7eccc8
+ccd63352d0929d534dde308d9ee2d1b3
   $fGenericTask :: GHC.Generics.Generic Crawler.Task
   DFunId
   {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -1575,7 +1575,7 @@ a6794dbd4aa5d86e083902850697a009
                   @ Crawler.Task
                   Crawler.$fGenericTask_$cfrom
                   Crawler.$fFromBSONTask_$cto -}
-12e1bd8144fb0479fdebd5792c7eccc8
+ccd63352d0929d534dde308d9ee2d1b3
   $fGenericTask_$cfrom ::
     Crawler.Task -> GHC.Generics.Rep Crawler.Task x
   {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(U,U,U)>m,
@@ -1704,7 +1704,7 @@ a6794dbd4aa5d86e083902850697a009
                                      <'GHC.Generics.MetaData
                                         "Task"
                                         "Crawler"
-                                        "Crawler-0.1.0.0-9xSvQ0HWqlG1rgWKIvrrEA"
+                                        "Crawler-0.1.0.0-E2DzjZCiWdrD8VXmujeLY4"
                                         'GHC.Types.False>_P
                                      <GHC.Generics.M1
                                         GHC.Generics.C
@@ -1739,7 +1739,7 @@ a6794dbd4aa5d86e083902850697a009
                                                                                  GHC.Generics.R
                                                                                  GHC.Types.Bool)))>_R))
                            (Sub (Sym (Crawler.Rep_Task[0])))) <x>_N) }) -}
-12e1bd8144fb0479fdebd5792c7eccc8
+ccd63352d0929d534dde308d9ee2d1b3
   $fShowTask :: GHC.Show.Show Crawler.Task
   DFunId
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -1748,31 +1748,31 @@ a6794dbd4aa5d86e083902850697a009
                   Crawler.$fShowTask_$cshowsPrec
                   Crawler.$fShowTask_$cshow
                   Crawler.$fShowTask_$cshowList -}
-12e1bd8144fb0479fdebd5792c7eccc8
+ccd63352d0929d534dde308d9ee2d1b3
   $fShowTask1 :: Crawler.Task -> GHC.Show.ShowS
   {- Arity: 2,
      Unfolding: (\ (w :: Crawler.Task) (w1 :: GHC.Base.String) ->
                  case w of ww { Crawler.Task ww1 ww2 ww3 ->
                  Crawler.$w$cshowsPrec 0# ww1 ww2 ww3 w1 }) -}
-53e7e2ac96e22d3a9a7e9d457d9d71cf
+2c02f00541dd6816f5b1f73da4f63b12
   $fShowTask2 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "}"#) -}
-a797580f4ba7fb1145174191de68da81
+f3c5314af4b86fb991c9f23d500b9c21
   $fShowTask3 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "running = "#) -}
-16d6c6314cf36f5a5f981a0e7377ae4b
+81000f137b33a9e4f7a3273ca7789790
   $fShowTask4 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "tskAuthToken = "#) -}
-ddcda381867f2b52a9c74d9162e9e41f
+498ba1dde5b799d8757096cb3bec6814
   $fShowTask5 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# ", "#) -}
-1145f20c5d6d69c3b15f2fdb9b51b9f6
+8676ce4408f159a5a9862c59d1666819
   $fShowTask6 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "tskUsername = "#) -}
-bb6920b39ba534b6a83213542a44b06c
+ef8d6049b7fc64e3f7411fff0b94b066
   $fShowTask7 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "Task {"#) -}
-12e1bd8144fb0479fdebd5792c7eccc8
+ccd63352d0929d534dde308d9ee2d1b3
   $fShowTask_$cshow :: Crawler.Task -> GHC.Base.String
   {- Arity: 1, Strictness: <S,1*U(1*U,1*U,1*U)>,
      Unfolding: InlineRule (1, True, False)
@@ -1781,13 +1781,13 @@ bb6920b39ba534b6a83213542a44b06c
                    GHC.Show.shows22
                    x
                    (GHC.Types.[] @ GHC.Types.Char)) -}
-12e1bd8144fb0479fdebd5792c7eccc8
+ccd63352d0929d534dde308d9ee2d1b3
   $fShowTask_$cshowList :: [Crawler.Task] -> GHC.Show.ShowS
   {- Arity: 2,
      Unfolding: (GHC.Show.showList__
                    @ Crawler.Task
                    Crawler.$fShowTask1) -}
-12e1bd8144fb0479fdebd5792c7eccc8
+ccd63352d0929d534dde308d9ee2d1b3
   $fShowTask_$cshowsPrec ::
     GHC.Types.Int -> Crawler.Task -> GHC.Show.ShowS
   {- Arity: 3, Strictness: <S(S),1*U(U)><S,1*U(1*U,1*U,1*U)><L,U>,
@@ -1799,7 +1799,7 @@ bb6920b39ba534b6a83213542a44b06c
                  case w of ww { GHC.Types.I# ww1 ->
                  case w1 of ww2 { Crawler.Task ww3 ww4 ww5 ->
                  Crawler.$w$cshowsPrec ww1 ww3 ww4 ww5 w2 } }) -}
-5772fb2290c892882eac02723e1f1d72
+4b60de688e0306cf25af7b585279c477
   $fToBSONBool :: Data.Bson.Generic.ToBSON GHC.Types.Bool
   DFunId
   {- Arity: 1, Strictness: <S,1*U>, Inline: INLINE (sat-args=0),
@@ -1807,7 +1807,7 @@ bb6920b39ba534b6a83213542a44b06c
                 Crawler.$fToBSONBool_$s$dmtoBSON
                   `cast`
                 (Sym (Data.Bson.Generic.N:ToBSON[0] <GHC.Types.Bool>_N)) -}
-07adf0644b060f00808a89575990f660
+2b3658510eb80b3feadedefbed889ebf
   $fToBSONBool1 ::
     Data.Bson.Generic.GConstructorCount
       (GHC.Generics.D1
@@ -1854,7 +1854,7 @@ bb6920b39ba534b6a83213542a44b06c
                                                          'GHC.Generics.PrefixI
                                                          'GHC.Types.False)
                                                       GHC.Generics.U1)>_N))) -}
-97bf43d6a217e0f02b5e20c423e59647
+4fbc0c5ee0ba4508e52cf275de343d0d
   $fToBSONBool2 ::
     (GHC.Generics.:+:)
       (GHC.Generics.M1
@@ -1885,7 +1885,7 @@ bb6920b39ba534b6a83213542a44b06c
                                GHC.Generics.U1)
                             a1) ->
                  Crawler.$fFromBSONBool_lvl47) -}
-885ea8500048ca946b26aad41193a42e
+60d97ac744da9d864db12557be7f3246
   $fToBSONBool3 ::
     Data.Bson.Generic.GToBSON
       (GHC.Generics.D1
@@ -1935,7 +1935,7 @@ bb6920b39ba534b6a83213542a44b06c
                                                          'GHC.Generics.PrefixI
                                                          'GHC.Types.False)
                                                       GHC.Generics.U1)>_N))) -}
-716371464bf6531158b810192d776ea0
+30460ce4d25ede634db2c81b7ddfb857
   $fToBSONBool4 ::
     GHC.Types.Int
     -> (GHC.Generics.:+:)
@@ -1969,7 +1969,7 @@ bb6920b39ba534b6a83213542a44b06c
                             a1) ->
                  case w of ww { GHC.Types.I# ww1 ->
                  Crawler.$w$dGToBSON @ a1 ww1 w1 }) -}
-3d1d391bfc419af3d9c231eefcf5bbf8
+a8420e0f21d6e4106927f78915778d5d
   $fToBSONBool_$s$dmtoBSON :: GHC.Types.Bool -> Data.Bson.Document
   {- Arity: 1, Strictness: <S,1*U>,
      Unfolding: InlineRule (-4, True, False)
@@ -1980,7 +1980,7 @@ bb6920b39ba534b6a83213542a44b06c
                    @ GHC.Prim.Any
                    (Crawler.$fToBSONBool_$sconstructorCount a1)
                    (GHC.Generics.$fGenericBool_$cfrom @ GHC.Prim.Any a1)) -}
-0eb86481118360465b9de616f10de73e
+fed3666f93f2cc7a28e406ae0ea2c464
   $fToBSONBool_$s$fConstructorMetaMetaCons ::
     GHC.Generics.Constructor
       ('GHC.Generics.MetaCons
@@ -2035,7 +2035,7 @@ bb6920b39ba534b6a83213542a44b06c
                      GHC.Generics.$WSFalse
                        `cast`
                      (Sym (GHC.Generics.N:SingI[0]) <GHC.Types.Bool>_N <'GHC.Types.False>_N)) -}
-102894cb2b4f7ef2b69475afcdf9f76e
+150aef5dc010a93532988d393eb474c1
   $fToBSONBool_$s$fConstructorMetaMetaCons1 ::
     GHC.Generics.Constructor
       ('GHC.Generics.MetaCons
@@ -2090,7 +2090,7 @@ bb6920b39ba534b6a83213542a44b06c
                      GHC.Generics.$WSFalse
                        `cast`
                      (Sym (GHC.Generics.N:SingI[0]) <GHC.Types.Bool>_N <'GHC.Types.False>_N)) -}
-5a02845a219a54e415db25fad1a383e7
+eff21f3020f230c80a55944763b6e226
   $fToBSONBool_$sconstructorCount :: GHC.Types.Bool -> GHC.Types.Int
   {- Arity: 1, HasNoCafRefs, Strictness: <L,A>m,
      Unfolding: InlineRule (1, True, False)
@@ -2101,20 +2101,398 @@ bb6920b39ba534b6a83213542a44b06c
                       (Sym (GHC.Generics.Rep_Bool[0])))
                    @ GHC.Prim.Any
                    (GHC.Generics.$fGenericBool_$cfrom @ GHC.Prim.Any x)) -}
-12e1bd8144fb0479fdebd5792c7eccc8
+ccd63352d0929d534dde308d9ee2d1b3
   $fToBSONTask :: Data.Bson.Generic.ToBSON Crawler.Task
   DFunId
   {- Arity: 1, Strictness: <L,1*U(U,U,U)>,
      Inline: INLINE (sat-args=0),
      Unfolding: InlineRule (0, False, True)
-                Crawler.$fToBSONTask_$ctoBSON
+                Crawler.$fToBSONTask_$s$dmtoBSON
                   `cast`
                 (Sym (Data.Bson.Generic.N:ToBSON[0] <Crawler.Task>_N)) -}
-e30801cbd66cf78e79dffb672639adb9
-  $fToBSONTask1 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "Task"#) -}
-b24a24e1ab6b4318e2ee65093378165a
+942061df4dec916d74b4e53757ce1d7b
+  $fToBSONTask1 ::
+    Data.Bson.Generic.GConstructorCount
+      (GHC.Generics.D1
+         ('GHC.Generics.MetaData
+            "Task"
+            "Crawler"
+            "Crawler-0.1.0.0-E2DzjZCiWdrD8VXmujeLY4"
+            'GHC.Types.False)
+         (GHC.Generics.C1
+            ('GHC.Generics.MetaCons
+               "Task" 'GHC.Generics.PrefixI 'GHC.Types.True)
+            (GHC.Generics.S1
+               ('GHC.Generics.MetaSel
+                  ('GHC.Base.Just "tskUsername")
+                  'GHC.Generics.NoSourceUnpackedness
+                  'GHC.Generics.NoSourceStrictness
+                  'GHC.Generics.DecidedLazy)
+               (GHC.Generics.Rec0 GHC.Base.String)
+             GHC.Generics.:*: (GHC.Generics.S1
+                                 ('GHC.Generics.MetaSel
+                                    ('GHC.Base.Just "tskAuthToken")
+                                    'GHC.Generics.NoSourceUnpackedness
+                                    'GHC.Generics.NoSourceStrictness
+                                    'GHC.Generics.DecidedLazy)
+                                 (GHC.Generics.Rec0 GHC.Base.String)
+                               GHC.Generics.:*: GHC.Generics.S1
+                                                  ('GHC.Generics.MetaSel
+                                                     ('GHC.Base.Just "running")
+                                                     'GHC.Generics.NoSourceUnpackedness
+                                                     'GHC.Generics.NoSourceStrictness
+                                                     'GHC.Generics.DecidedLazy)
+                                                  (GHC.Generics.Rec0 GHC.Types.Bool)))))
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>m,
+     Unfolding: InlineRule (0, True, True)
+                Crawler.$fToBSONTask2
+                  `cast`
+                (Sym (Data.Bson.Generic.N:GConstructorCount[0]
+                          <GHC.Generics.D1
+                             ('GHC.Generics.MetaData
+                                "Task"
+                                "Crawler"
+                                "Crawler-0.1.0.0-E2DzjZCiWdrD8VXmujeLY4"
+                                'GHC.Types.False)
+                             (GHC.Generics.M1
+                                GHC.Generics.C
+                                ('GHC.Generics.MetaCons
+                                   "Task" 'GHC.Generics.PrefixI 'GHC.Types.True)
+                                (GHC.Generics.S1
+                                   ('GHC.Generics.MetaSel
+                                      ('GHC.Base.Just "tskUsername")
+                                      'GHC.Generics.NoSourceUnpackedness
+                                      'GHC.Generics.NoSourceStrictness
+                                      'GHC.Generics.DecidedLazy)
+                                   (GHC.Generics.Rec0 GHC.Base.String)
+                                 GHC.Generics.:*: (GHC.Generics.S1
+                                                     ('GHC.Generics.MetaSel
+                                                        ('GHC.Base.Just "tskAuthToken")
+                                                        'GHC.Generics.NoSourceUnpackedness
+                                                        'GHC.Generics.NoSourceStrictness
+                                                        'GHC.Generics.DecidedLazy)
+                                                     (GHC.Generics.Rec0 GHC.Base.String)
+                                                   GHC.Generics.:*: GHC.Generics.S1
+                                                                      ('GHC.Generics.MetaSel
+                                                                         ('GHC.Base.Just "running")
+                                                                         'GHC.Generics.NoSourceUnpackedness
+                                                                         'GHC.Generics.NoSourceStrictness
+                                                                         'GHC.Generics.DecidedLazy)
+                                                                      (GHC.Generics.Rec0
+                                                                         GHC.Types.Bool))))>_N)) -}
+20ea153c07276ad5917b270b34fbe38e
   $fToBSONTask2 ::
+    GHC.Generics.M1
+      GHC.Generics.D
+      ('GHC.Generics.MetaData
+         "Task"
+         "Crawler"
+         "Crawler-0.1.0.0-E2DzjZCiWdrD8VXmujeLY4"
+         'GHC.Types.False)
+      (GHC.Generics.M1
+         GHC.Generics.C
+         ('GHC.Generics.MetaCons
+            "Task" 'GHC.Generics.PrefixI 'GHC.Types.True)
+         (GHC.Generics.S1
+            ('GHC.Generics.MetaSel
+               ('GHC.Base.Just "tskUsername")
+               'GHC.Generics.NoSourceUnpackedness
+               'GHC.Generics.NoSourceStrictness
+               'GHC.Generics.DecidedLazy)
+            (GHC.Generics.Rec0 GHC.Base.String)
+          GHC.Generics.:*: (GHC.Generics.S1
+                              ('GHC.Generics.MetaSel
+                                 ('GHC.Base.Just "tskAuthToken")
+                                 'GHC.Generics.NoSourceUnpackedness
+                                 'GHC.Generics.NoSourceStrictness
+                                 'GHC.Generics.DecidedLazy)
+                              (GHC.Generics.Rec0 GHC.Base.String)
+                            GHC.Generics.:*: GHC.Generics.S1
+                                               ('GHC.Generics.MetaSel
+                                                  ('GHC.Base.Just "running")
+                                                  'GHC.Generics.NoSourceUnpackedness
+                                                  'GHC.Generics.NoSourceStrictness
+                                                  'GHC.Generics.DecidedLazy)
+                                               (GHC.Generics.Rec0 GHC.Types.Bool))))
+      a1
+    -> GHC.Types.Int
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>m,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ a1
+                   (ds :: GHC.Generics.M1
+                            GHC.Generics.D
+                            ('GHC.Generics.MetaData
+                               "Task"
+                               "Crawler"
+                               "Crawler-0.1.0.0-E2DzjZCiWdrD8VXmujeLY4"
+                               'GHC.Types.False)
+                            (GHC.Generics.M1
+                               GHC.Generics.C
+                               ('GHC.Generics.MetaCons
+                                  "Task" 'GHC.Generics.PrefixI 'GHC.Types.True)
+                               (GHC.Generics.S1
+                                  ('GHC.Generics.MetaSel
+                                     ('GHC.Base.Just "tskUsername")
+                                     'GHC.Generics.NoSourceUnpackedness
+                                     'GHC.Generics.NoSourceStrictness
+                                     'GHC.Generics.DecidedLazy)
+                                  (GHC.Generics.Rec0 GHC.Base.String)
+                                GHC.Generics.:*: (GHC.Generics.S1
+                                                    ('GHC.Generics.MetaSel
+                                                       ('GHC.Base.Just "tskAuthToken")
+                                                       'GHC.Generics.NoSourceUnpackedness
+                                                       'GHC.Generics.NoSourceStrictness
+                                                       'GHC.Generics.DecidedLazy)
+                                                    (GHC.Generics.Rec0 GHC.Base.String)
+                                                  GHC.Generics.:*: GHC.Generics.S1
+                                                                     ('GHC.Generics.MetaSel
+                                                                        ('GHC.Base.Just "running")
+                                                                        'GHC.Generics.NoSourceUnpackedness
+                                                                        'GHC.Generics.NoSourceStrictness
+                                                                        'GHC.Generics.DecidedLazy)
+                                                                     (GHC.Generics.Rec0
+                                                                        GHC.Types.Bool))))
+                            a1) ->
+                 Data.Bson.Generic.$dmfromBSON1) -}
+00e91e51f029e00da9dc45338d80d240
+  $fToBSONTask3 ::
+    Data.Bson.Generic.GToBSON
+      (GHC.Generics.D1
+         ('GHC.Generics.MetaData
+            "Task"
+            "Crawler"
+            "Crawler-0.1.0.0-E2DzjZCiWdrD8VXmujeLY4"
+            'GHC.Types.False)
+         (GHC.Generics.C1
+            ('GHC.Generics.MetaCons
+               "Task" 'GHC.Generics.PrefixI 'GHC.Types.True)
+            (GHC.Generics.S1
+               ('GHC.Generics.MetaSel
+                  ('GHC.Base.Just "tskUsername")
+                  'GHC.Generics.NoSourceUnpackedness
+                  'GHC.Generics.NoSourceStrictness
+                  'GHC.Generics.DecidedLazy)
+               (GHC.Generics.Rec0 GHC.Base.String)
+             GHC.Generics.:*: (GHC.Generics.S1
+                                 ('GHC.Generics.MetaSel
+                                    ('GHC.Base.Just "tskAuthToken")
+                                    'GHC.Generics.NoSourceUnpackedness
+                                    'GHC.Generics.NoSourceStrictness
+                                    'GHC.Generics.DecidedLazy)
+                                 (GHC.Generics.Rec0 GHC.Base.String)
+                               GHC.Generics.:*: GHC.Generics.S1
+                                                  ('GHC.Generics.MetaSel
+                                                     ('GHC.Base.Just "running")
+                                                     'GHC.Generics.NoSourceUnpackedness
+                                                     'GHC.Generics.NoSourceStrictness
+                                                     'GHC.Generics.DecidedLazy)
+                                                  (GHC.Generics.Rec0 GHC.Types.Bool)))))
+  {- Arity: 2, Strictness: <S(S),1*U(U)><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Crawler.$fToBSONTask4
+                  `cast`
+                (Sym (Data.Bson.Generic.N:GToBSON[0]
+                          <GHC.Generics.D1
+                             ('GHC.Generics.MetaData
+                                "Task"
+                                "Crawler"
+                                "Crawler-0.1.0.0-E2DzjZCiWdrD8VXmujeLY4"
+                                'GHC.Types.False)
+                             (GHC.Generics.M1
+                                GHC.Generics.C
+                                ('GHC.Generics.MetaCons
+                                   "Task" 'GHC.Generics.PrefixI 'GHC.Types.True)
+                                (GHC.Generics.S1
+                                   ('GHC.Generics.MetaSel
+                                      ('GHC.Base.Just "tskUsername")
+                                      'GHC.Generics.NoSourceUnpackedness
+                                      'GHC.Generics.NoSourceStrictness
+                                      'GHC.Generics.DecidedLazy)
+                                   (GHC.Generics.Rec0 GHC.Base.String)
+                                 GHC.Generics.:*: (GHC.Generics.S1
+                                                     ('GHC.Generics.MetaSel
+                                                        ('GHC.Base.Just "tskAuthToken")
+                                                        'GHC.Generics.NoSourceUnpackedness
+                                                        'GHC.Generics.NoSourceStrictness
+                                                        'GHC.Generics.DecidedLazy)
+                                                     (GHC.Generics.Rec0 GHC.Base.String)
+                                                   GHC.Generics.:*: GHC.Generics.S1
+                                                                      ('GHC.Generics.MetaSel
+                                                                         ('GHC.Base.Just "running")
+                                                                         'GHC.Generics.NoSourceUnpackedness
+                                                                         'GHC.Generics.NoSourceStrictness
+                                                                         'GHC.Generics.DecidedLazy)
+                                                                      (GHC.Generics.Rec0
+                                                                         GHC.Types.Bool))))>_N)) -}
+037092740e5182ad6365f456e9363b9d
+  $fToBSONTask4 ::
+    GHC.Types.Int
+    -> GHC.Generics.M1
+         GHC.Generics.D
+         ('GHC.Generics.MetaData
+            "Task"
+            "Crawler"
+            "Crawler-0.1.0.0-E2DzjZCiWdrD8VXmujeLY4"
+            'GHC.Types.False)
+         (GHC.Generics.M1
+            GHC.Generics.C
+            ('GHC.Generics.MetaCons
+               "Task" 'GHC.Generics.PrefixI 'GHC.Types.True)
+            (GHC.Generics.S1
+               ('GHC.Generics.MetaSel
+                  ('GHC.Base.Just "tskUsername")
+                  'GHC.Generics.NoSourceUnpackedness
+                  'GHC.Generics.NoSourceStrictness
+                  'GHC.Generics.DecidedLazy)
+               (GHC.Generics.Rec0 GHC.Base.String)
+             GHC.Generics.:*: (GHC.Generics.S1
+                                 ('GHC.Generics.MetaSel
+                                    ('GHC.Base.Just "tskAuthToken")
+                                    'GHC.Generics.NoSourceUnpackedness
+                                    'GHC.Generics.NoSourceStrictness
+                                    'GHC.Generics.DecidedLazy)
+                                 (GHC.Generics.Rec0 GHC.Base.String)
+                               GHC.Generics.:*: GHC.Generics.S1
+                                                  ('GHC.Generics.MetaSel
+                                                     ('GHC.Base.Just "running")
+                                                     'GHC.Generics.NoSourceUnpackedness
+                                                     'GHC.Generics.NoSourceStrictness
+                                                     'GHC.Generics.DecidedLazy)
+                                                  (GHC.Generics.Rec0 GHC.Types.Bool))))
+         a1
+    -> Data.Bson.Document
+  {- Arity: 2, Strictness: <S(S),1*U(U)><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a1
+                   (n :: GHC.Types.Int)
+                   (ds :: GHC.Generics.M1
+                            GHC.Generics.D
+                            ('GHC.Generics.MetaData
+                               "Task"
+                               "Crawler"
+                               "Crawler-0.1.0.0-E2DzjZCiWdrD8VXmujeLY4"
+                               'GHC.Types.False)
+                            (GHC.Generics.M1
+                               GHC.Generics.C
+                               ('GHC.Generics.MetaCons
+                                  "Task" 'GHC.Generics.PrefixI 'GHC.Types.True)
+                               (GHC.Generics.S1
+                                  ('GHC.Generics.MetaSel
+                                     ('GHC.Base.Just "tskUsername")
+                                     'GHC.Generics.NoSourceUnpackedness
+                                     'GHC.Generics.NoSourceStrictness
+                                     'GHC.Generics.DecidedLazy)
+                                  (GHC.Generics.Rec0 GHC.Base.String)
+                                GHC.Generics.:*: (GHC.Generics.S1
+                                                    ('GHC.Generics.MetaSel
+                                                       ('GHC.Base.Just "tskAuthToken")
+                                                       'GHC.Generics.NoSourceUnpackedness
+                                                       'GHC.Generics.NoSourceStrictness
+                                                       'GHC.Generics.DecidedLazy)
+                                                    (GHC.Generics.Rec0 GHC.Base.String)
+                                                  GHC.Generics.:*: GHC.Generics.S1
+                                                                     ('GHC.Generics.MetaSel
+                                                                        ('GHC.Base.Just "running")
+                                                                        'GHC.Generics.NoSourceUnpackedness
+                                                                        'GHC.Generics.NoSourceStrictness
+                                                                        'GHC.Generics.DecidedLazy)
+                                                                     (GHC.Generics.Rec0
+                                                                        GHC.Types.Bool))))
+                            a1) ->
+                 case n of ww { GHC.Types.I# ww1 ->
+                 Data.Bson.Generic.$w$cgenericToBSON1
+                   @ (GHC.Generics.S1
+                        ('GHC.Generics.MetaSel
+                           ('GHC.Base.Just "tskUsername")
+                           'GHC.Generics.NoSourceUnpackedness
+                           'GHC.Generics.NoSourceStrictness
+                           'GHC.Generics.DecidedLazy)
+                        (GHC.Generics.Rec0 GHC.Base.String)
+                      GHC.Generics.:*: (GHC.Generics.S1
+                                          ('GHC.Generics.MetaSel
+                                             ('GHC.Base.Just "tskAuthToken")
+                                             'GHC.Generics.NoSourceUnpackedness
+                                             'GHC.Generics.NoSourceStrictness
+                                             'GHC.Generics.DecidedLazy)
+                                          (GHC.Generics.Rec0 GHC.Base.String)
+                                        GHC.Generics.:*: GHC.Generics.S1
+                                                           ('GHC.Generics.MetaSel
+                                                              ('GHC.Base.Just "running")
+                                                              'GHC.Generics.NoSourceUnpackedness
+                                                              'GHC.Generics.NoSourceStrictness
+                                                              'GHC.Generics.DecidedLazy)
+                                                           (GHC.Generics.Rec0 GHC.Types.Bool)))
+                   @ ('GHC.Generics.MetaCons
+                        "Task" 'GHC.Generics.PrefixI 'GHC.Types.True)
+                   Crawler.$fToBSONTask6
+                     `cast`
+                   (Sym (Data.Bson.Generic.N:GToBSON[0]
+                             <GHC.Generics.M1
+                                GHC.Generics.S
+                                ('GHC.Generics.MetaSel
+                                   ('GHC.Base.Just "tskUsername")
+                                   'GHC.Generics.NoSourceUnpackedness
+                                   'GHC.Generics.NoSourceStrictness
+                                   'GHC.Generics.DecidedLazy)
+                                (GHC.Generics.Rec0 GHC.Base.String)
+                              GHC.Generics.:*: (GHC.Generics.S1
+                                                  ('GHC.Generics.MetaSel
+                                                     ('GHC.Base.Just "tskAuthToken")
+                                                     'GHC.Generics.NoSourceUnpackedness
+                                                     'GHC.Generics.NoSourceStrictness
+                                                     'GHC.Generics.DecidedLazy)
+                                                  (GHC.Generics.Rec0 GHC.Base.String)
+                                                GHC.Generics.:*: GHC.Generics.S1
+                                                                   ('GHC.Generics.MetaSel
+                                                                      ('GHC.Base.Just "running")
+                                                                      'GHC.Generics.NoSourceUnpackedness
+                                                                      'GHC.Generics.NoSourceStrictness
+                                                                      'GHC.Generics.DecidedLazy)
+                                                                   (GHC.Generics.Rec0
+                                                                      GHC.Types.Bool))>_N))
+                   Crawler.$fToBSONTask_$s$fConstructorMetaMetaCons
+                   @ a1
+                   ww1
+                   ds
+                     `cast`
+                   (GHC.Generics.N:M1[0]
+                        <GHC.Generics.D>_P
+                        <'GHC.Generics.MetaData
+                           "Task"
+                           "Crawler"
+                           "Crawler-0.1.0.0-E2DzjZCiWdrD8VXmujeLY4"
+                           'GHC.Types.False>_P
+                        <GHC.Generics.M1
+                           GHC.Generics.C
+                           ('GHC.Generics.MetaCons
+                              "Task" 'GHC.Generics.PrefixI 'GHC.Types.True)
+                           (GHC.Generics.S1
+                              ('GHC.Generics.MetaSel
+                                 ('GHC.Base.Just "tskUsername")
+                                 'GHC.Generics.NoSourceUnpackedness
+                                 'GHC.Generics.NoSourceStrictness
+                                 'GHC.Generics.DecidedLazy)
+                              (GHC.Generics.Rec0 GHC.Base.String)
+                            GHC.Generics.:*: (GHC.Generics.S1
+                                                ('GHC.Generics.MetaSel
+                                                   ('GHC.Base.Just "tskAuthToken")
+                                                   'GHC.Generics.NoSourceUnpackedness
+                                                   'GHC.Generics.NoSourceStrictness
+                                                   'GHC.Generics.DecidedLazy)
+                                                (GHC.Generics.Rec0 GHC.Base.String)
+                                              GHC.Generics.:*: GHC.Generics.S1
+                                                                 ('GHC.Generics.MetaSel
+                                                                    ('GHC.Base.Just "running")
+                                                                    'GHC.Generics.NoSourceUnpackedness
+                                                                    'GHC.Generics.NoSourceStrictness
+                                                                    'GHC.Generics.DecidedLazy)
+                                                                 (GHC.Generics.Rec0
+                                                                    GHC.Types.Bool)))>_R <a1>_N) }) -}
+1fa91f50ca55c92d0ff4be5f8146e88b
+  $fToBSONTask5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Task"#) -}
+16b065ab19998e7d948910aaf6d9239c
+  $fToBSONTask6 ::
     GHC.Types.Int
     -> (GHC.Generics.:*:)
          (GHC.Generics.M1
@@ -2172,8 +2550,8 @@ b24a24e1ab6b4318e2ee65093378165a
                             a1) ->
                  case w1 of ww { GHC.Generics.:*: ww1 ww2 ->
                  Crawler.$w$dGToBSON1 @ a1 ww1 ww2 }) -}
-5b44d37738ed0b69130a7cf0054ca072
-  $fToBSONTask3 ::
+d7ec24d43f297ab887dc6d87fef0f199
+  $fToBSONTask7 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld,
           Data.Text.Internal.Text #)
@@ -2190,8 +2568,8 @@ b24a24e1ab6b4318e2ee65093378165a
                    Crawler.$fFromBSONTask5
                    0#
                    ipv }) -}
-0c705507efcf7663cf4541b36e88493a
-  $fToBSONTask4 ::
+9e93372b6ef0ded28a4c159bbd283709
+  $fToBSONTask8 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld,
           Data.Text.Internal.Text #)
@@ -2208,8 +2586,8 @@ b24a24e1ab6b4318e2ee65093378165a
                    Crawler.$fFromBSONTask9
                    0#
                    ipv }) -}
-3fe5e02f55ff03f159c84b2810b71523
-  $fToBSONTask5 ::
+d30627152320bfd065d50f04f743ef06
+  $fToBSONTask9 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld,
           Data.Text.Internal.Text #)
@@ -2226,102 +2604,18 @@ b24a24e1ab6b4318e2ee65093378165a
                    Crawler.$fFromBSONTask13
                    0#
                    ipv }) -}
-12e1bd8144fb0479fdebd5792c7eccc8
-  $fToBSONTask_$ctoBSON :: Crawler.Task -> Data.Bson.Document
+ccd63352d0929d534dde308d9ee2d1b3
+  $fToBSONTask_$s$dmtoBSON :: Crawler.Task -> Data.Bson.Document
   {- Arity: 1, Strictness: <L,1*U(U,U,U)>,
-     Unfolding: InlineRule (1, True, False)
+     Unfolding: InlineRule (-4, True, False)
                 (\ (a1 :: Crawler.Task) ->
-                 Data.Bson.Generic.$w$cgenericToBSON1
-                   @ (GHC.Generics.S1
-                        ('GHC.Generics.MetaSel
-                           ('GHC.Base.Just "tskUsername")
-                           'GHC.Generics.NoSourceUnpackedness
-                           'GHC.Generics.NoSourceStrictness
-                           'GHC.Generics.DecidedLazy)
-                        (GHC.Generics.Rec0 GHC.Base.String)
-                      GHC.Generics.:*: (GHC.Generics.S1
-                                          ('GHC.Generics.MetaSel
-                                             ('GHC.Base.Just "tskAuthToken")
-                                             'GHC.Generics.NoSourceUnpackedness
-                                             'GHC.Generics.NoSourceStrictness
-                                             'GHC.Generics.DecidedLazy)
-                                          (GHC.Generics.Rec0 GHC.Base.String)
-                                        GHC.Generics.:*: GHC.Generics.S1
-                                                           ('GHC.Generics.MetaSel
-                                                              ('GHC.Base.Just "running")
-                                                              'GHC.Generics.NoSourceUnpackedness
-                                                              'GHC.Generics.NoSourceStrictness
-                                                              'GHC.Generics.DecidedLazy)
-                                                           (GHC.Generics.Rec0 GHC.Types.Bool)))
-                   @ ('GHC.Generics.MetaCons
-                        "Task" 'GHC.Generics.PrefixI 'GHC.Types.True)
-                   Crawler.$fToBSONTask2
-                     `cast`
-                   (Sym (Data.Bson.Generic.N:GToBSON[0]
-                             <GHC.Generics.M1
-                                GHC.Generics.S
-                                ('GHC.Generics.MetaSel
-                                   ('GHC.Base.Just "tskUsername")
-                                   'GHC.Generics.NoSourceUnpackedness
-                                   'GHC.Generics.NoSourceStrictness
-                                   'GHC.Generics.DecidedLazy)
-                                (GHC.Generics.Rec0 GHC.Base.String)
-                              GHC.Generics.:*: (GHC.Generics.S1
-                                                  ('GHC.Generics.MetaSel
-                                                     ('GHC.Base.Just "tskAuthToken")
-                                                     'GHC.Generics.NoSourceUnpackedness
-                                                     'GHC.Generics.NoSourceStrictness
-                                                     'GHC.Generics.DecidedLazy)
-                                                  (GHC.Generics.Rec0 GHC.Base.String)
-                                                GHC.Generics.:*: GHC.Generics.S1
-                                                                   ('GHC.Generics.MetaSel
-                                                                      ('GHC.Base.Just "running")
-                                                                      'GHC.Generics.NoSourceUnpackedness
-                                                                      'GHC.Generics.NoSourceStrictness
-                                                                      'GHC.Generics.DecidedLazy)
-                                                                   (GHC.Generics.Rec0
-                                                                      GHC.Types.Bool))>_N))
-                   Crawler.$fToBSONTask_$s$fConstructorMetaMetaCons
+                 Crawler.$fToBSONTask3
+                   `cast`
+                 (Data.Bson.Generic.N:GToBSON[0] (Sym (Crawler.Rep_Task[0])))
                    @ GHC.Prim.Any
-                   1#
-                   (Crawler.$fGenericTask_$cfrom @ GHC.Prim.Any a1)
-                     `cast`
-                   (Trans
-                        (Sub (Crawler.Rep_Task[0]))
-                        (GHC.Generics.N:M1[0]
-                             <GHC.Generics.D>_P
-                             <'GHC.Generics.MetaData
-                                "Task"
-                                "Crawler"
-                                "Crawler-0.1.0.0-9xSvQ0HWqlG1rgWKIvrrEA"
-                                'GHC.Types.False>_P
-                             <GHC.Generics.M1
-                                GHC.Generics.C
-                                ('GHC.Generics.MetaCons
-                                   "Task" 'GHC.Generics.PrefixI 'GHC.Types.True)
-                                (GHC.Generics.S1
-                                   ('GHC.Generics.MetaSel
-                                      ('GHC.Base.Just "tskUsername")
-                                      'GHC.Generics.NoSourceUnpackedness
-                                      'GHC.Generics.NoSourceStrictness
-                                      'GHC.Generics.DecidedLazy)
-                                   (GHC.Generics.Rec0 GHC.Base.String)
-                                 GHC.Generics.:*: (GHC.Generics.S1
-                                                     ('GHC.Generics.MetaSel
-                                                        ('GHC.Base.Just "tskAuthToken")
-                                                        'GHC.Generics.NoSourceUnpackedness
-                                                        'GHC.Generics.NoSourceStrictness
-                                                        'GHC.Generics.DecidedLazy)
-                                                     (GHC.Generics.Rec0 GHC.Base.String)
-                                                   GHC.Generics.:*: GHC.Generics.S1
-                                                                      ('GHC.Generics.MetaSel
-                                                                         ('GHC.Base.Just "running")
-                                                                         'GHC.Generics.NoSourceUnpackedness
-                                                                         'GHC.Generics.NoSourceStrictness
-                                                                         'GHC.Generics.DecidedLazy)
-                                                                      (GHC.Generics.Rec0
-                                                                         GHC.Types.Bool)))>_R) <GHC.Prim.Any>_N)) -}
-46ad6e5b5824633fc47609ec501a60fa
+                   (Crawler.$fToBSONTask_$sconstructorCount a1)
+                   (Crawler.$fGenericTask_$cfrom @ GHC.Prim.Any a1)) -}
+f764f8074ded09ea300cfe665ba88e04
   $fToBSONTask_$s$fConstructorMetaMetaCons ::
     GHC.Generics.Constructor
       ('GHC.Generics.MetaCons
@@ -2335,7 +2629,7 @@ b24a24e1ab6b4318e2ee65093378165a
                      @ "Task"
                      @ 'GHC.Generics.PrefixI
                      @ 'GHC.Types.True
-                     Crawler.$fToBSONTask1
+                     Crawler.$fToBSONTask5
                        `cast`
                      (Trans
                           (Sym (GHC.TypeLits.N:SSymbol[0] <"Task">_P))
@@ -2350,7 +2644,7 @@ b24a24e1ab6b4318e2ee65093378165a
                      @ "Task"
                      @ 'GHC.Generics.PrefixI
                      @ 'GHC.Types.True
-                     Crawler.$fToBSONTask1
+                     Crawler.$fToBSONTask5
                        `cast`
                      (Trans
                           (Sym (GHC.TypeLits.N:SSymbol[0] <"Task">_P))
@@ -2365,7 +2659,7 @@ b24a24e1ab6b4318e2ee65093378165a
                      @ "Task"
                      @ 'GHC.Generics.PrefixI
                      @ 'GHC.Types.True
-                     Crawler.$fToBSONTask1
+                     Crawler.$fToBSONTask5
                        `cast`
                      (Trans
                           (Sym (GHC.TypeLits.N:SSymbol[0] <"Task">_P))
@@ -2376,7 +2670,18 @@ b24a24e1ab6b4318e2ee65093378165a
                      GHC.Generics.$WSTrue
                        `cast`
                      (Sym (GHC.Generics.N:SingI[0]) <GHC.Types.Bool>_N <'GHC.Types.True>_N)) -}
-12e1bd8144fb0479fdebd5792c7eccc8
+ccd63352d0929d534dde308d9ee2d1b3
+  $fToBSONTask_$sconstructorCount :: Crawler.Task -> GHC.Types.Int
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Crawler.Task) ->
+                 Crawler.$fToBSONTask1
+                   `cast`
+                 (Data.Bson.Generic.N:GConstructorCount[0]
+                      (Sym (Crawler.Rep_Task[0])))
+                   @ GHC.Prim.Any
+                   (Crawler.$fGenericTask_$cfrom @ GHC.Prim.Any x)) -}
+ccd63352d0929d534dde308d9ee2d1b3
   $fToJSONTask :: Data.Aeson.Types.Class.ToJSON Crawler.Task
   DFunId
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -2384,7 +2689,7 @@ b24a24e1ab6b4318e2ee65093378165a
                   @ Crawler.Task
                   Crawler.$fToJSONTask_$ctoJSON
                   Crawler.$fToJSONTask_$ctoEncoding -}
-12e1bd8144fb0479fdebd5792c7eccc8
+ccd63352d0929d534dde308d9ee2d1b3
   $fToJSONTask1 ::
     Crawler.Task
     -> Data.Aeson.Types.Generic.Tagged
@@ -2479,7 +2784,7 @@ b24a24e1ab6b4318e2ee65093378165a
                  (Sym (Data.Aeson.Types.Generic.N:Tagged[0]
                            <Data.Aeson.Types.Generic.True>_P
                            <Data.Aeson.Types.Internal.Value>_R)) } }) -}
-6c7f60d560b4407d58df4fdae68567f0
+715c58eeaf23d00cefa85030c05a403e
   $fToJSONTask2 ::
     Data.Aeson.Types.Internal.Options
     -> GHC.Generics.K1 GHC.Generics.R GHC.Types.Bool a1
@@ -2494,7 +2799,7 @@ b24a24e1ab6b4318e2ee65093378165a
                      `cast`
                    (GHC.Generics.N:K1[0]
                         <GHC.Generics.R>_P <GHC.Types.Bool>_R <a1>_P)) -}
-752aca48a71b9599a93f20ebd6c153c7
+4a8eb194659ef5d24b382fa807de867b
   $fToJSONTask3 ::
     Data.Aeson.Types.Internal.Options
     -> GHC.Generics.K1 GHC.Generics.R [GHC.Types.Char] a1
@@ -2506,10 +2811,10 @@ b24a24e1ab6b4318e2ee65093378165a
                    (w1 :: GHC.Generics.K1 GHC.Generics.R [GHC.Types.Char] a1) ->
                  case Crawler.$w$dGToJSON @ a1 w1 of ww { Unit# ww1 ->
                  Data.Aeson.Types.Internal.String ww1 }) -}
-a5cd345c4ff45398853f3a449cdf2da2
+672a53b327a3b86a0b9426e7be2560b7
   $fToJSONTask4 :: GHC.Types.Int
   {- HasNoCafRefs, Unfolding: (GHC.Types.I# 4#) -}
-12e1bd8144fb0479fdebd5792c7eccc8
+ccd63352d0929d534dde308d9ee2d1b3
   $fToJSONTask_$ctoEncoding ::
     Crawler.Task -> Data.Aeson.Types.Internal.Encoding
   {- Arity: 1, Strictness: <S,1*U(U,U,U)>,
@@ -2521,7 +2826,7 @@ a5cd345c4ff45398853f3a449cdf2da2
                   `cast`
                 (<Crawler.Task>_R
                  ->_R Sym (Data.Aeson.Types.Internal.N:Encoding[0])) -}
-12e1bd8144fb0479fdebd5792c7eccc8
+ccd63352d0929d534dde308d9ee2d1b3
   $fToJSONTask_$ctoJSON ::
     Crawler.Task -> Data.Aeson.Types.Internal.Value
   {- Arity: 1, Strictness: <S,1*U(U,U,U)>m1,
@@ -2532,7 +2837,7 @@ a5cd345c4ff45398853f3a449cdf2da2
                  ->_R Data.Aeson.Types.Generic.N:Tagged[0]
                           <Data.Aeson.Types.Generic.True>_P
                           <Data.Aeson.Types.Internal.Value>_R) -}
-80638927f3d5abade9981fe47d9cd77f
+4669afd38ceedc5c585c4855ab9f7e9a
   $s$fAllCTRender:a ::
     Servant.API.ContentTypes.AllCTRender
       '[Servant.API.ContentTypes.JSON] CommonResources.Response
@@ -2564,14 +2869,14 @@ a5cd345c4ff45398853f3a449cdf2da2
                        `cast`
                      (Sym (Servant.API.ContentTypes.N:AllMime[0] <'[]>_N))
                      Crawler.$s$fAllCTRender:a1) -}
-ce5c488ff3e52f1d7f5b948e68168b39
+3e9a195e408efd6314227ab2d80ec696
   $s$fAllCTRender:a1 ::
     Servant.API.ContentTypes.AllMimeRender
       '[Servant.API.ContentTypes.JSON] CommonResources.Response
   {- Strictness: m,
      Unfolding: InlineRule (0, True, True)
                 Crawler.$s$fAllCTRender:a_$s$fAllMimeRender:a0 -}
-33f9d93980fcab99baba172f55af97ae
+bc1193150410f5b64ec28b08395c83f2
   $s$fAllCTRender:a2 ::
     Data.Proxy.Proxy '[Servant.API.ContentTypes.JSON]
     -> CommonResources.Response
@@ -2595,14 +2900,14 @@ ce5c488ff3e52f1d7f5b948e68168b39
                    (GHC.Types.[]
                       @ (Network.HTTP.Media.MediaType.Internal.MediaType,
                          Data.ByteString.Lazy.Internal.ByteString))) -}
-fdba04a61076dc733e6adc3d23ed4aef
+899f129a51b31190b743d0c176a64335
   $s$fAllCTRender:a3 ::
     Servant.API.ContentTypes.MimeRender
       Servant.API.ContentTypes.JSON CommonResources.Response
   {- Strictness: m,
      Unfolding: InlineRule (0, True, True)
                 Crawler.$s$fAllCTRender:a_$s$fMimeRenderTYPEJSONa -}
-9a28aca2d87583f21e9c799fa9d512d4
+fc8762e63cfef75496192fb7e77ef770
   $s$fAllCTRender:a_$s$fAllMimeRender:a0 ::
     Servant.API.ContentTypes.AllMimeRender
       '[Servant.API.ContentTypes.JSON] CommonResources.Response
@@ -2615,7 +2920,7 @@ fdba04a61076dc733e6adc3d23ed4aef
                      @ CommonResources.Response
                      Crawler.$s$fAllCTRender:a3)
                   Crawler.$s$fAllCTRender:a2 -}
-6f0ad00c369f41cb9fe3c6c1952ed612
+fcececf7286f35b01e41a9436d2704be
   $s$fAllCTRender:a_$s$fMimeRenderTYPEJSONa ::
     Servant.API.ContentTypes.MimeRender
       Servant.API.ContentTypes.JSON CommonResources.Response
@@ -2628,7 +2933,7 @@ fdba04a61076dc733e6adc3d23ed4aef
                      @ CommonResources.Response
                      CommonResources.$fToJSONResponse)
                   Crawler.$s$fAllCTRender:a_$s$fMimeRenderTYPEJSONa_$cmimeRender -}
-fe1cb25be672570edfafcaf4b2fe6476
+0f6f67d14906c894d8ff7aa8aec03065
   $s$fAllCTRender:a_$s$fMimeRenderTYPEJSONa_$cmimeRender ::
     Data.Proxy.Proxy Servant.API.ContentTypes.JSON
     -> CommonResources.Response
@@ -2643,7 +2948,7 @@ fe1cb25be672570edfafcaf4b2fe6476
                          (CommonResources.$fToJSONResponse_$ctoJSON eta))
                         `cast`
                       (Sym (Data.Aeson.Types.Internal.N:Encoding[0])))) -}
-035ba320f3dadbf19d67498838ed02c5
+f98132753b2a17c2b5d210a0ab816ec0
   $s$fAllMimeUnrender:a ::
     Servant.API.ContentTypes.AllMimeUnrender
       '[Servant.API.ContentTypes.JSON] CommonResources.User
@@ -2665,14 +2970,14 @@ fe1cb25be672570edfafcaf4b2fe6476
                      Crawler.$s$fAllMimeUnrender:a1
                      (Servant.API.ContentTypes.$fAllMimeUnrender[]a
                         @ CommonResources.User)) -}
-39f215bac71f5ac10dfacc9c24ed6318
+d582d0e91d4673219372c383ea9d1e86
   $s$fAllMimeUnrender:a1 ::
     Servant.API.ContentTypes.MimeUnrender
       Servant.API.ContentTypes.JSON CommonResources.User
   {- Strictness: m,
      Unfolding: InlineRule (0, True, True)
                 Crawler.$s$fAllMimeUnrender:a_$s$fMimeUnrenderTYPEJSONa -}
-7a7f2a3bf58cb2cab074ed57ff7ba253
+cfa139ddb71d3cc583567c33705a94f9
   $s$fAllMimeUnrender:a_$s$fMimeUnrenderTYPEJSONa ::
     Servant.API.ContentTypes.MimeUnrender
       Servant.API.ContentTypes.JSON CommonResources.User
@@ -2688,7 +2993,7 @@ fe1cb25be672570edfafcaf4b2fe6476
                      (Sym (Data.Aeson.Types.Class.N:FromJSON[0]
                                <CommonResources.User>_N)))
                   Crawler.$s$fAllMimeUnrender:a_$s$fMimeUnrenderTYPEJSONa_$cmimeUnrender -}
-f551b2034762e4c4d5f9ef578ad757e1
+f9ae53b01b2b3dc9db23b787ea2bb9c6
   $s$fAllMimeUnrender:a_$s$fMimeUnrenderTYPEJSONa_$cmimeUnrender ::
     Data.Proxy.Proxy Servant.API.ContentTypes.JSON
     -> Data.ByteString.Lazy.Internal.ByteString
@@ -2704,7 +3009,7 @@ f551b2034762e4c4d5f9ef578ad757e1
                    (Sym (Data.Aeson.Types.Class.N:FromJSON[0]
                              <CommonResources.User>_N))
                    eta) -}
-204b851ada9223c21aec7c4a57b81948
+b132337503f37260a60e2db204baa93d
   $sinsert_$sgo10 ::
     Data.Text.Internal.Text
     -> a1
@@ -2719,7 +3024,7 @@ f551b2034762e4c4d5f9ef578ad757e1
                    (w2 :: Data.Map.Base.Map Data.Text.Internal.Text a1) ->
                  case w of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
                  Crawler.$w$sgo10 @ a1 ww1 ww2 ww3 w1 w2 }) -}
-6513120e374a5a8cf1a6c0272f56bb05
+76c11e242217c1d80222b4687dd50698
   $slookup1 ::
     Data.Text.Internal.Text
     -> Data.Map.Base.Map Data.Text.Internal.Text a -> GHC.Base.Maybe a
@@ -2731,7 +3036,7 @@ f551b2034762e4c4d5f9ef578ad757e1
                    (w1 :: Data.Map.Base.Map Data.Text.Internal.Text a) ->
                  case w of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
                  Crawler.$wpoly_go10 @ a ww1 ww2 ww3 w1 }) -}
-f6f05423ad14c37456c1c4a86a604ab6
+dfc1b0b7d08dd67ef598b4d1402cafcb
   $sserve2 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld,
@@ -2749,10 +3054,10 @@ f6f05423ad14c37456c1c4a86a604ab6
                    Crawler.$sserve3
                    0#
                    ipv }) -}
-23565e74504664a0b8537e5e56733648
+a306044844496ddb4af534795d0f3299
   $sserve3 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "kill"#) -}
-491a9e2dc3a0db25250f623a67e6e276
+0988d548a7cfff83d6b30f0ae6f7bfa2
   $sserve4 ::
     Data.Proxy.Proxy
       (Servant.API.Verbs.Verb
@@ -2807,10 +3112,10 @@ f6f05423ad14c37456c1c4a86a604ab6
                            200
                            '[Servant.API.ContentTypes.JSON]
                            CommonResources.Response)) }) -}
-fcb52daab920a9bc9d39a60d1dae34fd
+4c76757218f36f06fb281ecefd6277c9
   $sserve5 :: GHC.Integer.Type.Integer
   {- HasNoCafRefs, Unfolding: (200) -}
-0044edcf7b2a7712f6af8a606156e63c
+3823a7361f9b47e5a8c3374865c02070
   $sserve6 ::
     Data.Proxy.Proxy '[Servant.API.ContentTypes.JSON]
     -> Data.ByteString.Lazy.Internal.ByteString
@@ -2828,7 +3133,7 @@ fcb52daab920a9bc9d39a60d1dae34fd
                    Crawler.$s$fAllMimeUnrender:a
                    w2
                    w3) -}
-bb484fa344f160903058a04d18dbf20b
+a7da96247c44a4efd820904c961cdd4b
   $sserve7 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld,
@@ -2846,73 +3151,73 @@ bb484fa344f160903058a04d18dbf20b
                    Crawler.$sserve8
                    0#
                    ipv }) -}
-7660b2754f5a01a81cf13a540eaf88ca
+80de47291231fa4b439460f7ede1c877
   $sserve8 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "init"#) -}
-40a1a5146bd63acce91de79ee72f9d52
+c81e124967c8ec64d277fca78d15c033
   $tc'State :: GHC.Types.TyCon
   {- HasNoCafRefs, Strictness: m,
      Unfolding: (GHC.Types.TyCon
-                   4811569558925001381##
-                   3157801032553486532##
+                   3802501043759881279##
+                   6500710745943926702##
                    Crawler.$trModule
                    Crawler.$tc'State1) -}
-a406af08e224d40da5a8b9ce3be87241
+16db4b6ea924baf44bb300d8b9b5945c
   $tc'State1 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "'State"#) -}
-7ae7a021ddeb41cdd7dcec1b1ddb75f0
+077290432860832ff59b9c355189eace
   $tc'Task :: GHC.Types.TyCon
   {- HasNoCafRefs, Strictness: m,
      Unfolding: (GHC.Types.TyCon
-                   16008268505069971996##
-                   9386746688662511043##
+                   491485180717914745##
+                   17955412236829939766##
                    Crawler.$trModule
                    Crawler.$tc'Task1) -}
-55b04814d1695439f5c3be508432cc6e
+36ce6760367d3f1b9a23af1c7a142da1
   $tc'Task1 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "'Task"#) -}
-34dbbe92978b4f491d1617e30adc62df
+8bcb96743b1f65fb8b9df960a5645693
   $tcState :: GHC.Types.TyCon
   {- HasNoCafRefs, Strictness: m,
      Unfolding: (GHC.Types.TyCon
-                   4377824750643116357##
-                   1309018025249518500##
+                   5329579542023814974##
+                   15468859927110755887##
                    Crawler.$trModule
                    Crawler.$tcState1) -}
-5a4bec44ae762fdf11228e6a73fef08b
+22bcc5e298a0a56347af5152ea37d5a7
   $tcState1 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "State"#) -}
-d84310c61e06a6c76fcd4abe96fb1d3f
+c28ac29ca8477dc7708b27cd8dd5f343
   $tcTask :: GHC.Types.TyCon
   {- HasNoCafRefs, Strictness: m,
      Unfolding: (GHC.Types.TyCon
-                   13533429842582058867##
-                   15002014102734096123##
+                   3861397538471137439##
+                   5908385945704725476##
                    Crawler.$trModule
                    Crawler.$tcTask1) -}
-89f2ec99fa5aa051dacb2ff82d227bed
+4c4ea25700c7640dacdf08fccdae8b2d
   $tcTask1 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "Task"#) -}
-63916454c973fe68a24e1f0dc7bab4e2
+a06cc8558daffa5adc642dcee7dfdf84
   $trModule :: GHC.Types.Module
   {- HasNoCafRefs, Strictness: m,
      Unfolding: (GHC.Types.Module
                    Crawler.$trModule2
                    Crawler.$trModule1) -}
-e60142518591866b87171f8e8e10c249
+40513b9ef54698e019b973dde3c088df
   $trModule1 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "Crawler"#) -}
-ff3367cd1dd48905dc26bc57bb405e99
+16857b1a94dec5a06ad4274b5abddbb0
   $trModule2 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS
-                   "Crawler-0.1.0.0-9xSvQ0HWqlG1rgWKIvrrEA"#) -}
-24343d48e932b40d00aa6079a320e046
+                   "Crawler-0.1.0.0-E2DzjZCiWdrD8VXmujeLY4"#) -}
+c9496097b29657223160f9690591df5f
   $w$c== ::
     GHC.Base.String
     -> GHC.Base.String
@@ -2936,7 +3241,7 @@ ff3367cd1dd48905dc26bc57bb405e99
                    -> case GHC.Base.eqString ww1 ww4 of wild1 {
                         GHC.Types.False -> GHC.Types.False
                         GHC.Types.True -> GHC.Classes.$fEqBool_$c== ww2 ww5 } }) -}
-25032bf3850324d80e36c512336162f7
+78baaaa07b8dcfec13fa70320ad714fc
   $w$cshowsPrec ::
     GHC.Prim.Int#
     -> GHC.Base.String
@@ -3015,7 +3320,7 @@ ff3367cd1dd48905dc26bc57bb405e99
                         @ GHC.Types.Char
                         GHC.Show.shows9
                         (p (GHC.Types.: @ GHC.Types.Char GHC.Show.shows6 w)) }) -}
-85b9be9099718f3ba99022b2fbd2fe73
+2fc0cb1b592470b5b7238b858bfc79ec
   $w$dConsFromJSON' ::
     Data.Aeson.Types.Internal.Options
     -> Data.Aeson.Types.Internal.Value
@@ -3392,7 +3697,7 @@ ff3367cd1dd48905dc26bc57bb405e99
                                                                   'GHC.Generics.DecidedLazy)
                                                                (GHC.Generics.Rec0 GHC.Types.Bool))
                                            a)>_R))) }) -}
-9e29a49730d80acbb73d0662a0a3c05c
+548d106e4d96f59014344bf0c1347fce
   $w$dGFromBSON ::
     GHC.Prim.Int#
     -> Data.Bson.Document
@@ -3508,7 +3813,7 @@ ff3367cd1dd48905dc26bc57bb405e99
                                   GHC.Types.True -> Crawler.$fFromBSONBool2 @ a1 } } }
                    0# -> Crawler.$fFromBSONBool2 @ a1
                    1# -> Crawler.$fFromBSONBool2 @ a1 }) -}
-f2566e0ad3d4cb8e1588dfa0c356f0a9
+21976c8ff0d33ffe6ba903e12912e81a
   $w$dGFromBSON1 ::
     Data.Bson.Document
     -> GHC.Base.Maybe
@@ -3725,7 +4030,7 @@ f2566e0ad3d4cb8e1588dfa0c356f0a9
                                         @ a1
                                         x1
                                         x2)) } } }) -}
-894a70b475686ba0af7e93362b648b9c
+06c1e5e4d8b1e36d0b225884a833c50f
   $w$dGFromJSON ::
     Data.Aeson.Types.Internal.Value
     -> Data.Aeson.Types.Internal.Parser
@@ -3829,7 +4134,7 @@ f2566e0ad3d4cb8e1588dfa0c356f0a9
                    `cast`
                  (Sym (Data.Aeson.Types.Internal.N:Parser[0]
                            <GHC.Generics.K1 GHC.Generics.R [GHC.Types.Char] a1>_R))) -}
-7c724dceda0b08e80346890f7e87dce2
+224a31e672648971765e68c2318cb690
   $w$dGFromJSON1 ::
     Data.Aeson.Types.Internal.Value
     -> Data.Aeson.Types.Internal.Parser
@@ -3874,7 +4179,7 @@ f2566e0ad3d4cb8e1588dfa0c356f0a9
                    `cast`
                  (Sym (Data.Aeson.Types.Internal.N:Parser[0]
                            <GHC.Generics.K1 GHC.Generics.R GHC.Types.Bool a1>_R))) -}
-b37e1570bb59ab4c36c6967fff539353
+994293220112b9b0e65b92db96395b5f
   $w$dGToBSON ::
     GHC.Prim.Int#
     -> (GHC.Generics.:+:)
@@ -3930,7 +4235,7 @@ b37e1570bb59ab4c36c6967fff539353
                         @ a1
                         ww
                         x }) -}
-243dce841f46e2ac1d187629c1db8947
+f65760854c4677d2fdc46846a45d9d09
   $w$dGToBSON1 ::
     GHC.Generics.M1
       GHC.Generics.S
@@ -3992,7 +4297,7 @@ b37e1570bb59ab4c36c6967fff539353
                       (case GHC.Magic.runRW#
                               @ 'GHC.Types.PtrRepLifted
                               @ Data.Text.Internal.Text
-                              Crawler.$fToBSONTask5 of ds1 { (#,#) ipv ipv1 ->
+                              Crawler.$fToBSONTask9 of ds1 { (#,#) ipv ipv1 ->
                        case ipv1 of dt1 { Data.Text.Internal.Text ipv2 ipv3 ipv4 ->
                        Data.Bson.:=
                          dt1
@@ -4034,7 +4339,7 @@ b37e1570bb59ab4c36c6967fff539353
                          (case GHC.Magic.runRW#
                                  @ 'GHC.Types.PtrRepLifted
                                  @ Data.Text.Internal.Text
-                                 Crawler.$fToBSONTask4 of ds1 { (#,#) ipv ipv1 ->
+                                 Crawler.$fToBSONTask8 of ds1 { (#,#) ipv ipv1 ->
                           case ipv1 of dt1 { Data.Text.Internal.Text ipv2 ipv3 ipv4 ->
                           Data.Bson.:=
                             dt1
@@ -4072,7 +4377,7 @@ b37e1570bb59ab4c36c6967fff539353
                          (case GHC.Magic.runRW#
                                  @ 'GHC.Types.PtrRepLifted
                                  @ Data.Text.Internal.Text
-                                 Crawler.$fToBSONTask3 of ds1 { (#,#) ipv ipv1 ->
+                                 Crawler.$fToBSONTask7 of ds1 { (#,#) ipv ipv1 ->
                           case ipv1 of dt1 { Data.Text.Internal.Text ipv2 ipv3 ipv4 ->
                           Data.Bson.:=
                             dt1
@@ -4090,7 +4395,7 @@ b37e1570bb59ab4c36c6967fff539353
                                     (GHC.Generics.N:K1[0]
                                          <GHC.Generics.R>_P <GHC.Types.Bool>_R <a1>_P))) } })
                          (GHC.Types.[] @ Data.Bson.Field)) })) -}
-01c24376caf6bb4f3051c1c816bfdd01
+af779897f6c4a812b4e787679bc86f4b
   $w$dGToJSON ::
     GHC.Generics.K1 GHC.Generics.R [GHC.Types.Char] a1
     -> (# Data.Text.Internal.Text #)
@@ -4115,7 +4420,7 @@ b37e1570bb59ab4c36c6967fff539353
                            ipv }) of ds1 { (#,#) ipv ipv1 ->
                  case ipv1 of dt { Data.Text.Internal.Text ipv2 ipv3 ipv4 ->
                  (# dt #) } }) -}
-6a73a1d3a29beb8bc2921f3ac1be3be1
+d1cae0de6e885c45125e788088784112
   $w$dRecordToPairs ::
     Data.Aeson.Types.Internal.Options
     -> GHC.Generics.M1
@@ -4223,7 +4528,7 @@ b37e1570bb59ab4c36c6967fff539353
                          w
                          b1
                          w1) })) -}
-6c8e87725f6ebb2ab8e7e4fd81bd38e2
+c14deddd8bcf2bc4eee5d552474be7ef
   $w$sgo10 ::
     GHC.Prim.ByteArray#
     -> GHC.Prim.Int#
@@ -4233,20 +4538,19 @@ b37e1570bb59ab4c36c6967fff539353
     -> Data.Map.Base.Map Data.Text.Internal.Text a1
   {- Arity: 5, Strictness: <L,U><L,U><L,U><L,U><S,1*U>,
      Inline: [0] -}
-c453fff9f60bbdd967602b965e26634d
+0a50c1b6f59a75456698b74e279ed429
   $wformatRepo ::
     GHC.Base.Maybe GitHub.Auth.Auth
     -> GHC.Prim.TVar#
          GHC.Prim.RealWorld
          (Data.Map.Base.Map Data.Text.Internal.Text CommonResources.Node)
-    -> GHC.Base.Maybe Data.Text.Internal.Text
     -> GitHub.Data.Repos.Repo
     -> GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
-  {- Arity: 5,
-     Strictness: <L,U><S,U><L,1*U><L,U(A,A,A,U(U,U,U),A,A,A,A,A,A,A,A,A,A,U(A,U,A,A,A),U(U,U,U),A,A,A,A,A,A,A,A,A,A,A,A,A)><S,U>,
+  {- Arity: 4,
+     Strictness: <L,U><S,U><L,U(A,A,A,U(U,U,U),A,A,A,A,A,A,A,A,A,A,U(A,U,A,A,A),U(U,U,U),A,A,A,A,A,A,A,A,A,A,A,A,A)><S,U>,
      Inline: [0] -}
-73b9d07afaf455aa9fafa2ea912641d7
+53544e945ebc9fe9177216be27bcce07
   $winitialize ::
     GHC.Base.String
     -> GHC.Base.String
@@ -4301,7 +4605,7 @@ c453fff9f60bbdd967602b965e26634d
                                                                          GHC.Types.Bool)))
                               @ ('GHC.Generics.MetaCons
                                    "Task" 'GHC.Generics.PrefixI 'GHC.Types.True)
-                              Crawler.$fToBSONTask2
+                              Crawler.$fToBSONTask6
                                 `cast`
                               (Sym (Data.Bson.Generic.N:GToBSON[0]
                                         <GHC.Generics.M1
@@ -4490,15 +4794,14 @@ c453fff9f60bbdd967602b965e26634d
                               (GHC.Base.Just
                                  @ GitHub.Auth.Auth
                                  (GitHub.Auth.OAuth (Data.ByteString.Internal.packChars ww1)))
-                              ipv5
-                              (GHC.Base.Nothing @ Data.Text.Internal.Text))
+                              ipv5)
                            GHC.Conc.Sync.childHandler1
                            eta)
                           `cast`
                         (Sym (GHC.Types.N:IO[0] <()>_R))
                         ipv4 of ds { (#,#) ipv6 ipv7 ->
                  (# ipv6, Crawler.crawlerApp22 #) } } } }) -}
-6aff0cac29401683a5a8e61aa41f1c63
+9eea9fd7d31181c278f9af1b9bc8876a
   $wouter ::
     Data.Text.Array.MArray GHC.Prim.RealWorld
     -> GHC.Types.Int
@@ -4509,7 +4812,7 @@ c453fff9f60bbdd967602b965e26634d
           Data.Text.Internal.Text #)
   {- Arity: 5, Strictness: <L,U(U)><L,U(U)><S,1*U><S,U><S,U>,
      Inline: [0] -}
-dcf3ffa3c6db55a2a48c477852603f98
+7c4e890f9f20b44200eb7ffe76d0fb13
   $wouter1 ::
     Data.Text.Array.MArray GHC.Prim.RealWorld
     -> GHC.Types.Int
@@ -4520,7 +4823,7 @@ dcf3ffa3c6db55a2a48c477852603f98
           Data.Text.Internal.Text #)
   {- Arity: 5, Strictness: <L,U(U)><L,U(U)><S,1*U><S,U><S,U>,
      Inline: [0] -}
-564bad59ac8c6d8aa846f9207b0cd55e
+a7bdbd906295f240c0a0bf7c8be10e7f
   $wpoly_go10 ::
     GHC.Prim.ByteArray#
     -> GHC.Prim.Int#
@@ -4529,7 +4832,7 @@ dcf3ffa3c6db55a2a48c477852603f98
     -> GHC.Base.Maybe a
   {- Arity: 4, HasNoCafRefs, Strictness: <L,U><L,U><L,U><S,1*U>,
      Inline: [0] -}
-52b5c31a758e42c96015a049a7ab911a
+311a12b0455443fddf27a3c5498531e6
   $wterminate ::
     GHC.Base.String
     -> GHC.Base.String
@@ -4584,7 +4887,7 @@ dcf3ffa3c6db55a2a48c477852603f98
                                                                          GHC.Types.Bool)))
                               @ ('GHC.Generics.MetaCons
                                    "Task" 'GHC.Generics.PrefixI 'GHC.Types.True)
-                              Crawler.$fToBSONTask2
+                              Crawler.$fToBSONTask6
                                 `cast`
                               (Sym (Data.Bson.Generic.N:GToBSON[0]
                                         <GHC.Generics.M1
@@ -4745,31 +5048,31 @@ dcf3ffa3c6db55a2a48c477852603f98
                                                                                  GHC.Types.Bool))>_R) <GHC.Prim.Any>_N)))
                         ipv of ds2 { (#,#) ipv2 ipv3 ->
                  (# ipv2, Crawler.crawlerApp9 #) } }) -}
-415d4f4ba5a86faad1de456f2130800c
+c1eb8d946313d1e1366639a322b82283
   $wuserformat ::
     GHC.Base.Maybe GitHub.Auth.Auth
     -> GHC.Prim.TVar#
          GHC.Prim.RealWorld
          (Data.Map.Base.Map Data.Text.Internal.Text CommonResources.Node)
-    -> GHC.Base.Maybe Data.Text.Internal.Text
+    -> Data.Text.Internal.Text
     -> GitHub.Data.Repos.Contributor
     -> GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
-  {- Arity: 5, Strictness: <L,U><S,U><L,U><L,1*U><S,U>,
+  {- Arity: 5, Strictness: <L,U><S,U><L,U(U,U,U)><L,1*U><S,U>,
      Inline: [0] -}
-1678c0e5b4e11b545c0c5c773c2b4249
+8e5504a82f426fd13d96cd70a84a54ff
   type ApiHandler =
     Control.Monad.Trans.Except.ExceptT
       Servant.Server.Internal.ServantErr.ServantErr GHC.Types.IO
     :: * -> *
-12e1bd8144fb0479fdebd5792c7eccc8
+ccd63352d0929d534dde308d9ee2d1b3
   axiom Rep_Task::
       GHC.Generics.Rep Crawler.Task
         = GHC.Generics.D1
             ('GHC.Generics.MetaData
                "Task"
                "Crawler"
-               "Crawler-0.1.0.0-9xSvQ0HWqlG1rgWKIvrrEA"
+               "Crawler-0.1.0.0-E2DzjZCiWdrD8VXmujeLY4"
                'GHC.Types.False)
             (GHC.Generics.C1
                ('GHC.Generics.MetaCons
@@ -4795,16 +5098,16 @@ dcf3ffa3c6db55a2a48c477852603f98
                                                         'GHC.Generics.NoSourceStrictness
                                                         'GHC.Generics.DecidedLazy)
                                                      (GHC.Generics.Rec0 GHC.Types.Bool))))
-708da9c6f30b515cd127992c959a0ff0
+d25e4d12e5e85e465c357c2b95f80252
   data State
     = State {nodes :: GHC.Conc.Sync.TVar
                         (Data.Map.Base.Map Data.Text.Internal.Text CommonResources.Node)}
-12e1bd8144fb0479fdebd5792c7eccc8
+ccd63352d0929d534dde308d9ee2d1b3
   data Task
     = Task {tskUsername :: GHC.Base.String,
             tskAuthToken :: GHC.Base.String,
             running :: GHC.Types.Bool}
-cffc83e20f8517a5d8985ca67972474d
+bd428779a86076dc509dcdcfb19e3470
   addNode ::
     Crawler.State
     -> CommonResources.Node
@@ -4819,7 +5122,7 @@ cffc83e20f8517a5d8985ca67972474d
                  ->_R <CommonResources.Node>_R
                  ->_R <Data.Text.Internal.Text>_R
                  ->_R Sym (GHC.Conc.Sync.N:STM[0] <()>_R)) -}
-b665a58921f32147517fa7b1a9e4c97b
+3b3800a05dfa642ba5eff99d856b431c
   addNode1 ::
     Crawler.State
     -> CommonResources.Node
@@ -4851,17 +5154,17 @@ b665a58921f32147517fa7b1a9e4c97b
                            ipv1)
                         ipv of s2# { DEFAULT ->
                  (# s2#, GHC.Tuple.() #) } } } }) -}
-19ee18497d77adb195779c5fd39dbd93
+e04ffde9e135c12f6865907a985f62b0
   crawlerApi :: Data.Proxy.Proxy CommonResources.CrawlerApi
   {- HasNoCafRefs,
      Unfolding: InlineRule (0, True, True)
                 (Data.Proxy.Proxy @ * @ CommonResources.CrawlerApi) -}
-cb3a30d6095f0d7efc5e400d80ab85d3
+dbf767119d02fa4a12917a4938a03b35
   crawlerApp :: Network.Wai.Application
   {- Arity: 2,
      Unfolding: (Servant.Server.Internal.RoutingApplication.toApplication
                    Crawler.crawlerApp1) -}
-dbeb2d3fff532e0492677aacb9192b01
+98d8572f64081a72ad5ea884e52f43f2
   crawlerApp1 ::
     Network.Wai.Internal.Request
     -> (Servant.Server.Internal.RoutingApplication.RouteResult
@@ -4881,25 +5184,25 @@ dbeb2d3fff532e0492677aacb9192b01
                    GHC.Tuple.()
                    eta
                    eta1) -}
-c659d17b6e9489584019fe50ca14c992
+370297cdd967e9f8c3e60c3df486b2b0
   crawlerApp10 :: CommonResources.Response
   {- Strictness: m,
      Unfolding: (CommonResources.Response Crawler.crawlerApp11) -}
-5bed3a1cb9182623db8598ba3412db3b
+c69808ffe57924349338e8e59631a135
   crawlerApp11 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "Terminated"#) -}
-49917d82c64ac92c42d87c9e241eb088
+1d623379e9ba7aeb370944f8c7471d69
   crawlerApp12 :: Database.MongoDB.Query.Collection
   {- Unfolding: (Data.Text.Show.unpackCString#
                    "USER_TASK_RECORD"#) -}
-74a178cbaf1c7263a7305264c1e84c10
+857c6cb1a2a4307a285618e698d3d120
   crawlerApp13 :: Data.Bson.Label
   {- Unfolding: (Data.Text.Show.unpackCString# "tskUsername"#) -}
-b974564f597c74607fb7e84f273ef958
+4da483220aeb3ed923821792468f2ffd
   crawlerApp14 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString#
                    "Terminating User Task"#) -}
-f957e3407a6d5151f2bb69fdcb05acbb
+dc5c9a7d41676e36aabd2a5f39342d61
   crawlerApp15 ::
     Servant.Server.Internal.Router.Router'
       () Servant.Server.Internal.RoutingApplication.RoutingApplication
@@ -4910,7 +5213,7 @@ f957e3407a6d5151f2bb69fdcb05acbb
                    (GHC.Types.[]
                       @ (()
                          -> Servant.Server.Internal.RoutingApplication.RoutingApplication))) -}
-38c887e767222f9d8835fa7d3511144f
+f4c5047702156b41f581a2440b008c58
   crawlerApp16 ::
     Data.Map.Base.Map
       Data.Text.Internal.Text
@@ -4937,7 +5240,7 @@ f957e3407a6d5151f2bb69fdcb05acbb
                       @ (Servant.Server.Internal.Router.Router'
                            ()
                            Servant.Server.Internal.RoutingApplication.RoutingApplication)) } }) -}
-d924c6fabccd50bdee504af63a401728
+520c387125ff7e471acae235fee83bb3
   crawlerApp17 :: Servant.Server.Internal.Router.Router ()
   {- Unfolding: (Servant.Server.Internal.$w$croute2
                    @ *
@@ -4989,7 +5292,7 @@ d924c6fabccd50bdee504af63a401728
                                 <Control.Monad.Trans.Except.ExceptT
                                    Servant.Server.Internal.ServantErr.ServantErr
                                    GHC.Types.IO>_N)))_R) -}
-160839e4944bd6b8c98f87ac0382fca5
+9f4e43ada025c53d98ab1b6696dc7285
   crawlerApp18 ::
     Servant.Server.Internal.RoutingApplication.Delayed
       ()
@@ -5050,7 +5353,7 @@ d924c6fabccd50bdee504af63a401728
                         (Sym (Servant.Server.Internal.RoutingApplication.N:DelayedIO[0]
                                   <()>_R)))
                    Crawler.crawlerApp19) -}
-672fb4fe96826496004d2c44350494ab
+e051dedead8ca97cdba143f0999f51b3
   crawlerApp19 ::
     ()
     -> ()
@@ -5070,7 +5373,7 @@ d924c6fabccd50bdee504af63a401728
                    (b1 :: ())
                    (req :: Network.Wai.Internal.Request) ->
                  Crawler.crawlerApp20) -}
-1e0d74d60de049614c521007e8831b62
+68b57127f3bd273623194bf19d3f3017
   crawlerApp2 ::
     Servant.Server.Internal.Router.Router'
       () Servant.Server.Internal.RoutingApplication.RoutingApplication
@@ -5081,7 +5384,7 @@ d924c6fabccd50bdee504af63a401728
                    (GHC.Types.[]
                       @ (()
                          -> Servant.Server.Internal.RoutingApplication.RoutingApplication))) -}
-444771242ab202dd1ef54af593118220
+15cd2b4e3b7a83ef5ce11b6e898e9fe1
   crawlerApp20 ::
     Servant.Server.Internal.RoutingApplication.RouteResult
       (Servant.Server.Internal.Server
@@ -5146,7 +5449,7 @@ d924c6fabccd50bdee504af63a401728
                                             <Control.Monad.Trans.Except.ExceptT
                                                Servant.Server.Internal.ServantErr.ServantErr
                                                GHC.Types.IO>_N)))))) -}
-75bef0aaad36b7f338a0bffbc62e5878
+a0842d84c4fccc9de833e4f06a11e821
   crawlerApp21 ::
     CommonResources.User
     -> GHC.Prim.State# GHC.Prim.RealWorld
@@ -5160,7 +5463,7 @@ d924c6fabccd50bdee504af63a401728
                    (w1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
                  case w of ww { CommonResources.User ww1 ww2 ->
                  Crawler.$winitialize ww1 ww2 w1 }) -}
-f7f7b511763088f25c1ca6886aa7528f
+1f0ff62f4b4ec32b64950b597886b47e
   crawlerApp22 ::
     Data.Either.Either
       Servant.Server.Internal.ServantErr.ServantErr
@@ -5169,23 +5472,83 @@ f7f7b511763088f25c1ca6886aa7528f
                    @ Servant.Server.Internal.ServantErr.ServantErr
                    @ CommonResources.Response
                    Crawler.crawlerApp23) -}
-ba05f364ad786fa69d3d05d09b51e94a
+8d3bfe9d2a76490650e46d8c4825e24d
   crawlerApp23 :: CommonResources.Response
   {- Strictness: m,
      Unfolding: (CommonResources.Response Crawler.crawlerApp24) -}
-3055f09da746dcdc92817c649688d5b2
+2cbe272d2a57561c415c865259fb7d9c
   crawlerApp24 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "Started"#) -}
-f52d0e4108c29e73e2d7ea5f06a6415b
+d4875b54a785ba36897b9b708c1ca824
   crawlerApp25 ::
     Data.Text.Internal.Text
     -> GHC.Base.Maybe GitHub.Auth.Auth
     -> Crawler.State
-    -> GHC.Base.Maybe Data.Text.Internal.Text
     -> GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
-  {- Arity: 5, Strictness: <L,U(U,U,U)><L,U><L,U(U(U))><L,U><S,U> -}
-5ae8f1dfde8df757e306003d71d6517d
+  {- Arity: 4, Strictness: <L,U><L,U><L,U(U(U))><S,U>,
+     Unfolding: (\ (uname :: Data.Text.Internal.Text)
+                   (auth :: GHC.Base.Maybe GitHub.Auth.Auth)
+                   (state :: Crawler.State)
+                   (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case GitHub.Request.executeRequest'1
+                        @ (Data.Vector.Vector GitHub.Data.Repos.Repo)
+                        (GitHub.Data.Request.SimpleQuery
+                           @ 'GitHub.Data.Request.RO
+                           @ (Data.Vector.Vector GitHub.Data.Repos.Repo)
+                           GitHub.Endpoints.Repos.userReposR2
+                             `cast`
+                           (Sym (Data.Aeson.Types.Class.N:FromJSON[0]
+                                     <Data.Vector.Vector GitHub.Data.Repos.Repo>_N))
+                           (GitHub.Data.Request.PagedQuery
+                              @ 'GitHub.Data.Request.RO
+                              @ (Data.Vector.Vector GitHub.Data.Repos.Repo)
+                              @ GitHub.Data.Repos.Repo
+                              @~ <Data.Vector.Vector GitHub.Data.Repos.Repo>_N
+                              (GHC.Types.:
+                                 @ Data.Text.Internal.Text
+                                 GitHub.Endpoints.Repos.userReposR1
+                                 (GHC.Types.:
+                                    @ Data.Text.Internal.Text
+                                    uname
+                                    GitHub.Endpoints.Repos.createRepoR2))
+                              GitHub.Endpoints.Repos.currentUserReposR21
+                              GitHub.Data.Request.FetchAll))
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 case ipv1 of wild {
+                   Data.Either.Left error -> (# ipv, GHC.Tuple.() #)
+                   Data.Either.Right repos
+                   -> case repos of v2 { Data.Vector.Vector ipv2 ipv3 ipv4 ->
+                      letrec {
+                        $wfoldrM_loop :: GHC.Types.SPEC
+                                         -> GHC.Prim.Int#
+                                         -> GHC.Prim.State# GHC.Prim.RealWorld
+                                         -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+                          {- Arity: 3, Strictness: <S,1*U><S,U><S,U>, Inline: [0] -}
+                        = \ (w :: GHC.Types.SPEC)
+                            (ww :: GHC.Prim.Int#)
+                            (w1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                          case w of ds5 { DEFAULT ->
+                          case GHC.Prim.tagToEnum#
+                                 @ GHC.Types.Bool
+                                 (GHC.Prim.>=# ww ipv3) of wild1 {
+                            GHC.Types.False
+                            -> case state of ww1 { Crawler.State ww2 ->
+                               case ww2 of ww3 { GHC.Conc.Sync.TVar ww4 ->
+                               case GHC.Prim.indexArray#
+                                      @ GitHub.Data.Repos.Repo
+                                      ipv4
+                                      (GHC.Prim.+# ipv2 ww) of ds2 { Unit# ipv5 ->
+                               case Crawler.$wformatRepo
+                                      auth
+                                      ww4
+                                      ipv5
+                                      w1 of ds4 { (#,#) ipv6 ipv7 ->
+                               $wfoldrM_loop GHC.Types.SPEC (GHC.Prim.+# ww 1#) ipv6 } } } }
+                            GHC.Types.True -> (# w1, GHC.Tuple.() #) } }
+                      } in
+                      $wfoldrM_loop GHC.Types.SPEC 0# ipv } } }) -}
+e5f09c1683d1ac0f9c2973a470c2dbe3
   crawlerApp26 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, Crawler.State #)
@@ -5204,11 +5567,11 @@ f52d0e4108c29e73e2d7ea5f06a6415b
                       (GHC.Conc.Sync.TVar
                          @ (Data.Map.Base.Map Data.Text.Internal.Text CommonResources.Node)
                          ipv1) #) }) -}
-c2d7a2d4533e747de63193cbf67789f6
+87b3898cb5ca6131c6978a0dec096697
   crawlerApp27 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString#
                    "Received user crawl request, storing request"#) -}
-6ab9d547a27297ca622cefa0c46ee3b2
+bff382d1ac634f49d15b48d129e9b2b1
   crawlerApp3 ::
     Data.Map.Base.Map
       Data.Text.Internal.Text
@@ -5235,7 +5598,7 @@ c2d7a2d4533e747de63193cbf67789f6
                       @ (Servant.Server.Internal.Router.Router'
                            ()
                            Servant.Server.Internal.RoutingApplication.RoutingApplication)) } }) -}
-31857b4b5f3f04b318785a5e92d91272
+554e0c6830c98c7666a0ddd3985a4d32
   crawlerApp4 :: Servant.Server.Internal.Router.Router ()
   {- Unfolding: (Servant.Server.Internal.$w$croute2
                    @ *
@@ -5287,7 +5650,7 @@ c2d7a2d4533e747de63193cbf67789f6
                                 <Control.Monad.Trans.Except.ExceptT
                                    Servant.Server.Internal.ServantErr.ServantErr
                                    GHC.Types.IO>_N)))_R) -}
-2616634441356837d4d039ac0f8d6bdd
+4086b7f046452d6083cdcc96ed31f0a0
   crawlerApp5 ::
     Servant.Server.Internal.RoutingApplication.Delayed
       ()
@@ -5348,7 +5711,7 @@ c2d7a2d4533e747de63193cbf67789f6
                         (Sym (Servant.Server.Internal.RoutingApplication.N:DelayedIO[0]
                                   <()>_R)))
                    Crawler.crawlerApp6) -}
-36592f1fccdda7e91dee58701b1b5595
+32d78848d513bcb8800d8d691e3c0cb4
   crawlerApp6 ::
     ()
     -> ()
@@ -5368,7 +5731,7 @@ c2d7a2d4533e747de63193cbf67789f6
                    (b1 :: ())
                    (req :: Network.Wai.Internal.Request) ->
                  Crawler.crawlerApp7) -}
-569ed89bcb2f1ac4049078d9a47f770c
+aac66190b3257ee5fca2f1cb3c5fbc81
   crawlerApp7 ::
     Servant.Server.Internal.RoutingApplication.RouteResult
       (Servant.Server.Internal.Server
@@ -5433,7 +5796,7 @@ c2d7a2d4533e747de63193cbf67789f6
                                             <Control.Monad.Trans.Except.ExceptT
                                                Servant.Server.Internal.ServantErr.ServantErr
                                                GHC.Types.IO>_N)))))) -}
-eb8a34048995f438eb68f809cedfb168
+520943ef4e16f830294dcb4124d763bb
   crawlerApp8 ::
     CommonResources.User
     -> GHC.Prim.State# GHC.Prim.RealWorld
@@ -5447,7 +5810,7 @@ eb8a34048995f438eb68f809cedfb168
                    (w1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
                  case w of ww { CommonResources.User ww1 ww2 ->
                  Crawler.$wterminate ww1 ww2 w1 }) -}
-739e6bd1d2961d3a156514c3a8d676c7
+0600fc7253d1a419aa7e488374daa52e
   crawlerApp9 ::
     Data.Either.Either
       Servant.Server.Internal.ServantErr.ServantErr
@@ -5456,14 +5819,14 @@ eb8a34048995f438eb68f809cedfb168
                    @ Servant.Server.Internal.ServantErr.ServantErr
                    @ CommonResources.Response
                    Crawler.crawlerApp10) -}
-45b50cdeb53d64597fc3c79ab41cd45c
+8aec3842d8a7d977b343feb85206c754
   crawlerApp_r :: Servant.Server.Internal.Router.Router ()
   {- Unfolding: (Servant.Server.Internal.Router.choice
                    @ ()
                    @ Servant.Server.Internal.RoutingApplication.RoutingApplication
                    Crawler.crawlerApp15
                    Crawler.crawlerApp2) -}
-54f5ebd9cee84d3cc2f1e5884c700f34
+656481fd01d338bb45d04ec94faea5a7
   formatLanguage :: Data.String.IsString t1 => GHC.Base.Maybe t -> t1
   {- Arity: 2, Strictness: <C(S),1*C1(U)><S,1*U>,
      Unfolding: InlineRule (2, True, False)
@@ -5476,51 +5839,47 @@ eb8a34048995f438eb68f809cedfb168
                    -> $dIsString `cast` (Data.String.N:IsString[0] <t1>_N)
                         (GHC.Types.[] @ GHC.Types.Char)
                    GHC.Base.Just ipv -> Crawler.formatLanguage1 @ t1 }) -}
-f8a997896fc5cbcd31e9a276b2f10dca
+bc9db1715fe9bef74c5ca3c735f5119d
   formatLanguage1 :: t
   {- Strictness: x -}
-c360b6e38b9639703bec1dcd177f6e38
+34cdda2c6843ec6ced03ab6c92defa7d
   formatRepo ::
     GHC.Base.Maybe GitHub.Auth.Auth
     -> Data.Text.Internal.Text
     -> Crawler.State
-    -> GHC.Base.Maybe Data.Text.Internal.Text
     -> GitHub.Data.Repos.Repo
     -> GHC.Types.IO ()
-  {- Arity: 6,
-     Strictness: <L,U><L,A><S(S(S)),U(U(U))><L,1*U><L,U(A,A,A,U(U,U,U),A,A,A,A,A,A,A,A,A,A,U(A,U,A,A,A),U(U,U,U),A,A,A,A,A,A,A,A,A,A,A,A,A)><S,U>,
+  {- Arity: 5,
+     Strictness: <L,U><L,A><S(S(S)),U(U(U))><L,U(A,A,A,U(U,U,U),A,A,A,A,A,A,A,A,A,A,U(A,U,A,A,A),U(U,U,U),A,A,A,A,A,A,A,A,A,A,A,A,A)><S,U>,
      Unfolding: InlineRule (0, True, True)
                 Crawler.formatRepo1
                   `cast`
                 (<GHC.Base.Maybe GitHub.Auth.Auth>_R
                  ->_R <Data.Text.Internal.Text>_R
                  ->_R <Crawler.State>_R
-                 ->_R <GHC.Base.Maybe Data.Text.Internal.Text>_R
                  ->_R <GitHub.Data.Repos.Repo>_R
                  ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
-fc9b330f5fa19bb170a9a1062aafb2a7
+8f44cc290d4c36d31955440bd8bac142
   formatRepo1 ::
     GHC.Base.Maybe GitHub.Auth.Auth
     -> Data.Text.Internal.Text
     -> Crawler.State
-    -> GHC.Base.Maybe Data.Text.Internal.Text
     -> GitHub.Data.Repos.Repo
     -> GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
-  {- Arity: 6,
-     Strictness: <L,U><L,A><S(S(S)),U(U(U))><L,1*U><L,U(A,A,A,U(U,U,U),A,A,A,A,A,A,A,A,A,A,U(A,U,A,A,A),U(U,U,U),A,A,A,A,A,A,A,A,A,A,A,A,A)><S,U>,
+  {- Arity: 5,
+     Strictness: <L,U><L,A><S(S(S)),U(U(U))><L,U(A,A,A,U(U,U,U),A,A,A,A,A,A,A,A,A,A,U(A,U,A,A,A),U(U,U,U),A,A,A,A,A,A,A,A,A,A,A,A,A)><S,U>,
      Inline: INLINE[0],
-     Unfolding: InlineRule (6, True, False)
+     Unfolding: InlineRule (5, True, False)
                 (\ (w :: GHC.Base.Maybe GitHub.Auth.Auth)
                    (w1 :: Data.Text.Internal.Text)
                    (w2 :: Crawler.State)
-                   (w3 :: GHC.Base.Maybe Data.Text.Internal.Text)
-                   (w4 :: GitHub.Data.Repos.Repo)
-                   (w5 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                   (w3 :: GitHub.Data.Repos.Repo)
+                   (w4 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
                  case w2 of ww { Crawler.State ww1 ->
                  case ww1 of ww2 { GHC.Conc.Sync.TVar ww3 ->
-                 Crawler.$wformatRepo w ww3 w3 w4 w5 } }) -}
-a9dce0a53c929d8cf259967cf2c45607
+                 Crawler.$wformatRepo w ww3 w3 w4 } }) -}
+30eda5af610718c5907d0f61093d562d
   fotmatLanguage ::
     GHC.Base.Maybe GitHub.Data.Repos.Language
     -> Data.Text.Internal.Text
@@ -5531,26 +5890,24 @@ a9dce0a53c929d8cf259967cf2c45607
                    GHC.Base.Nothing -> Crawler.fotmatLanguage1
                    GHC.Base.Just language
                    -> language `cast` (GitHub.Data.Repos.N:Language[0]) }) -}
-4ca1f39a7e581e4bf86ee7a6beae1572
+54ecc2081ad446944233731474fe9f45
   fotmatLanguage1 :: Data.Text.Internal.Text
   {- Strictness: x -}
-4b3f24ddbd51ecd02af691eec269505a
+a0cb4913466286cb4d4b915da05c67a0
   getrepos ::
     Data.Text.Internal.Text
     -> GHC.Base.Maybe GitHub.Auth.Auth
     -> Crawler.State
-    -> GHC.Base.Maybe Data.Text.Internal.Text
     -> GHC.Types.IO ()
-  {- Arity: 5, Strictness: <L,U(U,U,U)><L,U><L,U(U(U))><L,U><S,U>,
+  {- Arity: 4, Strictness: <L,U><L,U><L,U(U(U))><S,U>,
      Unfolding: InlineRule (0, True, True)
                 Crawler.crawlerApp25
                   `cast`
                 (<Data.Text.Internal.Text>_R
                  ->_R <GHC.Base.Maybe GitHub.Auth.Auth>_R
                  ->_R <Crawler.State>_R
-                 ->_R <GHC.Base.Maybe Data.Text.Internal.Text>_R
                  ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
-b39844dd70152656a47668b117dde184
+6eff1b571d2adbb7883ba06bfe3d6fcf
   initialize ::
     CommonResources.User -> Crawler.ApiHandler CommonResources.Response
   {- Arity: 2, Strictness: <S,1*U(U,U)><S,U>,
@@ -5567,7 +5924,7 @@ b39844dd70152656a47668b117dde184
                                     <Servant.Server.Internal.ServantErr.ServantErr>_N
                                     <GHC.Types.IO>_R
                                     <CommonResources.Response>_N))) -}
-bd7ff585cd0b2bc9846d2bc0ef88977d
+7ffd0814b32908ddcb1f92ce69dae6b2
   lookupNode ::
     Crawler.State
     -> Data.Text.Internal.Text
@@ -5581,7 +5938,7 @@ bd7ff585cd0b2bc9846d2bc0ef88977d
                  ->_R <Data.Text.Internal.Text>_R
                  ->_R Sym (GHC.Conc.Sync.N:STM[0]
                                <GHC.Base.Maybe CommonResources.Node>_R)) -}
-e51883a3f8388d47d08935cb488dcf79
+16acec8cab405e6fd98785a82593fae0
   lookupNode1 ::
     Crawler.State
     -> Data.Text.Internal.Text
@@ -5603,12 +5960,12 @@ e51883a3f8388d47d08935cb488dcf79
                         eta of ds2 { (#,#) ipv ipv1 ->
                  (# ipv,
                     Crawler.$slookup1 @ CommonResources.Node repourl ipv1 #) } } }) -}
-c282f9f7b9f13e0bcf59a94d5f084e38
+07cf1270f1ac23b968fcc2ee67316666
   mkApp :: GHC.Types.IO ()
   {- Arity: 1, Strictness: <S,U>,
      Unfolding: InlineRule (0, True, True)
                 Crawler.mkApp1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
-1b82cae1ce0563670068a63186b12a7f
+57bc8a89324b7c9259f1725459df8f42
   mkApp1 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
@@ -5672,7 +6029,7 @@ c282f9f7b9f13e0bcf59a94d5f084e38
                    (GHC.Base.Nothing @ GHC.Types.Int)
                    Crawler.crawlerApp
                    ipv }) -}
-19e3584f46b142df2176c535cf97d3fa
+c4665c2a2ca0122a385727a2cb284647
   mkApp2 :: Network.Wai.Handler.Warp.Types.Port
   {- Unfolding: (case Text.Read.readEither6
                         @ GHC.Types.Int
@@ -5698,13 +6055,13 @@ c282f9f7b9f13e0bcf59a94d5f084e38
                              (Sym (GHC.Classes.N:IP[0]
                                        <"callStack">_N <GHC.Stack.Types.CallStack>_N))
                              Text.Read.readEither2 } }) -}
-3f9a40436400e36f6714347871b40ba8
+b534e55965d4d844295a4fda9d2a3b27
   mkApp3 :: [(GHC.Types.Int, GHC.Base.String)]
   {- Unfolding: (Text.ParserCombinators.ReadP.run
                    @ GHC.Types.Int
                    Crawler.mkApp4
                    CommonResources.crawlerport) -}
-3e61cefc19ec509396923f99cc15c85c
+3bbaa3500415247f5bd2867449fd6617
   mkApp4 :: Text.ParserCombinators.ReadP.P GHC.Types.Int
   {- Unfolding: ((GHC.Read.$fReadInt3
                     GHC.Read.$fReadInt_$sconvertInt
@@ -5713,19 +6070,19 @@ c282f9f7b9f13e0bcf59a94d5f084e38
                  (Text.ParserCombinators.ReadP.N:ReadP[0] <GHC.Types.Int>_R)
                    @ GHC.Types.Int
                    (Text.Read.readEither5 @ GHC.Types.Int)) -}
-4086dd318cdbf35acdb20b22f12a8681
+298afae6cad65b207725ceab908dbaf4
   mkApp5 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackAppendCString#
                    "Crawler starting on port: "#
                    CommonResources.crawlerport) -}
-73d73682f4e36fed93fd945713e44907
+7f8b68828f4960c86ff025289d2a1da4
   newState :: GHC.Types.IO Crawler.State
   {- Arity: 1, HasNoCafRefs,
      Unfolding: InlineRule (0, True, True)
                 Crawler.newState1
                   `cast`
                 (Sym (GHC.Types.N:IO[0] <Crawler.State>_R)) -}
-aa931e731a62f2a9f74abac70eddcd1e
+32d6bd64467e468f566af5d4048cb550
   newState1 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, Crawler.State #)
@@ -5733,7 +6090,7 @@ aa931e731a62f2a9f74abac70eddcd1e
      Unfolding: (GHC.Prim.atomically#
                    @ Crawler.State
                    Crawler.crawlerApp26) -}
-a8cf7238a31db07af24fccf27ebcf31b
+f3849ade2b6d92d2ce0fb97a93c206d9
   nodes ::
     Crawler.State
     -> GHC.Conc.Sync.TVar
@@ -5743,14 +6100,14 @@ a8cf7238a31db07af24fccf27ebcf31b
      Unfolding: InlineRule (1, True, False)
                 (\ (ds :: Crawler.State) ->
                  case ds of wild { Crawler.State ds1 -> ds1 }) -}
-ff078ae9dd41884f31e4b61161934618
+f99fcef99483be69898ec5d1c17671ed
   running :: Crawler.Task -> GHC.Types.Bool
   RecSel Left Crawler.Task
   {- Arity: 1, HasNoCafRefs, Strictness: <S(LLS),1*U(A,A,1*U)>,
      Unfolding: InlineRule (1, True, False)
                 (\ (ds :: Crawler.Task) ->
                  case ds of wild { Crawler.Task ds1 ds2 ds3 -> ds3 }) -}
-130fcf8a4adf82235bd758912f2dd5a6
+d7d655c3ac528e246f79698794752240
   server :: Servant.Server.Internal.Server CommonResources.CrawlerApi
   {- Strictness: m,
      Unfolding: InlineRule (0, True, True)
@@ -5847,7 +6204,7 @@ ff078ae9dd41884f31e4b61161934618
                                     <Control.Monad.Trans.Except.ExceptT
                                        Servant.Server.Internal.ServantErr.ServantErr
                                        GHC.Types.IO>_N)))) -}
-770056ce7bc23ffa37572de13d087098
+4109b9eacbf1a50daf43c938e09f9c01
   server1 ::
     (CommonResources.User
      -> Crawler.ApiHandler CommonResources.Response)
@@ -5883,7 +6240,7 @@ ff078ae9dd41884f31e4b61161934618
                                        <Servant.Server.Internal.ServantErr.ServantErr>_N
                                        <GHC.Types.IO>_R
                                        <CommonResources.Response>_N)))) -}
-1cb18e5e8ed5dcdd26eae332cf406581
+aa59ff5afabe0a11305f986e43094390
   terminate ::
     CommonResources.User -> Crawler.ApiHandler CommonResources.Response
   {- Arity: 2, Strictness: <S,1*U(U,U)><S,U>,
@@ -5900,50 +6257,52 @@ ff078ae9dd41884f31e4b61161934618
                                     <Servant.Server.Internal.ServantErr.ServantErr>_N
                                     <GHC.Types.IO>_R
                                     <CommonResources.Response>_N))) -}
-6aef5efd5b4083b2a908d67f83a97b25
+43cf20f2643e08f8f69385062e13ce36
   tskAuthToken :: Crawler.Task -> GHC.Base.String
   RecSel Left Crawler.Task
   {- Arity: 1, HasNoCafRefs, Strictness: <S(LSL),1*U(A,1*U,A)>,
      Unfolding: InlineRule (1, True, False)
                 (\ (ds :: Crawler.Task) ->
                  case ds of wild { Crawler.Task ds1 ds2 ds3 -> ds2 }) -}
-5b0aa69b765f8ac47d1c63b72ac3cb29
+a55355f7475fda25f120b71af007a55d
   tskUsername :: Crawler.Task -> GHC.Base.String
   RecSel Left Crawler.Task
   {- Arity: 1, HasNoCafRefs, Strictness: <S(SLL),1*U(1*U,A,A)>,
      Unfolding: InlineRule (1, True, False)
                 (\ (ds :: Crawler.Task) ->
                  case ds of wild { Crawler.Task ds1 ds2 ds3 -> ds1 }) -}
-a26c505aeca80c918b6c8165aef55f5f
+555aff03952f2a7a779f4d8873fb923f
   userformat ::
     GHC.Base.Maybe GitHub.Auth.Auth
     -> Crawler.State
-    -> GHC.Base.Maybe Data.Text.Internal.Text
+    -> Data.Text.Internal.Text
     -> GitHub.Data.Repos.Contributor
     -> GHC.Types.IO ()
-  {- Arity: 5, Strictness: <L,U><S(S(S)),U(U(U))><L,U><L,1*U><S,U>,
+  {- Arity: 5,
+     Strictness: <L,U><S(S(S)),U(U(U))><L,U(U,U,U)><L,1*U><S,U>,
      Unfolding: InlineRule (0, True, True)
                 Crawler.userformat1
                   `cast`
                 (<GHC.Base.Maybe GitHub.Auth.Auth>_R
                  ->_R <Crawler.State>_R
-                 ->_R <GHC.Base.Maybe Data.Text.Internal.Text>_R
+                 ->_R <Data.Text.Internal.Text>_R
                  ->_R <GitHub.Data.Repos.Contributor>_R
                  ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
-e41ea6b8794e7ccc70536e34b4c69c16
+ac26fe74baf0581c50f4e59cad401147
   userformat1 ::
     GHC.Base.Maybe GitHub.Auth.Auth
     -> Crawler.State
-    -> GHC.Base.Maybe Data.Text.Internal.Text
+    -> Data.Text.Internal.Text
     -> GitHub.Data.Repos.Contributor
     -> GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
-  {- Arity: 5, Strictness: <L,U><S(S(S)),U(U(U))><L,U><L,1*U><S,U>,
+  {- Arity: 5,
+     Strictness: <L,U><S(S(S)),U(U(U))><L,U(U,U,U)><L,1*U><S,U>,
      Inline: INLINE[0],
      Unfolding: InlineRule (5, True, False)
                 (\ (w :: GHC.Base.Maybe GitHub.Auth.Auth)
                    (w1 :: Crawler.State)
-                   (w2 :: GHC.Base.Maybe Data.Text.Internal.Text)
+                   (w2 :: Data.Text.Internal.Text)
                    (w3 :: GitHub.Data.Repos.Contributor)
                    (w4 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
                  case w1 of ww { Crawler.State ww1 ->
@@ -5980,6 +6339,20 @@ family instance GHC.Generics.Rep [Crawler.Task] = Crawler.Rep_Task
                               $dGConstructorCount
                               $dGToBSON
   = Crawler.$fToBSONBool_$s$dmtoBSON
+"SPEC/Crawler $dmtoBSON @ Task" [ALWAYS] forall ($dToBSON :: Data.Bson.Generic.ToBSON
+                                                               Crawler.Task)
+                                                ($dGeneric :: GHC.Generics.Generic Crawler.Task)
+                                                ($dGConstructorCount :: Data.Bson.Generic.GConstructorCount
+                                                                          (GHC.Generics.Rep
+                                                                             Crawler.Task))
+                                                ($dGToBSON :: Data.Bson.Generic.GToBSON
+                                                                (GHC.Generics.Rep Crawler.Task))
+  Data.Bson.Generic.$dmtoBSON @ Crawler.Task
+                              $dToBSON
+                              $dGeneric
+                              $dGConstructorCount
+                              $dGToBSON
+  = Crawler.$fToBSONTask_$s$dmtoBSON
 "SPEC/Crawler $fAllCTRender:a @ JSON @ '[] @ Response" [ALWAYS] forall ($dAccept :: Servant.API.ContentTypes.Accept
                                                                                       Servant.API.ContentTypes.JSON)
                                                                        ($dAllMime :: Servant.API.ContentTypes.AllMime
@@ -6199,6 +6572,15 @@ family instance GHC.Generics.Rep [Crawler.Task] = Crawler.Rep_Task
                                      $dGeneric
                                      $dGConstructorCount
   = Crawler.$fToBSONBool_$sconstructorCount
+"SPEC/Crawler constructorCount @ Task" [ALWAYS] forall ($dGeneric :: GHC.Generics.Generic
+                                                                       Crawler.Task)
+                                                       ($dGConstructorCount :: Data.Bson.Generic.GConstructorCount
+                                                                                 (GHC.Generics.Rep
+                                                                                    Crawler.Task))
+  Data.Bson.Generic.constructorCount @ Crawler.Task
+                                     $dGeneric
+                                     $dGConstructorCount
+  = Crawler.$fToBSONTask_$sconstructorCount
 vectorised variables:
 vectorised tycons:
 vectorised reused tycons:

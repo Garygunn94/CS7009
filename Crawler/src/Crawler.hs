@@ -104,7 +104,7 @@ initialize (CommonResources.User username authToken) = liftIO $ do
 	MongodbHelpers.withMongoDbConnection $ upsert (select ["tskUsername" =: username] "USER_TASK_RECORD") $ toBSON task
 	state <- liftIO $ newState
 	let auth = Just $ MainGitHub.OAuth $ (DBC.pack authToken)
-        liftIO $ forkIO $ getrepos (DT.pack username) auth state Nothing
+        liftIO $ forkIO $ getrepos (DT.pack username) auth state
         let resp = (Response "Started")
         return resp
 
@@ -116,42 +116,37 @@ terminate (CommonResources.User username authToken) = liftIO $ do
 	let resp = (Response "Terminated")
 	return resp
 
-getrepos :: Text -> Maybe GHD.Auth -> State -> Maybe Text -> IO()
-getrepos uname auth state prev_repo = liftIO $ do
-  tasker <- MongodbHelpers.withMongoDbConnection $ do
-  	docs <- find (select ["tskUsername" =: (unpack uname)] "USER_TASK_RECORD") >>= drainCursor
-  	return $ catMaybes $ DL.map (\ b -> fromBSON b :: Maybe Task) docs
-  case tasker of
-  	[(Task _ _ False)] -> return ()
-  	[(Task _ _ True)] -> do
+getrepos :: Text -> Maybe GHD.Auth -> State -> IO()
+getrepos uname auth state = liftIO $ do
+  --tasker <- MongodbHelpers.withMongoDbConnection $ do
+ -- 	docs <- find (select ["tskUsername" =: (unpack uname)] "USER_TASK_RECORD") >>= drainCursor
+  --	return $ catMaybes $ DL.map (\ b -> fromBSON b :: Maybe Task) docs
+  --case tasker of
+  --	[(Task _ _ True)] -> do
 	  possibleRepos <- Github.userRepos (mkOwnerName uname) GHDR.RepoPublicityAll
 	  case possibleRepos of
 	       (Left error)  -> return ()
 	       (Right repos) -> do
-	          mapM_ (formatRepo auth uname state prev_repo) repos
+	          mapM_ (formatRepo auth uname state) repos
 	         --return (V.toList x)
+	--_ -> return()
 
-formatRepo :: Maybe GHD.Auth -> Text -> State -> Maybe Text -> Github.Repo -> IO()
-formatRepo auth uname state prev_repo repo = do
+formatRepo :: Maybe GHD.Auth -> Text -> State -> Github.Repo -> IO()
+formatRepo auth uname state repo = do
   let repoHTML = getUrl $ GHDR.repoHtmlUrl repo
   seen_already <- atomically $ lookupNode state repoHTML
   case seen_already of
     Just r -> return ()
     Nothing -> do
-      case prev_repo of 
-        Just r -> do
-          let link = (Link (unpack r) (unpack repoHTML) "Contributor")
-          liftIO $ MongodbHelpers.withMongoDbConnection $ upsert (select ["start" =: (unpack r), "target" =: (unpack repoHTML)] "Link_RECORD") $ toBSON link
-        Nothing -> putStrLn "Unseen"
       let repodata = Node (unpack repoHTML) "Repo"
       atomically $ addNode state repodata repoHTML
       liftIO $ MongodbHelpers.withMongoDbConnection $ upsert (select ["name" =: (unpack repoHTML)] "Node_RECORD") $ toBSON repodata
       contributers <- Github.contributors' auth (mkOwnerName $ untagName $ simpleOwnerLogin (GHDR.repoOwner repo)) (GHDR.repoName repo)
       case contributers of
         (Left error) -> putStrLn $ "Error: " DL.++ (show error)
-        (Right contribs) -> mapM_ (userformat auth state (Just repoHTML)) contribs
+        (Right contribs) -> mapM_ (userformat auth state repoHTML) contribs
 
-userformat :: Maybe GHD.Auth -> State -> Maybe Text -> GHDR.Contributor -> IO()
+userformat :: Maybe GHD.Auth -> State -> Text -> GHDR.Contributor -> IO()
 userformat auth state prev_repo contributer = do
   let userLogin = untagName $ simpleUserLogin $ fromJust $ contributorToSimpleUser contributer
   let userData = (Node (unpack userLogin) "User")
@@ -160,8 +155,11 @@ userformat auth state prev_repo contributer = do
     Just u -> return ()
     Nothing -> do
       liftIO $ MongodbHelpers.withMongoDbConnection $ upsert (select ["name" =: (unpack userLogin)] "Node_RECORD") $ toBSON userData
+      let link = (Link (unpack userLogin) (unpack prev_repo) "Contributor")
+      liftIO $ MongodbHelpers.withMongoDbConnection $ upsert (select ["start" =: (unpack userLogin), "target" =: (unpack prev_repo)] "Link_RECORD") $ toBSON link
       atomically $ addNode state userData userLogin
-      getrepos userLogin auth state prev_repo
+      forkIO $ getrepos userLogin auth state
+      return()
 
 fotmatLanguage (Just language) = getLanguage language
 formatLanguage Nothing = ""

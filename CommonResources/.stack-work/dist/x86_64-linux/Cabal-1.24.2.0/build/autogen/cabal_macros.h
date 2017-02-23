@@ -70,6 +70,13 @@
   (major1) == 1 && (major2) <  6 || \
   (major1) == 1 && (major2) == 6 && (minor) <= 0)
 
+/* package transformers-0.5.2.0 */
+#define VERSION_transformers "0.5.2.0"
+#define MIN_VERSION_transformers(major1,major2,minor) (\
+  (major1) <  0 || \
+  (major1) == 0 && (major2) <  5 || \
+  (major1) == 0 && (major2) == 5 && (minor) <= 2)
+
 /* package wai-3.2.1.1 */
 #define VERSION_wai "3.2.1.1"
 #define MIN_VERSION_wai(major1,major2,minor) (\
@@ -168,7 +175,7 @@
   (major1) == 2 && (major2) <  26 || \
   (major1) == 2 && (major2) == 26 && (minor) <= 0)
 
-#define CURRENT_COMPONENT_ID "CommonResources-0.1.0.0-2hAoDRm32jf136sTU7I7w0"
+#define CURRENT_COMPONENT_ID "CommonResources-0.1.0.0-LpQja3yDL15K7T7dUigrkK"
 
-#define CURRENT_PACKAGE_KEY "CommonResources-0.1.0.0-2hAoDRm32jf136sTU7I7w0"
+#define CURRENT_PACKAGE_KEY "CommonResources-0.1.0.0-LpQja3yDL15K7T7dUigrkK"
 

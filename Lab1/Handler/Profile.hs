@@ -2,6 +2,7 @@
 
 
 
+
 {-# LANGUAGE DataKinds            #-}
 {-# LANGUAGE DeriveAnyClass       #-}
 {-# LANGUAGE DeriveGeneric        #-}
@@ -30,6 +31,11 @@ import              Servant.API
 import              Servant.Client
 import              Network.HTTP.Client (newManager, defaultManagerSettings)
 import qualified Data.Map as M hiding (split)
+import Database.MongoDB
+import Data.Aeson.Text (encodeToLazyText)
+import MongodbHelpers
+import System.IO
+import Data.List as DL
 import Prelude (read)
 
 crawlerApi :: Servant.Proxy CrawlerApi
@@ -45,10 +51,11 @@ getProfileR = do
     (_, user) <- requireAuthPair
     defaultLayout $ do
     	sess <- getSession
-    	let access_token = DBC.unpack (fromJust $ lookup "access_token" sess)
-    	let uname = DBC.unpack (fromJust $ lookup "login" sess)
+    	let access_token = DBC.unpack (fromJust $ Import.lookup "access_token" sess)
+    	let uname = DBC.unpack (fromJust $ Import.lookup "login" sess)
         let userdata = CommonResources.User (uname) (access_token)
-        liftIO $ makeApiCall userdata  
+        liftIO $ makeApiCall userdata
+        liftIO $ getJson
         setTitle . toHtml $ (DT.pack uname) <> "'s User page"
         $(widgetFile "profile")
 
@@ -58,5 +65,21 @@ makeApiCall user = liftIO $ do
   manager <- Network.HTTP.Client.newManager Network.HTTP.Client.defaultManagerSettings
   res <- runClientM (starter user) (ClientEnv manager (BaseUrl Http crawlerhost (read(crawlerport) :: Int) ""))
   case res of
-    Left err -> putStrLn $ "Error: "
+    Left err -> Import.putStrLn $ "Error: "
     Right response -> return ()
+
+
+getJson :: IO ()
+getJson = liftIO $ do
+   nodes <- MongodbHelpers.withMongoDbConnection $ do
+      docs <- Database.MongoDB.find (select [] "Node_RECORD") >>= drainCursor
+      return $ Import.catMaybes $ DL.map (\ b -> fromBSON b :: Maybe Node) docs
+   links <- MongodbHelpers.withMongoDbConnection $ do
+      docs <- Database.MongoDB.find (select [] "Link_RECORD") >>= drainCursor
+      return $ Import.catMaybes $ DL.map (\ b -> fromBSON b :: Maybe CommonResources.Link) docs
+   liftIO $ System.IO.writeFile "../nodes.json" (encodeToLazyText nodes)
+   liftIO $ System.IO.writeFile "../links.json" (encodeToLazyText links)
+   return ()
+   
+
+
