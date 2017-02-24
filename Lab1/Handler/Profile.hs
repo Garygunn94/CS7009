@@ -32,7 +32,6 @@ import              Servant.Client
 import              Network.HTTP.Client (newManager, defaultManagerSettings)
 import qualified Data.Map as M hiding (split)
 import Database.MongoDB
-import Data.Aeson.Text (encodeToLazyText)
 import MongodbHelpers
 import System.IO
 import Data.List as DL
@@ -55,7 +54,6 @@ getProfileR = do
     	let uname = DBC.unpack (fromJust $ Import.lookup "login" sess)
         let userdata = CommonResources.User (uname) (access_token)
         liftIO $ makeApiCall userdata
-        liftIO $ getJson
         setTitle . toHtml $ (DT.pack uname) <> "'s User page"
         $(widgetFile "profile")
 
@@ -69,17 +67,5 @@ makeApiCall user = liftIO $ do
     Right response -> return ()
 
 
-getJson :: IO ()
-getJson = liftIO $ do
-   nodes <- MongodbHelpers.withMongoDbConnection $ do
-      docs <- Database.MongoDB.find (select [] "Node_RECORD") >>= drainCursor
-      return $ Import.catMaybes $ DL.map (\ b -> fromBSON b :: Maybe Node) docs
-   links <- MongodbHelpers.withMongoDbConnection $ do
-      docs <- Database.MongoDB.find (select [] "Link_RECORD") >>= drainCursor
-      return $ Import.catMaybes $ DL.map (\ b -> fromBSON b :: Maybe CommonResources.Link) docs
-   liftIO $ System.IO.writeFile "../nodes.json" (encodeToLazyText nodes)
-   liftIO $ System.IO.writeFile "../links.json" (encodeToLazyText links)
-   return ()
-   
 
 

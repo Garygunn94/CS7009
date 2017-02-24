@@ -1,12 +1,12 @@
 
 ==================== FINAL INTERFACE ====================
-2017-02-23 15:24:30.18215 UTC
+2017-02-24 17:41:01.919091 UTC
 
 interface CommonResources-0.1.0.0-LpQja3yDL15K7T7dUigrkK:CommonResources [orphan module] [family instance module] 8001
-  interface hash: ca4c2ee70b822dae021d3e80a1fe2a21
-  ABI hash: 699397758d81567741cbfbf271019ed1
-  export-list hash: d3b805fa2f6c67f22fcd46be07d32abb
-  orphan hash: 96575b4c637a8c47c376ac616ed25a7e
+  interface hash: a5a5c08b083c7cb9de86b6a9041fdb25
+  ABI hash: 495fd03af70dba5cc6c42966f6107cc7
+  export-list hash: fe98f9180036bad5dfc86d6c88bb23d3
+  orphan hash: c3b524f31bf56066283048b1beff893e
   flag hash: 52c7ffec886c803869fcfa4ccdf0080e
   sig of: Nothing
   used TH splices: False
@@ -14,10 +14,14 @@ interface CommonResources-0.1.0.0-LpQja3yDL15K7T7dUigrkK:CommonResources [orphan
 exports:
   CommonResources.crawlerhost
   CommonResources.crawlerport
+  CommonResources.searchhost
+  CommonResources.searchport
   CommonResources.CrawlerApi
   CommonResources.Link{CommonResources.Link link_type start target}
   CommonResources.Node{CommonResources.Node name node_type}
   CommonResources.Response{CommonResources.Response respString}
+  CommonResources.SearchApi
+  CommonResources.SocialGraph{CommonResources.SocialGraph links nodes}
   CommonResources.User{CommonResources.User auth_token username}
 module dependencies:
 package dependencies: aeson-0.11.2.1@aeson-0.11.2.1-5ZQWuTFmffALcfpzDCXoOz
@@ -159,7 +163,7 @@ import  -/  servant-0.9.1.1@servant-0.9.1.1-JzVvK9yk6sQ1E4UZympEK1:Servant.API.S
 import  -/  servant-0.9.1.1@servant-0.9.1.1-JzVvK9yk6sQ1E4UZympEK1:Servant.API.Verbs 635eefa3150b87923b6bc0cdae51880a
 import  -/  servant-server-0.9.1.1@servant-server-0.9.1.1-66M2tFOHqQqK0MqMhFZVCd:Servant 486b79878ba489ae3f0fe8391c7fd3c5
 import  -/  time-1.6.0.1@time-1.6.0.1:Data.Time 11aa6bb0881cf13119ff057ae5c21663
-61b0e0d6cb0849134fd2685e93d9eb84
+9765339fac280027932b746bd2301922
   $fEqLink :: GHC.Classes.Eq CommonResources.Link
   DFunId
   {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -167,7 +171,7 @@ import  -/  time-1.6.0.1@time-1.6.0.1:Data.Time 11aa6bb0881cf13119ff057ae5c21663
                   @ CommonResources.Link
                   CommonResources.$fEqLink_$c==
                   CommonResources.$fEqLink_$c/= -}
-61b0e0d6cb0849134fd2685e93d9eb84
+9765339fac280027932b746bd2301922
   $fEqLink_$c/= ::
     CommonResources.Link -> CommonResources.Link -> GHC.Types.Bool
   {- Arity: 2, HasNoCafRefs,
@@ -177,7 +181,7 @@ import  -/  time-1.6.0.1@time-1.6.0.1:Data.Time 11aa6bb0881cf13119ff057ae5c21663
                  case CommonResources.$fEqLink_$c== a b of wild {
                    GHC.Types.False -> GHC.Types.True
                    GHC.Types.True -> GHC.Types.False }) -}
-61b0e0d6cb0849134fd2685e93d9eb84
+9765339fac280027932b746bd2301922
   $fEqLink_$c== ::
     CommonResources.Link -> CommonResources.Link -> GHC.Types.Bool
   {- Arity: 2, HasNoCafRefs,
@@ -252,7 +256,40 @@ d4865748a78d190968374356df046be6
                  case ds of wild { CommonResources.Response a1 ->
                  case ds1 of wild1 { CommonResources.Response b1 ->
                  GHC.Base.eqString a1 b1 } }) -}
-cef3aaa0867f26fc4479627a81ef80b7
+9765339fac280027932b746bd2301922
+  $fEqSocialGraph :: GHC.Classes.Eq CommonResources.SocialGraph
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ CommonResources.SocialGraph
+                  CommonResources.$fEqSocialGraph_$c==
+                  CommonResources.$fEqSocialGraph_$c/= -}
+9765339fac280027932b746bd2301922
+  $fEqSocialGraph_$c/= ::
+    CommonResources.SocialGraph
+    -> CommonResources.SocialGraph -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(SL),1*U(1*U,1*U)><S(SL),1*U(1*U,1*U)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (a :: CommonResources.SocialGraph)
+                   (b :: CommonResources.SocialGraph) ->
+                 case CommonResources.$fEqSocialGraph_$c== a b of wild {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True -> GHC.Types.False }) -}
+9765339fac280027932b746bd2301922
+  $fEqSocialGraph_$c== ::
+    CommonResources.SocialGraph
+    -> CommonResources.SocialGraph -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(SL),1*U(1*U,1*U)><S(SL),1*U(1*U,1*U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: CommonResources.SocialGraph)
+                   (w1 :: CommonResources.SocialGraph) ->
+                 case w of ww { CommonResources.SocialGraph ww1 ww2 ->
+                 case w1 of ww3 { CommonResources.SocialGraph ww4 ww5 ->
+                 CommonResources.$w$c==2 ww1 ww2 ww4 ww5 } }) -}
+80825682394d65b8cb8495364862b6b9
   $fEqUser :: GHC.Classes.Eq CommonResources.User
   DFunId
   {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -260,7 +297,7 @@ cef3aaa0867f26fc4479627a81ef80b7
                   @ CommonResources.User
                   CommonResources.$fEqUser_$c==
                   CommonResources.$fEqUser_$c/= -}
-cef3aaa0867f26fc4479627a81ef80b7
+80825682394d65b8cb8495364862b6b9
   $fEqUser_$c/= ::
     CommonResources.User -> CommonResources.User -> GHC.Types.Bool
   {- Arity: 2, HasNoCafRefs,
@@ -271,7 +308,7 @@ cef3aaa0867f26fc4479627a81ef80b7
                  case w of ww { CommonResources.User ww1 ww2 ->
                  case w1 of ww3 { CommonResources.User ww4 ww5 ->
                  CommonResources.$w$c/=1 ww1 ww2 ww4 ww5 } }) -}
-cef3aaa0867f26fc4479627a81ef80b7
+80825682394d65b8cb8495364862b6b9
   $fEqUser_$c== ::
     CommonResources.User -> CommonResources.User -> GHC.Types.Bool
   {- Arity: 2, HasNoCafRefs,
@@ -281,8 +318,8 @@ cef3aaa0867f26fc4479627a81ef80b7
                 (\ (w :: CommonResources.User) (w1 :: CommonResources.User) ->
                  case w of ww { CommonResources.User ww1 ww2 ->
                  case w1 of ww3 { CommonResources.User ww4 ww5 ->
-                 CommonResources.$w$c==2 ww1 ww2 ww4 ww5 } }) -}
-61b0e0d6cb0849134fd2685e93d9eb84
+                 CommonResources.$w$c==3 ww1 ww2 ww4 ww5 } }) -}
+9765339fac280027932b746bd2301922
   $fFromBSONLink :: Data.Bson.Generic.FromBSON CommonResources.Link
   DFunId
   {- Arity: 1, Strictness: <S,U>, Inline: INLINE (sat-args=0),
@@ -427,7 +464,7 @@ a07fcd1f4daec37e075bdddddee898cf
 cd4b69df67094d0be8a3efb24ed3d1b8
   $fFromBSONLink9 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "target"#) -}
-61b0e0d6cb0849134fd2685e93d9eb84
+9765339fac280027932b746bd2301922
   $fFromBSONLink_$cfromBSON ::
     Data.Bson.Document -> GHC.Base.Maybe CommonResources.Link
   {- Arity: 1, Strictness: <S,U>,
@@ -509,7 +546,7 @@ cd4b69df67094d0be8a3efb24ed3d1b8
                                                                                         (GHC.Generics.Rec0
                                                                                            GHC.Base.String)))>_R))
                                      (Sub (Sym (CommonResources.Rep_Link[0])))) <GHC.Prim.Any>_N)) }) -}
-61b0e0d6cb0849134fd2685e93d9eb84
+9765339fac280027932b746bd2301922
   $fFromBSONLink_$cto ::
     GHC.Generics.Rep CommonResources.Link x -> CommonResources.Link
   {- Arity: 1, HasNoCafRefs, Strictness: <S(LS),1*U(U,1*U(U,U))>m,
@@ -1529,7 +1566,7 @@ a5f2bf0145e087494bf577f037b4df15
 71be2b19bdcbe57b4bfd2838e980352a
   $fFromBSON[]_lvl47 :: GHC.Types.Int
   {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 2#) -}
-61b0e0d6cb0849134fd2685e93d9eb84
+9765339fac280027932b746bd2301922
   $fFromJSONLink ::
     Data.Aeson.Types.Class.FromJSON CommonResources.Link
   DFunId
@@ -1648,7 +1685,7 @@ c07425e720a5b6f58c0458c159396cf4
                                                  (GHC.Generics.Rec0 GHC.Base.String))
                              a) ->
                  GHC.Types.False) -}
-61b0e0d6cb0849134fd2685e93d9eb84
+9765339fac280027932b746bd2301922
   $fFromJSONLink_$cparseJSON ::
     Data.Aeson.Types.Internal.Value
     -> Data.Aeson.Types.Internal.Parser CommonResources.Link
@@ -2499,7 +2536,616 @@ f7a9b82c5406ef2953254524211bd635
                                 'GHC.Generics.NoSourceStrictness
                                 'GHC.Generics.DecidedLazy) f a) ->
                  CommonResources.$fFromJSONResponse6) -}
-cef3aaa0867f26fc4479627a81ef80b7
+9765339fac280027932b746bd2301922
+  $fFromJSONSocialGraph ::
+    Data.Aeson.Types.Class.FromJSON CommonResources.SocialGraph
+  DFunId
+  {- Arity: 1, Strictness: <L,U>, Inline: INLINE (sat-args=0),
+     Unfolding: InlineRule (0, False, True)
+                CommonResources.$fFromJSONSocialGraph_$cparseJSON
+                  `cast`
+                (Sym (Data.Aeson.Types.Class.N:FromJSON[0]
+                          <CommonResources.SocialGraph>_N)) -}
+9765339fac280027932b746bd2301922
+  $fFromJSONSocialGraph1 ::
+    Data.Aeson.Types.Internal.Options
+    -> GHC.Base.Maybe Data.Text.Internal.Text
+    -> Data.Aeson.Types.Internal.Value
+    -> Data.Aeson.Types.Generic.Tagged
+         Data.Aeson.Types.Generic.True
+         (Data.Aeson.Types.Internal.Parser
+            ((GHC.Generics.:*:)
+               (GHC.Generics.S1
+                  ('GHC.Generics.MetaSel
+                     ('GHC.Base.Just "nodes")
+                     'GHC.Generics.NoSourceUnpackedness
+                     'GHC.Generics.NoSourceStrictness
+                     'GHC.Generics.DecidedLazy)
+                  (GHC.Generics.Rec0 [CommonResources.Node]))
+               (GHC.Generics.S1
+                  ('GHC.Generics.MetaSel
+                     ('GHC.Base.Just "links")
+                     'GHC.Generics.NoSourceUnpackedness
+                     'GHC.Generics.NoSourceStrictness
+                     'GHC.Generics.DecidedLazy)
+                  (GHC.Generics.Rec0 [CommonResources.Link]))
+               a))
+  {- Arity: 3, Strictness: <L,U(U,U,U,U,U,U)><L,A><S,1*U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, True)
+                (\ @ a
+                   (w :: Data.Aeson.Types.Internal.Options)
+                   (w1 :: GHC.Base.Maybe Data.Text.Internal.Text)
+                   (w2 :: Data.Aeson.Types.Internal.Value) ->
+                 CommonResources.$w$dConsFromJSON'2 @ a w w2) -}
+9765339fac280027932b746bd2301922
+  $fFromJSONSocialGraph10 ::
+    [Data.Aeson.Types.Internal.Parser CommonResources.Link]
+    -> forall (f :: * -> *) r.
+       Data.Aeson.Types.Internal.JSONPath
+       -> Data.Aeson.Types.Internal.Failure f r
+       -> Data.Aeson.Types.Internal.Success [CommonResources.Link] f r
+       -> f r
+  {- Arity: 4, HasNoCafRefs, Strictness: <S,1*U><L,U><L,U><L,C(U)> -}
+a70309e6db6490b42e04b52b5354a7d2
+  $fFromJSONSocialGraph11 ::
+    GHC.Generics.SingI ('GHC.Base.Just "links")
+  {- Unfolding: InlineRule (0, True, True)
+                CommonResources.$fFromJSONSocialGraph12
+                  `cast`
+                (Trans
+                     (Sym (GHC.Generics.D:R:SingMaybeb0[0] <GHC.Types.Symbol>_N))
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Base.Maybe
+                                                       GHC.Types.Symbol>_N) <'GHC.Base.Just
+                                                                               "links">_N) -}
+bd32f73f8e41ba3d5d1409515e0c89f6
+  $fFromJSONSocialGraph12 ::
+    GHC.Generics.R:SingMaybeb GHC.Types.Symbol ('GHC.Base.Just "links")
+  {- Unfolding: (GHC.Generics.SJust
+                   @ GHC.Types.Symbol
+                   @ ('GHC.Base.Just "links")
+                   @ "links"
+                   @~ <'GHC.Base.Just "links">_N
+                   CommonResources.$fFromJSONSocialGraph13
+                     `cast`
+                   (Sym (GHC.Generics.D:R:SingSymbols0[0]) <"links">_N)) -}
+44689a4947669fe235eaca3bec9c4976
+  $fFromJSONSocialGraph13 :: GHC.Generics.R:SingSymbols "links"
+  {- Strictness: m,
+     Unfolding: (GHC.Generics.SSym
+                   @ "links"
+                   CommonResources.$fFromJSONSocialGraph14
+                     `cast`
+                   (Trans
+                        (Sym (GHC.TypeLits.N:SSymbol[0] <"links">_P))
+                        (Sym (GHC.TypeLits.N:KnownSymbol[0]) <"links">_N))) -}
+df461c63fc7912f15f89394d978d8fd8
+  $fFromJSONSocialGraph14 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "links"#) -}
+9765339fac280027932b746bd2301922
+  $fFromJSONSocialGraph15 ::
+    (GHC.Generics.:*:)
+      (GHC.Generics.M1
+         GHC.Generics.S
+         ('GHC.Generics.MetaSel
+            ('GHC.Base.Just "nodes")
+            'GHC.Generics.NoSourceUnpackedness
+            'GHC.Generics.NoSourceStrictness
+            'GHC.Generics.DecidedLazy)
+         (GHC.Generics.Rec0 [CommonResources.Node]))
+      (GHC.Generics.M1
+         GHC.Generics.S
+         ('GHC.Generics.MetaSel
+            ('GHC.Base.Just "links")
+            'GHC.Generics.NoSourceUnpackedness
+            'GHC.Generics.NoSourceStrictness
+            'GHC.Generics.DecidedLazy)
+         (GHC.Generics.Rec0 [CommonResources.Link]))
+      a
+    -> GHC.Types.Bool
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ a
+                   (eta :: (GHC.Generics.:*:)
+                             (GHC.Generics.M1
+                                GHC.Generics.S
+                                ('GHC.Generics.MetaSel
+                                   ('GHC.Base.Just "nodes")
+                                   'GHC.Generics.NoSourceUnpackedness
+                                   'GHC.Generics.NoSourceStrictness
+                                   'GHC.Generics.DecidedLazy)
+                                (GHC.Generics.Rec0 [CommonResources.Node]))
+                             (GHC.Generics.M1
+                                GHC.Generics.S
+                                ('GHC.Generics.MetaSel
+                                   ('GHC.Base.Just "links")
+                                   'GHC.Generics.NoSourceUnpackedness
+                                   'GHC.Generics.NoSourceStrictness
+                                   'GHC.Generics.DecidedLazy)
+                                (GHC.Generics.Rec0 [CommonResources.Link]))
+                             a) ->
+                 GHC.Types.False) -}
+9b912aba9a5269eb21e05287fb58a960
+  $fFromJSONSocialGraph2 ::
+    Data.Aeson.Types.Internal.Options
+    -> Data.Aeson.Types.Internal.Value
+    -> Data.Aeson.Types.Internal.Parser
+         (GHC.Generics.K1 GHC.Generics.R [CommonResources.Node] a1)
+  {- Arity: 2, Strictness: <L,A><L,1*U>, Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, True)
+                (\ @ a1
+                   (w :: Data.Aeson.Types.Internal.Options)
+                   (w1 :: Data.Aeson.Types.Internal.Value) ->
+                 CommonResources.$w$dGFromJSON3 @ a1 w1) -}
+ef95fcd0e7cfe7cccbe801ca8f183117
+  $fFromJSONSocialGraph3 ::
+    [Data.Aeson.Types.Internal.Parser CommonResources.Node]
+    -> forall (f :: * -> *) r.
+       Data.Aeson.Types.Internal.JSONPath
+       -> Data.Aeson.Types.Internal.Failure f r
+       -> Data.Aeson.Types.Internal.Success [CommonResources.Node] f r
+       -> f r
+  {- Arity: 4, HasNoCafRefs, Strictness: <S,1*U><L,U><L,U><L,C(U)> -}
+aa8fa1022578a73330519ad00f0770e2
+  $fFromJSONSocialGraph4 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "[a]"#) -}
+56f19b6c6a584e97b652ff89a4daf47c
+  $fFromJSONSocialGraph5 ::
+    GHC.Generics.SingI ('GHC.Base.Just "nodes")
+  {- Unfolding: InlineRule (0, True, True)
+                CommonResources.$fFromJSONSocialGraph6
+                  `cast`
+                (Trans
+                     (Sym (GHC.Generics.D:R:SingMaybeb0[0] <GHC.Types.Symbol>_N))
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Base.Maybe
+                                                       GHC.Types.Symbol>_N) <'GHC.Base.Just
+                                                                               "nodes">_N) -}
+2bb8026d21a38ac7c99b4f3079153236
+  $fFromJSONSocialGraph6 ::
+    GHC.Generics.R:SingMaybeb GHC.Types.Symbol ('GHC.Base.Just "nodes")
+  {- Unfolding: (GHC.Generics.SJust
+                   @ GHC.Types.Symbol
+                   @ ('GHC.Base.Just "nodes")
+                   @ "nodes"
+                   @~ <'GHC.Base.Just "nodes">_N
+                   CommonResources.$fFromJSONSocialGraph7
+                     `cast`
+                   (Sym (GHC.Generics.D:R:SingSymbols0[0]) <"nodes">_N)) -}
+5f65431de5b5a1bd717c3e7286e31261
+  $fFromJSONSocialGraph7 :: GHC.Generics.R:SingSymbols "nodes"
+  {- Strictness: m,
+     Unfolding: (GHC.Generics.SSym
+                   @ "nodes"
+                   CommonResources.$fFromJSONSocialGraph8
+                     `cast`
+                   (Trans
+                        (Sym (GHC.TypeLits.N:SSymbol[0] <"nodes">_P))
+                        (Sym (GHC.TypeLits.N:KnownSymbol[0]) <"nodes">_N))) -}
+b18c3b6e9efb2759b84912e2b3365a8c
+  $fFromJSONSocialGraph8 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "nodes"#) -}
+9765339fac280027932b746bd2301922
+  $fFromJSONSocialGraph9 ::
+    Data.Aeson.Types.Internal.Options
+    -> Data.Aeson.Types.Internal.Value
+    -> Data.Aeson.Types.Internal.Parser
+         (GHC.Generics.K1 GHC.Generics.R [CommonResources.Link] a1)
+  {- Arity: 2, Strictness: <L,A><L,1*U>, Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, True)
+                (\ @ a1
+                   (w :: Data.Aeson.Types.Internal.Options)
+                   (w1 :: Data.Aeson.Types.Internal.Value) ->
+                 CommonResources.$w$dGFromJSON4 @ a1 w1) -}
+9765339fac280027932b746bd2301922
+  $fFromJSONSocialGraph_$cparseJSON ::
+    Data.Aeson.Types.Internal.Value
+    -> Data.Aeson.Types.Internal.Parser CommonResources.SocialGraph
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: (\ (x :: Data.Aeson.Types.Internal.Value) ->
+                 let {
+                   m :: Data.Aeson.Types.Internal.Parser
+                          ((GHC.Generics.:*:)
+                             (GHC.Generics.S1
+                                ('GHC.Generics.MetaSel
+                                   ('GHC.Base.Just "nodes")
+                                   'GHC.Generics.NoSourceUnpackedness
+                                   'GHC.Generics.NoSourceStrictness
+                                   'GHC.Generics.DecidedLazy)
+                                (GHC.Generics.Rec0 [CommonResources.Node]))
+                             (GHC.Generics.S1
+                                ('GHC.Generics.MetaSel
+                                   ('GHC.Base.Just "links")
+                                   'GHC.Generics.NoSourceUnpackedness
+                                   'GHC.Generics.NoSourceStrictness
+                                   'GHC.Generics.DecidedLazy)
+                                (GHC.Generics.Rec0 [CommonResources.Link]))
+                             GHC.Prim.Any)
+                   = Data.Aeson.Types.Generic.$fConsFromJSONf_$cconsParseJSON
+                       @ (GHC.Generics.S1
+                            ('GHC.Generics.MetaSel
+                               ('GHC.Base.Just "nodes")
+                               'GHC.Generics.NoSourceUnpackedness
+                               'GHC.Generics.NoSourceStrictness
+                               'GHC.Generics.DecidedLazy)
+                            (GHC.Generics.Rec0 [CommonResources.Node])
+                          GHC.Generics.:*: GHC.Generics.S1
+                                             ('GHC.Generics.MetaSel
+                                                ('GHC.Base.Just "links")
+                                                'GHC.Generics.NoSourceUnpackedness
+                                                'GHC.Generics.NoSourceStrictness
+                                                'GHC.Generics.DecidedLazy)
+                                             (GHC.Generics.Rec0 [CommonResources.Link]))
+                       @ Data.Aeson.Types.Generic.True
+                       CommonResources.$fFromJSONSocialGraph15
+                         `cast`
+                       (Sym (Data.Aeson.Types.Generic.N:IsRecord[0]
+                                 <GHC.Generics.M1
+                                    GHC.Generics.S
+                                    ('GHC.Generics.MetaSel
+                                       ('GHC.Base.Just "nodes")
+                                       'GHC.Generics.NoSourceUnpackedness
+                                       'GHC.Generics.NoSourceStrictness
+                                       'GHC.Generics.DecidedLazy)
+                                    (GHC.Generics.Rec0 [CommonResources.Node])
+                                  GHC.Generics.:*: GHC.Generics.M1
+                                                     GHC.Generics.S
+                                                     ('GHC.Generics.MetaSel
+                                                        ('GHC.Base.Just "links")
+                                                        'GHC.Generics.NoSourceUnpackedness
+                                                        'GHC.Generics.NoSourceStrictness
+                                                        'GHC.Generics.DecidedLazy)
+                                                     (GHC.Generics.Rec0 [CommonResources.Link])>_N
+                                 <Data.Aeson.Types.Generic.True>_N))
+                       CommonResources.$fFromJSONSocialGraph1
+                         `cast`
+                       (Sym (Data.Aeson.Types.Generic.N:ConsFromJSON'[0]
+                                 <GHC.Generics.S1
+                                    ('GHC.Generics.MetaSel
+                                       ('GHC.Base.Just "nodes")
+                                       'GHC.Generics.NoSourceUnpackedness
+                                       'GHC.Generics.NoSourceStrictness
+                                       'GHC.Generics.DecidedLazy)
+                                    (GHC.Generics.Rec0 [CommonResources.Node])
+                                  GHC.Generics.:*: GHC.Generics.S1
+                                                     ('GHC.Generics.MetaSel
+                                                        ('GHC.Base.Just "links")
+                                                        'GHC.Generics.NoSourceUnpackedness
+                                                        'GHC.Generics.NoSourceStrictness
+                                                        'GHC.Generics.DecidedLazy)
+                                                     (GHC.Generics.Rec0 [CommonResources.Link])>_N
+                                 <Data.Aeson.Types.Generic.True>_N))
+                       @ GHC.Prim.Any
+                       Data.Aeson.Types.Internal.defaultOptions
+                       x
+                 } in
+                 (\ @ (f1 :: * -> *)
+                    @ r
+                    (path :: Data.Aeson.Types.Internal.JSONPath)
+                    (kf :: Data.Aeson.Types.Internal.Failure f1 r)
+                    (ks :: Data.Aeson.Types.Internal.Success
+                             CommonResources.SocialGraph f1 r) ->
+                  m `cast`
+                  (Data.Aeson.Types.Internal.N:Parser[0]
+                       <(GHC.Generics.:*:)
+                          (GHC.Generics.S1
+                             ('GHC.Generics.MetaSel
+                                ('GHC.Base.Just "nodes")
+                                'GHC.Generics.NoSourceUnpackedness
+                                'GHC.Generics.NoSourceStrictness
+                                'GHC.Generics.DecidedLazy)
+                             (GHC.Generics.Rec0 [CommonResources.Node]))
+                          (GHC.Generics.S1
+                             ('GHC.Generics.MetaSel
+                                ('GHC.Base.Just "links")
+                                'GHC.Generics.NoSourceUnpackedness
+                                'GHC.Generics.NoSourceStrictness
+                                'GHC.Generics.DecidedLazy)
+                             (GHC.Generics.Rec0 [CommonResources.Link]))
+                          GHC.Prim.Any>_R)
+                    @ f1
+                    @ r
+                    path
+                    kf
+                    (\ (a2 :: (GHC.Generics.:*:)
+                                (GHC.Generics.S1
+                                   ('GHC.Generics.MetaSel
+                                      ('GHC.Base.Just "nodes")
+                                      'GHC.Generics.NoSourceUnpackedness
+                                      'GHC.Generics.NoSourceStrictness
+                                      'GHC.Generics.DecidedLazy)
+                                   (GHC.Generics.Rec0 [CommonResources.Node]))
+                                (GHC.Generics.S1
+                                   ('GHC.Generics.MetaSel
+                                      ('GHC.Base.Just "links")
+                                      'GHC.Generics.NoSourceUnpackedness
+                                      'GHC.Generics.NoSourceStrictness
+                                      'GHC.Generics.DecidedLazy)
+                                   (GHC.Generics.Rec0 [CommonResources.Link]))
+                                GHC.Prim.Any) ->
+                     ks
+                       (case a2 of wild { GHC.Generics.:*: ds ds1 ->
+                        CommonResources.SocialGraph
+                          ds
+                            `cast`
+                          (Trans
+                               (GHC.Generics.N:M1[0]
+                                    <GHC.Generics.S>_P
+                                    <'GHC.Generics.MetaSel
+                                       ('GHC.Base.Just "nodes")
+                                       'GHC.Generics.NoSourceUnpackedness
+                                       'GHC.Generics.NoSourceStrictness
+                                       'GHC.Generics.DecidedLazy>_P
+                                    <GHC.Generics.K1
+                                       GHC.Generics.R [CommonResources.Node]>_R <GHC.Prim.Any>_N)
+                               (GHC.Generics.N:K1[0]
+                                    <GHC.Generics.R>_P <[CommonResources.Node]>_R <GHC.Prim.Any>_P))
+                          ds1
+                            `cast`
+                          (Trans
+                               (GHC.Generics.N:M1[0]
+                                    <GHC.Generics.S>_P
+                                    <'GHC.Generics.MetaSel
+                                       ('GHC.Base.Just "links")
+                                       'GHC.Generics.NoSourceUnpackedness
+                                       'GHC.Generics.NoSourceStrictness
+                                       'GHC.Generics.DecidedLazy>_P
+                                    <GHC.Generics.K1
+                                       GHC.Generics.R [CommonResources.Link]>_R <GHC.Prim.Any>_N)
+                               (GHC.Generics.N:K1[0]
+                                    <GHC.Generics.R>_P
+                                    <[CommonResources.Link]>_R
+                                    <GHC.Prim.Any>_P)) })))
+                   `cast`
+                 (Sym (Data.Aeson.Types.Internal.N:Parser[0]
+                           <CommonResources.SocialGraph>_R))) -}
+3f4b14753e56d70d68697c5b9903b382
+  $fFromJSONSocialGraph_$s$fSelectorMetaMetaSel ::
+    GHC.Generics.Selector
+      ('GHC.Generics.MetaSel
+         ('GHC.Base.Just "nodes")
+         'GHC.Generics.NoSourceUnpackedness
+         'GHC.Generics.NoSourceStrictness
+         'GHC.Generics.DecidedLazy)
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ GHC.Generics.Meta
+                  @ ('GHC.Generics.MetaSel
+                       ('GHC.Base.Just "nodes")
+                       'GHC.Generics.NoSourceUnpackedness
+                       'GHC.Generics.NoSourceStrictness
+                       'GHC.Generics.DecidedLazy)
+                  CommonResources.$fFromJSONSocialGraph_$s$fSelectorMetaMetaSel_$cselName
+                  (GHC.Generics.$fSelectorMetaMetaSel_$cselSourceUnpackedness
+                     @ ('GHC.Base.Just "nodes")
+                     @ 'GHC.Generics.NoSourceUnpackedness
+                     @ 'GHC.Generics.NoSourceStrictness
+                     @ 'GHC.Generics.DecidedLazy
+                     CommonResources.$fFromJSONSocialGraph5
+                     GHC.Generics.$WSNoSourceUnpackedness
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.SourceUnpackedness>_N <'GHC.Generics.NoSourceUnpackedness>_N)
+                     GHC.Generics.$WSNoSourceStrictness
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.SourceStrictness>_N <'GHC.Generics.NoSourceStrictness>_N)
+                     GHC.Generics.$WSDecidedLazy
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.DecidedStrictness>_N <'GHC.Generics.DecidedLazy>_N))
+                  (GHC.Generics.$fSelectorMetaMetaSel_$cselSourceStrictness
+                     @ ('GHC.Base.Just "nodes")
+                     @ 'GHC.Generics.NoSourceUnpackedness
+                     @ 'GHC.Generics.NoSourceStrictness
+                     @ 'GHC.Generics.DecidedLazy
+                     CommonResources.$fFromJSONSocialGraph5
+                     GHC.Generics.$WSNoSourceUnpackedness
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.SourceUnpackedness>_N <'GHC.Generics.NoSourceUnpackedness>_N)
+                     GHC.Generics.$WSNoSourceStrictness
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.SourceStrictness>_N <'GHC.Generics.NoSourceStrictness>_N)
+                     GHC.Generics.$WSDecidedLazy
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.DecidedStrictness>_N <'GHC.Generics.DecidedLazy>_N))
+                  (GHC.Generics.$fSelectorMetaMetaSel_$cselDecidedStrictness
+                     @ ('GHC.Base.Just "nodes")
+                     @ 'GHC.Generics.NoSourceUnpackedness
+                     @ 'GHC.Generics.NoSourceStrictness
+                     @ 'GHC.Generics.DecidedLazy
+                     CommonResources.$fFromJSONSocialGraph5
+                     GHC.Generics.$WSNoSourceUnpackedness
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.SourceUnpackedness>_N <'GHC.Generics.NoSourceUnpackedness>_N)
+                     GHC.Generics.$WSNoSourceStrictness
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.SourceStrictness>_N <'GHC.Generics.NoSourceStrictness>_N)
+                     GHC.Generics.$WSDecidedLazy
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.DecidedStrictness>_N <'GHC.Generics.DecidedLazy>_N)) -}
+223f2304bb4e1c15239f997b2f874d71
+  $fFromJSONSocialGraph_$s$fSelectorMetaMetaSel1 ::
+    GHC.Generics.Selector
+      ('GHC.Generics.MetaSel
+         ('GHC.Base.Just "links")
+         'GHC.Generics.NoSourceUnpackedness
+         'GHC.Generics.NoSourceStrictness
+         'GHC.Generics.DecidedLazy)
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ GHC.Generics.Meta
+                  @ ('GHC.Generics.MetaSel
+                       ('GHC.Base.Just "links")
+                       'GHC.Generics.NoSourceUnpackedness
+                       'GHC.Generics.NoSourceStrictness
+                       'GHC.Generics.DecidedLazy)
+                  CommonResources.$fFromJSONSocialGraph_$s$fSelectorMetaMetaSel_$cselName1
+                  (GHC.Generics.$fSelectorMetaMetaSel_$cselSourceUnpackedness
+                     @ ('GHC.Base.Just "links")
+                     @ 'GHC.Generics.NoSourceUnpackedness
+                     @ 'GHC.Generics.NoSourceStrictness
+                     @ 'GHC.Generics.DecidedLazy
+                     CommonResources.$fFromJSONSocialGraph11
+                     GHC.Generics.$WSNoSourceUnpackedness
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.SourceUnpackedness>_N <'GHC.Generics.NoSourceUnpackedness>_N)
+                     GHC.Generics.$WSNoSourceStrictness
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.SourceStrictness>_N <'GHC.Generics.NoSourceStrictness>_N)
+                     GHC.Generics.$WSDecidedLazy
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.DecidedStrictness>_N <'GHC.Generics.DecidedLazy>_N))
+                  (GHC.Generics.$fSelectorMetaMetaSel_$cselSourceStrictness
+                     @ ('GHC.Base.Just "links")
+                     @ 'GHC.Generics.NoSourceUnpackedness
+                     @ 'GHC.Generics.NoSourceStrictness
+                     @ 'GHC.Generics.DecidedLazy
+                     CommonResources.$fFromJSONSocialGraph11
+                     GHC.Generics.$WSNoSourceUnpackedness
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.SourceUnpackedness>_N <'GHC.Generics.NoSourceUnpackedness>_N)
+                     GHC.Generics.$WSNoSourceStrictness
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.SourceStrictness>_N <'GHC.Generics.NoSourceStrictness>_N)
+                     GHC.Generics.$WSDecidedLazy
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.DecidedStrictness>_N <'GHC.Generics.DecidedLazy>_N))
+                  (GHC.Generics.$fSelectorMetaMetaSel_$cselDecidedStrictness
+                     @ ('GHC.Base.Just "links")
+                     @ 'GHC.Generics.NoSourceUnpackedness
+                     @ 'GHC.Generics.NoSourceStrictness
+                     @ 'GHC.Generics.DecidedLazy
+                     CommonResources.$fFromJSONSocialGraph11
+                     GHC.Generics.$WSNoSourceUnpackedness
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.SourceUnpackedness>_N <'GHC.Generics.NoSourceUnpackedness>_N)
+                     GHC.Generics.$WSNoSourceStrictness
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.SourceStrictness>_N <'GHC.Generics.NoSourceStrictness>_N)
+                     GHC.Generics.$WSDecidedLazy
+                       `cast`
+                     (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.DecidedStrictness>_N <'GHC.Generics.DecidedLazy>_N)) -}
+cafe8882b6cada0d444520e3d04e162f
+  $fFromJSONSocialGraph_$s$fSelectorMetaMetaSel_$cselName ::
+    forall k (t :: GHC.Generics.Meta
+                   -> (GHC.Types.* -> GHC.Types.*) -> k -> *) (f :: GHC.Types.*
+                                                                    -> GHC.Types.*) (a :: k).
+    t ('GHC.Generics.MetaSel
+         ('GHC.Base.Just "nodes")
+         'GHC.Generics.NoSourceUnpackedness
+         'GHC.Generics.NoSourceStrictness
+         'GHC.Generics.DecidedLazy) f a
+    -> [GHC.Types.Char]
+  {- Arity: 1, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ k
+                   @ (t :: GHC.Generics.Meta
+                           -> (GHC.Types.* -> GHC.Types.*) -> k -> *)
+                   @ (f :: GHC.Types.* -> GHC.Types.*)
+                   @ (a :: k)
+                   (ds1 :: t ('GHC.Generics.MetaSel
+                                ('GHC.Base.Just "nodes")
+                                'GHC.Generics.NoSourceUnpackedness
+                                'GHC.Generics.NoSourceStrictness
+                                'GHC.Generics.DecidedLazy) f a) ->
+                 CommonResources.$fFromJSONSocialGraph8) -}
+ae800361b1ee28c49eba4a1aedd67291
+  $fFromJSONSocialGraph_$s$fSelectorMetaMetaSel_$cselName1 ::
+    forall k (t :: GHC.Generics.Meta
+                   -> (GHC.Types.* -> GHC.Types.*) -> k -> *) (f :: GHC.Types.*
+                                                                    -> GHC.Types.*) (a :: k).
+    t ('GHC.Generics.MetaSel
+         ('GHC.Base.Just "links")
+         'GHC.Generics.NoSourceUnpackedness
+         'GHC.Generics.NoSourceStrictness
+         'GHC.Generics.DecidedLazy) f a
+    -> [GHC.Types.Char]
+  {- Arity: 1, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ k
+                   @ (t :: GHC.Generics.Meta
+                           -> (GHC.Types.* -> GHC.Types.*) -> k -> *)
+                   @ (f :: GHC.Types.* -> GHC.Types.*)
+                   @ (a :: k)
+                   (ds1 :: t ('GHC.Generics.MetaSel
+                                ('GHC.Base.Just "links")
+                                'GHC.Generics.NoSourceUnpackedness
+                                'GHC.Generics.NoSourceStrictness
+                                'GHC.Generics.DecidedLazy) f a) ->
+                 CommonResources.$fFromJSONSocialGraph14) -}
+1ff0757d59000cc1bb686b0239ba4b4d
+  $fFromJSONSocialGraph_f1 ::
+    GHC.Types.Int
+    -> Data.Aeson.Types.Internal.Value
+    -> Data.Aeson.Types.Internal.Parser CommonResources.Node
+  {- Arity: 2, Strictness: <L,1*U(U)><L,U>,
+     Unfolding: (\ (idx :: GHC.Types.Int)
+                   (value :: Data.Aeson.Types.Internal.Value) ->
+                 let {
+                   pathElem17 :: Data.Aeson.Types.Internal.JSONPathElement
+                   = case idx of dt { GHC.Types.I# dt1 ->
+                     Data.Aeson.Types.Internal.Index dt1 }
+                 } in
+                 let {
+                   p :: Data.Aeson.Types.Internal.Parser CommonResources.Node
+                   = CommonResources.$fFromJSONNode_$cparseJSON value
+                 } in
+                 (\ @ (f1 :: * -> *)
+                    @ r
+                    (path :: Data.Aeson.Types.Internal.JSONPath)
+                    (kf :: Data.Aeson.Types.Internal.Failure f1 r)
+                    (ks :: Data.Aeson.Types.Internal.Success
+                             CommonResources.Node f1 r) ->
+                  p `cast`
+                  (Data.Aeson.Types.Internal.N:Parser[0] <CommonResources.Node>_R)
+                    @ f1
+                    @ r
+                    (GHC.Types.:
+                       @ Data.Aeson.Types.Internal.JSONPathElement
+                       pathElem17
+                       path)
+                    kf
+                    ks)
+                   `cast`
+                 (Sym (Data.Aeson.Types.Internal.N:Parser[0]
+                           <CommonResources.Node>_R))) -}
+da692896aa476979f4665f81d3c71e5c
+  $fFromJSONSocialGraph_f2 :: [GHC.Types.Int]
+  {- Unfolding: (GHC.Enum.eftInt 0# 9223372036854775807#) -}
+9765339fac280027932b746bd2301922
+  $fFromJSONSocialGraph_f4 ::
+    GHC.Types.Int
+    -> Data.Aeson.Types.Internal.Value
+    -> Data.Aeson.Types.Internal.Parser CommonResources.Link
+  {- Arity: 2, Strictness: <L,1*U(U)><L,U>,
+     Unfolding: (\ (idx :: GHC.Types.Int)
+                   (value :: Data.Aeson.Types.Internal.Value) ->
+                 let {
+                   pathElem17 :: Data.Aeson.Types.Internal.JSONPathElement
+                   = case idx of dt { GHC.Types.I# dt1 ->
+                     Data.Aeson.Types.Internal.Index dt1 }
+                 } in
+                 let {
+                   p :: Data.Aeson.Types.Internal.Parser CommonResources.Link
+                   = CommonResources.$fFromJSONLink_$cparseJSON value
+                 } in
+                 (\ @ (f1 :: * -> *)
+                    @ r
+                    (path :: Data.Aeson.Types.Internal.JSONPath)
+                    (kf :: Data.Aeson.Types.Internal.Failure f1 r)
+                    (ks :: Data.Aeson.Types.Internal.Success
+                             CommonResources.Link f1 r) ->
+                  p `cast`
+                  (Data.Aeson.Types.Internal.N:Parser[0] <CommonResources.Link>_R)
+                    @ f1
+                    @ r
+                    (GHC.Types.:
+                       @ Data.Aeson.Types.Internal.JSONPathElement
+                       pathElem17
+                       path)
+                    kf
+                    ks)
+                   `cast`
+                 (Sym (Data.Aeson.Types.Internal.N:Parser[0]
+                           <CommonResources.Link>_R))) -}
+80825682394d65b8cb8495364862b6b9
   $fFromJSONUser ::
     Data.Aeson.Types.Class.FromJSON CommonResources.User
   DFunId
@@ -2509,7 +3155,7 @@ cef3aaa0867f26fc4479627a81ef80b7
                   `cast`
                 (Sym (Data.Aeson.Types.Class.N:FromJSON[0]
                           <CommonResources.User>_N)) -}
-c15fd9319f3ec671e5df19d7d5bec0ad
+809561b02d9909171d0099e54b215d12
   $fFromJSONUser1 ::
     Data.Aeson.Types.Internal.Options
     -> GHC.Base.Maybe Data.Text.Internal.Text
@@ -2540,7 +3186,7 @@ c15fd9319f3ec671e5df19d7d5bec0ad
                    (w :: Data.Aeson.Types.Internal.Options)
                    (w1 :: GHC.Base.Maybe Data.Text.Internal.Text)
                    (w2 :: Data.Aeson.Types.Internal.Value) ->
-                 CommonResources.$w$dConsFromJSON'2 @ a w w2) -}
+                 CommonResources.$w$dConsFromJSON'3 @ a w w2) -}
 71a88d18dec3840ada4af9a609b23fb3
   $fFromJSONUser10 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "auth_token"#) -}
@@ -2622,7 +3268,7 @@ c1f8a22d7891d4a8d3b05753c9eb18b4
 53c5f883258c5a5f21f5bb92176a58ac
   $fFromJSONUser5 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "username"#) -}
-7e3ab6efcd13de9a71b7f0f12ec74e88
+ed9be20c9d7bbd0fa84cec74b25c43b8
   $fFromJSONUser6 ::
     Data.Aeson.Types.Internal.Options
     -> Data.Aeson.Types.Internal.Value
@@ -2633,7 +3279,7 @@ c1f8a22d7891d4a8d3b05753c9eb18b4
                 (\ @ a1
                    (w :: Data.Aeson.Types.Internal.Options)
                    (w1 :: Data.Aeson.Types.Internal.Value) ->
-                 CommonResources.$w$dGFromJSON3 @ a1 w1) -}
+                 CommonResources.$w$dGFromJSON5 @ a1 w1) -}
 af55b7b4243a3934d5efca0840945a77
   $fFromJSONUser7 :: GHC.Generics.SingI ('GHC.Base.Just "auth_token")
   {- Unfolding: InlineRule (0, True, True)
@@ -2666,7 +3312,7 @@ b0c1cdd46ce53c1eefbe977f7d624dbe
                    (Trans
                         (Sym (GHC.TypeLits.N:SSymbol[0] <"auth_token">_P))
                         (Sym (GHC.TypeLits.N:KnownSymbol[0]) <"auth_token">_N))) -}
-cef3aaa0867f26fc4479627a81ef80b7
+80825682394d65b8cb8495364862b6b9
   $fFromJSONUser_$cparseJSON ::
     Data.Aeson.Types.Internal.Value
     -> Data.Aeson.Types.Internal.Parser CommonResources.User
@@ -2998,7 +3644,7 @@ cef3aaa0867f26fc4479627a81ef80b7
                                 'GHC.Generics.NoSourceStrictness
                                 'GHC.Generics.DecidedLazy) f a) ->
                  CommonResources.$fFromJSONUser10) -}
-61b0e0d6cb0849134fd2685e93d9eb84
+9765339fac280027932b746bd2301922
   $fGenericLink :: GHC.Generics.Generic CommonResources.Link
   DFunId
   {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -3006,7 +3652,7 @@ cef3aaa0867f26fc4479627a81ef80b7
                   @ CommonResources.Link
                   CommonResources.$fGenericLink_$cfrom
                   CommonResources.$fFromBSONLink_$cto -}
-61b0e0d6cb0849134fd2685e93d9eb84
+9765339fac280027932b746bd2301922
   $fGenericLink_$cfrom ::
     CommonResources.Link -> GHC.Generics.Rep CommonResources.Link x
   {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(U,U,U)>m,
@@ -3495,7 +4141,214 @@ d4865748a78d190968374356df046be6
                                                GHC.Generics.R GHC.Base.String>_R))) <x>_N)
                         (GHC.Generics.N:K1[0]
                              <GHC.Generics.R>_P <GHC.Base.String>_R <x>_P))) -}
-cef3aaa0867f26fc4479627a81ef80b7
+9765339fac280027932b746bd2301922
+  $fGenericSocialGraph ::
+    GHC.Generics.Generic CommonResources.SocialGraph
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ CommonResources.SocialGraph
+                  CommonResources.$fGenericSocialGraph_$cfrom
+                  CommonResources.$fGenericSocialGraph_$cto -}
+9765339fac280027932b746bd2301922
+  $fGenericSocialGraph_$cfrom ::
+    CommonResources.SocialGraph
+    -> GHC.Generics.Rep CommonResources.SocialGraph x
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(U,U)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ x (ds :: CommonResources.SocialGraph) ->
+                 case ds of wild { CommonResources.SocialGraph g1 g2 ->
+                 (GHC.Generics.:*:
+                    @ (GHC.Generics.M1
+                         GHC.Generics.S
+                         ('GHC.Generics.MetaSel
+                            ('GHC.Base.Just "nodes")
+                            'GHC.Generics.NoSourceUnpackedness
+                            'GHC.Generics.NoSourceStrictness
+                            'GHC.Generics.DecidedLazy)
+                         (GHC.Generics.K1 GHC.Generics.R [CommonResources.Node]))
+                    @ (GHC.Generics.M1
+                         GHC.Generics.S
+                         ('GHC.Generics.MetaSel
+                            ('GHC.Base.Just "links")
+                            'GHC.Generics.NoSourceUnpackedness
+                            'GHC.Generics.NoSourceStrictness
+                            'GHC.Generics.DecidedLazy)
+                         (GHC.Generics.K1 GHC.Generics.R [CommonResources.Link]))
+                    @ x
+                    g1
+                      `cast`
+                    (Trans
+                         (Sym (GHC.Generics.N:K1[0]
+                                   <GHC.Generics.R>_P <[CommonResources.Node]>_R <x>_P))
+                         (Sym (GHC.Generics.N:M1[0]
+                                   <GHC.Generics.S>_P
+                                   <'GHC.Generics.MetaSel
+                                      ('GHC.Base.Just "nodes")
+                                      'GHC.Generics.NoSourceUnpackedness
+                                      'GHC.Generics.NoSourceStrictness
+                                      'GHC.Generics.DecidedLazy>_P
+                                   <GHC.Generics.K1
+                                      GHC.Generics.R [CommonResources.Node]>_R) <x>_N))
+                    g2
+                      `cast`
+                    (Trans
+                         (Sym (GHC.Generics.N:K1[0]
+                                   <GHC.Generics.R>_P <[CommonResources.Link]>_R <x>_P))
+                         (Sym (GHC.Generics.N:M1[0]
+                                   <GHC.Generics.S>_P
+                                   <'GHC.Generics.MetaSel
+                                      ('GHC.Base.Just "links")
+                                      'GHC.Generics.NoSourceUnpackedness
+                                      'GHC.Generics.NoSourceStrictness
+                                      'GHC.Generics.DecidedLazy>_P
+                                   <GHC.Generics.K1
+                                      GHC.Generics.R [CommonResources.Link]>_R) <x>_N)))
+                   `cast`
+                 (Trans
+                      (Sym (GHC.Generics.N:M1[0]
+                                <GHC.Generics.C>_P
+                                <'GHC.Generics.MetaCons
+                                   "SocialGraph" 'GHC.Generics.PrefixI 'GHC.Types.True>_P
+                                <GHC.Generics.M1
+                                   GHC.Generics.S
+                                   ('GHC.Generics.MetaSel
+                                      ('GHC.Base.Just "nodes")
+                                      'GHC.Generics.NoSourceUnpackedness
+                                      'GHC.Generics.NoSourceStrictness
+                                      'GHC.Generics.DecidedLazy)
+                                   (GHC.Generics.K1 GHC.Generics.R [CommonResources.Node])
+                                 GHC.Generics.:*: GHC.Generics.M1
+                                                    GHC.Generics.S
+                                                    ('GHC.Generics.MetaSel
+                                                       ('GHC.Base.Just "links")
+                                                       'GHC.Generics.NoSourceUnpackedness
+                                                       'GHC.Generics.NoSourceStrictness
+                                                       'GHC.Generics.DecidedLazy)
+                                                    (GHC.Generics.K1
+                                                       GHC.Generics.R [CommonResources.Link])>_R))
+                      (Trans
+                           (Sym (GHC.Generics.N:M1[0]
+                                     <GHC.Generics.D>_P
+                                     <'GHC.Generics.MetaData
+                                        "SocialGraph"
+                                        "CommonResources"
+                                        "CommonResources-0.1.0.0-LpQja3yDL15K7T7dUigrkK"
+                                        'GHC.Types.False>_P
+                                     <GHC.Generics.M1
+                                        GHC.Generics.C
+                                        ('GHC.Generics.MetaCons
+                                           "SocialGraph" 'GHC.Generics.PrefixI 'GHC.Types.True)
+                                        (GHC.Generics.M1
+                                           GHC.Generics.S
+                                           ('GHC.Generics.MetaSel
+                                              ('GHC.Base.Just "nodes")
+                                              'GHC.Generics.NoSourceUnpackedness
+                                              'GHC.Generics.NoSourceStrictness
+                                              'GHC.Generics.DecidedLazy)
+                                           (GHC.Generics.K1 GHC.Generics.R [CommonResources.Node])
+                                         GHC.Generics.:*: GHC.Generics.M1
+                                                            GHC.Generics.S
+                                                            ('GHC.Generics.MetaSel
+                                                               ('GHC.Base.Just "links")
+                                                               'GHC.Generics.NoSourceUnpackedness
+                                                               'GHC.Generics.NoSourceStrictness
+                                                               'GHC.Generics.DecidedLazy)
+                                                            (GHC.Generics.K1
+                                                               GHC.Generics.R
+                                                               [CommonResources.Link]))>_R))
+                           (Sub (Sym (CommonResources.Rep_SocialGraph[0])))) <x>_N) }) -}
+9765339fac280027932b746bd2301922
+  $fGenericSocialGraph_$cto ::
+    GHC.Generics.Rep CommonResources.SocialGraph x
+    -> CommonResources.SocialGraph
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(U,U)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ x (ds :: GHC.Generics.Rep CommonResources.SocialGraph x) ->
+                 case ds
+                        `cast`
+                      (Trans
+                           (Sub (CommonResources.Rep_SocialGraph[0]))
+                           (Trans
+                                (GHC.Generics.N:M1[0]
+                                     <GHC.Generics.D>_P
+                                     <'GHC.Generics.MetaData
+                                        "SocialGraph"
+                                        "CommonResources"
+                                        "CommonResources-0.1.0.0-LpQja3yDL15K7T7dUigrkK"
+                                        'GHC.Types.False>_P
+                                     <GHC.Generics.M1
+                                        GHC.Generics.C
+                                        ('GHC.Generics.MetaCons
+                                           "SocialGraph" 'GHC.Generics.PrefixI 'GHC.Types.True)
+                                        (GHC.Generics.M1
+                                           GHC.Generics.S
+                                           ('GHC.Generics.MetaSel
+                                              ('GHC.Base.Just "nodes")
+                                              'GHC.Generics.NoSourceUnpackedness
+                                              'GHC.Generics.NoSourceStrictness
+                                              'GHC.Generics.DecidedLazy)
+                                           (GHC.Generics.K1 GHC.Generics.R [CommonResources.Node])
+                                         GHC.Generics.:*: GHC.Generics.M1
+                                                            GHC.Generics.S
+                                                            ('GHC.Generics.MetaSel
+                                                               ('GHC.Base.Just "links")
+                                                               'GHC.Generics.NoSourceUnpackedness
+                                                               'GHC.Generics.NoSourceStrictness
+                                                               'GHC.Generics.DecidedLazy)
+                                                            (GHC.Generics.K1
+                                                               GHC.Generics.R
+                                                               [CommonResources.Link]))>_R)
+                                (GHC.Generics.N:M1[0]
+                                     <GHC.Generics.C>_P
+                                     <'GHC.Generics.MetaCons
+                                        "SocialGraph" 'GHC.Generics.PrefixI 'GHC.Types.True>_P
+                                     <GHC.Generics.M1
+                                        GHC.Generics.S
+                                        ('GHC.Generics.MetaSel
+                                           ('GHC.Base.Just "nodes")
+                                           'GHC.Generics.NoSourceUnpackedness
+                                           'GHC.Generics.NoSourceStrictness
+                                           'GHC.Generics.DecidedLazy)
+                                        (GHC.Generics.K1 GHC.Generics.R [CommonResources.Node])
+                                      GHC.Generics.:*: GHC.Generics.M1
+                                                         GHC.Generics.S
+                                                         ('GHC.Generics.MetaSel
+                                                            ('GHC.Base.Just "links")
+                                                            'GHC.Generics.NoSourceUnpackedness
+                                                            'GHC.Generics.NoSourceStrictness
+                                                            'GHC.Generics.DecidedLazy)
+                                                         (GHC.Generics.K1
+                                                            GHC.Generics.R
+                                                            [CommonResources.Link])>_R)) <x>_N) of wild { GHC.Generics.:*: ds1 ds2 ->
+                 CommonResources.SocialGraph
+                   ds1
+                     `cast`
+                   (Trans
+                        (GHC.Generics.N:M1[0]
+                             <GHC.Generics.S>_P
+                             <'GHC.Generics.MetaSel
+                                ('GHC.Base.Just "nodes")
+                                'GHC.Generics.NoSourceUnpackedness
+                                'GHC.Generics.NoSourceStrictness
+                                'GHC.Generics.DecidedLazy>_P
+                             <GHC.Generics.K1 GHC.Generics.R [CommonResources.Node]>_R <x>_N)
+                        (GHC.Generics.N:K1[0]
+                             <GHC.Generics.R>_P <[CommonResources.Node]>_R <x>_P))
+                   ds2
+                     `cast`
+                   (Trans
+                        (GHC.Generics.N:M1[0]
+                             <GHC.Generics.S>_P
+                             <'GHC.Generics.MetaSel
+                                ('GHC.Base.Just "links")
+                                'GHC.Generics.NoSourceUnpackedness
+                                'GHC.Generics.NoSourceStrictness
+                                'GHC.Generics.DecidedLazy>_P
+                             <GHC.Generics.K1 GHC.Generics.R [CommonResources.Link]>_R <x>_N)
+                        (GHC.Generics.N:K1[0]
+                             <GHC.Generics.R>_P <[CommonResources.Link]>_R <x>_P)) }) -}
+80825682394d65b8cb8495364862b6b9
   $fGenericUser :: GHC.Generics.Generic CommonResources.User
   DFunId
   {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -3503,7 +4356,7 @@ cef3aaa0867f26fc4479627a81ef80b7
                   @ CommonResources.User
                   CommonResources.$fGenericUser_$cfrom
                   CommonResources.$fGenericUser_$cto -}
-cef3aaa0867f26fc4479627a81ef80b7
+80825682394d65b8cb8495364862b6b9
   $fGenericUser_$cfrom ::
     CommonResources.User -> GHC.Generics.Rep CommonResources.User x
   {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(U,U)>m,
@@ -3607,7 +4460,7 @@ cef3aaa0867f26fc4479627a81ef80b7
                                                             (GHC.Generics.K1
                                                                GHC.Generics.R GHC.Base.String))>_R))
                            (Sub (Sym (CommonResources.Rep_User[0])))) <x>_N) }) -}
-cef3aaa0867f26fc4479627a81ef80b7
+80825682394d65b8cb8495364862b6b9
   $fGenericUser_$cto ::
     GHC.Generics.Rep CommonResources.User x -> CommonResources.User
   {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(U,U)>m,
@@ -3695,7 +4548,7 @@ cef3aaa0867f26fc4479627a81ef80b7
                              <GHC.Generics.K1 GHC.Generics.R GHC.Base.String>_R <x>_N)
                         (GHC.Generics.N:K1[0]
                              <GHC.Generics.R>_P <GHC.Base.String>_R <x>_P)) }) -}
-61b0e0d6cb0849134fd2685e93d9eb84
+9765339fac280027932b746bd2301922
   $fShowLink :: GHC.Show.Show CommonResources.Link
   DFunId
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -3704,7 +4557,7 @@ cef3aaa0867f26fc4479627a81ef80b7
                   CommonResources.$fShowLink_$cshowsPrec
                   CommonResources.$fShowLink_$cshow
                   CommonResources.$fShowLink_$cshowList -}
-61b0e0d6cb0849134fd2685e93d9eb84
+9765339fac280027932b746bd2301922
   $fShowLink1 :: CommonResources.Link -> GHC.Show.ShowS
   {- Arity: 2,
      Unfolding: (\ (w :: CommonResources.Link)
@@ -3729,7 +4582,7 @@ a66e7b58a67664950eeac8915265c656
 6a441b4c609bc68a93b5cf8e1478b9d7
   $fShowLink7 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "Link {"#) -}
-61b0e0d6cb0849134fd2685e93d9eb84
+9765339fac280027932b746bd2301922
   $fShowLink_$cshow :: CommonResources.Link -> GHC.Base.String
   {- Arity: 1, Strictness: <S,1*U(1*U,1*U,1*U)>,
      Unfolding: InlineRule (1, True, False)
@@ -3738,13 +4591,13 @@ a66e7b58a67664950eeac8915265c656
                    GHC.Show.shows22
                    x
                    (GHC.Types.[] @ GHC.Types.Char)) -}
-61b0e0d6cb0849134fd2685e93d9eb84
+9765339fac280027932b746bd2301922
   $fShowLink_$cshowList :: [CommonResources.Link] -> GHC.Show.ShowS
   {- Arity: 2,
      Unfolding: (GHC.Show.showList__
                    @ CommonResources.Link
                    CommonResources.$fShowLink1) -}
-61b0e0d6cb0849134fd2685e93d9eb84
+9765339fac280027932b746bd2301922
   $fShowLink_$cshowsPrec ::
     GHC.Types.Int -> CommonResources.Link -> GHC.Show.ShowS
   {- Arity: 3, Strictness: <S(S),1*U(U)><S,1*U(1*U,1*U,1*U)><L,U>,
@@ -3859,7 +4712,52 @@ d4865748a78d190968374356df046be6
                  case w of ww { GHC.Types.I# ww1 ->
                  case w1 of ww2 { CommonResources.Response ww3 ->
                  CommonResources.$w$cshowsPrec2 ww1 ww3 w2 } }) -}
-cef3aaa0867f26fc4479627a81ef80b7
+9765339fac280027932b746bd2301922
+  $fShowSocialGraph :: GHC.Show.Show CommonResources.SocialGraph
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ CommonResources.SocialGraph
+                  CommonResources.$fShowSocialGraph_$cshowsPrec
+                  CommonResources.$fShowSocialGraph_$cshow
+                  CommonResources.$fShowSocialGraph_$cshowList -}
+9765339fac280027932b746bd2301922
+  $fShowSocialGraph1 :: CommonResources.SocialGraph -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (\ (w :: CommonResources.SocialGraph)
+                   (w1 :: GHC.Base.String) ->
+                 case w of ww { CommonResources.SocialGraph ww1 ww2 ->
+                 CommonResources.$w$cshowsPrec3 0# ww1 ww2 w1 }) -}
+9765339fac280027932b746bd2301922
+  $fShowSocialGraph_$cshow ::
+    CommonResources.SocialGraph -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U(1*U,1*U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: CommonResources.SocialGraph) ->
+                 CommonResources.$fShowSocialGraph_$cshowsPrec
+                   GHC.Show.shows22
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+9765339fac280027932b746bd2301922
+  $fShowSocialGraph_$cshowList ::
+    [CommonResources.SocialGraph] -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (GHC.Show.showList__
+                   @ CommonResources.SocialGraph
+                   CommonResources.$fShowSocialGraph1) -}
+9765339fac280027932b746bd2301922
+  $fShowSocialGraph_$cshowsPrec ::
+    GHC.Types.Int -> CommonResources.SocialGraph -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <S(S),1*U(U)><S,1*U(1*U,1*U)><L,U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: GHC.Types.Int)
+                   (w1 :: CommonResources.SocialGraph)
+                   (w2 :: GHC.Base.String) ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 case w1 of ww2 { CommonResources.SocialGraph ww3 ww4 ->
+                 CommonResources.$w$cshowsPrec3 ww1 ww3 ww4 w2 } }) -}
+80825682394d65b8cb8495364862b6b9
   $fShowUser :: GHC.Show.Show CommonResources.User
   DFunId
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -3868,13 +4766,13 @@ cef3aaa0867f26fc4479627a81ef80b7
                   CommonResources.$fShowUser_$cshowsPrec
                   CommonResources.$fShowUser_$cshow
                   CommonResources.$fShowUser_$cshowList -}
-cef3aaa0867f26fc4479627a81ef80b7
+80825682394d65b8cb8495364862b6b9
   $fShowUser1 :: CommonResources.User -> GHC.Show.ShowS
   {- Arity: 2,
      Unfolding: (\ (w :: CommonResources.User)
                    (w1 :: GHC.Base.String) ->
                  case w of ww { CommonResources.User ww1 ww2 ->
-                 CommonResources.$w$cshowsPrec3 0# ww1 ww2 w1 }) -}
+                 CommonResources.$w$cshowsPrec4 0# ww1 ww2 w1 }) -}
 0c7a5e0dc7c73db3874f40860b29c7a6
   $fShowUser2 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "auth_token = "#) -}
@@ -3884,7 +4782,7 @@ cef3aaa0867f26fc4479627a81ef80b7
 8cbd8485ed6408eda9d09035240ba32f
   $fShowUser4 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "User {"#) -}
-cef3aaa0867f26fc4479627a81ef80b7
+80825682394d65b8cb8495364862b6b9
   $fShowUser_$cshow :: CommonResources.User -> GHC.Base.String
   {- Arity: 1, Strictness: <S,1*U(1*U,1*U)>,
      Unfolding: InlineRule (1, True, False)
@@ -3893,13 +4791,13 @@ cef3aaa0867f26fc4479627a81ef80b7
                    GHC.Show.shows22
                    x
                    (GHC.Types.[] @ GHC.Types.Char)) -}
-cef3aaa0867f26fc4479627a81ef80b7
+80825682394d65b8cb8495364862b6b9
   $fShowUser_$cshowList :: [CommonResources.User] -> GHC.Show.ShowS
   {- Arity: 2,
      Unfolding: (GHC.Show.showList__
                    @ CommonResources.User
                    CommonResources.$fShowUser1) -}
-cef3aaa0867f26fc4479627a81ef80b7
+80825682394d65b8cb8495364862b6b9
   $fShowUser_$cshowsPrec ::
     GHC.Types.Int -> CommonResources.User -> GHC.Show.ShowS
   {- Arity: 3, Strictness: <S(S),1*U(U)><S,1*U(1*U,1*U)><L,U>,
@@ -3910,8 +4808,8 @@ cef3aaa0867f26fc4479627a81ef80b7
                    (w2 :: GHC.Base.String) ->
                  case w of ww { GHC.Types.I# ww1 ->
                  case w1 of ww2 { CommonResources.User ww3 ww4 ->
-                 CommonResources.$w$cshowsPrec3 ww1 ww3 ww4 w2 } }) -}
-61b0e0d6cb0849134fd2685e93d9eb84
+                 CommonResources.$w$cshowsPrec4 ww1 ww3 ww4 w2 } }) -}
+9765339fac280027932b746bd2301922
   $fToBSONLink :: Data.Bson.Generic.ToBSON CommonResources.Link
   DFunId
   {- Arity: 1, Strictness: <L,1*U(U,U,U)>,
@@ -4416,7 +5314,7 @@ d84a394b6bfa0ce008527f057344fea3
                    CommonResources.$fFromBSONLink13
                    0#
                    ipv }) -}
-61b0e0d6cb0849134fd2685e93d9eb84
+9765339fac280027932b746bd2301922
   $fToBSONLink_$s$dmtoBSON ::
     CommonResources.Link -> Data.Bson.Document
   {- Arity: 1, Strictness: <L,1*U(U,U,U)>,
@@ -4484,7 +5382,7 @@ d84a394b6bfa0ce008527f057344fea3
                      GHC.Generics.$WSTrue
                        `cast`
                      (Sym (GHC.Generics.N:SingI[0]) <GHC.Types.Bool>_N <'GHC.Types.True>_N)) -}
-61b0e0d6cb0849134fd2685e93d9eb84
+9765339fac280027932b746bd2301922
   $fToBSONLink_$sconstructorCount ::
     CommonResources.Link -> GHC.Types.Int
   {- Arity: 1, HasNoCafRefs, Strictness: <L,A>m,
@@ -5309,7 +6207,7 @@ c61882239a1b499a460428d8c482dce7
                       @ GHC.Types.Char
                       @ GHC.Prim.Any
                       x)) -}
-61b0e0d6cb0849134fd2685e93d9eb84
+9765339fac280027932b746bd2301922
   $fToJSONLink :: Data.Aeson.Types.Class.ToJSON CommonResources.Link
   DFunId
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -5317,7 +6215,7 @@ c61882239a1b499a460428d8c482dce7
                   @ CommonResources.Link
                   CommonResources.$fToJSONLink_$ctoJSON
                   CommonResources.$fToJSONLink_$ctoEncoding -}
-61b0e0d6cb0849134fd2685e93d9eb84
+9765339fac280027932b746bd2301922
   $fToJSONLink1 ::
     CommonResources.Link
     -> Data.Aeson.Types.Generic.Tagged
@@ -5427,7 +6325,7 @@ dbc3286d4dbb7ca873c373da703d16ed
 4574ce7404622182fd3b81b16262bc43
   $fToJSONLink3 :: GHC.Types.Int
   {- HasNoCafRefs, Unfolding: (GHC.Types.I# 4#) -}
-61b0e0d6cb0849134fd2685e93d9eb84
+9765339fac280027932b746bd2301922
   $fToJSONLink_$ctoEncoding ::
     CommonResources.Link -> Data.Aeson.Types.Internal.Encoding
   {- Arity: 1, Strictness: <S,1*U(U,U,U)>,
@@ -5439,7 +6337,7 @@ dbc3286d4dbb7ca873c373da703d16ed
                   `cast`
                 (<CommonResources.Link>_R
                  ->_R Sym (Data.Aeson.Types.Internal.N:Encoding[0])) -}
-61b0e0d6cb0849134fd2685e93d9eb84
+9765339fac280027932b746bd2301922
   $fToJSONLink_$ctoJSON ::
     CommonResources.Link -> Data.Aeson.Types.Internal.Value
   {- Arity: 1, Strictness: <S,1*U(U,U,U)>m1,
@@ -5634,7 +6532,141 @@ d4865748a78d190968374356df046be6
                  ->_R Data.Aeson.Types.Generic.N:Tagged[0]
                           <Data.Aeson.Types.Generic.True>_P
                           <Data.Aeson.Types.Internal.Value>_R) -}
-cef3aaa0867f26fc4479627a81ef80b7
+9765339fac280027932b746bd2301922
+  $fToJSONSocialGraph ::
+    Data.Aeson.Types.Class.ToJSON CommonResources.SocialGraph
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ CommonResources.SocialGraph
+                  CommonResources.$fToJSONSocialGraph_$ctoJSON
+                  CommonResources.$fToJSONSocialGraph_$ctoEncoding -}
+9765339fac280027932b746bd2301922
+  $fToJSONSocialGraph1 ::
+    CommonResources.SocialGraph
+    -> Data.Aeson.Types.Generic.Tagged
+         Data.Aeson.Types.Generic.True Data.Aeson.Types.Internal.Value
+  {- Arity: 1, Strictness: <S,1*U(1*U,1*U)>m1, Inline: INLINE[0],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: CommonResources.SocialGraph) ->
+                 case w of ww { CommonResources.SocialGraph ww1 ww2 ->
+                 case CommonResources.$w$ctoJSON1 ww1 ww2 of ww3 { Unit# ww4 ->
+                 (Data.Aeson.Types.Internal.Object ww4)
+                   `cast`
+                 (Sym (Data.Aeson.Types.Generic.N:Tagged[0]
+                           <Data.Aeson.Types.Generic.True>_P
+                           <Data.Aeson.Types.Internal.Value>_R)) } }) -}
+16505a6e8584a1ed21dd76c7f982904a
+  $fToJSONSocialGraph2 :: GHC.Types.Int
+  {- HasNoCafRefs, Unfolding: (GHC.Types.I# 0#) -}
+86dfb75fc3a93352d4c4dfc95835a1a1
+  $fToJSONSocialGraph3 ::
+    GHC.Types.SPEC
+    -> (Data.Vector.Generic.Base.Mutable
+          Data.Vector.Vector
+          (Control.Monad.Primitive.PrimState (GHC.ST.ST GHC.Prim.RealWorld))
+          Data.Aeson.Types.Internal.Value,
+        GHC.Types.Int)
+    -> [Data.Aeson.Types.Internal.Value]
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          (Data.Vector.Generic.Base.Mutable
+             Data.Vector.Vector
+             (Control.Monad.Primitive.PrimState (GHC.ST.ST GHC.Prim.RealWorld))
+             Data.Aeson.Types.Internal.Value,
+           GHC.Types.Int) #)
+  {- Arity: 4, Strictness: <S,1*U><L,U(U(U,U,U),U(U))><S,1*U><S,U> -}
+4772989836dadc03a866fcac6106a0ab
+  $fToJSONSocialGraph4 :: Data.Text.Internal.Text
+  {- Unfolding: (case GHC.Magic.runRW#
+                        @ 'GHC.Types.PtrRepLifted
+                        @ Data.Text.Internal.Text
+                        CommonResources.$fToJSONSocialGraph5 of ds7 { (#,#) ipv ipv1 ->
+                 ipv1 }) -}
+7df59c2831351d7a4cd37f727a9a87a7
+  $fToJSONSocialGraph5 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 1,
+     Unfolding: (\ (s1 :: GHC.Prim.State#
+                            GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newByteArray#
+                        @ GHC.Prim.RealWorld
+                        8#
+                        s1 of ds7 { (#,#) ipv ipv1 ->
+                 Data.Aeson.Types.Generic.$wouter6
+                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
+                   Data.Aeson.Types.Generic.$fFromPairM2
+                   CommonResources.$fFromJSONSocialGraph14
+                   0#
+                   ipv }) -}
+629421dd1053758c434c801488bb8ee2
+  $fToJSONSocialGraph6 ::
+    GHC.Types.SPEC
+    -> (Data.Vector.Generic.Base.Mutable
+          Data.Vector.Vector
+          (Control.Monad.Primitive.PrimState (GHC.ST.ST GHC.Prim.RealWorld))
+          Data.Aeson.Types.Internal.Value,
+        GHC.Types.Int)
+    -> [Data.Aeson.Types.Internal.Value]
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          (Data.Vector.Generic.Base.Mutable
+             Data.Vector.Vector
+             (Control.Monad.Primitive.PrimState (GHC.ST.ST GHC.Prim.RealWorld))
+             Data.Aeson.Types.Internal.Value,
+           GHC.Types.Int) #)
+  {- Arity: 4, Strictness: <S,1*U><L,U(U(U,U,U),U(U))><S,1*U><S,U> -}
+ee9967283e65d9a890385fdc35baa909
+  $fToJSONSocialGraph7 :: Data.Text.Internal.Text
+  {- Unfolding: (case GHC.Magic.runRW#
+                        @ 'GHC.Types.PtrRepLifted
+                        @ Data.Text.Internal.Text
+                        CommonResources.$fToJSONSocialGraph8 of ds7 { (#,#) ipv ipv1 ->
+                 ipv1 }) -}
+5049b5339dded5aa85b9546e82621357
+  $fToJSONSocialGraph8 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Text.Internal.Text #)
+  {- Arity: 1,
+     Unfolding: (\ (s1 :: GHC.Prim.State#
+                            GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Prim.newByteArray#
+                        @ GHC.Prim.RealWorld
+                        8#
+                        s1 of ds7 { (#,#) ipv ipv1 ->
+                 Data.Aeson.Types.Generic.$wouter6
+                   (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
+                   Data.Aeson.Types.Generic.$fFromPairM2
+                   CommonResources.$fFromJSONSocialGraph8
+                   0#
+                   ipv }) -}
+9765339fac280027932b746bd2301922
+  $fToJSONSocialGraph_$ctoEncoding ::
+    CommonResources.SocialGraph -> Data.Aeson.Types.Internal.Encoding
+  {- Arity: 1, Strictness: <S,1*U(1*U,1*U)>,
+     Inline: INLINE (sat-args=0),
+     Unfolding: InlineRule (0, False, False)
+                (\ (eta :: CommonResources.SocialGraph) ->
+                 Data.Aeson.Encode.Builder.encodeToBuilder
+                   (CommonResources.$fToJSONSocialGraph_$ctoJSON eta))
+                  `cast`
+                (<CommonResources.SocialGraph>_R
+                 ->_R Sym (Data.Aeson.Types.Internal.N:Encoding[0])) -}
+9765339fac280027932b746bd2301922
+  $fToJSONSocialGraph_$ctoJSON ::
+    CommonResources.SocialGraph -> Data.Aeson.Types.Internal.Value
+  {- Arity: 1, Strictness: <S,1*U(1*U,1*U)>m1,
+     Unfolding: InlineRule (0, True, True)
+                CommonResources.$fToJSONSocialGraph1
+                  `cast`
+                (<CommonResources.SocialGraph>_R
+                 ->_R Data.Aeson.Types.Generic.N:Tagged[0]
+                          <Data.Aeson.Types.Generic.True>_P
+                          <Data.Aeson.Types.Internal.Value>_R) -}
+80825682394d65b8cb8495364862b6b9
   $fToJSONUser :: Data.Aeson.Types.Class.ToJSON CommonResources.User
   DFunId
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -5642,7 +6674,7 @@ cef3aaa0867f26fc4479627a81ef80b7
                   @ CommonResources.User
                   CommonResources.$fToJSONUser_$ctoJSON
                   CommonResources.$fToJSONUser_$ctoEncoding -}
-cef3aaa0867f26fc4479627a81ef80b7
+80825682394d65b8cb8495364862b6b9
   $fToJSONUser1 ::
     CommonResources.User
     -> Data.Aeson.Types.Generic.Tagged
@@ -5651,7 +6683,7 @@ cef3aaa0867f26fc4479627a81ef80b7
      Unfolding: InlineRule (1, True, False)
                 (\ (w :: CommonResources.User) ->
                  case w of ww { CommonResources.User ww1 ww2 ->
-                 case CommonResources.$w$ctoJSON1 ww1 ww2 of ww3 { Unit# ww4 ->
+                 case CommonResources.$w$ctoJSON2 ww1 ww2 of ww3 { Unit# ww4 ->
                  (Data.Aeson.Types.Internal.Object ww4)
                    `cast`
                  (Sym (Data.Aeson.Types.Generic.N:Tagged[0]
@@ -5707,7 +6739,7 @@ ac1aadc46d6bde6a358489aa9e371909
                    CommonResources.$fFromJSONUser5
                    0#
                    ipv }) -}
-cef3aaa0867f26fc4479627a81ef80b7
+80825682394d65b8cb8495364862b6b9
   $fToJSONUser_$ctoEncoding ::
     CommonResources.User -> Data.Aeson.Types.Internal.Encoding
   {- Arity: 1, Strictness: <S,1*U(1*U,1*U)>,
@@ -5719,7 +6751,7 @@ cef3aaa0867f26fc4479627a81ef80b7
                   `cast`
                 (<CommonResources.User>_R
                  ->_R Sym (Data.Aeson.Types.Internal.N:Encoding[0])) -}
-cef3aaa0867f26fc4479627a81ef80b7
+80825682394d65b8cb8495364862b6b9
   $fToJSONUser_$ctoJSON ::
     CommonResources.User -> Data.Aeson.Types.Internal.Value
   {- Arity: 1, Strictness: <S,1*U(1*U,1*U)>m1,
@@ -5766,6 +6798,18 @@ fa6b281d7d839bdc043fad33d524443c
   $tc'Response1 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "'Response"#) -}
+147472126669a908a504cf6f88036c96
+  $tc'SocialGraph :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   8487657905003778678##
+                   814389606043965171##
+                   CommonResources.$trModule
+                   CommonResources.$tc'SocialGraph1) -}
+56b2fe79cb781b4784b465c35cf3c2ff
+  $tc'SocialGraph1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'SocialGraph"#) -}
 faa7c58e63cc2809f6e43b669de86c60
   $tc'User :: GHC.Types.TyCon
   {- HasNoCafRefs, Strictness: m,
@@ -5814,6 +6858,18 @@ a555edec0e8a2ec74adc3978f6378eda
   $tcResponse1 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "Response"#) -}
+48e3d27f4f2dbd10ce926d2b6a0f6633
+  $tcSocialGraph :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   306269295990245338##
+                   2004766612303691886##
+                   CommonResources.$trModule
+                   CommonResources.$tcSocialGraph1) -}
+1f2f6c090a5ea3c2d18fe0a456b58e72
+  $tcSocialGraph1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "SocialGraph"#) -}
 5656aa59d5a542554f070f9ee89b0604
   $tcUser :: GHC.Types.TyCon
   {- HasNoCafRefs, Strictness: m,
@@ -5919,8 +6975,33 @@ eb7f57fd6846d4e67da24deb3add2e44
                  case GHC.Base.eqString ww ww2 of wild {
                    GHC.Types.False -> GHC.Types.False
                    GHC.Types.True -> GHC.Base.eqString ww1 ww3 }) -}
-11cd28fab5e596ed103ba33087bb8351
+9765339fac280027932b746bd2301922
   $w$c==2 ::
+    [CommonResources.Node]
+    -> [CommonResources.Link]
+    -> [CommonResources.Node]
+    -> [CommonResources.Link]
+    -> GHC.Types.Bool
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <S,1*U><L,1*U><S,1*U><L,1*U>, Inline: [0],
+     Unfolding: (\ (ww :: [CommonResources.Node])
+                   (ww1 :: [CommonResources.Link])
+                   (ww2 :: [CommonResources.Node])
+                   (ww3 :: [CommonResources.Link]) ->
+                 case GHC.Classes.$fEq[]_$c==
+                        @ CommonResources.Node
+                        CommonResources.$fEqNode
+                        ww
+                        ww2 of wild {
+                   GHC.Types.False -> GHC.Types.False
+                   GHC.Types.True
+                   -> GHC.Classes.$fEq[]_$c==
+                        @ CommonResources.Link
+                        CommonResources.$fEqLink
+                        ww1
+                        ww3 }) -}
+2ac89713967602ae3061d8ba361dc055
+  $w$c==3 ::
     GHC.Base.String
     -> GHC.Base.String
     -> GHC.Base.String
@@ -6102,8 +7183,16 @@ a7f67f25c99bcb608e9754ca08453d1b
                         @ GHC.Types.Char
                         GHC.Show.shows9
                         (p (GHC.Types.: @ GHC.Types.Char GHC.Show.shows6 w)) }) -}
-45979012a1257e0ff391dde8bac01b76
+9765339fac280027932b746bd2301922
   $w$cshowsPrec3 ::
+    GHC.Prim.Int#
+    -> [CommonResources.Node]
+    -> [CommonResources.Link]
+    -> GHC.Base.String
+    -> GHC.Base.String
+  {- Arity: 4, Strictness: <S,U><L,1*U><L,1*U><L,U>, Inline: [0] -}
+bb6c767d3d93554a92377fef7bc826e2
+  $w$cshowsPrec4 ::
     GHC.Prim.Int#
     -> GHC.Base.String
     -> GHC.Base.String
@@ -6196,8 +7285,46 @@ a7f67f25c99bcb608e9754ca08453d1b
                            @ Data.Text.Internal.Text
                            @ Data.Aeson.Types.Internal.Value) of dt { DEFAULT ->
                  (# dt #) }) -}
-403534d4477cfef2b9ea4be8290386b7
+9765339fac280027932b746bd2301922
   $w$ctoJSON1 ::
+    [CommonResources.Node]
+    -> [CommonResources.Link] -> (# Data.Aeson.Types.Internal.Object #)
+  {- Arity: 2, Strictness: <L,1*U><L,1*U>, Inline: [0],
+     Unfolding: (\ (ww :: [CommonResources.Node])
+                   (ww1 :: [CommonResources.Link]) ->
+                 case Data.Aeson.Types.Internal.$sfromList1
+                        @ Data.Aeson.Types.Internal.Value
+                        (GHC.Types.:
+                           @ (Data.Text.Internal.Text, Data.Aeson.Types.Internal.Value)
+                           (CommonResources.$fToJSONSocialGraph7,
+                            case CommonResources.$w$dGToJSON4
+                                   @ GHC.Prim.Any
+                                   ww
+                                     `cast`
+                                   (Sym (GHC.Generics.N:K1[0]
+                                             <GHC.Generics.R>_P
+                                             <[CommonResources.Node]>_R
+                                             <GHC.Prim.Any>_P)) of ww2 { Unit# ww3 ->
+                            Data.Aeson.Types.Internal.Array ww3 })
+                           (GHC.Types.:
+                              @ (Data.Text.Internal.Text, Data.Aeson.Types.Internal.Value)
+                              (CommonResources.$fToJSONSocialGraph4,
+                               case CommonResources.$w$dGToJSON3
+                                      @ GHC.Prim.Any
+                                      ww1
+                                        `cast`
+                                      (Sym (GHC.Generics.N:K1[0]
+                                                <GHC.Generics.R>_P
+                                                <[CommonResources.Link]>_R
+                                                <GHC.Prim.Any>_P)) of ww2 { Unit# ww3 ->
+                               Data.Aeson.Types.Internal.Array ww3 })
+                              (GHC.Types.[] @ Data.Aeson.Types.Internal.Pair)))
+                        (Data.HashMap.Base.Empty
+                           @ Data.Text.Internal.Text
+                           @ Data.Aeson.Types.Internal.Value) of dt { DEFAULT ->
+                 (# dt #) }) -}
+9f172953143174f0b54f596f6ee91faf
+  $w$ctoJSON2 ::
     GHC.Base.String
     -> GHC.Base.String -> (# Data.Aeson.Types.Internal.Object #)
   {- Arity: 2, Strictness: <L,1*U><L,1*U>, Inline: [0],
@@ -6207,7 +7334,7 @@ a7f67f25c99bcb608e9754ca08453d1b
                         (GHC.Types.:
                            @ (Data.Text.Internal.Text, Data.Aeson.Types.Internal.Value)
                            (CommonResources.$fToJSONUser4,
-                            case CommonResources.$w$dGToJSON3
+                            case CommonResources.$w$dGToJSON5
                                    @ GHC.Prim.Any
                                    ww
                                      `cast`
@@ -6219,7 +7346,7 @@ a7f67f25c99bcb608e9754ca08453d1b
                            (GHC.Types.:
                               @ (Data.Text.Internal.Text, Data.Aeson.Types.Internal.Value)
                               (CommonResources.$fToJSONUser2,
-                               case CommonResources.$w$dGToJSON3
+                               case CommonResources.$w$dGToJSON5
                                       @ GHC.Prim.Any
                                       ww1
                                         `cast`
@@ -6869,8 +7996,267 @@ c04f186b3b4fd341d2036c923b9f49d6
                                                  'GHC.Generics.DecidedLazy)
                                               (GHC.Generics.Rec0 GHC.Base.String))
                                            a)>_R))) }) -}
-a1170af3aa47e52bc0fdd7bd5d89f0d3
+9765339fac280027932b746bd2301922
   $w$dConsFromJSON'2 ::
+    Data.Aeson.Types.Internal.Options
+    -> Data.Aeson.Types.Internal.Value
+    -> Data.Aeson.Types.Generic.Tagged
+         Data.Aeson.Types.Generic.True
+         (Data.Aeson.Types.Internal.Parser
+            ((GHC.Generics.:*:)
+               (GHC.Generics.S1
+                  ('GHC.Generics.MetaSel
+                     ('GHC.Base.Just "nodes")
+                     'GHC.Generics.NoSourceUnpackedness
+                     'GHC.Generics.NoSourceStrictness
+                     'GHC.Generics.DecidedLazy)
+                  (GHC.Generics.Rec0 [CommonResources.Node]))
+               (GHC.Generics.S1
+                  ('GHC.Generics.MetaSel
+                     ('GHC.Base.Just "links")
+                     'GHC.Generics.NoSourceUnpackedness
+                     'GHC.Generics.NoSourceStrictness
+                     'GHC.Generics.DecidedLazy)
+                  (GHC.Generics.Rec0 [CommonResources.Link]))
+               a))
+  {- Arity: 2, Strictness: <L,U(U,U,U,U,U,U)><S,1*U>, Inline: [0],
+     Unfolding: (\ @ a
+                   (w :: Data.Aeson.Types.Internal.Options)
+                   (w1 :: Data.Aeson.Types.Internal.Value) ->
+                 case w1 of wild {
+                   DEFAULT
+                   -> (Data.Aeson.Types.Class.typeMismatch
+                         @ ((GHC.Generics.:*:)
+                              (GHC.Generics.S1
+                                 ('GHC.Generics.MetaSel
+                                    ('GHC.Base.Just "nodes")
+                                    'GHC.Generics.NoSourceUnpackedness
+                                    'GHC.Generics.NoSourceStrictness
+                                    'GHC.Generics.DecidedLazy)
+                                 (GHC.Generics.Rec0 [CommonResources.Node]))
+                              (GHC.Generics.S1
+                                 ('GHC.Generics.MetaSel
+                                    ('GHC.Base.Just "links")
+                                    'GHC.Generics.NoSourceUnpackedness
+                                    'GHC.Generics.NoSourceStrictness
+                                    'GHC.Generics.DecidedLazy)
+                                 (GHC.Generics.Rec0 [CommonResources.Link]))
+                              a)
+                         Data.Aeson.Types.Generic.$fConsFromJSON'fTrue1
+                         wild)
+                        `cast`
+                      (Sym (Data.Aeson.Types.Generic.N:Tagged[0]
+                                <Data.Aeson.Types.Generic.True>_P
+                                <Data.Aeson.Types.Internal.Parser
+                                   ((GHC.Generics.:*:)
+                                      (GHC.Generics.S1
+                                         ('GHC.Generics.MetaSel
+                                            ('GHC.Base.Just "nodes")
+                                            'GHC.Generics.NoSourceUnpackedness
+                                            'GHC.Generics.NoSourceStrictness
+                                            'GHC.Generics.DecidedLazy)
+                                         (GHC.Generics.Rec0 [CommonResources.Node]))
+                                      (GHC.Generics.S1
+                                         ('GHC.Generics.MetaSel
+                                            ('GHC.Base.Just "links")
+                                            'GHC.Generics.NoSourceUnpackedness
+                                            'GHC.Generics.NoSourceStrictness
+                                            'GHC.Generics.DecidedLazy)
+                                         (GHC.Generics.Rec0 [CommonResources.Link]))
+                                      a)>_R))
+                   Data.Aeson.Types.Internal.Object obj
+                   -> let {
+                        e :: Data.Aeson.Types.Internal.Parser
+                               (GHC.Generics.M1
+                                  GHC.Generics.S
+                                  ('GHC.Generics.MetaSel
+                                     ('GHC.Base.Just "links")
+                                     'GHC.Generics.NoSourceUnpackedness
+                                     'GHC.Generics.NoSourceStrictness
+                                     'GHC.Generics.DecidedLazy)
+                                  (GHC.Generics.Rec0 [CommonResources.Link])
+                                  a)
+                        = Data.Aeson.Types.Generic.$fFromRecordM10_$cparseRecord
+                            @ ('GHC.Generics.MetaSel
+                                 ('GHC.Base.Just "links")
+                                 'GHC.Generics.NoSourceUnpackedness
+                                 'GHC.Generics.NoSourceStrictness
+                                 'GHC.Generics.DecidedLazy)
+                            @ (GHC.Generics.K1 GHC.Generics.R [CommonResources.Link])
+                            CommonResources.$fFromJSONSocialGraph_$s$fSelectorMetaMetaSel1
+                            CommonResources.$fFromJSONSocialGraph9
+                              `cast`
+                            (Sym (Data.Aeson.Types.Class.N:GFromJSON[0]
+                                      <GHC.Generics.K1 GHC.Generics.R [CommonResources.Link]>_N))
+                            @ a
+                            w
+                            (GHC.Base.Nothing @ Data.Text.Internal.Text)
+                            obj
+                      } in
+                      let {
+                        m :: Data.Aeson.Types.Internal.Parser
+                               (GHC.Generics.M1
+                                  GHC.Generics.S
+                                  ('GHC.Generics.MetaSel
+                                     ('GHC.Base.Just "nodes")
+                                     'GHC.Generics.NoSourceUnpackedness
+                                     'GHC.Generics.NoSourceStrictness
+                                     'GHC.Generics.DecidedLazy)
+                                  (GHC.Generics.Rec0 [CommonResources.Node])
+                                  a)
+                        = Data.Aeson.Types.Generic.$fFromRecordM10_$cparseRecord
+                            @ ('GHC.Generics.MetaSel
+                                 ('GHC.Base.Just "nodes")
+                                 'GHC.Generics.NoSourceUnpackedness
+                                 'GHC.Generics.NoSourceStrictness
+                                 'GHC.Generics.DecidedLazy)
+                            @ (GHC.Generics.K1 GHC.Generics.R [CommonResources.Node])
+                            CommonResources.$fFromJSONSocialGraph_$s$fSelectorMetaMetaSel
+                            CommonResources.$fFromJSONSocialGraph2
+                              `cast`
+                            (Sym (Data.Aeson.Types.Class.N:GFromJSON[0]
+                                      <GHC.Generics.K1 GHC.Generics.R [CommonResources.Node]>_N))
+                            @ a
+                            w
+                            (GHC.Base.Nothing @ Data.Text.Internal.Text)
+                            obj
+                      } in
+                      (\ @ (f :: * -> *)
+                         @ r
+                         (path :: Data.Aeson.Types.Internal.JSONPath)
+                         (kf :: Data.Aeson.Types.Internal.Failure f r)
+                         (ks :: Data.Aeson.Types.Internal.Success
+                                  ((GHC.Generics.:*:)
+                                     (GHC.Generics.M1
+                                        GHC.Generics.S
+                                        ('GHC.Generics.MetaSel
+                                           ('GHC.Base.Just "nodes")
+                                           'GHC.Generics.NoSourceUnpackedness
+                                           'GHC.Generics.NoSourceStrictness
+                                           'GHC.Generics.DecidedLazy)
+                                        (GHC.Generics.Rec0 [CommonResources.Node]))
+                                     (GHC.Generics.M1
+                                        GHC.Generics.S
+                                        ('GHC.Generics.MetaSel
+                                           ('GHC.Base.Just "links")
+                                           'GHC.Generics.NoSourceUnpackedness
+                                           'GHC.Generics.NoSourceStrictness
+                                           'GHC.Generics.DecidedLazy)
+                                        (GHC.Generics.Rec0 [CommonResources.Link]))
+                                     a)
+                                  f
+                                  r) ->
+                       m `cast`
+                       (Data.Aeson.Types.Internal.N:Parser[0]
+                            <GHC.Generics.M1
+                               GHC.Generics.S
+                               ('GHC.Generics.MetaSel
+                                  ('GHC.Base.Just "nodes")
+                                  'GHC.Generics.NoSourceUnpackedness
+                                  'GHC.Generics.NoSourceStrictness
+                                  'GHC.Generics.DecidedLazy)
+                               (GHC.Generics.Rec0 [CommonResources.Node])
+                               a>_R)
+                         @ f
+                         @ r
+                         path
+                         kf
+                         (\ (a2 :: GHC.Generics.M1
+                                     GHC.Generics.S
+                                     ('GHC.Generics.MetaSel
+                                        ('GHC.Base.Just "nodes")
+                                        'GHC.Generics.NoSourceUnpackedness
+                                        'GHC.Generics.NoSourceStrictness
+                                        'GHC.Generics.DecidedLazy)
+                                     (GHC.Generics.Rec0 [CommonResources.Node])
+                                     a) ->
+                          e `cast`
+                          (Data.Aeson.Types.Internal.N:Parser[0]
+                               <GHC.Generics.M1
+                                  GHC.Generics.S
+                                  ('GHC.Generics.MetaSel
+                                     ('GHC.Base.Just "links")
+                                     'GHC.Generics.NoSourceUnpackedness
+                                     'GHC.Generics.NoSourceStrictness
+                                     'GHC.Generics.DecidedLazy)
+                                  (GHC.Generics.Rec0 [CommonResources.Link])
+                                  a>_R)
+                            @ f
+                            @ r
+                            path
+                            kf
+                            (\ (a3 :: GHC.Generics.M1
+                                        GHC.Generics.S
+                                        ('GHC.Generics.MetaSel
+                                           ('GHC.Base.Just "links")
+                                           'GHC.Generics.NoSourceUnpackedness
+                                           'GHC.Generics.NoSourceStrictness
+                                           'GHC.Generics.DecidedLazy)
+                                        (GHC.Generics.Rec0 [CommonResources.Link])
+                                        a) ->
+                             ks
+                               (GHC.Generics.:*:
+                                  @ (GHC.Generics.M1
+                                       GHC.Generics.S
+                                       ('GHC.Generics.MetaSel
+                                          ('GHC.Base.Just "nodes")
+                                          'GHC.Generics.NoSourceUnpackedness
+                                          'GHC.Generics.NoSourceStrictness
+                                          'GHC.Generics.DecidedLazy)
+                                       (GHC.Generics.Rec0 [CommonResources.Node]))
+                                  @ (GHC.Generics.M1
+                                       GHC.Generics.S
+                                       ('GHC.Generics.MetaSel
+                                          ('GHC.Base.Just "links")
+                                          'GHC.Generics.NoSourceUnpackedness
+                                          'GHC.Generics.NoSourceStrictness
+                                          'GHC.Generics.DecidedLazy)
+                                       (GHC.Generics.Rec0 [CommonResources.Link]))
+                                  @ a
+                                  a2
+                                  a3))))
+                        `cast`
+                      (Trans
+                           (Sym (Data.Aeson.Types.Internal.N:Parser[0]
+                                     <(GHC.Generics.:*:)
+                                        (GHC.Generics.M1
+                                           GHC.Generics.S
+                                           ('GHC.Generics.MetaSel
+                                              ('GHC.Base.Just "nodes")
+                                              'GHC.Generics.NoSourceUnpackedness
+                                              'GHC.Generics.NoSourceStrictness
+                                              'GHC.Generics.DecidedLazy)
+                                           (GHC.Generics.Rec0 [CommonResources.Node]))
+                                        (GHC.Generics.M1
+                                           GHC.Generics.S
+                                           ('GHC.Generics.MetaSel
+                                              ('GHC.Base.Just "links")
+                                              'GHC.Generics.NoSourceUnpackedness
+                                              'GHC.Generics.NoSourceStrictness
+                                              'GHC.Generics.DecidedLazy)
+                                           (GHC.Generics.Rec0 [CommonResources.Link]))
+                                        a>_R))
+                           (Sym (Data.Aeson.Types.Generic.N:Tagged[0]
+                                     <Data.Aeson.Types.Generic.True>_P
+                                     <Data.Aeson.Types.Internal.Parser
+                                        ((GHC.Generics.:*:)
+                                           (GHC.Generics.S1
+                                              ('GHC.Generics.MetaSel
+                                                 ('GHC.Base.Just "nodes")
+                                                 'GHC.Generics.NoSourceUnpackedness
+                                                 'GHC.Generics.NoSourceStrictness
+                                                 'GHC.Generics.DecidedLazy)
+                                              (GHC.Generics.Rec0 [CommonResources.Node]))
+                                           (GHC.Generics.S1
+                                              ('GHC.Generics.MetaSel
+                                                 ('GHC.Base.Just "links")
+                                                 'GHC.Generics.NoSourceUnpackedness
+                                                 'GHC.Generics.NoSourceStrictness
+                                                 'GHC.Generics.DecidedLazy)
+                                              (GHC.Generics.Rec0 [CommonResources.Link]))
+                                           a)>_R))) }) -}
+a66a118ed90bda1dead42539d9cf532e
+  $w$dConsFromJSON'3 ::
     Data.Aeson.Types.Internal.Options
     -> Data.Aeson.Types.Internal.Value
     -> Data.Aeson.Types.Generic.Tagged
@@ -8055,8 +9441,146 @@ b310d4c5dc8fad08ea68394e556f102f
                    `cast`
                  (Sym (Data.Aeson.Types.Internal.N:Parser[0]
                            <GHC.Generics.K1 GHC.Generics.R [GHC.Types.Char] a1>_R))) -}
-b9f1d13fefeb131d675501a441a76875
+36052db2877d70d704ae639d958b880e
   $w$dGFromJSON3 ::
+    Data.Aeson.Types.Internal.Value
+    -> Data.Aeson.Types.Internal.Parser
+         (GHC.Generics.K1 GHC.Generics.R [CommonResources.Node] a1)
+  {- Arity: 1, Strictness: <L,1*U>, Inline: [0],
+     Unfolding: (\ @ a1 (w :: Data.Aeson.Types.Internal.Value) ->
+                 let {
+                   m :: Data.Aeson.Types.Internal.Parser [CommonResources.Node]
+                   = case w of wild {
+                       DEFAULT
+                       -> Data.Aeson.Types.Class.typeMismatch
+                            @ [CommonResources.Node]
+                            CommonResources.$fFromJSONSocialGraph4
+                            wild
+                       Data.Aeson.Types.Internal.Array arr
+                       -> case arr of wild1 { Data.Vector.Vector dt dt1 dt2 ->
+                          (CommonResources.$fFromJSONSocialGraph3
+                             (GHC.List.zipWith
+                                @ GHC.Types.Int
+                                @ Data.Aeson.Types.Internal.Value
+                                @ (Data.Aeson.Types.Internal.Parser CommonResources.Node)
+                                CommonResources.$fFromJSONSocialGraph_f1
+                                CommonResources.$fFromJSONSocialGraph_f2
+                                (letrec {
+                                   $wgo :: GHC.Prim.Int# -> [Data.Aeson.Types.Internal.Value]
+                                     {- Arity: 1, Strictness: <S,U>, Inline: [0] -}
+                                   = \ (ww :: GHC.Prim.Int#) ->
+                                     case GHC.Prim.tagToEnum#
+                                            @ GHC.Types.Bool
+                                            (GHC.Prim.>=# ww dt1) of wild2 {
+                                       GHC.Types.False
+                                       -> case GHC.Prim.indexArray#
+                                                 @ Data.Aeson.Types.Internal.Value
+                                                 dt2
+                                                 (GHC.Prim.+# dt ww) of ds2 { Unit# ipv ->
+                                          GHC.Types.:
+                                            @ Data.Aeson.Types.Internal.Value
+                                            ipv
+                                            ($wgo (GHC.Prim.+# ww 1#)) }
+                                       GHC.Types.True
+                                       -> GHC.Types.[] @ Data.Aeson.Types.Internal.Value }
+                                 } in
+                                 $wgo 0#)))
+                            `cast`
+                          (Sym (Data.Aeson.Types.Internal.N:Parser[0]
+                                    <[CommonResources.Node]>_R)) } }
+                 } in
+                 (\ @ (f1 :: * -> *)
+                    @ r
+                    (path :: Data.Aeson.Types.Internal.JSONPath)
+                    (kf :: Data.Aeson.Types.Internal.Failure f1 r)
+                    (ks :: Data.Aeson.Types.Internal.Success
+                             (GHC.Generics.K1 GHC.Generics.R [CommonResources.Node] a1) f1 r) ->
+                  m `cast`
+                  (Data.Aeson.Types.Internal.N:Parser[0] <[CommonResources.Node]>_R)
+                    @ f1
+                    @ r
+                    path
+                    kf
+                    (\ (a2 :: [CommonResources.Node]) ->
+                     ks
+                       a2
+                         `cast`
+                       (Sym (GHC.Generics.N:K1[0]
+                                 <GHC.Generics.R>_P <[CommonResources.Node]>_R <a1>_P))))
+                   `cast`
+                 (Sym (Data.Aeson.Types.Internal.N:Parser[0]
+                           <GHC.Generics.K1 GHC.Generics.R [CommonResources.Node] a1>_R))) -}
+9765339fac280027932b746bd2301922
+  $w$dGFromJSON4 ::
+    Data.Aeson.Types.Internal.Value
+    -> Data.Aeson.Types.Internal.Parser
+         (GHC.Generics.K1 GHC.Generics.R [CommonResources.Link] a1)
+  {- Arity: 1, Strictness: <L,1*U>, Inline: [0],
+     Unfolding: (\ @ a1 (w :: Data.Aeson.Types.Internal.Value) ->
+                 let {
+                   m :: Data.Aeson.Types.Internal.Parser [CommonResources.Link]
+                   = case w of wild {
+                       DEFAULT
+                       -> Data.Aeson.Types.Class.typeMismatch
+                            @ [CommonResources.Link]
+                            CommonResources.$fFromJSONSocialGraph4
+                            wild
+                       Data.Aeson.Types.Internal.Array arr
+                       -> case arr of wild1 { Data.Vector.Vector dt dt1 dt2 ->
+                          (CommonResources.$fFromJSONSocialGraph10
+                             (GHC.List.zipWith
+                                @ GHC.Types.Int
+                                @ Data.Aeson.Types.Internal.Value
+                                @ (Data.Aeson.Types.Internal.Parser CommonResources.Link)
+                                CommonResources.$fFromJSONSocialGraph_f4
+                                CommonResources.$fFromJSONSocialGraph_f2
+                                (letrec {
+                                   $wgo :: GHC.Prim.Int# -> [Data.Aeson.Types.Internal.Value]
+                                     {- Arity: 1, Strictness: <S,U>, Inline: [0] -}
+                                   = \ (ww :: GHC.Prim.Int#) ->
+                                     case GHC.Prim.tagToEnum#
+                                            @ GHC.Types.Bool
+                                            (GHC.Prim.>=# ww dt1) of wild2 {
+                                       GHC.Types.False
+                                       -> case GHC.Prim.indexArray#
+                                                 @ Data.Aeson.Types.Internal.Value
+                                                 dt2
+                                                 (GHC.Prim.+# dt ww) of ds2 { Unit# ipv ->
+                                          GHC.Types.:
+                                            @ Data.Aeson.Types.Internal.Value
+                                            ipv
+                                            ($wgo (GHC.Prim.+# ww 1#)) }
+                                       GHC.Types.True
+                                       -> GHC.Types.[] @ Data.Aeson.Types.Internal.Value }
+                                 } in
+                                 $wgo 0#)))
+                            `cast`
+                          (Sym (Data.Aeson.Types.Internal.N:Parser[0]
+                                    <[CommonResources.Link]>_R)) } }
+                 } in
+                 (\ @ (f1 :: * -> *)
+                    @ r
+                    (path :: Data.Aeson.Types.Internal.JSONPath)
+                    (kf :: Data.Aeson.Types.Internal.Failure f1 r)
+                    (ks :: Data.Aeson.Types.Internal.Success
+                             (GHC.Generics.K1 GHC.Generics.R [CommonResources.Link] a1) f1 r) ->
+                  m `cast`
+                  (Data.Aeson.Types.Internal.N:Parser[0] <[CommonResources.Link]>_R)
+                    @ f1
+                    @ r
+                    path
+                    kf
+                    (\ (a2 :: [CommonResources.Link]) ->
+                     ks
+                       a2
+                         `cast`
+                       (Sym (GHC.Generics.N:K1[0]
+                                 <GHC.Generics.R>_P <[CommonResources.Link]>_R <a1>_P))))
+                   `cast`
+                 (Sym (Data.Aeson.Types.Internal.N:Parser[0]
+                           <GHC.Generics.K1 GHC.Generics.R [CommonResources.Link] a1>_R))) -}
+039725f4c43746bac2f93f93f5c85a59
+  $w$dGFromJSON5 ::
     Data.Aeson.Types.Internal.Value
     -> Data.Aeson.Types.Internal.Parser
          (GHC.Generics.K1 GHC.Generics.R [GHC.Types.Char] a1)
@@ -8754,8 +10278,174 @@ d97a22c17d9a55a104312b8ec4130ac0
                            ipv }) of ds1 { (#,#) ipv ipv1 ->
                  case ipv1 of dt { Data.Text.Internal.Text ipv2 ipv3 ipv4 ->
                  (# dt #) } }) -}
-d400881d348ca1d7d3251a9a3c046917
+9765339fac280027932b746bd2301922
   $w$dGToJSON3 ::
+    GHC.Generics.K1 GHC.Generics.R [CommonResources.Link] a1
+    -> (# Data.Aeson.Types.Internal.Array #)
+  {- Arity: 1, Strictness: <S,1*U>, Inline: [0],
+     Unfolding: (\ @ a1
+                   (w :: GHC.Generics.K1 GHC.Generics.R [CommonResources.Link] a1) ->
+                 case GHC.Magic.runRW#
+                        @ 'GHC.Types.PtrRepLifted
+                        @ (Data.Vector.Vector Data.Aeson.Types.Internal.Value)
+                        (\ (s1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                         case GHC.Prim.newArray#
+                                @ Data.Aeson.Types.Internal.Value
+                                @ (Control.Monad.Primitive.PrimState
+                                     (GHC.ST.ST GHC.Prim.RealWorld))
+                                0#
+                                (Data.Vector.Mutable.uninitialised
+                                   @ Data.Aeson.Types.Internal.Value)
+                                s1
+                                  `cast`
+                                (GHC.Prim.State#
+                                   (Sym (Control.Monad.Primitive.D:R:PrimStateST[0]
+                                             <GHC.Prim.RealWorld>_N)))_R of ds1 { (#,#) ipv ipv1 ->
+                         case CommonResources.$fToJSONSocialGraph3
+                                GHC.Types.SPEC
+                                ((Data.Vector.Mutable.MVector
+                                    @ (Control.Monad.Primitive.PrimState
+                                         (GHC.ST.ST GHC.Prim.RealWorld))
+                                    @ Data.Aeson.Types.Internal.Value
+                                    0#
+                                    0#
+                                    ipv1)
+                                   `cast`
+                                 (Sub (Sym (Data.Vector.D:R:MutableVector[0])) <Control.Monad.Primitive.PrimState
+                                                                                  (GHC.ST.ST
+                                                                                     GHC.Prim.RealWorld)>_N <Data.Aeson.Types.Internal.Value>_N),
+                                 CommonResources.$fToJSONSocialGraph2)
+                                (GHC.Base.map
+                                   @ CommonResources.Link
+                                   @ Data.Aeson.Types.Internal.Value
+                                   CommonResources.$fToJSONLink1
+                                     `cast`
+                                   (<CommonResources.Link>_R
+                                    ->_R Data.Aeson.Types.Generic.N:Tagged[0]
+                                             <Data.Aeson.Types.Generic.True>_P
+                                             <Data.Aeson.Types.Internal.Value>_R)
+                                   w `cast`
+                                   (GHC.Generics.N:K1[0]
+                                        <GHC.Generics.R>_P <[CommonResources.Link]>_R <a1>_P))
+                                ipv
+                                  `cast`
+                                (GHC.Prim.State#
+                                   (Control.Monad.Primitive.D:R:PrimStateST[0]
+                                        <GHC.Prim.RealWorld>_N))_R of ds2 { (#,#) ipv6 ipv7 ->
+                         case ipv7 of wild5 { (,) v' n ->
+                         case v'
+                                `cast`
+                              (Sub (Data.Vector.D:R:MutableVector[0]) <Control.Monad.Primitive.PrimState
+                                                                         (GHC.ST.ST
+                                                                            GHC.Prim.RealWorld)>_N <Data.Aeson.Types.Internal.Value>_N) of wild { Data.Vector.Mutable.MVector dt dt1 dt2 ->
+                         case n of dt5 { GHC.Types.I# dt6 ->
+                         case GHC.Prim.unsafeFreezeArray#
+                                @ (Control.Monad.Primitive.PrimState
+                                     (GHC.ST.ST GHC.Prim.RealWorld))
+                                @ Data.Aeson.Types.Internal.Value
+                                dt2
+                                ipv6
+                                  `cast`
+                                (GHC.Prim.State#
+                                   (Sym (Control.Monad.Primitive.D:R:PrimStateST[0]
+                                             <GHC.Prim.RealWorld>_N)))_R of ds4 { (#,#) ipv2 ipv3 ->
+                         (# ipv2
+                              `cast`
+                            (GHC.Prim.State#
+                               (Control.Monad.Primitive.D:R:PrimStateST[0]
+                                    <GHC.Prim.RealWorld>_N))_R,
+                            Data.Vector.Vector
+                              @ Data.Aeson.Types.Internal.Value
+                              dt
+                              dt6
+                              ipv3 #) } } } } } }) of ds1 { (#,#) ipv1 ipv2 ->
+                 case ipv2 of dt { Data.Vector.Vector ipv ipv4 ipv5 ->
+                 (# dt #) } }) -}
+4327736eb8b1c9df9d98385125edd581
+  $w$dGToJSON4 ::
+    GHC.Generics.K1 GHC.Generics.R [CommonResources.Node] a1
+    -> (# Data.Aeson.Types.Internal.Array #)
+  {- Arity: 1, Strictness: <S,1*U>, Inline: [0],
+     Unfolding: (\ @ a1
+                   (w :: GHC.Generics.K1 GHC.Generics.R [CommonResources.Node] a1) ->
+                 case GHC.Magic.runRW#
+                        @ 'GHC.Types.PtrRepLifted
+                        @ (Data.Vector.Vector Data.Aeson.Types.Internal.Value)
+                        (\ (s1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                         case GHC.Prim.newArray#
+                                @ Data.Aeson.Types.Internal.Value
+                                @ (Control.Monad.Primitive.PrimState
+                                     (GHC.ST.ST GHC.Prim.RealWorld))
+                                0#
+                                (Data.Vector.Mutable.uninitialised
+                                   @ Data.Aeson.Types.Internal.Value)
+                                s1
+                                  `cast`
+                                (GHC.Prim.State#
+                                   (Sym (Control.Monad.Primitive.D:R:PrimStateST[0]
+                                             <GHC.Prim.RealWorld>_N)))_R of ds1 { (#,#) ipv ipv1 ->
+                         case CommonResources.$fToJSONSocialGraph6
+                                GHC.Types.SPEC
+                                ((Data.Vector.Mutable.MVector
+                                    @ (Control.Monad.Primitive.PrimState
+                                         (GHC.ST.ST GHC.Prim.RealWorld))
+                                    @ Data.Aeson.Types.Internal.Value
+                                    0#
+                                    0#
+                                    ipv1)
+                                   `cast`
+                                 (Sub (Sym (Data.Vector.D:R:MutableVector[0])) <Control.Monad.Primitive.PrimState
+                                                                                  (GHC.ST.ST
+                                                                                     GHC.Prim.RealWorld)>_N <Data.Aeson.Types.Internal.Value>_N),
+                                 CommonResources.$fToJSONSocialGraph2)
+                                (GHC.Base.map
+                                   @ CommonResources.Node
+                                   @ Data.Aeson.Types.Internal.Value
+                                   CommonResources.$fToJSONNode1
+                                     `cast`
+                                   (<CommonResources.Node>_R
+                                    ->_R Data.Aeson.Types.Generic.N:Tagged[0]
+                                             <Data.Aeson.Types.Generic.True>_P
+                                             <Data.Aeson.Types.Internal.Value>_R)
+                                   w `cast`
+                                   (GHC.Generics.N:K1[0]
+                                        <GHC.Generics.R>_P <[CommonResources.Node]>_R <a1>_P))
+                                ipv
+                                  `cast`
+                                (GHC.Prim.State#
+                                   (Control.Monad.Primitive.D:R:PrimStateST[0]
+                                        <GHC.Prim.RealWorld>_N))_R of ds2 { (#,#) ipv6 ipv7 ->
+                         case ipv7 of wild5 { (,) v' n ->
+                         case v'
+                                `cast`
+                              (Sub (Data.Vector.D:R:MutableVector[0]) <Control.Monad.Primitive.PrimState
+                                                                         (GHC.ST.ST
+                                                                            GHC.Prim.RealWorld)>_N <Data.Aeson.Types.Internal.Value>_N) of wild { Data.Vector.Mutable.MVector dt dt1 dt2 ->
+                         case n of dt5 { GHC.Types.I# dt6 ->
+                         case GHC.Prim.unsafeFreezeArray#
+                                @ (Control.Monad.Primitive.PrimState
+                                     (GHC.ST.ST GHC.Prim.RealWorld))
+                                @ Data.Aeson.Types.Internal.Value
+                                dt2
+                                ipv6
+                                  `cast`
+                                (GHC.Prim.State#
+                                   (Sym (Control.Monad.Primitive.D:R:PrimStateST[0]
+                                             <GHC.Prim.RealWorld>_N)))_R of ds4 { (#,#) ipv2 ipv3 ->
+                         (# ipv2
+                              `cast`
+                            (GHC.Prim.State#
+                               (Control.Monad.Primitive.D:R:PrimStateST[0]
+                                    <GHC.Prim.RealWorld>_N))_R,
+                            Data.Vector.Vector
+                              @ Data.Aeson.Types.Internal.Value
+                              dt
+                              dt6
+                              ipv3 #) } } } } } }) of ds1 { (#,#) ipv1 ipv2 ->
+                 case ipv2 of dt { Data.Vector.Vector ipv ipv4 ipv5 ->
+                 (# dt #) } }) -}
+de82426aac0abe895d95defd744f6905
+  $w$dGToJSON5 ::
     GHC.Generics.K1 GHC.Generics.R [GHC.Types.Char] a1
     -> (# Data.Text.Internal.Text #)
   {- Arity: 1, Strictness: <S,1*U>, Inline: [0],
@@ -8931,7 +10621,7 @@ b29f16d9eac52cba213eca9f1a05e7c1
           Data.Text.Internal.Text #)
   {- Arity: 5, Strictness: <L,U(U)><L,U(U)><S,1*U><S,U><S,U>,
      Inline: [0] -}
-f21580aec800f9b582324fabd0ac2962
+3089c0181f7f9978395388ef4a6651e1
   type CrawlerApi =
     ("init"
      Servant.API.Sub.:> (Servant.API.ReqBody.ReqBody
@@ -8946,7 +10636,7 @@ f21580aec800f9b582324fabd0ac2962
                                                       Servant.API.Sub.:> Servant.API.Verbs.Post
                                                                            '[Servant.API.ContentTypes.JSON]
                                                                            CommonResources.Response))
-61b0e0d6cb0849134fd2685e93d9eb84
+9765339fac280027932b746bd2301922
   data Link
     = Link {start :: GHC.Base.String,
             target :: GHC.Base.String,
@@ -8954,7 +10644,7 @@ f21580aec800f9b582324fabd0ac2962
 d3a47d38a8ed1efc343bebb3a38bebdc
   data Node
     = Node {name :: GHC.Base.String, node_type :: GHC.Base.String}
-61b0e0d6cb0849134fd2685e93d9eb84
+9765339fac280027932b746bd2301922
   axiom Rep_Link::
       GHC.Generics.Rep CommonResources.Link
         = GHC.Generics.D1
@@ -9032,7 +10722,33 @@ d4865748a78d190968374356df046be6
                      'GHC.Generics.NoSourceStrictness
                      'GHC.Generics.DecidedLazy)
                   (GHC.Generics.Rec0 GHC.Base.String)))
-cef3aaa0867f26fc4479627a81ef80b7
+9765339fac280027932b746bd2301922
+  axiom Rep_SocialGraph::
+      GHC.Generics.Rep CommonResources.SocialGraph
+        = GHC.Generics.D1
+            ('GHC.Generics.MetaData
+               "SocialGraph"
+               "CommonResources"
+               "CommonResources-0.1.0.0-LpQja3yDL15K7T7dUigrkK"
+               'GHC.Types.False)
+            (GHC.Generics.C1
+               ('GHC.Generics.MetaCons
+                  "SocialGraph" 'GHC.Generics.PrefixI 'GHC.Types.True)
+               (GHC.Generics.S1
+                  ('GHC.Generics.MetaSel
+                     ('GHC.Base.Just "nodes")
+                     'GHC.Generics.NoSourceUnpackedness
+                     'GHC.Generics.NoSourceStrictness
+                     'GHC.Generics.DecidedLazy)
+                  (GHC.Generics.Rec0 [CommonResources.Node])
+                GHC.Generics.:*: GHC.Generics.S1
+                                   ('GHC.Generics.MetaSel
+                                      ('GHC.Base.Just "links")
+                                      'GHC.Generics.NoSourceUnpackedness
+                                      'GHC.Generics.NoSourceStrictness
+                                      'GHC.Generics.DecidedLazy)
+                                   (GHC.Generics.Rec0 [CommonResources.Link])))
+80825682394d65b8cb8495364862b6b9
   axiom Rep_User::
       GHC.Generics.Rep CommonResources.User
         = GHC.Generics.D1
@@ -9060,29 +10776,48 @@ cef3aaa0867f26fc4479627a81ef80b7
                                    (GHC.Generics.Rec0 GHC.Base.String)))
 d4865748a78d190968374356df046be6
   data Response = Response {respString :: GHC.Base.String}
-cef3aaa0867f26fc4479627a81ef80b7
+00125e11c74417394a716b949c414f90
+  type SearchApi =
+    "socialGraph"
+    Servant.API.Sub.:> (Servant.API.ReqBody.ReqBody
+                          '[Servant.API.ContentTypes.JSON] CommonResources.User
+                        Servant.API.Sub.:> Servant.API.Verbs.Post
+                                             '[Servant.API.ContentTypes.JSON]
+                                             CommonResources.SocialGraph)
+9765339fac280027932b746bd2301922
+  data SocialGraph
+    = SocialGraph {nodes :: [CommonResources.Node],
+                   links :: [CommonResources.Link]}
+80825682394d65b8cb8495364862b6b9
   data User
     = User {username :: GHC.Base.String, auth_token :: GHC.Base.String}
-cebf9f8cb94f47dac0ee45a646c15189
+4d78a0280e333782c431e6717467bea4
   auth_token :: CommonResources.User -> GHC.Base.String
   RecSel Left CommonResources.User
   {- Arity: 1, HasNoCafRefs, Strictness: <S(LS),1*U(A,1*U)>,
      Unfolding: InlineRule (1, True, False)
                 (\ (ds :: CommonResources.User) ->
                  case ds of wild { CommonResources.User ds1 ds2 -> ds2 }) -}
-3ce3cdf96adfaf6ee08f5cb1eb76be43
+f3ce0a938123f97a3793fa5c3ed2ba05
   crawlerhost :: GHC.Base.String
-  {- Unfolding: (GHC.CString.unpackCString# "localhost"#) -}
+  {- Unfolding: (CommonResources.searchhost) -}
 b3e9736280746b5b99da85371ab9468e
   crawlerport :: GHC.Base.String
   {- Unfolding: (GHC.CString.unpackCString# "8080"#) -}
-6de9bf66de81b88bc4ffdad47af3b13e
+1071d2e77d8147a2ebfc3046a6afb863
   link_type :: CommonResources.Link -> GHC.Base.String
   RecSel Left CommonResources.Link
   {- Arity: 1, HasNoCafRefs, Strictness: <S(LLS),1*U(A,A,1*U)>,
      Unfolding: InlineRule (1, True, False)
                 (\ (ds :: CommonResources.Link) ->
                  case ds of wild { CommonResources.Link ds1 ds2 ds3 -> ds3 }) -}
+d3490957a0a7f05d7c301eb058ab1254
+  links :: CommonResources.SocialGraph -> [CommonResources.Link]
+  RecSel Left CommonResources.SocialGraph
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LS),1*U(A,1*U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: CommonResources.SocialGraph) ->
+                 case ds of wild { CommonResources.SocialGraph ds1 ds2 -> ds2 }) -}
 f2e56b0482cd2969bc52efe7207d44e4
   name :: CommonResources.Node -> GHC.Base.String
   RecSel Left CommonResources.Node
@@ -9097,6 +10832,13 @@ f2e56b0482cd2969bc52efe7207d44e4
      Unfolding: InlineRule (1, True, False)
                 (\ (ds :: CommonResources.Node) ->
                  case ds of wild { CommonResources.Node ds1 ds2 -> ds2 }) -}
+abbd2f6f4aff89fa771acb8caaec409b
+  nodes :: CommonResources.SocialGraph -> [CommonResources.Node]
+  RecSel Left CommonResources.SocialGraph
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(SL),1*U(1*U,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: CommonResources.SocialGraph) ->
+                 case ds of wild { CommonResources.SocialGraph ds1 ds2 -> ds1 }) -}
 7a09c9f75893c9fd0ab3b3d8886ce0ae
   respString :: CommonResources.Response -> GHC.Base.String
   RecSel Left CommonResources.Response
@@ -9104,21 +10846,27 @@ f2e56b0482cd2969bc52efe7207d44e4
      Unfolding: InlineRule (1, True, False)
                 (\ (ds :: CommonResources.Response) ->
                  case ds of wild { CommonResources.Response ds1 -> ds1 }) -}
-96767f81da0ec8c4e60e3a8794aebbf5
+d737073ff2153902bfbee082fd370898
+  searchhost :: GHC.Base.String
+  {- Unfolding: (GHC.CString.unpackCString# "localhost"#) -}
+bb44decc6aeb47aad583a304df2ad9ee
+  searchport :: GHC.Base.String
+  {- Unfolding: (GHC.CString.unpackCString# "8081"#) -}
+d12213912671b7d82b07ff21b51acd54
   start :: CommonResources.Link -> GHC.Base.String
   RecSel Left CommonResources.Link
   {- Arity: 1, HasNoCafRefs, Strictness: <S(SLL),1*U(1*U,A,A)>,
      Unfolding: InlineRule (1, True, False)
                 (\ (ds :: CommonResources.Link) ->
                  case ds of wild { CommonResources.Link ds1 ds2 ds3 -> ds1 }) -}
-0cdcfc19d0d8aa99264430347b60e1b0
+869d7a946d6e4fcd51e740e9cc6317dc
   target :: CommonResources.Link -> GHC.Base.String
   RecSel Left CommonResources.Link
   {- Arity: 1, HasNoCafRefs, Strictness: <S(LSL),1*U(A,1*U,A)>,
      Unfolding: InlineRule (1, True, False)
                 (\ (ds :: CommonResources.Link) ->
                  case ds of wild { CommonResources.Link ds1 ds2 ds3 -> ds2 }) -}
-7cf056042d846bde65e031834bbacca9
+6badb010a35f198bd915b59485b08361
   username :: CommonResources.User -> GHC.Base.String
   RecSel Left CommonResources.User
   {- Arity: 1, HasNoCafRefs, Strictness: <S(SL),1*U(1*U,A)>,
@@ -9131,6 +10879,8 @@ instance GHC.Classes.Eq [CommonResources.Node]
   = CommonResources.$fEqNode
 instance GHC.Classes.Eq [CommonResources.Response]
   = CommonResources.$fEqResponse
+instance GHC.Classes.Eq [CommonResources.SocialGraph]
+  = CommonResources.$fEqSocialGraph
 instance GHC.Classes.Eq [CommonResources.User]
   = CommonResources.$fEqUser
 instance Data.Bson.Generic.FromBSON [CommonResources.Link]
@@ -9145,6 +10895,8 @@ instance Data.Aeson.Types.Class.FromJSON [CommonResources.Node]
   = CommonResources.$fFromJSONNode
 instance Data.Aeson.Types.Class.FromJSON [CommonResources.Response]
   = CommonResources.$fFromJSONResponse
+instance Data.Aeson.Types.Class.FromJSON [CommonResources.SocialGraph]
+  = CommonResources.$fFromJSONSocialGraph
 instance Data.Aeson.Types.Class.FromJSON [CommonResources.User]
   = CommonResources.$fFromJSONUser
 instance GHC.Generics.Generic [CommonResources.Link]
@@ -9153,6 +10905,8 @@ instance GHC.Generics.Generic [CommonResources.Node]
   = CommonResources.$fGenericNode
 instance GHC.Generics.Generic [CommonResources.Response]
   = CommonResources.$fGenericResponse
+instance GHC.Generics.Generic [CommonResources.SocialGraph]
+  = CommonResources.$fGenericSocialGraph
 instance GHC.Generics.Generic [CommonResources.User]
   = CommonResources.$fGenericUser
 instance GHC.Show.Show [CommonResources.Link]
@@ -9161,6 +10915,8 @@ instance GHC.Show.Show [CommonResources.Node]
   = CommonResources.$fShowNode
 instance GHC.Show.Show [CommonResources.Response]
   = CommonResources.$fShowResponse
+instance GHC.Show.Show [CommonResources.SocialGraph]
+  = CommonResources.$fShowSocialGraph
 instance GHC.Show.Show [CommonResources.User]
   = CommonResources.$fShowUser
 instance Data.Bson.Generic.ToBSON [CommonResources.Link]
@@ -9174,12 +10930,16 @@ instance Data.Aeson.Types.Class.ToJSON [CommonResources.Node]
   = CommonResources.$fToJSONNode
 instance Data.Aeson.Types.Class.ToJSON [CommonResources.Response]
   = CommonResources.$fToJSONResponse
+instance Data.Aeson.Types.Class.ToJSON [CommonResources.SocialGraph]
+  = CommonResources.$fToJSONSocialGraph
 instance Data.Aeson.Types.Class.ToJSON [CommonResources.User]
   = CommonResources.$fToJSONUser
 family instance GHC.Generics.Rep [CommonResources.Response]
   = CommonResources.Rep_Response
 family instance GHC.Generics.Rep [CommonResources.User]
   = CommonResources.Rep_User
+family instance GHC.Generics.Rep [CommonResources.SocialGraph]
+  = CommonResources.Rep_SocialGraph
 family instance GHC.Generics.Rep [CommonResources.Link]
   = CommonResources.Rep_Link
 family instance GHC.Generics.Rep [CommonResources.Node]
@@ -9327,6 +11087,25 @@ family instance GHC.Generics.Rep [CommonResources.Node]
                                      $dSingI3
   = CommonResources.$fFromBSONLink_$s$fSelectorMetaMetaSel
 "SPEC/CommonResources $fSelectorMetaMetaSel @ ('Just
+                                                "links") @ 'NoSourceUnpackedness @ 'NoSourceStrictness @ 'DecidedLazy" [ALWAYS] forall ($dSingI :: GHC.Generics.SingI
+                                                                                                                                                                                                          ('GHC.Base.Just
+                                                                                                                                                                                                             "links"))
+                                                                                                                                                                                            ($dSingI1 :: GHC.Generics.SingI
+                                                                                                                                                                                                           'GHC.Generics.NoSourceUnpackedness)
+                                                                                                                                                                                            ($dSingI2 :: GHC.Generics.SingI
+                                                                                                                                                                                                           'GHC.Generics.NoSourceStrictness)
+                                                                                                                                                                                            ($dSingI3 :: GHC.Generics.SingI
+                                                                                                                                                                                                           'GHC.Generics.DecidedLazy)
+  GHC.Generics.$fSelectorMetaMetaSel @ ('GHC.Base.Just "links")
+                                     @ 'GHC.Generics.NoSourceUnpackedness
+                                     @ 'GHC.Generics.NoSourceStrictness
+                                     @ 'GHC.Generics.DecidedLazy
+                                     $dSingI
+                                     $dSingI1
+                                     $dSingI2
+                                     $dSingI3
+  = CommonResources.$fFromJSONSocialGraph_$s$fSelectorMetaMetaSel1
+"SPEC/CommonResources $fSelectorMetaMetaSel @ ('Just
                                                 "name") @ 'NoSourceUnpackedness @ 'NoSourceStrictness @ 'DecidedLazy" [ALWAYS] forall ($dSingI :: GHC.Generics.SingI
                                                                                                                                                                                                          ('GHC.Base.Just
                                                                                                                                                                                                             "name"))
@@ -9364,6 +11143,25 @@ family instance GHC.Generics.Rep [CommonResources.Node]
                                      $dSingI2
                                      $dSingI3
   = CommonResources.$fFromBSONNode_$s$fSelectorMetaMetaSel
+"SPEC/CommonResources $fSelectorMetaMetaSel @ ('Just
+                                                "nodes") @ 'NoSourceUnpackedness @ 'NoSourceStrictness @ 'DecidedLazy" [ALWAYS] forall ($dSingI :: GHC.Generics.SingI
+                                                                                                                                                                                                          ('GHC.Base.Just
+                                                                                                                                                                                                             "nodes"))
+                                                                                                                                                                                            ($dSingI1 :: GHC.Generics.SingI
+                                                                                                                                                                                                           'GHC.Generics.NoSourceUnpackedness)
+                                                                                                                                                                                            ($dSingI2 :: GHC.Generics.SingI
+                                                                                                                                                                                                           'GHC.Generics.NoSourceStrictness)
+                                                                                                                                                                                            ($dSingI3 :: GHC.Generics.SingI
+                                                                                                                                                                                                           'GHC.Generics.DecidedLazy)
+  GHC.Generics.$fSelectorMetaMetaSel @ ('GHC.Base.Just "nodes")
+                                     @ 'GHC.Generics.NoSourceUnpackedness
+                                     @ 'GHC.Generics.NoSourceStrictness
+                                     @ 'GHC.Generics.DecidedLazy
+                                     $dSingI
+                                     $dSingI1
+                                     $dSingI2
+                                     $dSingI3
+  = CommonResources.$fFromJSONSocialGraph_$s$fSelectorMetaMetaSel
 "SPEC/CommonResources $fSelectorMetaMetaSel @ ('Just
                                                 "respString") @ 'NoSourceUnpackedness @ 'NoSourceStrictness @ 'DecidedLazy" [ALWAYS] forall ($dSingI :: GHC.Generics.SingI
                                                                                                                                                                                                                ('GHC.Base.Just
@@ -9498,6 +11296,26 @@ family instance GHC.Generics.Rep [CommonResources.Node]
                                                $dSingI3
   = CommonResources.$fFromBSONLink_$s$fSelectorMetaMetaSel_$cselName
 "SPEC/CommonResources $fSelectorMetaMetaSel_$cselName @ ('Just
+                                                          "links") @ 'NoSourceUnpackedness @ 'NoSourceStrictness @ 'DecidedLazy" [ALWAYS] forall ($dSingI :: GHC.Generics.SingI
+                                                                                                                                                                                                                              ('GHC.Base.Just
+                                                                                                                                                                                                                                 "links"))
+                                                                                                                                                                                                                ($dSingI1 :: GHC.Generics.SingI
+                                                                                                                                                                                                                               'GHC.Generics.NoSourceUnpackedness)
+                                                                                                                                                                                                                ($dSingI2 :: GHC.Generics.SingI
+                                                                                                                                                                                                                               'GHC.Generics.NoSourceStrictness)
+                                                                                                                                                                                                                ($dSingI3 :: GHC.Generics.SingI
+                                                                                                                                                                                                                               'GHC.Generics.DecidedLazy)
+  GHC.Generics.$fSelectorMetaMetaSel_$cselName @ ('GHC.Base.Just
+                                                    "links")
+                                               @ 'GHC.Generics.NoSourceUnpackedness
+                                               @ 'GHC.Generics.NoSourceStrictness
+                                               @ 'GHC.Generics.DecidedLazy
+                                               $dSingI
+                                               $dSingI1
+                                               $dSingI2
+                                               $dSingI3
+  = CommonResources.$fFromJSONSocialGraph_$s$fSelectorMetaMetaSel_$cselName1
+"SPEC/CommonResources $fSelectorMetaMetaSel_$cselName @ ('Just
                                                           "name") @ 'NoSourceUnpackedness @ 'NoSourceStrictness @ 'DecidedLazy" [ALWAYS] forall ($dSingI :: GHC.Generics.SingI
                                                                                                                                                                                                                              ('GHC.Base.Just
                                                                                                                                                                                                                                 "name"))
@@ -9537,6 +11355,26 @@ family instance GHC.Generics.Rep [CommonResources.Node]
                                                $dSingI2
                                                $dSingI3
   = CommonResources.$fFromBSONNode_$s$fSelectorMetaMetaSel_$cselName
+"SPEC/CommonResources $fSelectorMetaMetaSel_$cselName @ ('Just
+                                                          "nodes") @ 'NoSourceUnpackedness @ 'NoSourceStrictness @ 'DecidedLazy" [ALWAYS] forall ($dSingI :: GHC.Generics.SingI
+                                                                                                                                                                                                                              ('GHC.Base.Just
+                                                                                                                                                                                                                                 "nodes"))
+                                                                                                                                                                                                                ($dSingI1 :: GHC.Generics.SingI
+                                                                                                                                                                                                                               'GHC.Generics.NoSourceUnpackedness)
+                                                                                                                                                                                                                ($dSingI2 :: GHC.Generics.SingI
+                                                                                                                                                                                                                               'GHC.Generics.NoSourceStrictness)
+                                                                                                                                                                                                                ($dSingI3 :: GHC.Generics.SingI
+                                                                                                                                                                                                                               'GHC.Generics.DecidedLazy)
+  GHC.Generics.$fSelectorMetaMetaSel_$cselName @ ('GHC.Base.Just
+                                                    "nodes")
+                                               @ 'GHC.Generics.NoSourceUnpackedness
+                                               @ 'GHC.Generics.NoSourceStrictness
+                                               @ 'GHC.Generics.DecidedLazy
+                                               $dSingI
+                                               $dSingI1
+                                               $dSingI2
+                                               $dSingI3
+  = CommonResources.$fFromJSONSocialGraph_$s$fSelectorMetaMetaSel_$cselName
 "SPEC/CommonResources $fSelectorMetaMetaSel_$cselName @ ('Just
                                                           "respString") @ 'NoSourceUnpackedness @ 'NoSourceStrictness @ 'DecidedLazy" [ALWAYS] forall ($dSingI :: GHC.Generics.SingI
                                                                                                                                                                                                                                    ('GHC.Base.Just
