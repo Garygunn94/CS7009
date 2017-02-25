@@ -1,12 +1,12 @@
 
 ==================== FINAL INTERFACE ====================
-2017-02-23 15:49:23.756664 UTC
+2017-02-25 03:07:10.048265 UTC
 
 interface Crawler-0.1.0.0-E2DzjZCiWdrD8VXmujeLY4:Crawler [orphan module] [family instance module] 8001
-  interface hash: c60060d2320378ae390db9a8441ed142
-  ABI hash: bc66feb29ad19e8d020b466188934730
-  export-list hash: 54d28c3893c85cd8f4c0741889a0c94f
-  orphan hash: 179ff02fbd1d994ccf5ca93d9dac473e
+  interface hash: 1d822990371e8b0d2e9ecfcab4fc939e
+  ABI hash: 94f29f622d15ee86d32b6c2ec32482d9
+  export-list hash: 6a27c1aabbbb1a53da59d0b5d4a5bf83
+  orphan hash: bd7e6b0dd4f30940d4e3377e93310120
   flag hash: befc830e2f81db4375ecfe4034bd792a
   sig of: Nothing
   used TH splices: False
@@ -287,7 +287,7 @@ family instance modules: CommonResources-0.1.0.0@CommonResources-0.1.0.0-LpQja3y
                          vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Unboxed.Base
                          vector-instances-3.3.1@vector-instances-3.3.1-I6TdtGyV4ig2RKtxblZRcS:Data.Vector.Instances
                          zlib-0.6.1.2@zlib-0.6.1.2-4CWLN1T27kOJhNvXgy46ZV:Codec.Compression.Zlib.Stream
-import  -/  CommonResources-0.1.0.0@CommonResources-0.1.0.0-LpQja3yDL15K7T7dUigrkK:CommonResources 699397758d81567741cbfbf271019ed1
+import  -/  CommonResources-0.1.0.0@CommonResources-0.1.0.0-LpQja3yDL15K7T7dUigrkK:CommonResources 3102178b5e590312a2bc7d526d9c7b44
 import  -/  CommonResources-0.1.0.0@CommonResources-0.1.0.0-LpQja3yDL15K7T7dUigrkK:MongodbHelpers 4daa66e428083494a6336cb109bd67ac
 import  -/  aeson-0.11.2.1@aeson-0.11.2.1-5ZQWuTFmffALcfpzDCXoOz:Data.Aeson 94b59824488f369f190c261b6e39e7ba
 import  -/  aeson-0.11.2.1@aeson-0.11.2.1-5ZQWuTFmffALcfpzDCXoOz:Data.Aeson.TH 869262ef224a0287f5d5fc093506acd2
@@ -2948,7 +2948,7 @@ fcececf7286f35b01e41a9436d2704be
                          (CommonResources.$fToJSONResponse_$ctoJSON eta))
                         `cast`
                       (Sym (Data.Aeson.Types.Internal.N:Encoding[0])))) -}
-f98132753b2a17c2b5d210a0ab816ec0
+00b1e191eada93174726b3065b335d7f
   $s$fAllMimeUnrender:a ::
     Servant.API.ContentTypes.AllMimeUnrender
       '[Servant.API.ContentTypes.JSON] CommonResources.User
@@ -2970,14 +2970,14 @@ f98132753b2a17c2b5d210a0ab816ec0
                      Crawler.$s$fAllMimeUnrender:a1
                      (Servant.API.ContentTypes.$fAllMimeUnrender[]a
                         @ CommonResources.User)) -}
-d582d0e91d4673219372c383ea9d1e86
+84b0bf52d1bca9ee2f5f3c3f44cbb0aa
   $s$fAllMimeUnrender:a1 ::
     Servant.API.ContentTypes.MimeUnrender
       Servant.API.ContentTypes.JSON CommonResources.User
   {- Strictness: m,
      Unfolding: InlineRule (0, True, True)
                 Crawler.$s$fAllMimeUnrender:a_$s$fMimeUnrenderTYPEJSONa -}
-cfa139ddb71d3cc583567c33705a94f9
+743df541b155cb5a085a817cb580ae82
   $s$fAllMimeUnrender:a_$s$fMimeUnrenderTYPEJSONa ::
     Servant.API.ContentTypes.MimeUnrender
       Servant.API.ContentTypes.JSON CommonResources.User
@@ -2993,7 +2993,7 @@ cfa139ddb71d3cc583567c33705a94f9
                      (Sym (Data.Aeson.Types.Class.N:FromJSON[0]
                                <CommonResources.User>_N)))
                   Crawler.$s$fAllMimeUnrender:a_$s$fMimeUnrenderTYPEJSONa_$cmimeUnrender -}
-f9ae53b01b2b3dc9db23b787ea2bb9c6
+89da9bd3208a786a956204eaf7f943ba
   $s$fAllMimeUnrender:a_$s$fMimeUnrenderTYPEJSONa_$cmimeUnrender ::
     Data.Proxy.Proxy Servant.API.ContentTypes.JSON
     -> Data.ByteString.Lazy.Internal.ByteString
@@ -3115,7 +3115,7 @@ a306044844496ddb4af534795d0f3299
 4c76757218f36f06fb281ecefd6277c9
   $sserve5 :: GHC.Integer.Type.Integer
   {- HasNoCafRefs, Unfolding: (200) -}
-3823a7361f9b47e5a8c3374865c02070
+078e60b4267c95c0df6ac1480ba4c9f7
   $sserve6 ::
     Data.Proxy.Proxy '[Servant.API.ContentTypes.JSON]
     -> Data.ByteString.Lazy.Internal.ByteString
@@ -4538,7 +4538,7 @@ c14deddd8bcf2bc4eee5d552474be7ef
     -> Data.Map.Base.Map Data.Text.Internal.Text a1
   {- Arity: 5, Strictness: <L,U><L,U><L,U><L,U><S,1*U>,
      Inline: [0] -}
-0a50c1b6f59a75456698b74e279ed429
+0207443f80576ecde3988b6f28f6eab8
   $wformatRepo ::
     GHC.Base.Maybe GitHub.Auth.Auth
     -> GHC.Prim.TVar#
@@ -4550,7 +4550,7 @@ c14deddd8bcf2bc4eee5d552474be7ef
   {- Arity: 4,
      Strictness: <L,U><S,U><L,U(A,A,A,U(U,U,U),A,A,A,A,A,A,A,A,A,A,U(A,U,A,A,A),U(U,U,U),A,A,A,A,A,A,A,A,A,A,A,A,A)><S,U>,
      Inline: [0] -}
-53544e945ebc9fe9177216be27bcce07
+a7fe780eb30c7534ba03d15d9d732b5e
   $winitialize ::
     GHC.Base.String
     -> GHC.Base.String
@@ -5048,7 +5048,7 @@ a7bdbd906295f240c0a0bf7c8be10e7f
                                                                                  GHC.Types.Bool))>_R) <GHC.Prim.Any>_N)))
                         ipv of ds2 { (#,#) ipv2 ipv3 ->
                  (# ipv2, Crawler.crawlerApp9 #) } }) -}
-c1eb8d946313d1e1366639a322b82283
+3dfa87cba4499fc15260531c5d3c1f39
   $wuserformat ::
     GHC.Base.Maybe GitHub.Auth.Auth
     -> GHC.Prim.TVar#
@@ -5098,7 +5098,7 @@ ccd63352d0929d534dde308d9ee2d1b3
                                                         'GHC.Generics.NoSourceStrictness
                                                         'GHC.Generics.DecidedLazy)
                                                      (GHC.Generics.Rec0 GHC.Types.Bool))))
-d25e4d12e5e85e465c357c2b95f80252
+c7af70d097f868714bcbc6af13d27fcf
   data State
     = State {nodes :: GHC.Conc.Sync.TVar
                         (Data.Map.Base.Map Data.Text.Internal.Text CommonResources.Node)}
@@ -5107,7 +5107,7 @@ ccd63352d0929d534dde308d9ee2d1b3
     = Task {tskUsername :: GHC.Base.String,
             tskAuthToken :: GHC.Base.String,
             running :: GHC.Types.Bool}
-bd428779a86076dc509dcdcfb19e3470
+f4a3b30b021c4630e4bd7f77ff024bc9
   addNode ::
     Crawler.State
     -> CommonResources.Node
@@ -5122,7 +5122,7 @@ bd428779a86076dc509dcdcfb19e3470
                  ->_R <CommonResources.Node>_R
                  ->_R <Data.Text.Internal.Text>_R
                  ->_R Sym (GHC.Conc.Sync.N:STM[0] <()>_R)) -}
-3b3800a05dfa642ba5eff99d856b431c
+777446125925f14ead6dc1785fe4fd78
   addNode1 ::
     Crawler.State
     -> CommonResources.Node
@@ -5154,17 +5154,17 @@ bd428779a86076dc509dcdcfb19e3470
                            ipv1)
                         ipv of s2# { DEFAULT ->
                  (# s2#, GHC.Tuple.() #) } } } }) -}
-e04ffde9e135c12f6865907a985f62b0
+3de5ae94a0567f05b084ef2d68db9801
   crawlerApi :: Data.Proxy.Proxy CommonResources.CrawlerApi
   {- HasNoCafRefs,
      Unfolding: InlineRule (0, True, True)
                 (Data.Proxy.Proxy @ * @ CommonResources.CrawlerApi) -}
-dbf767119d02fa4a12917a4938a03b35
+6c3d3983a0a84ecc6e2311b40462906b
   crawlerApp :: Network.Wai.Application
   {- Arity: 2,
      Unfolding: (Servant.Server.Internal.RoutingApplication.toApplication
                    Crawler.crawlerApp1) -}
-98d8572f64081a72ad5ea884e52f43f2
+621c496d52e03e25786271193c4ffcb8
   crawlerApp1 ::
     Network.Wai.Internal.Request
     -> (Servant.Server.Internal.RoutingApplication.RouteResult
@@ -5202,7 +5202,7 @@ c69808ffe57924349338e8e59631a135
   crawlerApp14 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString#
                    "Terminating User Task"#) -}
-dc5c9a7d41676e36aabd2a5f39342d61
+a984ed899bd66c925dd7035b652c2513
   crawlerApp15 ::
     Servant.Server.Internal.Router.Router'
       () Servant.Server.Internal.RoutingApplication.RoutingApplication
@@ -5213,7 +5213,7 @@ dc5c9a7d41676e36aabd2a5f39342d61
                    (GHC.Types.[]
                       @ (()
                          -> Servant.Server.Internal.RoutingApplication.RoutingApplication))) -}
-f4c5047702156b41f581a2440b008c58
+db384af5717bbe76749d70fcea1907eb
   crawlerApp16 ::
     Data.Map.Base.Map
       Data.Text.Internal.Text
@@ -5240,7 +5240,7 @@ f4c5047702156b41f581a2440b008c58
                       @ (Servant.Server.Internal.Router.Router'
                            ()
                            Servant.Server.Internal.RoutingApplication.RoutingApplication)) } }) -}
-520c387125ff7e471acae235fee83bb3
+b5752e02aa9400d9119281b3e8063b03
   crawlerApp17 :: Servant.Server.Internal.Router.Router ()
   {- Unfolding: (Servant.Server.Internal.$w$croute2
                    @ *
@@ -5292,7 +5292,7 @@ f4c5047702156b41f581a2440b008c58
                                 <Control.Monad.Trans.Except.ExceptT
                                    Servant.Server.Internal.ServantErr.ServantErr
                                    GHC.Types.IO>_N)))_R) -}
-9f4e43ada025c53d98ab1b6696dc7285
+5994e917ff8fd8d66b0f395645bf4b6e
   crawlerApp18 ::
     Servant.Server.Internal.RoutingApplication.Delayed
       ()
@@ -5353,7 +5353,7 @@ f4c5047702156b41f581a2440b008c58
                         (Sym (Servant.Server.Internal.RoutingApplication.N:DelayedIO[0]
                                   <()>_R)))
                    Crawler.crawlerApp19) -}
-e051dedead8ca97cdba143f0999f51b3
+f87f03534d27f3095e7e1094a80f9bd8
   crawlerApp19 ::
     ()
     -> ()
@@ -5373,7 +5373,7 @@ e051dedead8ca97cdba143f0999f51b3
                    (b1 :: ())
                    (req :: Network.Wai.Internal.Request) ->
                  Crawler.crawlerApp20) -}
-68b57127f3bd273623194bf19d3f3017
+bf8583da7efc763c1700904f5a90c92e
   crawlerApp2 ::
     Servant.Server.Internal.Router.Router'
       () Servant.Server.Internal.RoutingApplication.RoutingApplication
@@ -5384,7 +5384,7 @@ e051dedead8ca97cdba143f0999f51b3
                    (GHC.Types.[]
                       @ (()
                          -> Servant.Server.Internal.RoutingApplication.RoutingApplication))) -}
-15cd2b4e3b7a83ef5ce11b6e898e9fe1
+1eb32e6ea62ea45c9ea749f43c4f1408
   crawlerApp20 ::
     Servant.Server.Internal.RoutingApplication.RouteResult
       (Servant.Server.Internal.Server
@@ -5449,7 +5449,7 @@ e051dedead8ca97cdba143f0999f51b3
                                             <Control.Monad.Trans.Except.ExceptT
                                                Servant.Server.Internal.ServantErr.ServantErr
                                                GHC.Types.IO>_N)))))) -}
-a0842d84c4fccc9de833e4f06a11e821
+3dbef02fe8cbb090f58ef27274781e13
   crawlerApp21 ::
     CommonResources.User
     -> GHC.Prim.State# GHC.Prim.RealWorld
@@ -5479,7 +5479,7 @@ a0842d84c4fccc9de833e4f06a11e821
 2cbe272d2a57561c415c865259fb7d9c
   crawlerApp24 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "Started"#) -}
-d4875b54a785ba36897b9b708c1ca824
+497cf8cfd523cfd942d2498cebb98ba7
   crawlerApp25 ::
     Data.Text.Internal.Text
     -> GHC.Base.Maybe GitHub.Auth.Auth
@@ -5548,7 +5548,7 @@ d4875b54a785ba36897b9b708c1ca824
                             GHC.Types.True -> (# w1, GHC.Tuple.() #) } }
                       } in
                       $wfoldrM_loop GHC.Types.SPEC 0# ipv } } }) -}
-e5f09c1683d1ac0f9c2973a470c2dbe3
+84642da3bbdbca56ac748e5a7c6e87ea
   crawlerApp26 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, Crawler.State #)
@@ -5571,7 +5571,7 @@ e5f09c1683d1ac0f9c2973a470c2dbe3
   crawlerApp27 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString#
                    "Received user crawl request, storing request"#) -}
-bff382d1ac634f49d15b48d129e9b2b1
+212d58c82d0e991a923cce7c8441ee2f
   crawlerApp3 ::
     Data.Map.Base.Map
       Data.Text.Internal.Text
@@ -5598,7 +5598,7 @@ bff382d1ac634f49d15b48d129e9b2b1
                       @ (Servant.Server.Internal.Router.Router'
                            ()
                            Servant.Server.Internal.RoutingApplication.RoutingApplication)) } }) -}
-554e0c6830c98c7666a0ddd3985a4d32
+8636c39443426e111ee70203852a7e16
   crawlerApp4 :: Servant.Server.Internal.Router.Router ()
   {- Unfolding: (Servant.Server.Internal.$w$croute2
                    @ *
@@ -5650,7 +5650,7 @@ bff382d1ac634f49d15b48d129e9b2b1
                                 <Control.Monad.Trans.Except.ExceptT
                                    Servant.Server.Internal.ServantErr.ServantErr
                                    GHC.Types.IO>_N)))_R) -}
-4086b7f046452d6083cdcc96ed31f0a0
+304ca1f78df6274d8dc1d6add09a2f08
   crawlerApp5 ::
     Servant.Server.Internal.RoutingApplication.Delayed
       ()
@@ -5711,7 +5711,7 @@ bff382d1ac634f49d15b48d129e9b2b1
                         (Sym (Servant.Server.Internal.RoutingApplication.N:DelayedIO[0]
                                   <()>_R)))
                    Crawler.crawlerApp6) -}
-32d78848d513bcb8800d8d691e3c0cb4
+e0d25377314ee73f457132ecf4d68664
   crawlerApp6 ::
     ()
     -> ()
@@ -5731,7 +5731,7 @@ bff382d1ac634f49d15b48d129e9b2b1
                    (b1 :: ())
                    (req :: Network.Wai.Internal.Request) ->
                  Crawler.crawlerApp7) -}
-aac66190b3257ee5fca2f1cb3c5fbc81
+a7005b69299ca4900eca8ee14b00faa5
   crawlerApp7 ::
     Servant.Server.Internal.RoutingApplication.RouteResult
       (Servant.Server.Internal.Server
@@ -5796,7 +5796,7 @@ aac66190b3257ee5fca2f1cb3c5fbc81
                                             <Control.Monad.Trans.Except.ExceptT
                                                Servant.Server.Internal.ServantErr.ServantErr
                                                GHC.Types.IO>_N)))))) -}
-520943ef4e16f830294dcb4124d763bb
+c68ae6b11935a94aa1bb9a317c86b732
   crawlerApp8 ::
     CommonResources.User
     -> GHC.Prim.State# GHC.Prim.RealWorld
@@ -5819,7 +5819,7 @@ aac66190b3257ee5fca2f1cb3c5fbc81
                    @ Servant.Server.Internal.ServantErr.ServantErr
                    @ CommonResources.Response
                    Crawler.crawlerApp10) -}
-8aec3842d8a7d977b343feb85206c754
+c2a830c126c91b820e87cc88c2341f89
   crawlerApp_r :: Servant.Server.Internal.Router.Router ()
   {- Unfolding: (Servant.Server.Internal.Router.choice
                    @ ()
@@ -5842,7 +5842,7 @@ aac66190b3257ee5fca2f1cb3c5fbc81
 bc9db1715fe9bef74c5ca3c735f5119d
   formatLanguage1 :: t
   {- Strictness: x -}
-34cdda2c6843ec6ced03ab6c92defa7d
+96820709c2d261f00fb2bde83d537cbd
   formatRepo ::
     GHC.Base.Maybe GitHub.Auth.Auth
     -> Data.Text.Internal.Text
@@ -5859,7 +5859,7 @@ bc9db1715fe9bef74c5ca3c735f5119d
                  ->_R <Crawler.State>_R
                  ->_R <GitHub.Data.Repos.Repo>_R
                  ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
-8f44cc290d4c36d31955440bd8bac142
+91b7218b7055670e8d3e0565b6c08106
   formatRepo1 ::
     GHC.Base.Maybe GitHub.Auth.Auth
     -> Data.Text.Internal.Text
@@ -5893,7 +5893,7 @@ bc9db1715fe9bef74c5ca3c735f5119d
 54ecc2081ad446944233731474fe9f45
   fotmatLanguage1 :: Data.Text.Internal.Text
   {- Strictness: x -}
-a0cb4913466286cb4d4b915da05c67a0
+ee319a9ccc9f1e7b295dac7c0d3677e5
   getrepos ::
     Data.Text.Internal.Text
     -> GHC.Base.Maybe GitHub.Auth.Auth
@@ -5907,7 +5907,7 @@ a0cb4913466286cb4d4b915da05c67a0
                  ->_R <GHC.Base.Maybe GitHub.Auth.Auth>_R
                  ->_R <Crawler.State>_R
                  ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
-6eff1b571d2adbb7883ba06bfe3d6fcf
+fd01ceeaee730c61bfe07168bd29324e
   initialize ::
     CommonResources.User -> Crawler.ApiHandler CommonResources.Response
   {- Arity: 2, Strictness: <S,1*U(U,U)><S,U>,
@@ -5924,7 +5924,7 @@ a0cb4913466286cb4d4b915da05c67a0
                                     <Servant.Server.Internal.ServantErr.ServantErr>_N
                                     <GHC.Types.IO>_R
                                     <CommonResources.Response>_N))) -}
-7ffd0814b32908ddcb1f92ce69dae6b2
+f433358d7b23e699b7f412cace81f6b0
   lookupNode ::
     Crawler.State
     -> Data.Text.Internal.Text
@@ -5938,7 +5938,7 @@ a0cb4913466286cb4d4b915da05c67a0
                  ->_R <Data.Text.Internal.Text>_R
                  ->_R Sym (GHC.Conc.Sync.N:STM[0]
                                <GHC.Base.Maybe CommonResources.Node>_R)) -}
-16acec8cab405e6fd98785a82593fae0
+de37cae5fb8f85c33c9fa405073d54f5
   lookupNode1 ::
     Crawler.State
     -> Data.Text.Internal.Text
@@ -5960,12 +5960,12 @@ a0cb4913466286cb4d4b915da05c67a0
                         eta of ds2 { (#,#) ipv ipv1 ->
                  (# ipv,
                     Crawler.$slookup1 @ CommonResources.Node repourl ipv1 #) } } }) -}
-07cf1270f1ac23b968fcc2ee67316666
+733a9593ef10abece7ed5a3faf9e2dd8
   mkApp :: GHC.Types.IO ()
   {- Arity: 1, Strictness: <S,U>,
      Unfolding: InlineRule (0, True, True)
                 Crawler.mkApp1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
-57bc8a89324b7c9259f1725459df8f42
+ecb69b404ec6d955134ae294a1df54a8
   mkApp1 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
@@ -6075,14 +6075,14 @@ b534e55965d4d844295a4fda9d2a3b27
   {- Unfolding: (GHC.CString.unpackAppendCString#
                    "Crawler starting on port: "#
                    CommonResources.crawlerport) -}
-7f8b68828f4960c86ff025289d2a1da4
+08c81b5bd3ccda02186d124255d0cb02
   newState :: GHC.Types.IO Crawler.State
   {- Arity: 1, HasNoCafRefs,
      Unfolding: InlineRule (0, True, True)
                 Crawler.newState1
                   `cast`
                 (Sym (GHC.Types.N:IO[0] <Crawler.State>_R)) -}
-32d6bd64467e468f566af5d4048cb550
+31220452e40107d1b04b780e437a481b
   newState1 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, Crawler.State #)
@@ -6090,7 +6090,7 @@ b534e55965d4d844295a4fda9d2a3b27
      Unfolding: (GHC.Prim.atomically#
                    @ Crawler.State
                    Crawler.crawlerApp26) -}
-f3849ade2b6d92d2ce0fb97a93c206d9
+7333f240c607553e645d76c3e08dfb34
   nodes ::
     Crawler.State
     -> GHC.Conc.Sync.TVar
@@ -6107,7 +6107,7 @@ f99fcef99483be69898ec5d1c17671ed
      Unfolding: InlineRule (1, True, False)
                 (\ (ds :: Crawler.Task) ->
                  case ds of wild { Crawler.Task ds1 ds2 ds3 -> ds3 }) -}
-d7d655c3ac528e246f79698794752240
+a617316d534013662ae73bf686fb7d6d
   server :: Servant.Server.Internal.Server CommonResources.CrawlerApi
   {- Strictness: m,
      Unfolding: InlineRule (0, True, True)
@@ -6204,7 +6204,7 @@ d7d655c3ac528e246f79698794752240
                                     <Control.Monad.Trans.Except.ExceptT
                                        Servant.Server.Internal.ServantErr.ServantErr
                                        GHC.Types.IO>_N)))) -}
-4109b9eacbf1a50daf43c938e09f9c01
+408f0401a0be91f9962e49838166f006
   server1 ::
     (CommonResources.User
      -> Crawler.ApiHandler CommonResources.Response)
@@ -6240,7 +6240,7 @@ d7d655c3ac528e246f79698794752240
                                        <Servant.Server.Internal.ServantErr.ServantErr>_N
                                        <GHC.Types.IO>_R
                                        <CommonResources.Response>_N)))) -}
-aa59ff5afabe0a11305f986e43094390
+3b0cd84cbc22dd07f5bbd9aed7970143
   terminate ::
     CommonResources.User -> Crawler.ApiHandler CommonResources.Response
   {- Arity: 2, Strictness: <S,1*U(U,U)><S,U>,
@@ -6271,7 +6271,7 @@ a55355f7475fda25f120b71af007a55d
      Unfolding: InlineRule (1, True, False)
                 (\ (ds :: Crawler.Task) ->
                  case ds of wild { Crawler.Task ds1 ds2 ds3 -> ds1 }) -}
-555aff03952f2a7a779f4d8873fb923f
+b632abe4b18e673c0cc5e8e420c115b1
   userformat ::
     GHC.Base.Maybe GitHub.Auth.Auth
     -> Crawler.State
@@ -6288,7 +6288,7 @@ a55355f7475fda25f120b71af007a55d
                  ->_R <Data.Text.Internal.Text>_R
                  ->_R <GitHub.Data.Repos.Contributor>_R
                  ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
-ac26fe74baf0581c50f4e59cad401147
+0788743fa75f7ff25f60d283733b0527
   userformat1 ::
     GHC.Base.Maybe GitHub.Auth.Auth
     -> Crawler.State

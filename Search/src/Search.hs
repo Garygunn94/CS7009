@@ -34,27 +34,42 @@ import CommonResources
 import MongodbHelpers
 import Database.MongoDB
 import Network.Wai.Middleware.Cors
+import Servant.JS
 
 type ApiHandler = ExceptT ServantErr IO
 
 searchApi :: Proxy SearchApi
 searchApi = Proxy
 
+type SearchApi' = SearchApi
+       :<|> Raw
+
+searchApi' :: Proxy SearchApi'
+searchApi' = Proxy
+
+www :: FilePath
+www = "www"
+
 server :: Server SearchApi
 server = 
     getSocialGraph
 
+server' :: Server SearchApi'
+server' = server
+   :<|> serveDirectory www -- serve static files
+
 searchApp :: Application
-searchApp = simpleCors (serve searchApi server)
+searchApp = simpleCors (serve searchApi' server')
 
 mkApp :: IO()
 mkApp = do
     putStrLn ("Search starting on port: " ++ searchport)
+    writeJSForAPI searchApi jquery (www ++ "/" ++ "jquery" ++ "/" ++ "api.js")
     run (read (searchport) ::Int) searchApp 
 
 
-getSocialGraph :: User -> ApiHandler SocialGraph
-getSocialGraph (User username accessToken) = liftIO $ do
+getSocialGraph :: ApiHandler SocialGraph
+getSocialGraph = liftIO $ do
 	putStrLn ("Fetching Node data")
 	nodes <- MongodbHelpers.withMongoDbConnection $ do
 		docs <- find (select [] "Node_RECORD") >>= drainCursor

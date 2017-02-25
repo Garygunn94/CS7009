@@ -8,8 +8,14 @@ packages:
     git: https://github.com/Palmik/bson-generic.git
     commit: e078def65d0dee1ea7e3205f445e47d5937851f3
 extra-deps:
+- aeson-1.1.0.0
+- fast-logger-2.4.10
 - http-api-data-0.3.2
 - servant-0.9.1.1
 - servant-client-0.9.1.1
+- servant-foreign-0.9.1.1
+- servant-js-0.9.1
 - servant-server-0.9.1.1
+- wai-extra-3.0.19.1
+- warp-3.2.11
 resolver: lts-7.13

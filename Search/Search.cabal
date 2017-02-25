@@ -35,6 +35,7 @@ library
                      , warp
                      , wai-logger
                      , wai-cors
+                     , servant-js
   default-language:    Haskell2010
 
 executable Search-exe

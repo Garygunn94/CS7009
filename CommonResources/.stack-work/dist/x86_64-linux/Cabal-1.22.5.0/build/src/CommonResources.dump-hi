@@ -1,11 +1,11 @@
 
 ==================== FINAL INTERFACE ====================
-2017-02-24 18:06:43.264686 UTC
+2017-02-25 03:07:05.400533 UTC
 
 interface Commo_BnOP5ivkdB81DjNKrAGgy9:CommonResources [orphan module] [family instance module] 7103
-  interface hash: 50ba379e7b4b583e6d7173986a957dd2
-  ABI hash: 87b06d1eff7db485e362aa8b5636b579
-  export-list hash: b112d1c7f9488b0652c5d3d74d330e86
+  interface hash: 8d09dc1d663e1b043771dd37f0f4ed5d
+  ABI hash: d157ffe8285bdb39824346f379516b84
+  export-list hash: cbe3af714f4fe3b9091f77df4540dd19
   orphan hash: 91153b8367252064eeb31f224ced29e1
   flag hash: 1f3b74fe95704520c9edb4859e1b5ff7
   sig of: Nothing
@@ -17,8 +17,8 @@ exports:
   CommonResources.searchhost
   CommonResources.searchport
   CommonResources.CrawlerApi
-  CommonResources.Link{CommonResources.Link CommonResources.link_type CommonResources.start CommonResources.target}
-  CommonResources.Node{CommonResources.Node CommonResources.name CommonResources.node_type}
+  CommonResources.Link{CommonResources.Link CommonResources.source CommonResources.target CommonResources.value}
+  CommonResources.Node{CommonResources.Node CommonResources.group CommonResources.id}
   CommonResources.Response{CommonResources.Response CommonResources.respString}
   CommonResources.SearchApi
   CommonResources.SocialGraph{CommonResources.SocialGraph CommonResources.links CommonResources.nodes}
@@ -575,7 +575,7 @@ a29e15ecec79b6f7bfeb25ef748b2aa6
                    @ a27
                    ds :: t CommonResources.D1User f a27 ->
                  GHC.Types.False) -}
-7e3aab4dcbc5f309c3204bfee1a91119
+7ba7753f9d24f3336f0986fb19197aab
   $fEqLink :: GHC.Classes.Eq CommonResources.Link
   DFunId[0]
   {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -583,7 +583,7 @@ a29e15ecec79b6f7bfeb25ef748b2aa6
                   @ CommonResources.Link
                   CommonResources.$fEqLink_$c==
                   CommonResources.$fEqLink_$c/= -}
-7e3aab4dcbc5f309c3204bfee1a91119
+7ba7753f9d24f3336f0986fb19197aab
   $fEqLink_$c/= ::
     CommonResources.Link -> CommonResources.Link -> GHC.Types.Bool
   {- Arity: 2, HasNoCafRefs,
@@ -593,7 +593,7 @@ a29e15ecec79b6f7bfeb25ef748b2aa6
                  case CommonResources.$fEqLink_$c== a27 b of wild {
                    GHC.Types.False -> GHC.Types.True
                    GHC.Types.True -> GHC.Types.False }) -}
-7e3aab4dcbc5f309c3204bfee1a91119
+7ba7753f9d24f3336f0986fb19197aab
   $fEqLink_$c== ::
     CommonResources.Link -> CommonResources.Link -> GHC.Types.Bool
   {- Arity: 2, HasNoCafRefs,
@@ -604,7 +604,7 @@ a29e15ecec79b6f7bfeb25ef748b2aa6
                  case w of ww { CommonResources.Link ww1 ww2 ww3 ->
                  case w1 of ww4 { CommonResources.Link ww5 ww6 ww7 ->
                  CommonResources.$w$c== ww1 ww2 ww3 ww5 ww6 ww7 } }) -}
-5afc7149eb4c520adbc5633be01eaa21
+c0e8b1424c16200db8fda6b0a5f9fcae
   $fEqNode :: GHC.Classes.Eq CommonResources.Node
   DFunId[0]
   {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -612,7 +612,7 @@ a29e15ecec79b6f7bfeb25ef748b2aa6
                   @ CommonResources.Node
                   CommonResources.$fEqNode_$c==
                   CommonResources.$fEqNode_$c/= -}
-5afc7149eb4c520adbc5633be01eaa21
+c0e8b1424c16200db8fda6b0a5f9fcae
   $fEqNode_$c/= ::
     CommonResources.Node -> CommonResources.Node -> GHC.Types.Bool
   {- Arity: 2, HasNoCafRefs,
@@ -623,7 +623,7 @@ a29e15ecec79b6f7bfeb25ef748b2aa6
                  case w of ww { CommonResources.Node ww1 ww2 ->
                  case w1 of ww3 { CommonResources.Node ww4 ww5 ->
                  CommonResources.$w$c/= ww1 ww2 ww4 ww5 } }) -}
-5afc7149eb4c520adbc5633be01eaa21
+c0e8b1424c16200db8fda6b0a5f9fcae
   $fEqNode_$c== ::
     CommonResources.Node -> CommonResources.Node -> GHC.Types.Bool
   {- Arity: 2, HasNoCafRefs,
@@ -667,7 +667,7 @@ a29e15ecec79b6f7bfeb25ef748b2aa6
                  case ds of wild { CommonResources.Response a27 ->
                  case ds1 of wild1 { CommonResources.Response b1 ->
                  GHC.Base.eqString a27 b1 } }) -}
-5afc7149eb4c520adbc5633be01eaa21
+c6911f22c61df1a324fd3c77eb30789b
   $fEqSocialGraph :: GHC.Classes.Eq CommonResources.SocialGraph
   DFunId[0]
   {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -675,7 +675,7 @@ a29e15ecec79b6f7bfeb25ef748b2aa6
                   @ CommonResources.SocialGraph
                   CommonResources.$fEqSocialGraph_$c==
                   CommonResources.$fEqSocialGraph_$c/= -}
-5afc7149eb4c520adbc5633be01eaa21
+c6911f22c61df1a324fd3c77eb30789b
   $fEqSocialGraph_$c/= ::
     CommonResources.SocialGraph
     -> CommonResources.SocialGraph -> GHC.Types.Bool
@@ -687,7 +687,7 @@ a29e15ecec79b6f7bfeb25ef748b2aa6
                  case CommonResources.$fEqSocialGraph_$c== a27 b of wild {
                    GHC.Types.False -> GHC.Types.True
                    GHC.Types.True -> GHC.Types.False }) -}
-5afc7149eb4c520adbc5633be01eaa21
+c6911f22c61df1a324fd3c77eb30789b
   $fEqSocialGraph_$c== ::
     CommonResources.SocialGraph
     -> CommonResources.SocialGraph -> GHC.Types.Bool
@@ -730,7 +730,7 @@ b2d1e9e33ac3e708cc92fcc894f29d76
                  case w of ww { CommonResources.User ww1 ww2 ->
                  case w1 of ww3 { CommonResources.User ww4 ww5 ->
                  CommonResources.$w$c==3 ww1 ww2 ww4 ww5 } }) -}
-7e3aab4dcbc5f309c3204bfee1a91119
+7ba7753f9d24f3336f0986fb19197aab
   $fFromBSONLink :: Data.Bson.Generic.FromBSON CommonResources.Link
   DFunId[0]
   {- Arity: 1, Strictness: <S,U>, Inline: INLINE (sat-args=0),
@@ -739,7 +739,7 @@ b2d1e9e33ac3e708cc92fcc894f29d76
                   `cast`
                 (Sym (Data.Bson.Generic.NTCo:FromBSON[0]
                           <CommonResources.Link>_N)) -}
-7e3aab4dcbc5f309c3204bfee1a91119
+7ba7753f9d24f3336f0986fb19197aab
   $fFromBSONLink1 ::
     GHC.Types.Int
     -> Data.Bson.Document
@@ -758,16 +758,16 @@ b2d1e9e33ac3e708cc92fcc894f29d76
      Unfolding: InlineRule (2, True, True)
                 (\ @ a27 w :: GHC.Types.Int w1 :: Data.Bson.Document ->
                  CommonResources.$wa @ a27 w1) -}
-ee192de96867f9602c1375f9b003e39f
+804060311587c77b0fa6f897207d4950
   $fFromBSONLink2 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "link_type"#) -}
+  {- Unfolding: (GHC.CString.unpackCString# "value"#) -}
 b3d111475a57bb80c6aa16f7e751b4bb
   $fFromBSONLink3 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "target"#) -}
-36e38d069bf76acd2d8d5a1e081f78a7
+0b6ddd67ac3b49ca109ded2c7df65b42
   $fFromBSONLink4 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "start"#) -}
-7e3aab4dcbc5f309c3204bfee1a91119
+  {- Unfolding: (GHC.CString.unpackCString# "source"#) -}
+7ba7753f9d24f3336f0986fb19197aab
   $fFromBSONLink_$cfromBSON ::
     Data.Bson.Document -> GHC.Base.Maybe CommonResources.Link
   {- Arity: 1, Strictness: <S,U>,
@@ -818,7 +818,7 @@ b3d111475a57bb80c6aa16f7e751b4bb
                                                                                         (GHC.Generics.Rec0
                                                                                            GHC.Base.String)))>_R))
                                      (Sub (Sym (CommonResources.Rep_Link[0])))) <GHC.Prim.Any>_N)) }) -}
-7e3aab4dcbc5f309c3204bfee1a91119
+7ba7753f9d24f3336f0986fb19197aab
   $fFromBSONLink_$cselName ::
     t CommonResources.S1_0_2Link f a -> [GHC.Types.Char]
   {- Arity: 1, Strictness: <L,A>,
@@ -838,7 +838,7 @@ b3d111475a57bb80c6aa16f7e751b4bb
                    @ a27
                    ds :: t CommonResources.S1_0_1Link f a27 ->
                  CommonResources.$fFromBSONLink3) -}
-db9c4c795ee0c6d3c994566ebe5ce86a
+725d789057fcc446ab5a57f4699225a7
   $fFromBSONLink_$cselName2 ::
     t CommonResources.S1_0_0Link f a -> [GHC.Types.Char]
   {- Arity: 1, Strictness: <L,A>,
@@ -848,7 +848,7 @@ db9c4c795ee0c6d3c994566ebe5ce86a
                    @ a27
                    ds :: t CommonResources.S1_0_0Link f a27 ->
                  CommonResources.$fFromBSONLink4) -}
-7e3aab4dcbc5f309c3204bfee1a91119
+7ba7753f9d24f3336f0986fb19197aab
   $fFromBSONLink_$cto ::
     GHC.Generics.Rep CommonResources.Link x -> CommonResources.Link
   {- Arity: 1, HasNoCafRefs, Strictness: <S(LS),1*U(U,1*U(U,U))>m,
@@ -927,7 +927,7 @@ db9c4c795ee0c6d3c994566ebe5ce86a
                              <GHC.Generics.K1 GHC.Generics.R GHC.Base.String>_R <x>_N)
                         (GHC.Generics.NTCo:K1[0]
                              <GHC.Generics.R>_P <GHC.Base.String>_R <x>_P)) } }) -}
-5afc7149eb4c520adbc5633be01eaa21
+c0e8b1424c16200db8fda6b0a5f9fcae
   $fFromBSONNode :: Data.Bson.Generic.FromBSON CommonResources.Node
   DFunId[0]
   {- Arity: 1, Strictness: <S,U>, Inline: INLINE (sat-args=0),
@@ -936,13 +936,13 @@ db9c4c795ee0c6d3c994566ebe5ce86a
                   `cast`
                 (Sym (Data.Bson.Generic.NTCo:FromBSON[0]
                           <CommonResources.Node>_N)) -}
-d083948def2c0fd4a88e1e065d3a342d
+9849700dab2acaa51179808c37a63221
   $fFromBSONNode1 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "node_type"#) -}
-0efb974cc7ed27d27153c92c189f6982
+  {- Unfolding: (GHC.CString.unpackCString# "group"#) -}
+ec2cde69793adb40ca0010849a4e3f91
   $fFromBSONNode2 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "name"#) -}
-5afc7149eb4c520adbc5633be01eaa21
+  {- Unfolding: (GHC.CString.unpackCString# "id"#) -}
+c0e8b1424c16200db8fda6b0a5f9fcae
   $fFromBSONNode_$cfromBSON ::
     Data.Bson.Document -> GHC.Base.Maybe CommonResources.Node
   {- Arity: 1, Strictness: <S,U>,
@@ -997,7 +997,7 @@ d083948def2c0fd4a88e1e065d3a342d
                                           <GHC.Generics.R>_P
                                           <GHC.Base.String>_R
                                           <GHC.Prim.Any>_P))) } }) -}
-5afc7149eb4c520adbc5633be01eaa21
+c0e8b1424c16200db8fda6b0a5f9fcae
   $fFromBSONNode_$cselName ::
     t CommonResources.S1_0_1Node f a -> [GHC.Types.Char]
   {- Arity: 1, Strictness: <L,A>,
@@ -1007,7 +1007,7 @@ d083948def2c0fd4a88e1e065d3a342d
                    @ a27
                    ds :: t CommonResources.S1_0_1Node f a27 ->
                  CommonResources.$fFromBSONNode1) -}
-25353b6d7a387ee664efabf7fa8adff7
+1f2d7ba63a7e69f013abbeec1c45557f
   $fFromBSONNode_$cselName1 ::
     t CommonResources.S1_0_0Node f a -> [GHC.Types.Char]
   {- Arity: 1, Strictness: <L,A>,
@@ -1307,7 +1307,7 @@ d654e80d6c922b3be9f8f24233c96a63
                       @ GHC.Types.Char
                       @ GHC.Prim.Any
                       x)) -}
-7e3aab4dcbc5f309c3204bfee1a91119
+7ba7753f9d24f3336f0986fb19197aab
   $fFromJSONLink ::
     Data.Aeson.Types.Class.FromJSON CommonResources.Link
   DFunId[0]
@@ -1317,7 +1317,7 @@ d654e80d6c922b3be9f8f24233c96a63
                   `cast`
                 (Sym (Data.Aeson.Types.Class.NTCo:FromJSON[0]
                           <CommonResources.Link>_N)) -}
-7e3aab4dcbc5f309c3204bfee1a91119
+7ba7753f9d24f3336f0986fb19197aab
   $fFromJSONLink1 ::
     Data.Aeson.Types.Internal.Options
     -> GHC.Base.Maybe Data.Text.Internal.Text
@@ -1356,7 +1356,7 @@ d654e80d6c922b3be9f8f24233c96a63
 eaf8c3f925677602a6f52f7fdcee40b7
   $fFromJSONLink3 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "String"#) -}
-7e3aab4dcbc5f309c3204bfee1a91119
+7ba7753f9d24f3336f0986fb19197aab
   $fFromJSONLink4 ::
     (GHC.Generics.:*:)
       (GHC.Generics.M1
@@ -1384,7 +1384,7 @@ eaf8c3f925677602a6f52f7fdcee40b7
                                                 (GHC.Generics.Rec0 GHC.Base.String))
                             a27 ->
                  GHC.Types.False) -}
-7e3aab4dcbc5f309c3204bfee1a91119
+7ba7753f9d24f3336f0986fb19197aab
   $fFromJSONLink_$cparseJSON ::
     Data.Aeson.Types.Internal.Value
     -> Data.Aeson.Types.Internal.Parser CommonResources.Link
@@ -1514,7 +1514,7 @@ eaf8c3f925677602a6f52f7fdcee40b7
                    `cast`
                  (Sym (Data.Aeson.Types.Internal.NTCo:Parser[0]
                            <CommonResources.Link>_R))) -}
-5afc7149eb4c520adbc5633be01eaa21
+c0e8b1424c16200db8fda6b0a5f9fcae
   $fFromJSONNode ::
     Data.Aeson.Types.Class.FromJSON CommonResources.Node
   DFunId[0]
@@ -1524,7 +1524,7 @@ eaf8c3f925677602a6f52f7fdcee40b7
                   `cast`
                 (Sym (Data.Aeson.Types.Class.NTCo:FromJSON[0]
                           <CommonResources.Node>_N)) -}
-5afc7149eb4c520adbc5633be01eaa21
+c0e8b1424c16200db8fda6b0a5f9fcae
   $fFromJSONNode1 ::
     Data.Aeson.Types.Internal.Options
     -> GHC.Base.Maybe Data.Text.Internal.Text
@@ -1546,7 +1546,7 @@ eaf8c3f925677602a6f52f7fdcee40b7
                    w1 :: GHC.Base.Maybe Data.Text.Internal.Text
                    w2 :: Data.Aeson.Types.Internal.Value ->
                  CommonResources.$wa4 @ a27 w w2) -}
-5afc7149eb4c520adbc5633be01eaa21
+c0e8b1424c16200db8fda6b0a5f9fcae
   $fFromJSONNode2 ::
     (GHC.Generics.:*:)
       (GHC.Generics.M1
@@ -1573,7 +1573,7 @@ eaf8c3f925677602a6f52f7fdcee40b7
                                (GHC.Generics.Rec0 GHC.Base.String))
                             a27 ->
                  GHC.Types.False) -}
-5afc7149eb4c520adbc5633be01eaa21
+c0e8b1424c16200db8fda6b0a5f9fcae
   $fFromJSONNode_$cparseJSON ::
     Data.Aeson.Types.Internal.Value
     -> Data.Aeson.Types.Internal.Parser CommonResources.Node
@@ -1845,7 +1845,7 @@ eaf8c3f925677602a6f52f7fdcee40b7
                    @ a27
                    ds :: t CommonResources.S1_0_0Response f a27 ->
                  CommonResources.$fFromJSONResponse2) -}
-5afc7149eb4c520adbc5633be01eaa21
+c6911f22c61df1a324fd3c77eb30789b
   $fFromJSONSocialGraph ::
     Data.Aeson.Types.Class.FromJSON CommonResources.SocialGraph
   DFunId[0]
@@ -1855,7 +1855,7 @@ eaf8c3f925677602a6f52f7fdcee40b7
                   `cast`
                 (Sym (Data.Aeson.Types.Class.NTCo:FromJSON[0]
                           <CommonResources.SocialGraph>_N)) -}
-5afc7149eb4c520adbc5633be01eaa21
+c6911f22c61df1a324fd3c77eb30789b
   $fFromJSONSocialGraph1 ::
     Data.Aeson.Types.Internal.Options
     -> GHC.Base.Maybe Data.Text.Internal.Text
@@ -1879,7 +1879,7 @@ eaf8c3f925677602a6f52f7fdcee40b7
                    w1 :: GHC.Base.Maybe Data.Text.Internal.Text
                    w2 :: Data.Aeson.Types.Internal.Value ->
                  CommonResources.$wa5 @ a27 w w2) -}
-5afc7149eb4c520adbc5633be01eaa21
+37ca9a58313c63f59313171e3091b6dc
   $fFromJSONSocialGraph2 ::
     Data.Aeson.Types.Internal.Options
     -> Data.Aeson.Types.Internal.Value
@@ -1891,7 +1891,7 @@ eaf8c3f925677602a6f52f7fdcee40b7
                    w :: Data.Aeson.Types.Internal.Options
                    w1 :: Data.Aeson.Types.Internal.Value ->
                  CommonResources.$wa6 @ a27 w1) -}
-5afc7149eb4c520adbc5633be01eaa21
+100c001984a1c206a3872e44cbad5c33
   $fFromJSONSocialGraph3 ::
     [Data.Aeson.Types.Internal.Parser CommonResources.Node]
     -> forall (f :: * -> *) r.
@@ -1906,7 +1906,7 @@ eaf8c3f925677602a6f52f7fdcee40b7
 548191095dd3c6314ed72ec0f528cb3e
   $fFromJSONSocialGraph5 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "nodes"#) -}
-411c9b3a3fb2cf6e1b1f127f8a4a3fab
+c8ef2241df3c0d3df333c8d015fa47f5
   $fFromJSONSocialGraph6 ::
     Data.Aeson.Types.Internal.Options
     -> Data.Aeson.Types.Internal.Value
@@ -1918,7 +1918,7 @@ eaf8c3f925677602a6f52f7fdcee40b7
                    w :: Data.Aeson.Types.Internal.Options
                    w1 :: Data.Aeson.Types.Internal.Value ->
                  CommonResources.$wa7 @ a27 w1) -}
-f8eca2ea9e2695cc2e590e3391acf50b
+9e0fae5f30aaff119e5e946a9176210c
   $fFromJSONSocialGraph7 ::
     [Data.Aeson.Types.Internal.Parser CommonResources.Link]
     -> forall (f :: * -> *) r.
@@ -1930,7 +1930,7 @@ f8eca2ea9e2695cc2e590e3391acf50b
 fecc5a865b0143b99725a17b105d010c
   $fFromJSONSocialGraph8 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "links"#) -}
-5afc7149eb4c520adbc5633be01eaa21
+c6911f22c61df1a324fd3c77eb30789b
   $fFromJSONSocialGraph9 ::
     (GHC.Generics.:*:)
       (GHC.Generics.M1
@@ -1957,7 +1957,7 @@ fecc5a865b0143b99725a17b105d010c
                                (GHC.Generics.Rec0 [CommonResources.Link]))
                             a27 ->
                  GHC.Types.False) -}
-5afc7149eb4c520adbc5633be01eaa21
+c6911f22c61df1a324fd3c77eb30789b
   $fFromJSONSocialGraph_$cparseJSON ::
     Data.Aeson.Types.Internal.Value
     -> Data.Aeson.Types.Internal.Parser CommonResources.SocialGraph
@@ -2073,7 +2073,7 @@ fecc5a865b0143b99725a17b105d010c
                    @ a27
                    ds :: t CommonResources.S1_0_0SocialGraph f a27 ->
                  CommonResources.$fFromJSONSocialGraph5) -}
-290c1fdeefd0e24213cab4b6fac2f77b
+c6911f22c61df1a324fd3c77eb30789b
   $fFromJSONSocialGraph_$cselName1 ::
     t CommonResources.S1_0_1SocialGraph f a -> [GHC.Types.Char]
   {- Arity: 1, Strictness: <L,A>,
@@ -2083,14 +2083,14 @@ fecc5a865b0143b99725a17b105d010c
                    @ a27
                    ds :: t CommonResources.S1_0_1SocialGraph f a27 ->
                  CommonResources.$fFromJSONSocialGraph8) -}
-89b4dcc8b27ef98b5113bb320926f104
+13fd9e02bbb658578e720bf3cdaf276f
   $fFromJSONSocialGraph_a1 ::
     GHC.Types.Int
     -> Data.Aeson.Types.Internal.Value
     -> Data.Aeson.Types.Internal.Parser CommonResources.Link
   {- Arity: 2, Strictness: <L,1*U(U)><L,U>,
      Unfolding: (\ idx :: GHC.Types.Int
-                   value :: Data.Aeson.Types.Internal.Value ->
+                   value1 :: Data.Aeson.Types.Internal.Value ->
                  let {
                    pathElem17 :: Data.Aeson.Types.Internal.JSONPathElement
                    = case idx of dt { GHC.Types.I# dt1 ->
@@ -2098,7 +2098,7 @@ fecc5a865b0143b99725a17b105d010c
                  } in
                  let {
                    p :: Data.Aeson.Types.Internal.Parser CommonResources.Link
-                   = CommonResources.$fFromJSONLink_$cparseJSON value
+                   = CommonResources.$fFromJSONLink_$cparseJSON value1
                  } in
                  (\ @ (f :: * -> *)
                     @ r
@@ -2118,14 +2118,14 @@ fecc5a865b0143b99725a17b105d010c
                    `cast`
                  (Sym (Data.Aeson.Types.Internal.NTCo:Parser[0]
                            <CommonResources.Link>_R))) -}
-5afc7149eb4c520adbc5633be01eaa21
+8a3c8327e530132e05820ba932d86184
   $fFromJSONSocialGraph_a109 ::
     GHC.Types.Int
     -> Data.Aeson.Types.Internal.Value
     -> Data.Aeson.Types.Internal.Parser CommonResources.Node
   {- Arity: 2, Strictness: <L,1*U(U)><L,U>,
      Unfolding: (\ idx :: GHC.Types.Int
-                   value :: Data.Aeson.Types.Internal.Value ->
+                   value1 :: Data.Aeson.Types.Internal.Value ->
                  let {
                    pathElem17 :: Data.Aeson.Types.Internal.JSONPathElement
                    = case idx of dt { GHC.Types.I# dt1 ->
@@ -2133,7 +2133,7 @@ fecc5a865b0143b99725a17b105d010c
                  } in
                  let {
                    p :: Data.Aeson.Types.Internal.Parser CommonResources.Node
-                   = CommonResources.$fFromJSONNode_$cparseJSON value
+                   = CommonResources.$fFromJSONNode_$cparseJSON value1
                  } in
                  (\ @ (f :: * -> *)
                     @ r
@@ -2337,7 +2337,7 @@ b2d1e9e33ac3e708cc92fcc894f29d76
                    @ a27
                    ds :: t CommonResources.S1_0_1User f a27 ->
                  CommonResources.$fFromJSONUser3) -}
-7e3aab4dcbc5f309c3204bfee1a91119
+7ba7753f9d24f3336f0986fb19197aab
   $fGenericLink :: GHC.Generics.Generic CommonResources.Link
   DFunId[0]
   {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -2345,7 +2345,7 @@ b2d1e9e33ac3e708cc92fcc894f29d76
                   @ CommonResources.Link
                   CommonResources.$fGenericLink_$cfrom
                   CommonResources.$fFromBSONLink_$cto -}
-7e3aab4dcbc5f309c3204bfee1a91119
+7ba7753f9d24f3336f0986fb19197aab
   $fGenericLink_$cfrom ::
     CommonResources.Link -> GHC.Generics.Rep CommonResources.Link x
   {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(U,U,U)>m,
@@ -2446,7 +2446,7 @@ b2d1e9e33ac3e708cc92fcc894f29d76
                                                                                  GHC.Generics.R
                                                                                  GHC.Base.String)))>_R))
                            (Sub (Sym (CommonResources.Rep_Link[0])))) <x>_N) }) -}
-5afc7149eb4c520adbc5633be01eaa21
+c0e8b1424c16200db8fda6b0a5f9fcae
   $fGenericNode :: GHC.Generics.Generic CommonResources.Node
   DFunId[0]
   {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -2454,7 +2454,7 @@ b2d1e9e33ac3e708cc92fcc894f29d76
                   @ CommonResources.Node
                   CommonResources.$fGenericNode_$cfrom
                   CommonResources.$fGenericNode_$cto -}
-5afc7149eb4c520adbc5633be01eaa21
+c0e8b1424c16200db8fda6b0a5f9fcae
   $fGenericNode_$cfrom ::
     CommonResources.Node -> GHC.Generics.Rep CommonResources.Node x
   {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(U,U)>m,
@@ -2520,7 +2520,7 @@ b2d1e9e33ac3e708cc92fcc894f29d76
                                                             (GHC.Generics.K1
                                                                GHC.Generics.R GHC.Base.String))>_R))
                            (Sub (Sym (CommonResources.Rep_Node[0])))) <x>_N) }) -}
-5afc7149eb4c520adbc5633be01eaa21
+c0e8b1424c16200db8fda6b0a5f9fcae
   $fGenericNode_$cto ::
     GHC.Generics.Rep CommonResources.Node x -> CommonResources.Node
   {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(U,U)>m,
@@ -2664,7 +2664,7 @@ b2d1e9e33ac3e708cc92fcc894f29d76
                                                GHC.Generics.R GHC.Base.String>_R))) <x>_N)
                         (GHC.Generics.NTCo:K1[0]
                              <GHC.Generics.R>_P <GHC.Base.String>_R <x>_P))) -}
-5afc7149eb4c520adbc5633be01eaa21
+c6911f22c61df1a324fd3c77eb30789b
   $fGenericSocialGraph ::
     GHC.Generics.Generic CommonResources.SocialGraph
   DFunId[0]
@@ -2673,7 +2673,7 @@ b2d1e9e33ac3e708cc92fcc894f29d76
                   @ CommonResources.SocialGraph
                   CommonResources.$fGenericSocialGraph_$cfrom
                   CommonResources.$fGenericSocialGraph_$cto -}
-5afc7149eb4c520adbc5633be01eaa21
+c6911f22c61df1a324fd3c77eb30789b
   $fGenericSocialGraph_$cfrom ::
     CommonResources.SocialGraph
     -> GHC.Generics.Rep CommonResources.SocialGraph x
@@ -2743,7 +2743,7 @@ b2d1e9e33ac3e708cc92fcc894f29d76
                                                                GHC.Generics.R
                                                                [CommonResources.Link]))>_R))
                            (Sub (Sym (CommonResources.Rep_SocialGraph[0])))) <x>_N) }) -}
-5afc7149eb4c520adbc5633be01eaa21
+c6911f22c61df1a324fd3c77eb30789b
   $fGenericSocialGraph_$cto ::
     GHC.Generics.Rep CommonResources.SocialGraph x
     -> CommonResources.SocialGraph
@@ -2935,7 +2935,7 @@ b2d1e9e33ac3e708cc92fcc894f29d76
                              <GHC.Generics.K1 GHC.Generics.R GHC.Base.String>_R <x>_N)
                         (GHC.Generics.NTCo:K1[0]
                              <GHC.Generics.R>_P <GHC.Base.String>_R <x>_P)) }) -}
-db9c4c795ee0c6d3c994566ebe5ce86a
+725d789057fcc446ab5a57f4699225a7
   $fSelectorLink :: GHC.Generics.Selector CommonResources.S1_0_0Link
   DFunId[0]
   {- Arity: 1, Strictness: <L,A>, Inline: INLINE (sat-args=0),
@@ -2953,7 +2953,7 @@ db9c4c795ee0c6d3c994566ebe5ce86a
                   `cast`
                 (Sym (GHC.Generics.NTCo:Selector[0]
                           <CommonResources.S1_0_1Link>_N)) -}
-7e3aab4dcbc5f309c3204bfee1a91119
+7ba7753f9d24f3336f0986fb19197aab
   $fSelectorLink1 :: GHC.Generics.Selector CommonResources.S1_0_2Link
   DFunId[0]
   {- Arity: 1, Strictness: <L,A>, Inline: INLINE (sat-args=0),
@@ -2962,7 +2962,7 @@ db9c4c795ee0c6d3c994566ebe5ce86a
                   `cast`
                 (Sym (GHC.Generics.NTCo:Selector[0]
                           <CommonResources.S1_0_2Link>_N)) -}
-25353b6d7a387ee664efabf7fa8adff7
+1f2d7ba63a7e69f013abbeec1c45557f
   $fSelectorNode :: GHC.Generics.Selector CommonResources.S1_0_0Node
   DFunId[0]
   {- Arity: 1, Strictness: <L,A>, Inline: INLINE (sat-args=0),
@@ -2971,7 +2971,7 @@ db9c4c795ee0c6d3c994566ebe5ce86a
                   `cast`
                 (Sym (GHC.Generics.NTCo:Selector[0]
                           <CommonResources.S1_0_0Node>_N)) -}
-5afc7149eb4c520adbc5633be01eaa21
+c0e8b1424c16200db8fda6b0a5f9fcae
   $fSelectorNode0 :: GHC.Generics.Selector CommonResources.S1_0_1Node
   DFunId[0]
   {- Arity: 1, Strictness: <L,A>, Inline: INLINE (sat-args=0),
@@ -3000,7 +3000,7 @@ db9c4c795ee0c6d3c994566ebe5ce86a
                   `cast`
                 (Sym (GHC.Generics.NTCo:Selector[0]
                           <CommonResources.S1_0_0SocialGraph>_N)) -}
-290c1fdeefd0e24213cab4b6fac2f77b
+c6911f22c61df1a324fd3c77eb30789b
   $fSelectorSocialGraph0 ::
     GHC.Generics.Selector CommonResources.S1_0_1SocialGraph
   DFunId[0]
@@ -3028,7 +3028,7 @@ b2d1e9e33ac3e708cc92fcc894f29d76
                   `cast`
                 (Sym (GHC.Generics.NTCo:Selector[0]
                           <CommonResources.S1_0_1User>_N)) -}
-7e3aab4dcbc5f309c3204bfee1a91119
+7ba7753f9d24f3336f0986fb19197aab
   $fShowLink :: GHC.Show.Show CommonResources.Link
   DFunId[0]
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -3037,7 +3037,7 @@ b2d1e9e33ac3e708cc92fcc894f29d76
                   CommonResources.$fShowLink_$cshowsPrec
                   CommonResources.$fShowLink_$cshow
                   CommonResources.$fShowLink_$cshowList -}
-7e3aab4dcbc5f309c3204bfee1a91119
+7ba7753f9d24f3336f0986fb19197aab
   $fShowLink1 :: CommonResources.Link -> GHC.Show.ShowS
   {- Arity: 2,
      Unfolding: (\ w :: CommonResources.Link w1 :: GHC.Base.String ->
@@ -3046,22 +3046,22 @@ b2d1e9e33ac3e708cc92fcc894f29d76
 b84c3f3844caea1a4b3bb55b602bce9c
   $fShowLink2 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "}"#) -}
-636c075877cda060e142cbca589f3663
+e73e5e5fdce802654d345800af092a1e
   $fShowLink3 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "link_type = "#) -}
+  {- Unfolding: (GHC.CString.unpackCString# "value = "#) -}
 8202309e4003b5d112dc4a13741ff11c
   $fShowLink4 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "target = "#) -}
 bf9e85e0bd2d81b0a5ff211dc73135c1
   $fShowLink5 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# ", "#) -}
-02b04dfc4ada32f20944752ad450c56b
+97583faaab66d98c0b221ef9c422af29
   $fShowLink6 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "start = "#) -}
+  {- Unfolding: (GHC.CString.unpackCString# "source = "#) -}
 5d19ed6e3ac81ea06a66a91c29450d38
   $fShowLink7 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "Link {"#) -}
-7e3aab4dcbc5f309c3204bfee1a91119
+7ba7753f9d24f3336f0986fb19197aab
   $fShowLink_$cshow :: CommonResources.Link -> GHC.Base.String
   {- Arity: 1, Strictness: <S,1*U(1*U,1*U,1*U)>,
      Unfolding: InlineRule (1, True, False)
@@ -3070,13 +3070,13 @@ bf9e85e0bd2d81b0a5ff211dc73135c1
                    GHC.Show.shows18
                    x
                    (GHC.Types.[] @ GHC.Types.Char)) -}
-7e3aab4dcbc5f309c3204bfee1a91119
+7ba7753f9d24f3336f0986fb19197aab
   $fShowLink_$cshowList :: [CommonResources.Link] -> GHC.Show.ShowS
   {- Arity: 2,
      Unfolding: (GHC.Show.showList__
                    @ CommonResources.Link
                    CommonResources.$fShowLink1) -}
-7e3aab4dcbc5f309c3204bfee1a91119
+7ba7753f9d24f3336f0986fb19197aab
   $fShowLink_$cshowsPrec ::
     GHC.Types.Int -> CommonResources.Link -> GHC.Show.ShowS
   {- Arity: 3, Strictness: <S,1*U(U)><S,1*U(1*U,1*U,1*U)><L,U>,
@@ -3088,7 +3088,7 @@ bf9e85e0bd2d81b0a5ff211dc73135c1
                  case w of ww { GHC.Types.I# ww1 ->
                  case w1 of ww2 { CommonResources.Link ww3 ww4 ww5 ->
                  CommonResources.$w$cshowsPrec ww1 ww3 ww4 ww5 w2 } }) -}
-5afc7149eb4c520adbc5633be01eaa21
+c0e8b1424c16200db8fda6b0a5f9fcae
   $fShowNode :: GHC.Show.Show CommonResources.Node
   DFunId[0]
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -3097,22 +3097,22 @@ bf9e85e0bd2d81b0a5ff211dc73135c1
                   CommonResources.$fShowNode_$cshowsPrec
                   CommonResources.$fShowNode_$cshow
                   CommonResources.$fShowNode_$cshowList -}
-5afc7149eb4c520adbc5633be01eaa21
+c0e8b1424c16200db8fda6b0a5f9fcae
   $fShowNode1 :: CommonResources.Node -> GHC.Show.ShowS
   {- Arity: 2,
      Unfolding: (\ w :: CommonResources.Node w1 :: GHC.Base.String ->
                  case w of ww { CommonResources.Node ww1 ww2 ->
                  CommonResources.$w$cshowsPrec1 0 ww1 ww2 w1 }) -}
-7c4aa78bc23d79bd1fcb93adea588770
+b1bf5bd37338c38360dad398347f54e2
   $fShowNode2 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "node_type = "#) -}
-4e42a2bc952db25fb68c03f4bce29503
+  {- Unfolding: (GHC.CString.unpackCString# "group = "#) -}
+0c5c8a4172c3605970bd5d6d16f302db
   $fShowNode3 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "name = "#) -}
+  {- Unfolding: (GHC.CString.unpackCString# "id = "#) -}
 974052106c2526928f48039bed6f5ad0
   $fShowNode4 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "Node {"#) -}
-5afc7149eb4c520adbc5633be01eaa21
+c0e8b1424c16200db8fda6b0a5f9fcae
   $fShowNode_$cshow :: CommonResources.Node -> GHC.Base.String
   {- Arity: 1, Strictness: <S,1*U(1*U,1*U)>,
      Unfolding: InlineRule (1, True, False)
@@ -3121,13 +3121,13 @@ bf9e85e0bd2d81b0a5ff211dc73135c1
                    GHC.Show.shows18
                    x
                    (GHC.Types.[] @ GHC.Types.Char)) -}
-5afc7149eb4c520adbc5633be01eaa21
+c0e8b1424c16200db8fda6b0a5f9fcae
   $fShowNode_$cshowList :: [CommonResources.Node] -> GHC.Show.ShowS
   {- Arity: 2,
      Unfolding: (GHC.Show.showList__
                    @ CommonResources.Node
                    CommonResources.$fShowNode1) -}
-5afc7149eb4c520adbc5633be01eaa21
+c0e8b1424c16200db8fda6b0a5f9fcae
   $fShowNode_$cshowsPrec ::
     GHC.Types.Int -> CommonResources.Node -> GHC.Show.ShowS
   {- Arity: 3, Strictness: <S,1*U(U)><S,1*U(1*U,1*U)><L,U>,
@@ -3190,7 +3190,7 @@ cb8a92dcea28fa0aa8380d8dc41485dd
                  case w of ww { GHC.Types.I# ww1 ->
                  case w1 of ww2 { CommonResources.Response ww3 ->
                  CommonResources.$w$cshowsPrec2 ww1 ww3 w2 } }) -}
-5afc7149eb4c520adbc5633be01eaa21
+c6911f22c61df1a324fd3c77eb30789b
   $fShowSocialGraph :: GHC.Show.Show CommonResources.SocialGraph
   DFunId[0]
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -3199,14 +3199,14 @@ cb8a92dcea28fa0aa8380d8dc41485dd
                   CommonResources.$fShowSocialGraph_$cshowsPrec
                   CommonResources.$fShowSocialGraph_$cshow
                   CommonResources.$fShowSocialGraph_$cshowList -}
-5afc7149eb4c520adbc5633be01eaa21
+c6911f22c61df1a324fd3c77eb30789b
   $fShowSocialGraph1 :: CommonResources.SocialGraph -> GHC.Show.ShowS
   {- Arity: 2,
      Unfolding: (\ w :: CommonResources.SocialGraph
                    w1 :: GHC.Base.String ->
                  case w of ww { CommonResources.SocialGraph ww1 ww2 ->
                  CommonResources.$w$cshowsPrec3 0 ww1 ww2 w1 }) -}
-5afc7149eb4c520adbc5633be01eaa21
+c6911f22c61df1a324fd3c77eb30789b
   $fShowSocialGraph_$cshow ::
     CommonResources.SocialGraph -> GHC.Base.String
   {- Arity: 1, Strictness: <S,1*U(1*U,1*U)>,
@@ -3216,14 +3216,14 @@ cb8a92dcea28fa0aa8380d8dc41485dd
                    GHC.Show.shows18
                    x
                    (GHC.Types.[] @ GHC.Types.Char)) -}
-5afc7149eb4c520adbc5633be01eaa21
+c6911f22c61df1a324fd3c77eb30789b
   $fShowSocialGraph_$cshowList ::
     [CommonResources.SocialGraph] -> GHC.Show.ShowS
   {- Arity: 2,
      Unfolding: (GHC.Show.showList__
                    @ CommonResources.SocialGraph
                    CommonResources.$fShowSocialGraph1) -}
-5afc7149eb4c520adbc5633be01eaa21
+c6911f22c61df1a324fd3c77eb30789b
   $fShowSocialGraph_$cshowsPrec ::
     GHC.Types.Int -> CommonResources.SocialGraph -> GHC.Show.ShowS
   {- Arity: 3, Strictness: <S,1*U(U)><S,1*U(1*U,1*U)><L,U>,
@@ -3286,7 +3286,7 @@ b2d1e9e33ac3e708cc92fcc894f29d76
                  case w of ww { GHC.Types.I# ww1 ->
                  case w1 of ww2 { CommonResources.User ww3 ww4 ->
                  CommonResources.$w$cshowsPrec4 ww1 ww3 ww4 w2 } }) -}
-7e3aab4dcbc5f309c3204bfee1a91119
+7ba7753f9d24f3336f0986fb19197aab
   $fToBSONLink :: Data.Bson.Generic.ToBSON CommonResources.Link
   DFunId[0]
   {- Arity: 1, Strictness: <L,1*U(U,U,U)>,
@@ -3296,7 +3296,7 @@ b2d1e9e33ac3e708cc92fcc894f29d76
                   `cast`
                 (Sym (Data.Bson.Generic.NTCo:ToBSON[0]
                           <CommonResources.Link>_N)) -}
-7e3aab4dcbc5f309c3204bfee1a91119
+7ba7753f9d24f3336f0986fb19197aab
   $fToBSONLink1 ::
     GHC.Types.Int
     -> (GHC.Generics.:*:)
@@ -3328,12 +3328,12 @@ b2d1e9e33ac3e708cc92fcc894f29d76
                            a27 ->
                  case w1 of ww { GHC.Generics.:*: ww1 ww2 ->
                  CommonResources.$wa9 @ a27 ww1 ww2 }) -}
-350e032cd8bcfa03ccdaf772341d196a
+fe58e61901af0cc686f34cfdc559a3e7
   $fToBSONLink2 :: Data.Text.Internal.Text
   {- Unfolding: (GHC.ST.runSTRep
                    @ Data.Text.Internal.Text
                    CommonResources.$fToBSONLink3) -}
-4ce967a2633d0a4031c987479d0d5683
+790c532713ddf139344d574c88570f8e
   $fToBSONLink3 ::
     GHC.Prim.State# s1
     -> (# GHC.Prim.State# s1, Data.Text.Internal.Text #)
@@ -3366,12 +3366,12 @@ b2d1e9e33ac3e708cc92fcc894f29d76
                    CommonResources.$fFromBSONLink3
                    0
                    ipv }) -}
-7e9c4e5fc060f3a7afa24d669c3bfcb9
+1c03bb2c836a8fca82c2f9bc6f96a9fc
   $fToBSONLink6 :: Data.Text.Internal.Text
   {- Unfolding: (GHC.ST.runSTRep
                    @ Data.Text.Internal.Text
                    CommonResources.$fToBSONLink7) -}
-06cdc1d88e1c36b3d1b4ef13e8faddd6
+ee43bf78373014fe6f09aba4e0ebe67d
   $fToBSONLink7 ::
     GHC.Prim.State# s1
     -> (# GHC.Prim.State# s1, Data.Text.Internal.Text #)
@@ -3385,7 +3385,7 @@ b2d1e9e33ac3e708cc92fcc894f29d76
                    CommonResources.$fFromBSONLink4
                    0
                    ipv }) -}
-7e3aab4dcbc5f309c3204bfee1a91119
+7ba7753f9d24f3336f0986fb19197aab
   $fToBSONLink_$ctoBSON :: CommonResources.Link -> Data.Bson.Document
   {- Arity: 1, Strictness: <L,1*U(U,U,U)>,
      Unfolding: InlineRule (1, True, False)
@@ -3436,7 +3436,7 @@ b2d1e9e33ac3e708cc92fcc894f29d76
                                                                       CommonResources.S1_0_2Link
                                                                       (GHC.Generics.Rec0
                                                                          GHC.Base.String)))>_R) <GHC.Prim.Any>_N)) -}
-5afc7149eb4c520adbc5633be01eaa21
+c0e8b1424c16200db8fda6b0a5f9fcae
   $fToBSONNode :: Data.Bson.Generic.ToBSON CommonResources.Node
   DFunId[0]
   {- Arity: 1, Strictness: <L,1*U(U,U)>, Inline: INLINE (sat-args=0),
@@ -3445,7 +3445,7 @@ b2d1e9e33ac3e708cc92fcc894f29d76
                   `cast`
                 (Sym (Data.Bson.Generic.NTCo:ToBSON[0]
                           <CommonResources.Node>_N)) -}
-5afc7149eb4c520adbc5633be01eaa21
+c0e8b1424c16200db8fda6b0a5f9fcae
   $fToBSONNode1 ::
     GHC.Types.Int
     -> (GHC.Generics.:*:)
@@ -3475,12 +3475,12 @@ b2d1e9e33ac3e708cc92fcc894f29d76
                            a27 ->
                  case w1 of ww { GHC.Generics.:*: ww1 ww2 ->
                  CommonResources.$wa10 @ a27 ww1 ww2 }) -}
-0bf224bc7b0f16954325482de862f2ac
+df1fd26b595b82e565a7ac1f8d241fdd
   $fToBSONNode2 :: Data.Text.Internal.Text
   {- Unfolding: (GHC.ST.runSTRep
                    @ Data.Text.Internal.Text
                    CommonResources.$fToBSONNode3) -}
-b44981181648a9e4a1455d4b20671c20
+6993365caeaba9089f3531c1f0e0c8b6
   $fToBSONNode3 ::
     GHC.Prim.State# s1
     -> (# GHC.Prim.State# s1, Data.Text.Internal.Text #)
@@ -3494,12 +3494,12 @@ b44981181648a9e4a1455d4b20671c20
                    CommonResources.$fFromBSONNode1
                    0
                    ipv }) -}
-3964cbf5def534ce7db083c40e8fd262
+9f3dff40e7d73d96681a8628dca8cbb6
   $fToBSONNode4 :: Data.Text.Internal.Text
   {- Unfolding: (GHC.ST.runSTRep
                    @ Data.Text.Internal.Text
                    CommonResources.$fToBSONNode5) -}
-8396c43cafdd7c5a8a7faa4a4f49bb36
+e8f2fedd5ae5689c5fd6634a04a92338
   $fToBSONNode5 ::
     GHC.Prim.State# s1
     -> (# GHC.Prim.State# s1, Data.Text.Internal.Text #)
@@ -3513,7 +3513,7 @@ b44981181648a9e4a1455d4b20671c20
                    CommonResources.$fFromBSONNode2
                    0
                    ipv }) -}
-5afc7149eb4c520adbc5633be01eaa21
+c0e8b1424c16200db8fda6b0a5f9fcae
   $fToBSONNode_$ctoBSON :: CommonResources.Node -> Data.Bson.Document
   {- Arity: 1, Strictness: <L,1*U(U,U)>,
      Unfolding: InlineRule (1, True, False)
@@ -3737,7 +3737,7 @@ ce2c63c366763345e3ef5b8a8ebeb517
                       @ GHC.Types.Char
                       @ GHC.Prim.Any
                       a27)) -}
-7e3aab4dcbc5f309c3204bfee1a91119
+7ba7753f9d24f3336f0986fb19197aab
   $fToJSONLink :: Data.Aeson.Types.Class.ToJSON CommonResources.Link
   DFunId[0]
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -3745,7 +3745,7 @@ ce2c63c366763345e3ef5b8a8ebeb517
                   @ CommonResources.Link
                   CommonResources.$fToJSONLink_$ctoJSON
                   CommonResources.$fToJSONLink_$ctoEncoding -}
-7e3aab4dcbc5f309c3204bfee1a91119
+7ba7753f9d24f3336f0986fb19197aab
   $fToJSONLink1 ::
     CommonResources.Link
     -> Data.Aeson.Types.Generic.Tagged
@@ -3845,7 +3845,7 @@ ce2c63c366763345e3ef5b8a8ebeb517
     -> (# GHC.Prim.State# s1, Data.Text.Internal.Text #)
   {- Arity: 5, Strictness: <L,U(U)><L,U(U)><S,1*U><L,U><L,U>,
      Inline: [0] -}
-7e3aab4dcbc5f309c3204bfee1a91119
+7ba7753f9d24f3336f0986fb19197aab
   $fToJSONLink_$ctoEncoding ::
     CommonResources.Link -> Data.Aeson.Types.Internal.Encoding
   {- Arity: 1, Strictness: <S,1*U(U,U,U)>,
@@ -3857,7 +3857,7 @@ ce2c63c366763345e3ef5b8a8ebeb517
                   `cast`
                 (<CommonResources.Link>_R
                  ->_R Sym (Data.Aeson.Types.Internal.NTCo:Encoding[0])) -}
-7e3aab4dcbc5f309c3204bfee1a91119
+7ba7753f9d24f3336f0986fb19197aab
   $fToJSONLink_$ctoJSON ::
     CommonResources.Link -> Data.Aeson.Types.Internal.Value
   {- Arity: 1, Strictness: <S,1*U(U,U,U)>m1,
@@ -3868,7 +3868,7 @@ ce2c63c366763345e3ef5b8a8ebeb517
                  ->_R Data.Aeson.Types.Generic.NTCo:Tagged[0]
                           <Data.Aeson.Types.Generic.True>_P
                           <Data.Aeson.Types.Internal.Value>_R) -}
-5afc7149eb4c520adbc5633be01eaa21
+c0e8b1424c16200db8fda6b0a5f9fcae
   $fToJSONNode :: Data.Aeson.Types.Class.ToJSON CommonResources.Node
   DFunId[0]
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -3876,7 +3876,7 @@ ce2c63c366763345e3ef5b8a8ebeb517
                   @ CommonResources.Node
                   CommonResources.$fToJSONNode_$ctoJSON
                   CommonResources.$fToJSONNode_$ctoEncoding -}
-5afc7149eb4c520adbc5633be01eaa21
+c0e8b1424c16200db8fda6b0a5f9fcae
   $fToJSONNode1 ::
     CommonResources.Node
     -> Data.Aeson.Types.Generic.Tagged
@@ -3891,7 +3891,7 @@ ce2c63c366763345e3ef5b8a8ebeb517
                  (Sym (Data.Aeson.Types.Generic.NTCo:Tagged[0]
                            <Data.Aeson.Types.Generic.True>_P
                            <Data.Aeson.Types.Internal.Value>_R)) } }) -}
-5afc7149eb4c520adbc5633be01eaa21
+c0e8b1424c16200db8fda6b0a5f9fcae
   $fToJSONNode_$ctoEncoding ::
     CommonResources.Node -> Data.Aeson.Types.Internal.Encoding
   {- Arity: 1, Strictness: <S,1*U(U,U)>, Inline: INLINE (sat-args=0),
@@ -3902,7 +3902,7 @@ ce2c63c366763345e3ef5b8a8ebeb517
                   `cast`
                 (<CommonResources.Node>_R
                  ->_R Sym (Data.Aeson.Types.Internal.NTCo:Encoding[0])) -}
-5afc7149eb4c520adbc5633be01eaa21
+c0e8b1424c16200db8fda6b0a5f9fcae
   $fToJSONNode_$ctoJSON ::
     CommonResources.Node -> Data.Aeson.Types.Internal.Value
   {- Arity: 1, Strictness: <S,1*U(U,U)>m1,
@@ -4005,7 +4005,7 @@ cb2c79e0dfa56e49eb7591bc90c1b4e9
                  ->_R Data.Aeson.Types.Generic.NTCo:Tagged[0]
                           <Data.Aeson.Types.Generic.True>_P
                           <Data.Aeson.Types.Internal.Value>_R) -}
-5afc7149eb4c520adbc5633be01eaa21
+c6911f22c61df1a324fd3c77eb30789b
   $fToJSONSocialGraph ::
     Data.Aeson.Types.Class.ToJSON CommonResources.SocialGraph
   DFunId[0]
@@ -4014,7 +4014,7 @@ cb2c79e0dfa56e49eb7591bc90c1b4e9
                   @ CommonResources.SocialGraph
                   CommonResources.$fToJSONSocialGraph_$ctoJSON
                   CommonResources.$fToJSONSocialGraph_$ctoEncoding -}
-5afc7149eb4c520adbc5633be01eaa21
+c6911f22c61df1a324fd3c77eb30789b
   $fToJSONSocialGraph1 ::
     CommonResources.SocialGraph
     -> Data.Aeson.Types.Generic.Tagged
@@ -4029,7 +4029,7 @@ cb2c79e0dfa56e49eb7591bc90c1b4e9
                  (Sym (Data.Aeson.Types.Generic.NTCo:Tagged[0]
                            <Data.Aeson.Types.Generic.True>_P
                            <Data.Aeson.Types.Internal.Value>_R)) } }) -}
-ef575dcd7842d08948e9252e9ab0c619
+05d1a6ef0d26890159abf272d006bf82
   $fToJSONSocialGraph2 ::
     Data.Aeson.Types.Internal.Options
     -> GHC.Generics.K1 GHC.Generics.R [CommonResources.Link] a4
@@ -4061,7 +4061,7 @@ acb98c8f54d07b50c8636ba03b36e963
              Data.Aeson.Types.Internal.Value,
            GHC.Types.Int) #)
   {- Arity: 4, Strictness: <S,1*U><L,U(U(U,U,U),U(U))><S,1*U><L,U> -}
-5afc7149eb4c520adbc5633be01eaa21
+3c4d209b6e6ec1d0bdc77d96b92330ab
   $fToJSONSocialGraph5 ::
     Data.Aeson.Types.Internal.Options
     -> GHC.Generics.K1 GHC.Generics.R [CommonResources.Node] a4
@@ -4090,7 +4090,7 @@ acb98c8f54d07b50c8636ba03b36e963
              Data.Aeson.Types.Internal.Value,
            GHC.Types.Int) #)
   {- Arity: 4, Strictness: <S,1*U><L,U(U(U,U,U),U(U))><S,1*U><L,U> -}
-5afc7149eb4c520adbc5633be01eaa21
+c6911f22c61df1a324fd3c77eb30789b
   $fToJSONSocialGraph_$ctoEncoding ::
     CommonResources.SocialGraph -> Data.Aeson.Types.Internal.Encoding
   {- Arity: 1, Strictness: <S,1*U(U,U)>, Inline: INLINE (sat-args=0),
@@ -4101,7 +4101,7 @@ acb98c8f54d07b50c8636ba03b36e963
                   `cast`
                 (<CommonResources.SocialGraph>_R
                  ->_R Sym (Data.Aeson.Types.Internal.NTCo:Encoding[0])) -}
-5afc7149eb4c520adbc5633be01eaa21
+c6911f22c61df1a324fd3c77eb30789b
   $fToJSONSocialGraph_$ctoJSON ::
     CommonResources.SocialGraph -> Data.Aeson.Types.Internal.Value
   {- Arity: 1, Strictness: <S,1*U(U,U)>m1,
@@ -4235,7 +4235,7 @@ c9840ed24d7355b9fe4b818537af6d23
                  case GHC.Base.eqString ww ww2 of wild {
                    GHC.Types.False -> GHC.Types.False
                    GHC.Types.True -> GHC.Base.eqString ww1 ww3 }) -}
-5afc7149eb4c520adbc5633be01eaa21
+ff7404791fd9c66e9cba09257c7681a1
   $w$c==2 ::
     [CommonResources.Node]
     -> [CommonResources.Link]
@@ -4276,7 +4276,7 @@ c9840ed24d7355b9fe4b818537af6d23
                  case GHC.Base.eqString ww ww2 of wild {
                    GHC.Types.False -> GHC.Types.False
                    GHC.Types.True -> GHC.Base.eqString ww1 ww3 }) -}
-156d7191aaa2c9bb8d385c01fa3358f8
+bd576cbf13e031e9f20a1e89918ae14f
   $w$cshowsPrec ::
     GHC.Prim.Int#
     -> GHC.Base.String
@@ -4350,7 +4350,7 @@ c9840ed24d7355b9fe4b818537af6d23
                         @ GHC.Types.Char
                         GHC.Show.shows9
                         (p (GHC.Types.: @ GHC.Types.Char GHC.Show.shows8 w)) }) -}
-96d524b7afd0a2855d565e2c636e5f4d
+bbac86cbb974f3f232d5ffa094f2cb79
   $w$cshowsPrec1 ::
     GHC.Prim.Int#
     -> GHC.Base.String
@@ -4443,7 +4443,7 @@ caae9bc5d7b96cf4b81ea633170686b8
                         @ GHC.Types.Char
                         GHC.Show.shows9
                         (p (GHC.Types.: @ GHC.Types.Char GHC.Show.shows8 w)) }) -}
-5afc7149eb4c520adbc5633be01eaa21
+3aa64d9f844fea27a5c820758f6101ed
   $w$cshowsPrec3 ::
     GHC.Prim.Int#
     -> [CommonResources.Node]
@@ -4508,7 +4508,7 @@ b96aa82be18924ad1025e8439ebc7b6c
                         @ GHC.Types.Char
                         GHC.Show.shows9
                         (p (GHC.Types.: @ GHC.Types.Char GHC.Show.shows8 w)) }) -}
-7e3aab4dcbc5f309c3204bfee1a91119
+7ba7753f9d24f3336f0986fb19197aab
   $wa ::
     Data.Bson.Document
     -> GHC.Base.Maybe
@@ -4879,7 +4879,7 @@ b96aa82be18924ad1025e8439ebc7b6c
                                   GHC.Types.True -> CommonResources.$fFromBSON[]6 @ a27 } } }
                    0 -> CommonResources.$fFromBSON[]6 @ a27
                    1 -> CommonResources.$fFromBSON[]6 @ a27 }) -}
-5afc7149eb4c520adbc5633be01eaa21
+c0e8b1424c16200db8fda6b0a5f9fcae
   $wa10 ::
     GHC.Generics.M1
       GHC.Generics.S
@@ -5075,7 +5075,7 @@ e6d44573f032bf1b9867a34e31239d9f
                                            <a27>_P)) of ww2 { (##) ww3 ->
                           Data.Bson.String ww3 }) })
                       (GHC.Types.[] @ Data.Bson.Field))) -}
-7e3aab4dcbc5f309c3204bfee1a91119
+7ba7753f9d24f3336f0986fb19197aab
   $wa13 ::
     Data.Aeson.Types.Internal.Options
     -> GHC.Generics.M1
@@ -5173,7 +5173,7 @@ e6d44573f032bf1b9867a34e31239d9f
                            0
                            ipv }) of dt { Data.Text.Internal.Text ipv ipv1 ipv2 ->
                  (# dt #) }) -}
-5afc7149eb4c520adbc5633be01eaa21
+c0e8b1424c16200db8fda6b0a5f9fcae
   $wa15 ::
     GHC.Base.String
     -> GHC.Base.String -> (# Data.Aeson.Types.Internal.Object #)
@@ -5235,7 +5235,7 @@ e6d44573f032bf1b9867a34e31239d9f
                            @ Data.Text.Internal.Text
                            @ Data.Aeson.Types.Internal.Value) of dt { DEFAULT ->
                  (# dt #) }) -}
-5afc7149eb4c520adbc5633be01eaa21
+c6911f22c61df1a324fd3c77eb30789b
   $wa16 ::
     [CommonResources.Node]
     -> [CommonResources.Link] -> (# Data.Aeson.Types.Internal.Object #)
@@ -5301,7 +5301,7 @@ e6d44573f032bf1b9867a34e31239d9f
                            @ Data.Text.Internal.Text
                            @ Data.Aeson.Types.Internal.Value) of dt { DEFAULT ->
                  (# dt #) }) -}
-399637004a2c9059fe5b24e463485792
+d7770ce2295835faaca8d7a4353de5c7
   $wa17 ::
     GHC.Generics.K1 GHC.Generics.R [CommonResources.Link] a4
     -> (# Data.Aeson.Types.Internal.Array #)
@@ -5379,7 +5379,7 @@ e6d44573f032bf1b9867a34e31239d9f
                               dt6
                               ipv3 #) } } } } } }) of dt { Data.Vector.Vector ipv ipv1 ipv2 ->
                  (# dt #) }) -}
-5afc7149eb4c520adbc5633be01eaa21
+c0866e98068f571ab810b172f735f7a0
   $wa18 ::
     GHC.Generics.K1 GHC.Generics.R [CommonResources.Node] a4
     -> (# Data.Aeson.Types.Internal.Array #)
@@ -5519,7 +5519,7 @@ b2d1e9e33ac3e708cc92fcc894f29d76
                            @ Data.Text.Internal.Text
                            @ Data.Aeson.Types.Internal.Value) of dt { DEFAULT ->
                  (# dt #) }) -}
-7e3aab4dcbc5f309c3204bfee1a91119
+7ba7753f9d24f3336f0986fb19197aab
   $wa2 ::
     Data.Aeson.Types.Internal.Options
     -> Data.Aeson.Types.Internal.Value
@@ -5864,7 +5864,7 @@ a418445c0c54233208c8b285f8bd5d3d
                    `cast`
                  (Sym (Data.Aeson.Types.Internal.NTCo:Parser[0]
                            <GHC.Generics.K1 GHC.Generics.R [GHC.Types.Char] a27>_R))) -}
-5afc7149eb4c520adbc5633be01eaa21
+c0e8b1424c16200db8fda6b0a5f9fcae
   $wa4 ::
     Data.Aeson.Types.Internal.Options
     -> Data.Aeson.Types.Internal.Value
@@ -6037,7 +6037,7 @@ a418445c0c54233208c8b285f8bd5d3d
                                               CommonResources.S1_0_1Node
                                               (GHC.Generics.Rec0 GHC.Base.String))
                                            a27)>_R))) }) -}
-5afc7149eb4c520adbc5633be01eaa21
+c6911f22c61df1a324fd3c77eb30789b
   $wa5 ::
     Data.Aeson.Types.Internal.Options
     -> Data.Aeson.Types.Internal.Value
@@ -6214,7 +6214,7 @@ a418445c0c54233208c8b285f8bd5d3d
                                               CommonResources.S1_0_1SocialGraph
                                               (GHC.Generics.Rec0 [CommonResources.Link]))
                                            a27)>_R))) }) -}
-5afc7149eb4c520adbc5633be01eaa21
+3c0c6c2c262f8e0495063d64e87d82db
   $wa6 ::
     Data.Aeson.Types.Internal.Value
     -> Data.Aeson.Types.Internal.Parser
@@ -6284,7 +6284,7 @@ a418445c0c54233208c8b285f8bd5d3d
                    `cast`
                  (Sym (Data.Aeson.Types.Internal.NTCo:Parser[0]
                            <GHC.Generics.K1 GHC.Generics.R [CommonResources.Node] a27>_R))) -}
-178e9d3712b55e4a4cd9d10423bcc6e8
+d81826d00c7d8f2fdd5be4630eb8ea9e
   $wa7 ::
     Data.Aeson.Types.Internal.Value
     -> Data.Aeson.Types.Internal.Parser
@@ -6527,7 +6527,7 @@ b2d1e9e33ac3e708cc92fcc894f29d76
                                               CommonResources.S1_0_1User
                                               (GHC.Generics.Rec0 GHC.Base.String))
                                            a27)>_R))) }) -}
-7e3aab4dcbc5f309c3204bfee1a91119
+7ba7753f9d24f3336f0986fb19197aab
   $wa9 ::
     GHC.Generics.M1
       GHC.Generics.S
@@ -6652,15 +6652,14 @@ d89097a8c3443edf000ae5ee0c5b4d3d
   abstract(True) D1SocialGraph
 a29e15ecec79b6f7bfeb25ef748b2aa6
   abstract(True) D1User
-7e3aab4dcbc5f309c3204bfee1a91119
+7ba7753f9d24f3336f0986fb19197aab
   data Link
-    = Link {start :: GHC.Base.String,
+    = Link {source :: GHC.Base.String,
             target :: GHC.Base.String,
-            link_type :: GHC.Base.String}
-5afc7149eb4c520adbc5633be01eaa21
-  data Node
-    = Node {name :: GHC.Base.String, node_type :: GHC.Base.String}
-7e3aab4dcbc5f309c3204bfee1a91119
+            value :: GHC.Base.String}
+c0e8b1424c16200db8fda6b0a5f9fcae
+  data Node = Node {id :: GHC.Base.String, group :: GHC.Base.String}
+7ba7753f9d24f3336f0986fb19197aab
   axiom Rep_Link::
       GHC.Generics.Rep CommonResources.Link
         = GHC.Generics.D1
@@ -6674,7 +6673,7 @@ a29e15ecec79b6f7bfeb25ef748b2aa6
                                   GHC.Generics.:*: GHC.Generics.S1
                                                      CommonResources.S1_0_2Link
                                                      (GHC.Generics.Rec0 GHC.Base.String))))
-5afc7149eb4c520adbc5633be01eaa21
+c0e8b1424c16200db8fda6b0a5f9fcae
   axiom Rep_Node::
       GHC.Generics.Rep CommonResources.Node
         = GHC.Generics.D1
@@ -6695,7 +6694,7 @@ a29e15ecec79b6f7bfeb25ef748b2aa6
                (GHC.Generics.S1
                   CommonResources.S1_0_0Response
                   (GHC.Generics.Rec0 GHC.Base.String)))
-5afc7149eb4c520adbc5633be01eaa21
+c6911f22c61df1a324fd3c77eb30789b
   axiom Rep_SocialGraph::
       GHC.Generics.Rep CommonResources.SocialGraph
         = GHC.Generics.D1
@@ -6721,9 +6720,9 @@ b2d1e9e33ac3e708cc92fcc894f29d76
                                    CommonResources.S1_0_1User (GHC.Generics.Rec0 GHC.Base.String)))
 3157d45a4c51956892995c7dc926f1e5
   data Response = Response {respString :: GHC.Base.String}
-db9c4c795ee0c6d3c994566ebe5ce86a
+725d789057fcc446ab5a57f4699225a7
   abstract(True) S1_0_0Link
-25353b6d7a387ee664efabf7fa8adff7
+1f2d7ba63a7e69f013abbeec1c45557f
   abstract(True) S1_0_0Node
 3157d45a4c51956892995c7dc926f1e5
   abstract(True) S1_0_0Response
@@ -6733,23 +6732,20 @@ db9c4c795ee0c6d3c994566ebe5ce86a
   abstract(True) S1_0_0User
 3c0a273f91c78cc339f25bae05fc2226
   abstract(True) S1_0_1Link
-5afc7149eb4c520adbc5633be01eaa21
+c0e8b1424c16200db8fda6b0a5f9fcae
   abstract(True) S1_0_1Node
-290c1fdeefd0e24213cab4b6fac2f77b
+c6911f22c61df1a324fd3c77eb30789b
   abstract(True) S1_0_1SocialGraph
 b2d1e9e33ac3e708cc92fcc894f29d76
   abstract(True) S1_0_1User
-7e3aab4dcbc5f309c3204bfee1a91119
+7ba7753f9d24f3336f0986fb19197aab
   abstract(True) S1_0_2Link
-a8eb9014373bc1c65a830720803675da
+0b62b99519fffd463d54a57c6fd1a046
   type SearchApi =
     "socialGraph"
-    Servant.API.Sub.:> (Servant.API.ReqBody.ReqBody
-                          '[Servant.API.ContentTypes.JSON] CommonResources.User
-                        Servant.API.Sub.:> Servant.API.Verbs.Post
-                                             '[Servant.API.ContentTypes.JSON]
-                                             CommonResources.SocialGraph)
-5afc7149eb4c520adbc5633be01eaa21
+    Servant.API.Sub.:> Servant.API.Verbs.Get
+                         '[Servant.API.ContentTypes.JSON] CommonResources.SocialGraph
+c6911f22c61df1a324fd3c77eb30789b
   data SocialGraph
     = SocialGraph {nodes :: [CommonResources.Node],
                    links :: [CommonResources.Link]}
@@ -6763,41 +6759,34 @@ b2d1e9e33ac3e708cc92fcc894f29d76
      Unfolding: InlineRule (1, True, False)
                 (\ ds :: CommonResources.User ->
                  case ds of wild { CommonResources.User ds1 ds2 -> ds2 }) -}
-e60123e1ef642eedb5239575cd452b3c
+008cc8fa1ab28aa71d2481fb89acdd89
   crawlerhost :: GHC.Base.String
-  {- Unfolding: (CommonResources.searchhost) -}
+  {- Unfolding: (GHC.CString.unpackCString# "localhost"#) -}
 b6e60c5b5921a7030f13d36159e04a31
   crawlerport :: GHC.Base.String
   {- Unfolding: (GHC.CString.unpackCString# "8080"#) -}
-ba95b89d6a8537853505e712b975f6ce
-  link_type :: CommonResources.Link -> GHC.Base.String
-  RecSel CommonResources.Link
-  {- Arity: 1, HasNoCafRefs, Strictness: <S(LLS),1*U(A,A,1*U)>,
+7b1161e81e00123e254f6d48d6ba8cc5
+  group :: CommonResources.Node -> GHC.Base.String
+  RecSel CommonResources.Node
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LS),1*U(A,1*U)>,
      Unfolding: InlineRule (1, True, False)
-                (\ ds :: CommonResources.Link ->
-                 case ds of wild { CommonResources.Link ds1 ds2 ds3 -> ds3 }) -}
-2f0e52837716ef0fe690dfd40b38ef42
+                (\ ds :: CommonResources.Node ->
+                 case ds of wild { CommonResources.Node ds1 ds2 -> ds2 }) -}
+7d17198495cd5e1e98b726c5b85ba578
+  id :: CommonResources.Node -> GHC.Base.String
+  RecSel CommonResources.Node
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(SL),1*U(1*U,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: CommonResources.Node ->
+                 case ds of wild { CommonResources.Node ds1 ds2 -> ds1 }) -}
+e3a6be175d70bb05c790e2de8b9534c9
   links :: CommonResources.SocialGraph -> [CommonResources.Link]
   RecSel CommonResources.SocialGraph
   {- Arity: 1, HasNoCafRefs, Strictness: <S(LS),1*U(A,1*U)>,
      Unfolding: InlineRule (1, True, False)
                 (\ ds :: CommonResources.SocialGraph ->
                  case ds of wild { CommonResources.SocialGraph ds1 ds2 -> ds2 }) -}
-af462cf7b7bfb650e01de9388605ed86
-  name :: CommonResources.Node -> GHC.Base.String
-  RecSel CommonResources.Node
-  {- Arity: 1, HasNoCafRefs, Strictness: <S(SL),1*U(1*U,A)>,
-     Unfolding: InlineRule (1, True, False)
-                (\ ds :: CommonResources.Node ->
-                 case ds of wild { CommonResources.Node ds1 ds2 -> ds1 }) -}
-6f5214d3be6499fcbeeed82e403f7770
-  node_type :: CommonResources.Node -> GHC.Base.String
-  RecSel CommonResources.Node
-  {- Arity: 1, HasNoCafRefs, Strictness: <S(LS),1*U(A,1*U)>,
-     Unfolding: InlineRule (1, True, False)
-                (\ ds :: CommonResources.Node ->
-                 case ds of wild { CommonResources.Node ds1 ds2 -> ds2 }) -}
-83e0329c65d6a51a749b027652aab0f7
+e35f52edcea4850409ba6751bfa48a8c
   nodes :: CommonResources.SocialGraph -> [CommonResources.Node]
   RecSel CommonResources.SocialGraph
   {- Arity: 1, HasNoCafRefs, Strictness: <S(SL),1*U(1*U,A)>,
@@ -6811,20 +6800,20 @@ af462cf7b7bfb650e01de9388605ed86
      Unfolding: InlineRule (1, True, False)
                 (\ ds :: CommonResources.Response ->
                  case ds of wild { CommonResources.Response ds1 -> ds1 }) -}
-21ed5eb5165ca679375c6f1fe40650e6
+a1bf4d6d1328ac64fe6c96450c598f39
   searchhost :: GHC.Base.String
-  {- Unfolding: (GHC.CString.unpackCString# "localhost"#) -}
+  {- Unfolding: (CommonResources.crawlerhost) -}
 98d5ea95b9271b07b375dff26a63fb48
   searchport :: GHC.Base.String
   {- Unfolding: (GHC.CString.unpackCString# "8081"#) -}
-2855ddedf6de1e83549e8efe6af129dc
-  start :: CommonResources.Link -> GHC.Base.String
+db0960b93f5d9e8c72a8f1f7f0e2d63a
+  source :: CommonResources.Link -> GHC.Base.String
   RecSel CommonResources.Link
   {- Arity: 1, HasNoCafRefs, Strictness: <S(SLL),1*U(1*U,A,A)>,
      Unfolding: InlineRule (1, True, False)
                 (\ ds :: CommonResources.Link ->
                  case ds of wild { CommonResources.Link ds1 ds2 ds3 -> ds1 }) -}
-16439b0654d5d4da1ca386f79d4a5ac9
+87e9d4c9016635eb9fcfc1a02c7caab7
   target :: CommonResources.Link -> GHC.Base.String
   RecSel CommonResources.Link
   {- Arity: 1, HasNoCafRefs, Strictness: <S(LSL),1*U(A,1*U,A)>,
@@ -6838,6 +6827,13 @@ af462cf7b7bfb650e01de9388605ed86
      Unfolding: InlineRule (1, True, False)
                 (\ ds :: CommonResources.User ->
                  case ds of wild { CommonResources.User ds1 ds2 -> ds1 }) -}
+e32345f2fd03dcfa7ea49733cd79dfc9
+  value :: CommonResources.Link -> GHC.Base.String
+  RecSel CommonResources.Link
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LLS),1*U(A,A,1*U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: CommonResources.Link ->
+                 case ds of wild { CommonResources.Link ds1 ds2 ds3 -> ds3 }) -}
 instance GHC.Generics.Constructor [CommonResources.C1_0Link]
   = CommonResources.$fConstructorLink
 instance GHC.Generics.Constructor [CommonResources.C1_0Node]
@@ -6941,10 +6937,10 @@ instance Data.Aeson.Types.Class.ToJSON [CommonResources.User]
   = CommonResources.$fToJSONUser
 family instance GHC.Generics.Rep [CommonResources.User]
   = CommonResources.Rep_User
-family instance GHC.Generics.Rep [CommonResources.Response]
-  = CommonResources.Rep_Response
 family instance GHC.Generics.Rep [CommonResources.SocialGraph]
   = CommonResources.Rep_SocialGraph
+family instance GHC.Generics.Rep [CommonResources.Response]
+  = CommonResources.Rep_Response
 family instance GHC.Generics.Rep [CommonResources.Node]
   = CommonResources.Rep_Node
 family instance GHC.Generics.Rep [CommonResources.Link]

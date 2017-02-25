@@ -138,7 +138,7 @@ formatRepo auth uname state repo = do
   case seen_already of
     Just r -> return ()
     Nothing -> do
-      let repodata = Node (unpack repoHTML) "Repo"
+      let repodata = Node (unpack repoHTML) "1"
       atomically $ addNode state repodata repoHTML
       liftIO $ MongodbHelpers.withMongoDbConnection $ upsert (select ["name" =: (unpack repoHTML)] "Node_RECORD") $ toBSON repodata
       contributers <- Github.contributors' auth (mkOwnerName $ untagName $ simpleOwnerLogin (GHDR.repoOwner repo)) (GHDR.repoName repo)
@@ -149,13 +149,13 @@ formatRepo auth uname state repo = do
 userformat :: Maybe GHD.Auth -> State -> Text -> GHDR.Contributor -> IO()
 userformat auth state prev_repo contributer = do
   let userLogin = untagName $ simpleUserLogin $ fromJust $ contributorToSimpleUser contributer
-  let userData = (Node (unpack userLogin) "User")
+  let userData = (Node (unpack userLogin) "2")
   seen_already <- atomically $ lookupNode state userLogin
   case seen_already of
     Just u -> return ()
     Nothing -> do
       liftIO $ MongodbHelpers.withMongoDbConnection $ upsert (select ["name" =: (unpack userLogin)] "Node_RECORD") $ toBSON userData
-      let link = (Link (unpack userLogin) (unpack prev_repo) "Contributor")
+      let link = (Link (unpack userLogin) (unpack prev_repo) "4")
       liftIO $ MongodbHelpers.withMongoDbConnection $ upsert (select ["start" =: (unpack userLogin), "target" =: (unpack prev_repo)] "Link_RECORD") $ toBSON link
       atomically $ addNode state userData userLogin
       forkIO $ getrepos userLogin auth state

@@ -35,19 +35,19 @@ type CrawlerApi =
     "kill" :> ReqBody '[JSON] User :> Post '[JSON] Response
 
 type SearchApi =
-	"socialGraph" :> ReqBody '[JSON] User :> Post '[JSON] SocialGraph
+	"socialGraph" :> Get '[JSON] SocialGraph
 
 data Node = Node{
-  name :: String,
-  node_type :: String
+  id :: String,
+  group :: String
 } deriving(ToJSON, FromJSON, Generic, Eq, Show, ToBSON, FromBSON)
 instance FromBSON String
 instance ToBSON String
 
 data Link = Link{
-  start :: String,
+  source :: String,
   target :: String,
-  link_type :: String
+  value :: String
 }deriving(ToJSON, FromJSON, Generic, Eq, Show, ToBSON, FromBSON)
 
 data SocialGraph = SocialGraph{

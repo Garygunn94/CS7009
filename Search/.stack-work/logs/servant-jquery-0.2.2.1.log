@@ -1,0 +1,20 @@
+Configuring servant-jquery-0.2.2.1...
+Building servant-jquery-0.2.2.1...
+Preprocessing library servant-jquery-0.2.2.1...
+[1 of 2] Compiling Servant.JQuery.Internal ( src/Servant/JQuery/Internal.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/Servant/JQuery/Internal.o )
+
+src/Servant/JQuery/Internal.hs:96:5: error:
+    Ambiguous occurrence ‘List’
+    It could refer to either ‘Control.Lens.List’,
+                             imported from ‘Control.Lens’ at src/Servant/JQuery/Internal.hs:10:1-19
+                             (and originally defined in ‘Control.Lens.Iso’)
+                          or ‘Servant.JQuery.Internal.List’,
+                             defined at src/Servant/JQuery/Internal.hs:48:5
+
+src/Servant/JQuery/Internal.hs:183:47: error:
+    Ambiguous occurrence ‘List’
+    It could refer to either ‘Control.Lens.List’,
+                             imported from ‘Control.Lens’ at src/Servant/JQuery/Internal.hs:10:1-19
+                             (and originally defined in ‘Control.Lens.Iso’)
+                          or ‘Servant.JQuery.Internal.List’,
+                             defined at src/Servant/JQuery/Internal.hs:48:5
