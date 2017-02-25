@@ -125,7 +125,9 @@ getrepos uname auth state = liftIO $ do
   --	[(Task _ _ True)] -> do
 	  possibleRepos <- Github.userRepos (mkOwnerName uname) GHDR.RepoPublicityAll
 	  case possibleRepos of
-	       (Left error)  -> return ()
+	       (Left error)  -> do
+                putStrLn $ show error
+	       	return ()
 	       (Right repos) -> do
 	          mapM_ (formatRepo auth uname state) repos
 	         --return (V.toList x)
@@ -140,7 +142,7 @@ formatRepo auth uname state repo = do
     Nothing -> do
       let repodata = Node (unpack repoHTML) "1"
       atomically $ addNode state repodata repoHTML
-      liftIO $ MongodbHelpers.withMongoDbConnection $ upsert (select ["name" =: (unpack repoHTML)] "Node_RECORD") $ toBSON repodata
+      liftIO $ MongodbHelpers.withMongoDbConnection $ upsert (select ["id" =: (unpack repoHTML)] "Node_RECORD") $ toBSON repodata
       contributers <- Github.contributors' auth (mkOwnerName $ untagName $ simpleOwnerLogin (GHDR.repoOwner repo)) (GHDR.repoName repo)
       case contributers of
         (Left error) -> putStrLn $ "Error: " DL.++ (show error)
@@ -154,9 +156,9 @@ userformat auth state prev_repo contributer = do
   case seen_already of
     Just u -> return ()
     Nothing -> do
-      liftIO $ MongodbHelpers.withMongoDbConnection $ upsert (select ["name" =: (unpack userLogin)] "Node_RECORD") $ toBSON userData
+      liftIO $ MongodbHelpers.withMongoDbConnection $ upsert (select ["id" =: (unpack userLogin)] "Node_RECORD") $ toBSON userData
       let link = (Link (unpack userLogin) (unpack prev_repo) "4")
-      liftIO $ MongodbHelpers.withMongoDbConnection $ upsert (select ["start" =: (unpack userLogin), "target" =: (unpack prev_repo)] "Link_RECORD") $ toBSON link
+      liftIO $ MongodbHelpers.withMongoDbConnection $ upsert (select ["source" =: (unpack userLogin), "target" =: (unpack prev_repo)] "Link_RECORD") $ toBSON link
       atomically $ addNode state userData userLogin
       forkIO $ getrepos userLogin auth state
       return()
