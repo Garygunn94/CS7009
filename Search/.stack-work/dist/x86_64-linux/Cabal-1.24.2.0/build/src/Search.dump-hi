@@ -1,12 +1,12 @@
 
 ==================== FINAL INTERFACE ====================
-2017-02-25 02:49:55.47509 UTC
+2017-02-25 10:25:19.211458 UTC
 
 interface Search-0.1.0.0-1DjOwK0NIga9yxix8ruoSo:Search 8001
-  interface hash: 1a8bc45ae2d7affec782238700584419
-  ABI hash: 5888db7d24d2694a929d9c232123c4d5
-  export-list hash: 3d9f5946c8cd8c6bfa77a4ba7604d22a
-  orphan hash: cd2c7580817a04d86e8f649006c178b2
+  interface hash: 0a042d798fa42b9c7a5d7bf20f0ce1cf
+  ABI hash: bc296543463a6c647f9d18fce1ecfb8e
+  export-list hash: 96db30cac1de4f430aea06fdbba6fc12
+  orphan hash: 7020981fa64fb7e09cd00ebae6e41881
   flag hash: befc830e2f81db4375ecfe4034bd792a
   sig of: Nothing
   used TH splices: False
@@ -241,7 +241,7 @@ family instance modules: CommonResources-0.1.0.0@CommonResources-0.1.0.0-9oGhjaA
                          vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Unboxed
                          vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Unboxed.Base
                          zlib-0.6.1.2@zlib-0.6.1.2-4CWLN1T27kOJhNvXgy46ZV:Codec.Compression.Zlib.Stream
-import  -/  CommonResources-0.1.0.0@CommonResources-0.1.0.0-9oGhjaAGZvDFMay6riBguH:CommonResources 863ab13ba8aa8f72475aca5b2dde5fe0
+import  -/  CommonResources-0.1.0.0@CommonResources-0.1.0.0-9oGhjaAGZvDFMay6riBguH:CommonResources c2b8b25c7ed1ef9958c090039f3d2a94
 import  -/  CommonResources-0.1.0.0@CommonResources-0.1.0.0-9oGhjaAGZvDFMay6riBguH:MongodbHelpers 789c1632b46e94acf191cbba8ae79a85
 import  -/  aeson-1.1.0.0@aeson-1.1.0.0-6czAS50gW4ueCUtDYEEe5:Data.Aeson b187cf5010344c18bbca3711f42bab36
 import  -/  aeson-1.1.0.0@aeson-1.1.0.0-6czAS50gW4ueCUtDYEEe5:Data.Aeson.TH 0de008ad842d6b08fe41045eb928293b
@@ -280,7 +280,7 @@ import  -/  wai-cors-0.2.5@wai-cors-0.2.5-BDy2NVoLgcb3RRwf6ZB87s:Network.Wai.Mid
 import  -/  wai-logger-2.3.0@wai-logger-2.3.0-C2kjKtxJuQq8O8LHz2WBTM:Network.Wai.Logger 6501b45cb087f748ff445f19b41ab5ed
 import  -/  warp-3.2.11@warp-3.2.11-EqWoeK75b7sENnTnGPN6ko:Network.Wai.Handler.Warp b1ddd37b2696083e71e7b31c03fa5d61
 import  -/  warp-3.2.11@warp-3.2.11-EqWoeK75b7sENnTnGPN6ko:Network.Wai.Handler.Warp.Run 4d875f83c8c91e00480a03fda719ffae
-56ace6da88ac72325c3819e5e139dc6e
+7473e3c4f2a9007292a439eba959d5de
   $s$fAllCTRender:a ::
     Servant.API.ContentTypes.AllCTRender
       '[Servant.API.ContentTypes.JSON] CommonResources.SocialGraph
@@ -312,7 +312,7 @@ import  -/  warp-3.2.11@warp-3.2.11-EqWoeK75b7sENnTnGPN6ko:Network.Wai.Handler.W
                        `cast`
                      (Sym (Servant.API.ContentTypes.N:AllMime[0] <'[]>_N))
                      Search.$s$fAllCTRender:a_$dAllMimeRender) -}
-a69e45d3d50aebb781e2d212d8e66274
+152f36b3272511787c08778e78cb9793
   $s$fAllCTRender:a1 ::
     Data.Proxy.Proxy '[Servant.API.ContentTypes.JSON]
     -> CommonResources.SocialGraph
@@ -330,21 +330,21 @@ a69e45d3d50aebb781e2d212d8e66274
                    (GHC.Types.[]
                       @ (Network.HTTP.Media.MediaType.Internal.MediaType,
                          Data.ByteString.Lazy.Internal.ByteString))) -}
-059bc26f50fbc4fcdb98dc34c00162d3
+1063383067b1d1ed2a79c314d6f7ba0f
   $s$fAllCTRender:a_$dAllMimeRender ::
     Servant.API.ContentTypes.AllMimeRender
       '[Servant.API.ContentTypes.JSON] CommonResources.SocialGraph
   {- Strictness: m,
      Unfolding: InlineRule (0, True, True)
                 Search.$s$fAllCTRender:a_$s$fAllMimeRender:a0 -}
-129dcd90e880b938423092091e73281b
+6e63d7ad1cbba21478912e4d66755278
   $s$fAllCTRender:a_$dMimeRender ::
     Servant.API.ContentTypes.MimeRender
       Servant.API.ContentTypes.JSON CommonResources.SocialGraph
   {- Strictness: m,
      Unfolding: InlineRule (0, True, True)
                 Search.$s$fAllCTRender:a_$s$fMimeRenderTYPEJSONa -}
-8677f966d8308286cdfad236d099d50a
+a8177b9d66500cbd3a794dcb5b703170
   $s$fAllCTRender:a_$s$fAllMimeRender:a0 ::
     Servant.API.ContentTypes.AllMimeRender
       '[Servant.API.ContentTypes.JSON] CommonResources.SocialGraph
@@ -357,7 +357,7 @@ a69e45d3d50aebb781e2d212d8e66274
                      @ CommonResources.SocialGraph
                      Search.$s$fAllCTRender:a_$dMimeRender)
                   Search.$s$fAllCTRender:a1 -}
-21afbde06c93a4f53410d388122c865e
+71ab5b9bc5e881a1a132f3c6ab78a0f9
   $s$fAllCTRender:a_$s$fMimeRenderTYPEJSONa ::
     Servant.API.ContentTypes.MimeRender
       Servant.API.ContentTypes.JSON CommonResources.SocialGraph
@@ -370,7 +370,7 @@ a69e45d3d50aebb781e2d212d8e66274
                      @ CommonResources.SocialGraph
                      CommonResources.$fToJSONSocialGraph)
                   Search.$s$fAllCTRender:a_$s$fMimeRenderTYPEJSONa_$cmimeRender -}
-d6c840e547d9fde9cca350b8c3ca1f9a
+a8b49211f09df6a643a697e65e9fcda3
   $s$fAllCTRender:a_$s$fMimeRenderTYPEJSONa_$cmimeRender ::
     Data.Proxy.Proxy Servant.API.ContentTypes.JSON
     -> CommonResources.SocialGraph
@@ -380,7 +380,7 @@ d6c840e547d9fde9cca350b8c3ca1f9a
                 (\ (ds :: Data.Proxy.Proxy Servant.API.ContentTypes.JSON)
                    (eta :: CommonResources.SocialGraph) ->
                  Search.$s$fAllCTRender:a_$sencode eta) -}
-9d83449f7118a3aa139fa282858842c8
+709da5de502145848ba790a834f38489
   $s$fAllCTRender:a_$sencode ::
     CommonResources.SocialGraph
     -> Data.ByteString.Lazy.Internal.ByteString
@@ -437,11 +437,11 @@ d62c6c64490b6c048587fcdc8179cb28
     Control.Monad.Trans.Except.ExceptT
       Servant.Server.Internal.ServantErr.ServantErr GHC.Types.IO
     :: * -> *
-48fd66c8421a5837eaa44a457e3414ac
+d4c16d074295f2f204fe00e379a8af15
   type SearchApi' =
     CommonResources.SearchApi
     Servant.API.Alternative.:<|> Servant.API.Raw.Raw
-dd2cbb9a8d86ffb7cdc19f0f2c8264ab
+d3033320e50552f0b893286364ef62f3
   getSocialGraph :: Search.ApiHandler CommonResources.SocialGraph
   {- Arity: 1, Strictness: <S,U>,
      Unfolding: InlineRule (0, True, True)
@@ -456,7 +456,7 @@ dd2cbb9a8d86ffb7cdc19f0f2c8264ab
                                <Servant.Server.Internal.ServantErr.ServantErr>_N
                                <GHC.Types.IO>_R
                                <CommonResources.SocialGraph>_N))) -}
-4cb29d48c1407560e6042b01c2112859
+2cd6300fc5e2e3c3e9d019083e6a8c3c
   getSocialGraph1 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld,
@@ -506,7 +506,7 @@ dd2cbb9a8d86ffb7cdc19f0f2c8264ab
                       @ Servant.Server.Internal.ServantErr.ServantErr
                       @ CommonResources.SocialGraph
                       (CommonResources.SocialGraph ipv3 ipv7) #) } } } }) -}
-66ba5f79cde413058dbd471cee79d6f9
+3375b4ca3a2c07a9944701bf19f673d2
   getSocialGraph2 ::
     Database.MongoDB.Query.MongoContext
     -> GHC.Prim.State# GHC.Prim.RealWorld
@@ -563,7 +563,7 @@ dd2cbb9a8d86ffb7cdc19f0f2c8264ab
 dd7c6d2dd89cd6c94641d5822fe9e5ba
   getSocialGraph5 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "Fetching Link Data"#) -}
-2cadc09083e70396f77fe4bd3bb2c6f9
+34b18c0387debeafae2cd2bfc1579129
   getSocialGraph6 ::
     Database.MongoDB.Query.MongoContext
     -> GHC.Prim.State# GHC.Prim.RealWorld
@@ -620,12 +620,12 @@ f5c6f144cd92e9a724e104460be9a845
 798befc0707f2fd8650f9383946d34dd
   getSocialGraph9 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "Fetching Node data"#) -}
-69f7a65ee6aad1a565f3c61c53d93212
+5f93670598ede0b263a275d9e67419cf
   mkApp :: GHC.Types.IO ()
   {- Arity: 1, Strictness: <S,U>,
      Unfolding: InlineRule (0, True, True)
                 Search.mkApp1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
-a62af021a0f2aaab942c2be08d918dd2
+6ec5fc81c6b245c7c16f38953aa3bc59
   mkApp1 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
@@ -711,7 +711,7 @@ a62af021a0f2aaab942c2be08d918dd2
                     ->_R Sym (GHC.Types.N:IO[0]
                                   <Network.Wai.Internal.ResponseReceived>_R))
                    ipv2 } }) -}
-0884dcdce0f31c1eab96d82edee9feb9
+1da783613724340036c085ea1a81c512
   mkApp10 ::
     Servant.Server.Internal.RoutingApplication.RouteResult
       (Servant.Server.Internal.Server
@@ -757,7 +757,7 @@ a62af021a0f2aaab942c2be08d918dd2
                                                  <Control.Monad.Trans.Except.ExceptT
                                                     Servant.Server.Internal.ServantErr.ServantErr
                                                     GHC.Types.IO>_N))))))) -}
-cda57e02cdc33c2edfa4c867f8041ace
+85bb515b4236806a7f8ace75dbbc98a1
   mkApp11 ::
     Servant.Server.Internal.RoutingApplication.Delayed
       ()
@@ -955,7 +955,7 @@ d0bf13e27bbcf8aec5c3c703808bbfe6
                              (Sym (GHC.Classes.N:IP[0]
                                        <"callStack">_N <GHC.Stack.Types.CallStack>_N))
                              Text.Read.readEither2 } }) -}
-05068ca96e8c57e96b99816e32dd8153
+bfb461c77da86d54726c2a76fe6be17f
   mkApp2 ::
     Network.Wai.Internal.Request
     -> (Network.Wai.Internal.Response
@@ -981,7 +981,7 @@ ff143dc852a0db32fa7180775862af91
                  (Text.ParserCombinators.ReadP.N:ReadP[0] <GHC.Types.Int>_R)
                    @ GHC.Types.Int
                    (Text.Read.readEither5 @ GHC.Types.Int)) -}
-6af2131bf98bbb2faca595874e0dd0e2
+0b726197743c2f3fc53e89658fced820
   mkApp22 ::
     GHC.IO.Handle.Types.Handle
     -> GHC.Prim.State# GHC.Prim.RealWorld
@@ -990,16 +990,16 @@ ff143dc852a0db32fa7180775862af91
      Unfolding: (\ (y :: GHC.IO.Handle.Types.Handle)[OneShot]
                    (eta2 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
                  Data.Text.IO.appendFile2 y Search.mkApp23 eta2) -}
-04309f8cdd04ab0309fc1adf12016b3e
+0c0c02a363951b697a82d7638d9c0fa4
   mkApp23 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.concat Search.mkApp24) -}
-57420c629839a2d387d7d6e951d96ff1
+4f4a7a3224b9d0e03ef8b34ae2985449
   mkApp24 :: [Data.Text.Internal.Text]
   {- Unfolding: (GHC.Types.:
                    @ Data.Text.Internal.Text
                    Search.mkApp25
                    (GHC.Types.[] @ Data.Text.Internal.Text)) -}
-2f6448a0f98e3681de92a7b929a03d0d
+52f61b381527126d33faa242daa1cea3
   mkApp25 :: Data.Text.Internal.Text
   {- Unfolding: (Servant.JS.JQuery.generateJQueryJS
                    Search.mkApp26
@@ -1012,7 +1012,7 @@ ff143dc852a0db32fa7180775862af91
                              <CommonResources.SocialGraph>_N
                              <'Network.HTTP.Types.Method.GET>_N
                              <200>_N))) -}
-27d152d0c7eb49aed76bf04e5b4e6289
+44db691b5f4eac7b0e4c4bf7d5d2ccd6
   mkApp26 ::
     Servant.Foreign.Internal.Foreign
       Servant.API.ContentTypes.NoContent
@@ -1059,7 +1059,7 @@ ff143dc852a0db32fa7180775862af91
                                               CommonResources.SocialGraph))
                    (Servant.Foreign.Internal.defReq
                       @ Servant.API.ContentTypes.NoContent)) -}
-db981507690bc5c604c4db86a9446210
+180131804a910ed8831f5da3e0e305a7
   mkApp27 ::
     Data.Proxy.Proxy Servant.Foreign.Internal.NoTypes
     -> Data.Proxy.Proxy Servant.API.ContentTypes.NoContent
@@ -1163,7 +1163,7 @@ db981507690bc5c604c4db86a9446210
                    @ GHC.Types.Char
                    Search.www
                    Search.mkApp30) -}
-c56c139e00627ad0d535d9a54ffd4784
+6f38b24077235090ffd21df084ca4723
   mkApp3 :: Network.Wai.Application
   {- Arity: 2,
      Unfolding: (Servant.Server.Internal.RoutingApplication.toApplication
@@ -1176,7 +1176,7 @@ f6fe533f08a5aa15b822b44dd4c7bb18
   {- Unfolding: (GHC.CString.unpackAppendCString#
                    "Search starting on port: "#
                    CommonResources.searchport) -}
-77b966f76c4b031661ca85374e315aae
+78f0bd313dfa92f34d1302779e1cde54
   mkApp4 ::
     Network.Wai.Internal.Request
     -> (Servant.Server.Internal.RoutingApplication.RouteResult
@@ -1196,7 +1196,7 @@ f6fe533f08a5aa15b822b44dd4c7bb18
                    GHC.Tuple.()
                    eta
                    eta1) -}
-fc3fce068d037cdd5c4b6e2a101a683b
+688d0f488ec7570ff20f5f4b4fb49945
   mkApp5 ::
     Servant.Server.Internal.Router.Router'
       () Servant.Server.Internal.RoutingApplication.RoutingApplication
@@ -1207,7 +1207,7 @@ fc3fce068d037cdd5c4b6e2a101a683b
                    (GHC.Types.[]
                       @ (()
                          -> Servant.Server.Internal.RoutingApplication.RoutingApplication))) -}
-8252e87101b124eb2a885dc9c140ac36
+820ba0087da3ba37dffc9a0151a28a33
   mkApp6 ::
     Data.Map.Base.Map
       Data.Text.Internal.Text
@@ -1234,7 +1234,7 @@ fc3fce068d037cdd5c4b6e2a101a683b
                       @ (Servant.Server.Internal.Router.Router'
                            ()
                            Servant.Server.Internal.RoutingApplication.RoutingApplication)) } }) -}
-27ac5491b6398104684bc31105294e59
+5d4f6fc62f5305b8f4fbbf6dba16f1f7
   mkApp7 :: Servant.Server.Internal.Router.Router ()
   {- Unfolding: (Search.mkApp11
                    Search.mkApp8
@@ -1252,7 +1252,7 @@ fc3fce068d037cdd5c4b6e2a101a683b
                                 <Control.Monad.Trans.Except.ExceptT
                                    Servant.Server.Internal.ServantErr.ServantErr
                                    GHC.Types.IO>_N)))_R) -}
-dc9f7f7590f8f79558f17484c3991f39
+0227d1adc98c38e95f3c3934c1d1fa2f
   mkApp8 ::
     Servant.Server.Internal.RoutingApplication.Delayed
       ()
@@ -1308,7 +1308,7 @@ dc9f7f7590f8f79558f17484c3991f39
                         (Sym (Servant.Server.Internal.RoutingApplication.N:DelayedIO[0]
                                   <()>_R)))
                    Search.mkApp9) -}
-b509cb98302833d68d85053722902afc
+ebf30ec68fb132f086daee8d54b04dff
   mkApp9 ::
     ()
     -> ()
@@ -1325,7 +1325,7 @@ b509cb98302833d68d85053722902afc
                    (b1 :: ())
                    (req :: Network.Wai.Internal.Request) ->
                  Search.mkApp10) -}
-6890b7634b4d796569f8d2997dda607b
+c3924d3c04317ef4188b9884cdecd51e
   mkApp_r :: Servant.Server.Internal.Router.Router ()
   {- Unfolding: (case Servant.Server.Internal.$w$croute6
                         @ '[]
@@ -1340,17 +1340,17 @@ b509cb98302833d68d85053722902afc
                       @ ()
                       @ Servant.Server.Internal.RoutingApplication.RoutingApplication
                       ww1) }) -}
-a5d55afe28017eb886526e2438c20ed0
+c5568d3958710bdbd522e1beb402f912
   searchApi :: Data.Proxy.Proxy CommonResources.SearchApi
   {- HasNoCafRefs,
      Unfolding: InlineRule (0, True, True)
                 (Data.Proxy.Proxy @ * @ CommonResources.SearchApi) -}
-b937e4e7ae5d5c01c5e55b88bdf29f20
+941a543748f10657258f99964b6633cc
   searchApi' :: Data.Proxy.Proxy Search.SearchApi'
   {- HasNoCafRefs,
      Unfolding: InlineRule (0, True, True)
                 (Data.Proxy.Proxy @ * @ Search.SearchApi') -}
-33aa0e83c8d6446f6ee66c146eefcebc
+1c9d8424c3bba9441bfab3c62684620e
   searchApp :: Network.Wai.Application
   {- Arity: 3,
      Unfolding: InlineRule (0, True, True)
@@ -1361,7 +1361,7 @@ b937e4e7ae5d5c01c5e55b88bdf29f20
                        -> GHC.Types.IO Network.Wai.Internal.ResponseReceived>_R
                  ->_R Sym (GHC.Types.N:IO[0]
                                <Network.Wai.Internal.ResponseReceived>_R)) -}
-67236366ca5660161bed69d76187b214
+18a7c772273a750a03744823b408a9b1
   server :: Servant.Server.Internal.Server CommonResources.SearchApi
   {- Strictness: <S,U>,
      Unfolding: InlineRule (0, True, True)
@@ -1398,7 +1398,7 @@ b937e4e7ae5d5c01c5e55b88bdf29f20
                                               <Control.Monad.Trans.Except.ExceptT
                                                  Servant.Server.Internal.ServantErr.ServantErr
                                                  GHC.Types.IO>_N)))))) -}
-f1d2f7ef55d8bc7269f6343c842f76fe
+092be09a184e8295981a74ae76a2957a
   server' :: Servant.Server.Internal.Server Search.SearchApi'
   {- Strictness: m,
      Unfolding: InlineRule (0, True, True)
@@ -1413,7 +1413,7 @@ f1d2f7ef55d8bc7269f6343c842f76fe
                                <Control.Monad.Trans.Except.ExceptT
                                   Servant.Server.Internal.ServantErr.ServantErr
                                   GHC.Types.IO>_N))) -}
-7669c11f213fc21a9c373026a52f847a
+000be4f568c71d54d3d0995fd8a9c1a0
   server'1 ::
     Servant.Server.Internal.Server CommonResources.SearchApi
     Servant.API.Alternative.:<|> Servant.Server.Internal.Server
