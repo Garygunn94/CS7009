@@ -57,7 +57,8 @@ data SocialGraph = SocialGraph{
 
 data User = User{
 	username :: String,
-	auth_token :: String
+	auth_token :: String,
+  num_hops :: Int
 }deriving(ToJSON, FromJSON, Generic, Show, Eq)
 
 data Response = Response{

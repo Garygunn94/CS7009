@@ -40,7 +40,7 @@ import           	System.Log.Handler.Syslog
 import           	System.Log.Logger
 import         	  Data.Bson.Generic
 import qualified Data.List as DL hiding (find)
-import Data.Maybe                   (catMaybes, fromJust)
+import Data.Maybe                   (catMaybes, fromJust, fromMaybe)
 import Control.Monad (when, liftM)
 import Network.HTTP.Client (newManager, defaultManagerSettings)
 import CommonResources
@@ -98,7 +98,7 @@ mkApp = do
     run (read (crawlerport) ::Int) crawlerApp 
 
 initialize :: CommonResources.User -> ApiHandler Response
-initialize (CommonResources.User username authToken) = liftIO $ do
+initialize (CommonResources.User username authToken num_hops) = liftIO $ do
 	putStrLn "Received user crawl request, storing request"
 	let task = (Task username authToken True)
 	MongodbHelpers.withMongoDbConnection $ upsert (select ["tskUsername" =: username] "USER_TASK_RECORD") $ toBSON task
@@ -109,20 +109,21 @@ initialize (CommonResources.User username authToken) = liftIO $ do
         return resp
 
 terminate :: CommonResources.User -> ApiHandler Response
-terminate (CommonResources.User username authToken) = liftIO $ do
+terminate (CommonResources.User username authToken num_hops) = liftIO $ do
 	putStrLn "Terminating User Task"
 	let task = (Task username authToken False)
 	MongodbHelpers.withMongoDbConnection $ upsert (select ["tskUsername" =: username] "USER_TASK_RECORD") $ toBSON task
 	let resp = (Response "Terminated")
 	return resp
 
-getrepos :: Text -> Maybe GHD.Auth -> State -> Integer -> IO()
+getrepos :: Text -> Maybe GHD.Auth -> State -> Int -> IO()
 getrepos uname auth state hops = liftIO $ do
   --tasker <- MongodbHelpers.withMongoDbConnection $ do
  -- 	docs <- find (select ["tskUsername" =: (unpack uname)] "USER_TASK_RECORD") >>= drainCursor
   --	return $ catMaybes $ DL.map (\ b -> fromBSON b :: Maybe Task) docs
   --case tasker of
   --	[(Task _ _ True)] -> do
+  	  putStrLn (unpack uname)
   	  case hops > 0 of
   	  	True -> do
 		  possibleRepos <- Github.userRepos (mkOwnerName uname) GHDR.RepoPublicityAll
@@ -139,14 +140,16 @@ getrepos uname auth state hops = liftIO $ do
 	         --return (V.toList x)
 	--_ -> return()
 
-formatRepo :: Maybe GHD.Auth -> Text -> State -> Integer ->  Github.Repo -> IO()
+formatRepo :: Maybe GHD.Auth -> Text -> State -> Int ->  Github.Repo -> IO()
 formatRepo auth uname state hops repo = do
   let repoHTML = getUrl $ GHDR.repoHtmlUrl repo
   seen_already <- atomically $ lookupNode state repoHTML
   case seen_already of
     Just r -> return ()
     Nothing -> do
-      let repodata = Node (unpack repoHTML) "1"
+      let language = formatLanguage (GHDR.repoLanguage repo)
+      putStrLn (unpack repoHTML)
+      let repodata = Node (unpack repoHTML) (unpack language)
       atomically $ addNode state repodata repoHTML
       liftIO $ MongodbHelpers.withMongoDbConnection $ upsert (select ["id" =: (unpack repoHTML)] "Node_RECORD") $ toBSON repodata
       contributers <- Github.contributors' auth (mkOwnerName $ untagName $ simpleOwnerLogin (GHDR.repoOwner repo)) (GHDR.repoName repo)
@@ -154,11 +157,13 @@ formatRepo auth uname state hops repo = do
         (Left error) -> putStrLn $ "Error: " DL.++ (show error)
         (Right contribs) -> mapM_ (userformat auth state repoHTML hops) contribs
 
-userformat :: Maybe GHD.Auth -> State -> Text -> Integer -> GHDR.Contributor -> IO()
-userformat auth state prev_repo hops contributer = do
+userformat :: Maybe GHD.Auth -> State -> Text -> Int -> GHDR.Contributor -> IO()
+userformat auth state prev_repo hops contributer@(Github.KnownContributor contributions _ _ _ _ _) = do
+  --let contrib = contributer
   let userLogin = untagName $ simpleUserLogin $ fromJust $ contributorToSimpleUser contributer
-  let userData = (Node (unpack userLogin) "2")
-  let link = (Link (unpack userLogin) (unpack prev_repo) "4")
+  putStrLn (unpack userLogin)
+  let userData = (Node (unpack userLogin) "User")
+  let link = (Link (unpack userLogin) (unpack prev_repo) (show contributions))
   liftIO $ MongodbHelpers.withMongoDbConnection $ upsert (select ["source" =: (unpack userLogin), "target" =: (unpack prev_repo)] "Link_RECORD") $ toBSON link
   seen_already <- atomically $ lookupNode state userLogin
   case seen_already of
@@ -166,10 +171,11 @@ userformat auth state prev_repo hops contributer = do
     Nothing -> do
       liftIO $ MongodbHelpers.withMongoDbConnection $ upsert (select ["id" =: (unpack userLogin)] "Node_RECORD") $ toBSON userData
       atomically $ addNode state userData userLogin
-      forkIO $ getrepos userLogin auth state hops
-      return()
+      forkIO $ liftIO $ getrepos userLogin auth state hops
+      return ()
 
-fotmatLanguage (Just language) = getLanguage language
+formatLanguage (Just language) = getLanguage language
 formatLanguage Nothing = ""
+
 
 
