@@ -104,7 +104,7 @@ initialize (CommonResources.User username authToken num_hops) = liftIO $ do
 	MongodbHelpers.withMongoDbConnection $ upsert (select ["tskUsername" =: username] "USER_TASK_RECORD") $ toBSON task
 	state <- liftIO $ newState
 	let auth = Just $ MainGitHub.OAuth $ (DBC.pack authToken)
-        liftIO $ forkIO $ getrepos (DT.pack username) auth state 4
+        liftIO $ forkIO $ getrepos (DT.pack username) auth state num_hops
         let resp = (Response "Started")
         return resp
 
@@ -123,17 +123,18 @@ getrepos uname auth state hops = liftIO $ do
   --	return $ catMaybes $ DL.map (\ b -> fromBSON b :: Maybe Task) docs
   --case tasker of
   --	[(Task _ _ True)] -> do
-  	  putStrLn (unpack uname)
+  	  putStrLn ("Num hops := " DL.++ (show hops))
   	  case hops > 0 of
   	  	True -> do
+  	  	  putStrLn (unpack uname)
 		  possibleRepos <- Github.userRepos (mkOwnerName uname) GHDR.RepoPublicityAll
 		  case possibleRepos of
 		       (Left error)  -> do
 	                putStrLn $ show error
 		       	return ()
 		       (Right repos) -> do
-		       	  let hops = hops - 1
-		          mapM_ (formatRepo auth uname state hops) repos
+		       	  let hopers = hops - 1
+		          mapM_ (formatRepo auth uname state hopers) repos
 		False -> do
 			putStrLn "Completed all hops"
 			return ()
@@ -145,8 +146,14 @@ formatRepo auth uname state hops repo = do
   let repoHTML = getUrl $ GHDR.repoHtmlUrl repo
   seen_already <- atomically $ lookupNode state repoHTML
   case seen_already of
-    Just r -> return ()
+    Just r -> do
+        putStrLn ((show r) DL.++ ": Repo seen already")
+    	return ()
     Nothing -> do
+      let user = (Node (unpack uname) "User")
+      liftIO $ MongodbHelpers.withMongoDbConnection $ upsert (select ["id" =: (unpack uname)] "Node_RECORD") $ toBSON user
+      let link = (Link (unpack uname) (unpack repoHTML) "1")
+      liftIO $ MongodbHelpers.withMongoDbConnection $ upsert (select ["source" =: (unpack uname), "target" =: (unpack repoHTML)] "Link_RECORD") $ toBSON link	
       let language = formatLanguage (GHDR.repoLanguage repo)
       putStrLn (unpack repoHTML)
       let repodata = Node (unpack repoHTML) (unpack language)
@@ -171,7 +178,7 @@ userformat auth state prev_repo hops contributer@(Github.KnownContributor contri
     Nothing -> do
       liftIO $ MongodbHelpers.withMongoDbConnection $ upsert (select ["id" =: (unpack userLogin)] "Node_RECORD") $ toBSON userData
       atomically $ addNode state userData userLogin
-      forkIO $ liftIO $ getrepos userLogin auth state hops
+      getrepos userLogin auth state hops
       return ()
 
 formatLanguage (Just language) = getLanguage language
