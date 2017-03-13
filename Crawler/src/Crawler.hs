@@ -59,7 +59,6 @@ type ApiHandler = ExceptT ServantErr IO
 
 data Task = Task{
 	tskUsername :: String,
-	tskAuthToken :: String,
 	running :: Bool
 }deriving(ToJSON, ToBSON, FromJSON, FromBSON, Generic, Show, Eq)
 
@@ -100,29 +99,31 @@ mkApp = do
 initialize :: CommonResources.User -> ApiHandler Response
 initialize (CommonResources.User username authToken num_hops) = liftIO $ do
 	putStrLn "Received user crawl request, storing request"
-	let task = (Task username authToken True)
-	MongodbHelpers.withMongoDbConnection $ upsert (select ["tskUsername" =: username] "USER_TASK_RECORD") $ toBSON task
-	state <- liftIO $ newState
-	let auth = Just $ MainGitHub.OAuth $ (DBC.pack authToken)
-        liftIO $ forkIO $ getrepos (DT.pack username) auth state num_hops
-        let resp = (Response "Started")
-        return resp
+	tasker <- MongodbHelpers.withMongoDbConnection $ do
+	 	docs <- find (select ["tskUsername" =: (username)] "USER_TASK_RECORD") >>= drainCursor
+	  	return $ catMaybes $ DL.map (\ b -> fromBSON b :: Maybe Task) docs
+	case tasker of
+	   [(Task _ False)] -> return (Response "Already Completed")
+	   [(Task _ True)] -> return (Response "Currently executing")
+	   _ -> do
+			let task = (Task username True)
+			MongodbHelpers.withMongoDbConnection $ upsert (select ["tskUsername" =: username] "USER_TASK_RECORD") $ toBSON task
+			state <- liftIO $ newState
+			let auth = Just $ MainGitHub.OAuth $ (DBC.pack authToken)
+		        liftIO $ forkIO $ getrepos (DT.pack username) auth state num_hops
+		        let resp = (Response "Started")
+		        return resp
 
 terminate :: CommonResources.User -> ApiHandler Response
 terminate (CommonResources.User username authToken num_hops) = liftIO $ do
 	putStrLn "Terminating User Task"
-	let task = (Task username authToken False)
+	let task = (Task username False)
 	MongodbHelpers.withMongoDbConnection $ upsert (select ["tskUsername" =: username] "USER_TASK_RECORD") $ toBSON task
 	let resp = (Response "Terminated")
 	return resp
 
 getrepos :: Text -> Maybe GHD.Auth -> State -> Int -> IO()
 getrepos uname auth state hops = liftIO $ do
-  --tasker <- MongodbHelpers.withMongoDbConnection $ do
- -- 	docs <- find (select ["tskUsername" =: (unpack uname)] "USER_TASK_RECORD") >>= drainCursor
-  --	return $ catMaybes $ DL.map (\ b -> fromBSON b :: Maybe Task) docs
-  --case tasker of
-  --	[(Task _ _ True)] -> do
   	  putStrLn ("Num hops := " DL.++ (show hops))
   	  case hops > 0 of
   	  	True -> do
@@ -135,6 +136,16 @@ getrepos uname auth state hops = liftIO $ do
 		       (Right repos) -> do
 		       	  let hopers = hops - 1
 		          mapM_ (formatRepo auth uname state hopers) repos
+		          tasker <- MongodbHelpers.withMongoDbConnection $ do
+				 	docs <- find (select ["tskUsername" =: (unpack uname)] "USER_TASK_RECORD") >>= drainCursor
+				  	return $ catMaybes $ DL.map (\ b -> fromBSON b :: Maybe Task) docs
+		          case tasker of
+			     [(Task _ True)] -> do
+				  let task = (Task (unpack uname) False)
+				  MongodbHelpers.withMongoDbConnection $ upsert (select ["tskUsername" =: (unpack uname)] "USER_TASK_RECORD") $ toBSON task
+				  return ()
+			     _ -> return ()
+
 		False -> do
 			putStrLn "Completed all hops"
 			return ()

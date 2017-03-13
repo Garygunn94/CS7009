@@ -9,7 +9,11 @@
     <p>
       Your data is protected with us <strong><span class="username">#{show "deets"}</span></strong>!
 
+
+    <input type="button" value="Social Graph" id="MyButton" onclick="SocialGraph();">
+    
     <svg width="960" height="600">
     <script src="https://d3js.org/d3.v4.min.js">
     <script>
+
 
