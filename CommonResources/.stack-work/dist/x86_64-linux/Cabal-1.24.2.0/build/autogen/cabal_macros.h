@@ -28,6 +28,20 @@
   (major1) == 0 && (major2) <  0 || \
   (major1) == 0 && (major2) == 0 && (minor) <= 8)
 
+/* package containers-0.5.7.1 */
+#define VERSION_containers "0.5.7.1"
+#define MIN_VERSION_containers(major1,major2,minor) (\
+  (major1) <  0 || \
+  (major1) == 0 && (major2) <  5 || \
+  (major1) == 0 && (major2) == 5 && (minor) <= 7)
+
+/* package hasbolt-0.1.0.9 */
+#define VERSION_hasbolt "0.1.0.9"
+#define MIN_VERSION_hasbolt(major1,major2,minor) (\
+  (major1) <  0 || \
+  (major1) == 0 && (major2) <  1 || \
+  (major1) == 0 && (major2) == 1 && (minor) <= 0)
+
 /* package hslogger-1.2.10 */
 #define VERSION_hslogger "1.2.10"
 #define MIN_VERSION_hslogger(major1,major2,minor) (\
@@ -175,7 +189,7 @@
   (major1) == 2 && (major2) <  26 || \
   (major1) == 2 && (major2) == 26 && (minor) <= 0)
 
-#define CURRENT_COMPONENT_ID "CommonResources-0.1.0.0-LpQja3yDL15K7T7dUigrkK"
+#define CURRENT_COMPONENT_ID "CommonResources-0.1.0.0-BsMSFzQQ7hXDT6ERpBbAsv"
 
-#define CURRENT_PACKAGE_KEY "CommonResources-0.1.0.0-LpQja3yDL15K7T7dUigrkK"
+#define CURRENT_PACKAGE_KEY "CommonResources-0.1.0.0-BsMSFzQQ7hXDT6ERpBbAsv"
 

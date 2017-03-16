@@ -17,6 +17,7 @@ library
   hs-source-dirs:      src
   exposed-modules:     CommonResources
                      , MongodbHelpers
+                     , Neo4jHelpers
   build-depends:       base >= 4.7 && < 5
                      , aeson
                      , bson-generic
@@ -28,7 +29,9 @@ library
                      , time
                      , wai
                      , warp
+                     , hasbolt
                      , transformers
+                     , containers
   default-language:    Haskell2010
 
 executable CommonResources-exe

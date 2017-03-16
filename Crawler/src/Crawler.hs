@@ -45,9 +45,11 @@ import Control.Monad (when, liftM)
 import Network.HTTP.Client (newManager, defaultManagerSettings)
 import CommonResources
 import MongodbHelpers
+import Neo4jHelpers
 import Database.MongoDB
 import Data.ByteString.Char8 as DBC hiding (unpack, putStrLn, find)
 import qualified GitHub.Endpoints.Repos as Github
+import qualified GitHub.Endpoints.Users as GithubUsers
 import GitHub as MainGitHub
 import GitHub.Data as GHD
 import GitHub.Data.Repos as GHDR
@@ -128,23 +130,32 @@ getrepos uname auth state hops = liftIO $ do
   	  case hops > 0 of
   	  	True -> do
   	  	  putStrLn (unpack uname)
-		  possibleRepos <- Github.userRepos (mkOwnerName uname) GHDR.RepoPublicityAll
-		  case possibleRepos of
-		       (Left error)  -> do
-	                putStrLn $ show error
-		       	return ()
-		       (Right repos) -> do
-		       	  let hopers = hops - 1
-		          mapM_ (formatRepo auth uname state hopers) repos
-		          tasker <- MongodbHelpers.withMongoDbConnection $ do
+  	  	  userdetails <- GithubUsers.userInfoFor' auth (N uname)
+  	  	  case userdetails of
+  	  	  	(Left error) -> do
+  	  	  		putStrLn $ show error
+  	  	  		return ()
+  	  	  	(Right userDetails) -> do
+  	  	  		let userData = (UserData (untagName (userLogin userDetails)) (untagId (userId userDetails)) (getUrl (userUrl userDetails)) (fromJust (userName userDetails)) (fromJust (userCompany userDetails)) (fromJust (userLocation userDetails)) (fromJust (userEmail userDetails)) (fromJust (userHireable userDetails)) (fromJust (userBio userDetails)) (userPublicRepos userDetails) (userPublicGists userDetails) (userFollowers userDetails) (userFollowing userDetails))
+                                               
+  	  	  	        stored <- storeUserNodeNeo userData
+		                possibleRepos <- Github.userRepos (mkOwnerName uname) GHDR.RepoPublicityAll
+		                case possibleRepos of
+		                  (Left error)  -> do
+	                             putStrLn $ show error
+		                     return ()
+		                  (Right repos) -> do
+		       	             let hopers = hops - 1
+		                     mapM_ (formatRepo auth uname state hopers) repos
+		                     tasker <- MongodbHelpers.withMongoDbConnection $ do
 				 	docs <- find (select ["tskUsername" =: (unpack uname)] "USER_TASK_RECORD") >>= drainCursor
 				  	return $ catMaybes $ DL.map (\ b -> fromBSON b :: Maybe Task) docs
-		          case tasker of
-			     [(Task _ True)] -> do
-				  let task = (Task (unpack uname) False)
-				  MongodbHelpers.withMongoDbConnection $ upsert (select ["tskUsername" =: (unpack uname)] "USER_TASK_RECORD") $ toBSON task
-				  return ()
-			     _ -> return ()
+		                     case tasker of
+			               [(Task _ True)] -> do
+				          let task = (Task (unpack uname) False)
+				          MongodbHelpers.withMongoDbConnection $ upsert (select ["tskUsername" =: (unpack uname)] "USER_TASK_RECORD") $ toBSON task
+				          return ()
+			               _ -> return ()
 
 		False -> do
 			putStrLn "Completed all hops"

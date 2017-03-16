@@ -9,6 +9,7 @@ packages:
     commit: e078def65d0dee1ea7e3205f445e47d5937851f3
 extra-deps:
 - github-0.15.0
+- hasbolt-0.1.0.9
 - http-api-data-0.3.2
 - servant-0.9.1.1
 - servant-client-0.9.1.1
