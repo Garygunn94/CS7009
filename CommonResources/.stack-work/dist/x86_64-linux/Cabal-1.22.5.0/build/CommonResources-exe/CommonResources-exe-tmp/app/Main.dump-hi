@@ -1,11 +1,11 @@
 
 ==================== FINAL INTERFACE ====================
-2017-03-03 16:08:40.046707 UTC
+2017-03-20 14:29:23.887787 UTC
 
 interface main@main:Main 7103
-  interface hash: 43745274cc323c278c261cc7e8cd9cf7
-  ABI hash: 11840988c06d942e5d1d780e7d1329ad
-  export-list hash: 1d7bce764562a58423b1c0421d345c0d
+  interface hash: 7079fdca06e73b5aef562ec5c87f4e6a
+  ABI hash: 1e4ffbdecd56c855440fc9623df4b28a
+  export-list hash: 3d02417a09de3f1ddbc5c9a6a1ab631e
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: 1f13e1d46ca569d7c9dbc78ceeb65d6a
   sig of: Nothing
@@ -14,7 +14,7 @@ interface main@main:Main 7103
 exports:
   Main.main
 module dependencies:
-package dependencies: CommonResources-0.1.0.0@Commo_BnOP5ivkdB81DjNKrAGgy9
+package dependencies: CommonResources-0.1.0.0@Commo_IbhiHxA014wDFh8GUHMJgL
                       MonadRandom-0.4.2.3@Monad_I7tEJH7vOtsKQS7CpG48fz
                       aeson-0.11.3.0@aeson_B5LvSVh4SoyKRIAEpaMXT8
                       array-0.5.1.0@array_67iodizgJQIIxYVTp4emlA
@@ -39,6 +39,12 @@ package dependencies: CommonResources-0.1.0.0@Commo_BnOP5ivkdB81DjNKrAGgy9
                       crypto-random-0.0.9@crypt_Hp2mrapNVMVGQkdcUyO52d
                       cryptohash-0.11.9@crypt_Hqp6MzZ2INFDwJx94iHBem
                       data-binary-ieee754-0.4.4@datab_LscVfvSYUChE22ECWWHc4v
+                      data-default-instances-base-0.1.0@datad_2INJRDvgZ4jDHH2QJIQkcK
+                      data-default-0.5.3@datad_91CrM49egJd0Gm9c4dN01A
+                      data-default-instances-dlist-0.0.1@datad_IV2dTGx3Pj09NowR0FWGzk
+                      data-default-instances-containers-0.0.1@datad_IvTKAI579b047LLJfQOYbY
+                      data-default-class-0.0.1@datad_K91y8NcZUJI9yaBI61rgdD
+                      data-default-instances-old-locale-0.0.1@datad_LQTewb1b5hK22W4h2rIWVQ
                       deepseq-1.4.1.1@deeps_6vMKxt5sPFR0XsbRWvvq59
                       directory-1.2.2.0@direc_0hFG6ZxK1nk4zsyOqbNHfm
                       dlist-0.7.1.2@dlist_AO7XAasbAeyL0XLKeq1Aui
@@ -46,6 +52,7 @@ package dependencies: CommonResources-0.1.0.0@Commo_BnOP5ivkdB81DjNKrAGgy9
                       fail-4.9.0.0@fail_2xB1AvdW34sDm9N3JOe33G
                       file-embed-0.0.10@filee_BNyHeBYneTRAp0kIbc1T1P
                       filepath-1.4.0.0@filep_Ey7a1in9roBAE8bUFJ5R9m ghc-prim-0.4.0.0
+                      hasbolt-0.1.0.3@hasbo_K0KM9nxmFVu3gU3WjBxRRl
                       hashable-1.2.4.0@hasha_EalUWgp8NarBYWPbvYAD8I
                       hashtables-1.2.1.0@hasht_5Vb6phNxUZg6pFkCi63Q8S
                       hslogger-1.2.10@hslog_04sLevfvM5gJcSYKYFmHrc
@@ -61,8 +68,10 @@ package dependencies: CommonResources-0.1.0.0@Commo_BnOP5ivkdB81DjNKrAGgy9
                       mongoDB-2.0.10@mongo_JD4areV705MJDUckkf7F52
                       mtl-2.2.1@mtl_Aue4leSeVkpKLsfHIV51E8
                       network-2.6.3.1@netwo_4FL8hbDqfKm3Q9HV1QK1xw
+                      network-simple-0.4.0.5@netwo_7OkzJ6JfvQKLuLJj0Du5QL
                       network-uri-2.6.1.0@netwo_8hCRgBDYvZA6nRJCSPBXws
                       nonce-1.0.2@nonce_LVZ3LgyElrS1925qK5wiEt
+                      old-locale-1.0.0.7@oldlo_7h2Gx6mVPJ5Gheca8j9Mpe
                       parsec-3.1.11@parse_AtBt9uDOS2NCyWnucTHV3y
                       pretty-1.1.2.0@prett_JItwetRppk1H5Uq3xbjDGC
                       primitive-0.6.1.0@primi_EphY2c7CCxSCBKjAN0YTR3
@@ -94,7 +103,7 @@ package dependencies: CommonResources-0.1.0.0@Commo_BnOP5ivkdB81DjNKrAGgy9
                       wai-app-static-3.1.6.1@waiap_8WOx3ySTMuC3NFaSDIKTVT
                       word8-0.1.2@word8_6yKBsGbmsbLB2UCORShr75
                       zlib-0.6.1.2@zlib_6IYWBckbsXNBJ9KOMHaE3y
-orphans: CommonResources-0.1.0.0@Commo_BnOP5ivkdB81DjNKrAGgy9:CommonResources
+orphans: CommonResources-0.1.0.0@Commo_IbhiHxA014wDFh8GUHMJgL:CommonResources
          MonadRandom-0.4.2.3@Monad_I7tEJH7vOtsKQS7CpG48fz:Control.Monad.Random
          aeson-0.11.3.0@aeson_B5LvSVh4SoyKRIAEpaMXT8:Data.Aeson.Types.Generic
          aeson-0.11.3.0@aeson_B5LvSVh4SoyKRIAEpaMXT8:Data.Aeson.Types.Instances
@@ -104,6 +113,13 @@ orphans: CommonResources-0.1.0.0@Commo_BnOP5ivkdB81DjNKrAGgy9:CommonResources
          binary-0.7.5.0@binar_3uXFWMoAGBg0xKP9MHKRwi:Data.Binary.Generic
          bson-generic-0.0.8@bsong_JSuepLqeaMrAomI3fc0opc:Data.Bson.Generic
          bytestring-0.10.6.0@bytes_6VWy06pWzJq9evDvK2d4w6:Data.ByteString.Builder
+         data-default-instances-base-0.1.0@datad_2INJRDvgZ4jDHH2QJIQkcK:Data.Default.Instances.Base
+         data-default-instances-dlist-0.0.1@datad_IV2dTGx3Pj09NowR0FWGzk:Data.Default.Instances.DList
+         data-default-instances-containers-0.0.1@datad_IvTKAI579b047LLJfQOYbY:Data.Default.Instances.Containers
+         data-default-instances-old-locale-0.0.1@datad_LQTewb1b5hK22W4h2rIWVQ:Data.Default.Instances.OldLocale
+         hasbolt-0.1.0.3@hasbo_K0KM9nxmFVu3gU3WjBxRRl:Database.Bolt.Connection.Instances
+         hasbolt-0.1.0.3@hasbo_K0KM9nxmFVu3gU3WjBxRRl:Database.Bolt.Value.Instances
+         hasbolt-0.1.0.3@hasbo_K0KM9nxmFVu3gU3WjBxRRl:Database.Bolt.Value.Structure
          hashable-1.2.4.0@hasha_EalUWgp8NarBYWPbvYAD8I:Data.Hashable.Generic
          mongoDB-2.0.10@mongo_JD4areV705MJDUckkf7F52:Database.MongoDB.Internal.Util
          network-2.6.3.1@netwo_4FL8hbDqfKm3Q9HV1QK1xw:Network.Socket
@@ -117,7 +133,7 @@ orphans: CommonResources-0.1.0.0@Commo_BnOP5ivkdB81DjNKrAGgy9:CommonResources
          transformers-0.4.2.0@trans_GZTjP9K5WFq01xC9BAGQpF:Control.Monad.Trans.Error
          vector-0.11.0.0@vecto_LmZ3LQW4ivu8MsQuVgukln:Data.Vector.Fusion.Bundle
          vector-0.11.0.0@vecto_LmZ3LQW4ivu8MsQuVgukln:Data.Vector.Unboxed
-family instance modules: CommonResources-0.1.0.0@Commo_BnOP5ivkdB81DjNKrAGgy9:CommonResources
+family instance modules: CommonResources-0.1.0.0@Commo_IbhiHxA014wDFh8GUHMJgL:CommonResources
                          attoparsec-0.13.1.0@attop_FKrWZUTc8r1GxSTzsCBTxF:Data.Attoparsec.Internal.Types
                          base-4.8.2.0:Control.Applicative base-4.8.2.0:Data.Either
                          base-4.8.2.0:Data.Functor.Identity base-4.8.2.0:Data.Monoid
@@ -160,17 +176,18 @@ family instance modules: CommonResources-0.1.0.0@Commo_BnOP5ivkdB81DjNKrAGgy9:Co
                          vector-0.11.0.0@vecto_LmZ3LQW4ivu8MsQuVgukln:Data.Vector.Unboxed
                          vector-0.11.0.0@vecto_LmZ3LQW4ivu8MsQuVgukln:Data.Vector.Unboxed.Base
                          zlib-0.6.1.2@zlib_6IYWBckbsXNBJ9KOMHaE3y:Codec.Compression.Zlib.Stream
-import  -/  CommonResources-0.1.0.0@Commo_BnOP5ivkdB81DjNKrAGgy9:CommonResources c60d68719bc6d0fe8dbd996677fe59fd
-import  -/  CommonResources-0.1.0.0@Commo_BnOP5ivkdB81DjNKrAGgy9:MongodbHelpers b4c90f613b05a58ac86b31a68bb41d9e
+import  -/  CommonResources-0.1.0.0@Commo_IbhiHxA014wDFh8GUHMJgL:CommonResources f13d4cdf0858f5600b857a3aceecf007
+import  -/  CommonResources-0.1.0.0@Commo_IbhiHxA014wDFh8GUHMJgL:MongodbHelpers 6e4a4f2f17cd32542af3ed9d94e8bd5f
+import  -/  CommonResources-0.1.0.0@Commo_IbhiHxA014wDFh8GUHMJgL:Neo4jHelpers bb545e0c4bde92515180a527a0df3fbe
 import  -/  base-4.8.2.0:Prelude 694dcaf039efe62df1c44834e2dbd2fb
 import  -/  base-4.8.2.0:System.IO 0248c1e850b7ea124cf7a2e1669ebf67
 import  -/  ghc-prim-0.4.0.0:GHC.Types 6b27fb3fdbd0e3f0925a4496c66513bb
-38fad709bc7d50b057c9f3abc71b65d2
+cf16c71a2ef704e26ca157756fa5a2b2
   main :: GHC.Types.IO ()
   {- Arity: 1, Strictness: <L,U>,
      Unfolding: InlineRule (0, True, True)
                 Main.main1 `cast` (Sym (GHC.Types.NTCo:IO[0] <()>_R)) -}
-044a3255db4dbb603bb6dcccb0d52165
+ce686fc97566a883bd163f99a07a57cb
   main1 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
@@ -181,10 +198,10 @@ import  -/  ghc-prim-0.4.0.0:GHC.Types 6b27fb3fdbd0e3f0925a4496c66513bb
                    Main.main2
                    GHC.Types.True
                    eta) -}
-d75f45cf21cfd0ba6c18b070238f6a49
+a7878b9fbbe0b63f641a786e14841e9c
   main2 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "Loaded"#) -}
-f84df15b01b0597fbde25badebb9acb1
+  {- Unfolding: (GHC.CString.unpackCString# "Ain't no problem"#) -}
+224c24e5ac938e112ccc8e11315b8563
   main3 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)

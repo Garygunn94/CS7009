@@ -74,7 +74,6 @@ data UserData = UserData {
   u_company :: Text,
   u_location :: Text,
   u_email :: Text,
-  u_hireable :: Bool,
   u_bio :: Text,
   u_public_repos :: Int,
   u_public_gists :: Int,
@@ -92,7 +91,6 @@ data RepoData = RepoData {
   r_name :: Text, -- 5
   r_description :: Text,
   r_is_private :: Bool,
-  r_is_fork :: Bool,
   r_html_url :: Text,
   -- More urls
   r_forks :: Int, -- 10
@@ -100,14 +98,8 @@ data RepoData = RepoData {
   r_watchers :: Int,
   r_size :: Int,
   r_open_issues :: Int,
-  r_has_issues :: Bool, -- 15
   -- More 'has' flags
   r_pushed_at :: Int,
   r_created_at :: Int,
-  r_updated_at :: Int,
-  -- Custom
-  r_full_name :: Text,
-  -- Permissions
-  -- From seperate call
-  r_contribs :: [Text] -- 19
+  r_updated_at :: Int
 } deriving(Generic, ToJSON, Eq, Show)

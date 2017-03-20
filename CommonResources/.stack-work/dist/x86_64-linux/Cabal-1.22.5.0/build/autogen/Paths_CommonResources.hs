@@ -17,7 +17,7 @@ version = Version [0,1,0,0] []
 bindir, libdir, datadir, libexecdir, sysconfdir :: FilePath
 
 bindir     = "/home/ggunn/CS7009/Lab1/.stack-work/install/x86_64-linux/lts-6.29/7.10.3/bin"
-libdir     = "/home/ggunn/CS7009/Lab1/.stack-work/install/x86_64-linux/lts-6.29/7.10.3/lib/x86_64-linux-ghc-7.10.3/CommonResources-0.1.0.0-BnOP5ivkdB81DjNKrAGgy9"
+libdir     = "/home/ggunn/CS7009/Lab1/.stack-work/install/x86_64-linux/lts-6.29/7.10.3/lib/x86_64-linux-ghc-7.10.3/CommonResources-0.1.0.0-IbhiHxA014wDFh8GUHMJgL"
 datadir    = "/home/ggunn/CS7009/Lab1/.stack-work/install/x86_64-linux/lts-6.29/7.10.3/share/x86_64-linux-ghc-7.10.3/CommonResources-0.1.0.0"
 libexecdir = "/home/ggunn/CS7009/Lab1/.stack-work/install/x86_64-linux/lts-6.29/7.10.3/libexec"
 sysconfdir = "/home/ggunn/CS7009/Lab1/.stack-work/install/x86_64-linux/lts-6.29/7.10.3/etc"

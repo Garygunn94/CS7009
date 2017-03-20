@@ -21,6 +21,20 @@
   (major1) == 0 && (major2) <  0 || \
   (major1) == 0 && (major2) == 0 && (minor) <= 8)
 
+/* package containers-0.5.6.2 */
+#define VERSION_containers "0.5.6.2"
+#define MIN_VERSION_containers(major1,major2,minor) (\
+  (major1) <  0 || \
+  (major1) == 0 && (major2) <  5 || \
+  (major1) == 0 && (major2) == 5 && (minor) <= 6)
+
+/* package hasbolt-0.1.0.3 */
+#define VERSION_hasbolt "0.1.0.3"
+#define MIN_VERSION_hasbolt(major1,major2,minor) (\
+  (major1) <  0 || \
+  (major1) == 0 && (major2) <  1 || \
+  (major1) == 0 && (major2) == 1 && (minor) <= 0)
+
 /* package hslogger-1.2.10 */
 #define VERSION_hslogger "1.2.10"
 #define MIN_VERSION_hslogger(major1,major2,minor) (\
@@ -168,5 +182,5 @@
   (major1) == 2 && (major2) <  26 || \
   (major1) == 2 && (major2) == 26 && (minor) <= 0)
 
-#define CURRENT_PACKAGE_KEY "Commo_BnOP5ivkdB81DjNKrAGgy9"
+#define CURRENT_PACKAGE_KEY "Commo_IbhiHxA014wDFh8GUHMJgL"
 

@@ -19,6 +19,44 @@ import qualified Data.List as DL
 import CommonResources
 
 
+storeOwnerLinkNeo :: DT.Text -> DT.Text-> IO Bool
+storeOwnerLinkNeo userName repoName = do
+  let neo_conf = Neo.def { Neo.user = "neo4j", Neo.password = "GaryGunn94" }
+  neo_pipe <- Neo.connect $ neo_conf 
+
+  -- -- Add node
+  records <- Neo.run neo_pipe $ Neo.queryP (DT.pack cypher) params
+
+  Neo.close neo_pipe
+
+  let isEmpty = null records
+  return isEmpty
+
+  where cypher = "MATCH (u:User {u_login: {userName}}), (r:Repo {r_html_url: {repoName}}) \n CREATE (u)-[:IS_OWNER]->(r)" --14
+
+        params = DM.fromList [
+            ("userName", Neo.T userName),
+            ("repoName", Neo.T repoName)]
+
+storeCollabLinkNeo :: DT.Text -> DT.Text-> IO Bool
+storeCollabLinkNeo userName repoName = do
+  let neo_conf = Neo.def { Neo.user = "neo4j", Neo.password = "GaryGunn94" }
+  neo_pipe <- Neo.connect $ neo_conf 
+
+  -- -- Add node
+  records <- Neo.run neo_pipe $ Neo.queryP (DT.pack cypher) params
+
+  Neo.close neo_pipe
+
+  let isEmpty = null records
+  return isEmpty
+
+  where cypher = "MATCH (u:User {u_login: {userName}}), (r:Repo {r_html_url: {repoName}}) \n CREATE (u)-[:IS_COLLABORATOR]->(r)" --14
+
+        params = DM.fromList [
+            ("userName", Neo.T userName),
+            ("repoName", Neo.T repoName)]
+
 storeUserNodeNeo :: UserData -> IO Bool
 storeUserNodeNeo (UserData
                     u_login
@@ -27,8 +65,7 @@ storeUserNodeNeo (UserData
                     u_name 
                     u_company 
                     u_location 
-                    u_email 
-                    u_hireable 
+                    u_email  
                     u_bio 
                     u_public_repos 
                     u_public_gists 
@@ -54,9 +91,7 @@ storeUserNodeNeo (UserData
             " u_company: {u_company}, " ++
             " u_location: {u_location}, " ++
             " u_email: {u_email}, " ++
-            " u_hireable: {u_hireable}, " ++
             " u_bio: {u_bio}, " ++
-            " u_hireable: {u_hireable}, " ++
             " u_public_reps: {u_public_repos}, " ++
             " u_public_gists: {u_public_gists}, " ++
             " u_followers: {u_followers}, " ++
@@ -70,7 +105,6 @@ storeUserNodeNeo (UserData
             ("u_company", Neo.T u_company),
             ("u_location", Neo.T u_location),
             ("u_email", Neo.T u_email),
-            ("u_hireable", Neo.B u_hireable),
             ("u_bio", Neo.T u_bio),
             ("u_public_repos", Neo.I u_public_repos),
             ("u_public_gists", Neo.I u_public_gists),
@@ -85,20 +119,16 @@ storeRepoNodeNeo (RepoData
                     r_owner_id 
                     r_name 
                     r_description 
-                    r_is_private 
-                    r_is_fork 
+                    r_is_private  
                     r_html_url 
                     r_forks 
                     r_stargazers 
                     r_watchers 
                     r_size 
                     r_open_issues 
-                    r_has_issues 
                     r_pushed_at 
                     r_created_at 
                     r_updated_at
-                    r_full_name
-                    r_contribs
                  ) = do
 
   let neo_conf = Neo.def { Neo.user = "neo4j", Neo.password = "GaryGunn94" }
@@ -120,19 +150,15 @@ storeRepoNodeNeo (RepoData
             " r_name: {r_name}, " ++
             " r_description: {r_description}, " ++
             " r_is_private: {r_is_private}, " ++
-            " r_is_fork: {r_is_fork}, " ++
             " r_html_url: {r_html_url}, " ++
             " r_forks: {r_forks}, " ++
             " r_stargazers: {r_stargazers}, " ++
             " r_watchers: {r_watchers}, " ++
             " r_size: {r_size}, " ++
             " r_open_issues: {r_open_issues}, " ++
-            " r_has_issues: {r_has_issues}, " ++
             " r_pushed_at: {r_pushed_at}, " ++
             " r_created_at: {r_created_at}, " ++
-            " r_updated_at: {r_updated_at}, " ++
-            " r_full_name: {r_full_name}, " ++
-            " r_contribs: {r_contribs} } )"  --19
+            " r_updated_at: {r_updated_at}})"
 
         params = DM.fromList [
             ("r_last_updated", Neo.I r_last_updated),
@@ -142,19 +168,15 @@ storeRepoNodeNeo (RepoData
             ("r_name", Neo.T r_name),
             ("r_description", Neo.T r_description),
             ("r_is_private", Neo.B r_is_private),
-            ("r_is_fork", Neo.B r_is_fork),
             ("r_html_url", Neo.T r_html_url),
             ("r_forks", Neo.I r_forks),
             ("r_stargazers", Neo.I r_stargazers),
             ("r_watchers", Neo.I r_watchers),
             ("r_size", Neo.I r_size),
             ("r_open_issues", Neo.I r_open_issues),
-            ("r_has_issues", Neo.B r_has_issues),
             ("r_pushed_at", Neo.I r_pushed_at),
             ("r_created_at", Neo.I r_created_at),
-            ("r_updated_at", Neo.I r_updated_at),
-            ("r_full_name", Neo.T r_full_name),
-            ("r_contribs", Neo.L (map (\c -> Neo.T c) r_contribs))]
+            ("r_updated_at", Neo.I r_updated_at)]
 
 --getRepoByNameNeo :: Text -> IO RepoData
 getRepoByFullNameNeo :: DT.Text -> IO DT.Text
@@ -215,8 +237,6 @@ nodeToRepoData node = do
   r_pushed_at :: Int <- (props `Neo.at` "r_pushed_at") >>= Neo.exact
   r_created_at :: Int <- (props `Neo.at` "r_created_at") >>= Neo.exact
   r_updated_at :: Int <- (props `Neo.at` "r_updated_at") >>= Neo.exact
-  r_full_name :: DT.Text <- (props `Neo.at` "r_full_name") >>= Neo.exact
-  r_contribs :: [DT.Text] <- (props `Neo.at` "r_contribs") >>= Neo.exact
       
   return (RepoData
           r_last_updated
@@ -226,19 +246,15 @@ nodeToRepoData node = do
           r_name
           r_description
           r_is_private
-          r_is_fork
           r_html_url
           r_forks
           r_stargazers
           r_watchers
           r_size
           r_open_issues
-          r_has_issues
           r_pushed_at
           r_created_at
           r_updated_at
-          r_full_name
-          r_contribs
          )
 
 toNode :: Neo.Record -> IO Neo.Node

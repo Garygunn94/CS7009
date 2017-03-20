@@ -1,11 +1,11 @@
 
 ==================== FINAL INTERFACE ====================
-2017-03-16 18:22:40.706861 UTC
+2017-03-20 15:52:50.801253 UTC
 
 interface CommonResources-0.1.0.0-BsMSFzQQ7hXDT6ERpBbAsv:Neo4jHelpers 8001
-  interface hash: 56bb91906cd4e20b97b915061fc6bf36
-  ABI hash: b4a7e7d3b35e68dbb813d6ff4473c01a
-  export-list hash: 0a7591fbce6de37cd7858d9d1b5f4da1
+  interface hash: b793790dffa32653ab88e7fa34359f92
+  ABI hash: 5dbea2452606acfb50727a2a55a395fa
+  export-list hash: 0049485c6641069b1c6c7df8e18a1708
   orphan hash: d299bc92b6b8d83bb93b6fc5b13f9c21
   flag hash: 475ddb1266f979e9bd5d545258b369df
   sig of: Nothing
@@ -16,6 +16,8 @@ exports:
   Neo4jHelpers.nodeToRepoData
   Neo4jHelpers.nodeToText
   Neo4jHelpers.recordToNode
+  Neo4jHelpers.storeCollabLinkNeo
+  Neo4jHelpers.storeOwnerLinkNeo
   Neo4jHelpers.storeRepoNodeNeo
   Neo4jHelpers.storeUserNodeNeo
   Neo4jHelpers.toNode
@@ -161,12 +163,12 @@ family instance modules: CommonResources-0.1.0.0-BsMSFzQQ7hXDT6ERpBbAsv:CommonRe
                          vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Unboxed
                          vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Unboxed.Base
                          zlib-0.6.1.2@zlib-0.6.1.2-4CWLN1T27kOJhNvXgy46ZV:Codec.Compression.Zlib.Stream
-import  -/  CommonResources 50a7533e805971860dab6bb4beb9933f
-  exports: 306e88158282b4ac74da9d7085b88da2
-  RepoData 850c5290160b6adcb5ebb876fed6f523
-  RepoData 70547f74bdb9fe139aab30fd2ff6a4ce
-  UserData bc971bfc0b8a2cd8483762cc72606bb1
-  UserData ba18b8c003e9a79140f6de9121bc3d5b
+import  -/  CommonResources 08ddf06b6b4042b5908c606ed109b0c7
+  exports: 35706be493902c31e2265f2093d3809d
+  RepoData e80c9bb59a9cd6536e67ff7be8628ad5
+  RepoData 55f70cdbd1b68f1ac3cd80ef2aa23d13
+  UserData df2b248543878f44f13fb2737fbb21c1
+  UserData ba7a92a5b831c40695a7cb913780dd2b
 import  -/  base-4.9.0.0:Data.Foldable 8aeb682f6c74f97fcf0ace0d608a43ea
 import  -/  base-4.9.0.0:Data.List 49b86831b79b49ce5d4d9416ecba61df
 import  -/  base-4.9.0.0:GHC.Base 8ed3be81c0707b322f975a84ae1bb816
@@ -267,7 +269,7 @@ da121771a92e4beabac3cf03bb6b4e42
     -> Data.Map.Base.Map Data.Text.Internal.Text a1
   {- Arity: 5, Strictness: <L,U><L,U><L,U><L,U><S,1*U>,
      Inline: [0] -}
-a840db45601fba84b2e0275255f1bfbf
+4053cd5822924e9c14f1efa42cde61c4
   $wnodeToRepoData ::
     Data.Map.Base.Map
       Data.Text.Internal.Text Database.Bolt.Value.Type.Value
@@ -336,7 +338,7 @@ f2f178958b9b5abee57f09f3f96a54b3
     -> [(Data.Text.Internal.Text, a)]
     -> Data.Map.Base.Map Data.Text.Internal.Text a
   {- Arity: 3, Strictness: <L,U><S,1*U><S,1*U>, Inline: [0] -}
-ec4c2c3ee6be6e30476f832da7ff6a09
+4b9f8261a9ef839d13215fab8e2330db
   $wstoreRepoNodeNeo ::
     GHC.Types.Int
     -> GHC.Types.Int
@@ -345,129 +347,126 @@ ec4c2c3ee6be6e30476f832da7ff6a09
     -> Data.Text.Internal.Text
     -> Data.Text.Internal.Text
     -> GHC.Types.Bool
-    -> GHC.Types.Bool
     -> Data.Text.Internal.Text
     -> GHC.Types.Int
     -> GHC.Types.Int
     -> GHC.Types.Int
     -> GHC.Types.Int
-    -> GHC.Types.Int
-    -> GHC.Types.Bool
-    -> GHC.Types.Int
-    -> GHC.Types.Int
-    -> GHC.Types.Int
-    -> Data.Text.Internal.Text
-    -> [Data.Text.Internal.Text]
-    -> GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld, GHC.Types.Bool #)
-  {- Arity: 21,
-     Strictness: <L,U><L,U><L,U><L,U><L,U><L,U><L,U><L,U><L,U><L,U><L,U><L,U><L,U><L,U><L,U><L,U><L,U><L,U><L,U><L,1*U><S,U>,
-     Inline: [0] -}
-785590474d0fdd70f489fb40deb35b09
-  $wstoreUserNodeNeo ::
-    Data.Text.Internal.Text
-    -> GHC.Types.Int
-    -> Data.Text.Internal.Text
-    -> Data.Text.Internal.Text
-    -> Data.Text.Internal.Text
-    -> Data.Text.Internal.Text
-    -> Data.Text.Internal.Text
-    -> GHC.Types.Bool
-    -> Data.Text.Internal.Text
     -> GHC.Types.Int
     -> GHC.Types.Int
     -> GHC.Types.Int
     -> GHC.Types.Int
     -> GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, GHC.Types.Bool #)
-  {- Arity: 14,
-     Strictness: <L,U><L,U><L,U><L,U><L,U><L,U><L,U><L,U><L,U><L,U><L,U><L,U><L,U><S,U>,
+  {- Arity: 17,
+     Strictness: <L,U><L,U><L,U><L,U><L,U><L,U><L,U><L,U><L,U><L,U><L,U><L,U><L,U><L,U><L,U><L,U><S,U>,
      Inline: [0],
-     Unfolding: (\ (ww :: Data.Text.Internal.Text)
+     Unfolding: (\ (ww :: GHC.Types.Int)
                    (ww1 :: GHC.Types.Int)
                    (ww2 :: Data.Text.Internal.Text)
-                   (ww3 :: Data.Text.Internal.Text)
+                   (ww3 :: GHC.Types.Int)
                    (ww4 :: Data.Text.Internal.Text)
                    (ww5 :: Data.Text.Internal.Text)
-                   (ww6 :: Data.Text.Internal.Text)
-                   (ww7 :: GHC.Types.Bool)
-                   (ww8 :: Data.Text.Internal.Text)
+                   (ww6 :: GHC.Types.Bool)
+                   (ww7 :: Data.Text.Internal.Text)
+                   (ww8 :: GHC.Types.Int)
                    (ww9 :: GHC.Types.Int)
                    (ww10 :: GHC.Types.Int)
                    (ww11 :: GHC.Types.Int)
                    (ww12 :: GHC.Types.Int)
+                   (ww13 :: GHC.Types.Int)
+                   (ww14 :: GHC.Types.Int)
+                   (ww15 :: GHC.Types.Int)
                    (w :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
                  case Neo4jHelpers.getRepoByFullNameNeo7
                         `cast`
                       (GHC.Types.N:IO[0] <Database.Bolt.Connection.Type.Pipe>_R)
                         w of ds1 { (#,#) ipv ipv1 ->
                  case ((Neo4jHelpers.getRepoByFullNameNeo6
-                          Neo4jHelpers.storeUserNodeNeo15
+                          Neo4jHelpers.storeRepoNodeNeo17
                           (Neo4jHelpers.$sfromList
                              @ Database.Bolt.Value.Type.Value
                              (GHC.Types.:
                                 @ (Data.Text.Internal.Text, Database.Bolt.Value.Type.Value)
-                                (Neo4jHelpers.storeUserNodeNeo14, Database.Bolt.Value.Type.T ww)
+                                (Neo4jHelpers.storeRepoNodeNeo16, Database.Bolt.Value.Type.I ww)
                                 (GHC.Types.:
                                    @ (Data.Text.Internal.Text, Database.Bolt.Value.Type.Value)
-                                   (Neo4jHelpers.storeUserNodeNeo13, Database.Bolt.Value.Type.I ww1)
+                                   (Neo4jHelpers.storeRepoNodeNeo15, Database.Bolt.Value.Type.I ww1)
                                    (GHC.Types.:
                                       @ (Data.Text.Internal.Text, Database.Bolt.Value.Type.Value)
-                                      (Neo4jHelpers.storeUserNodeNeo12,
+                                      (Neo4jHelpers.storeRepoNodeNeo14,
                                        Database.Bolt.Value.Type.T ww2)
                                       (GHC.Types.:
                                          @ (Data.Text.Internal.Text, Database.Bolt.Value.Type.Value)
-                                         (Neo4jHelpers.storeUserNodeNeo11,
-                                          Database.Bolt.Value.Type.T ww3)
+                                         (Neo4jHelpers.storeRepoNodeNeo13,
+                                          Database.Bolt.Value.Type.I ww3)
                                          (GHC.Types.:
                                             @ (Data.Text.Internal.Text,
                                                Database.Bolt.Value.Type.Value)
-                                            (Neo4jHelpers.storeUserNodeNeo10,
+                                            (Neo4jHelpers.getRepoByFullNameNeo4,
                                              Database.Bolt.Value.Type.T ww4)
                                             (GHC.Types.:
                                                @ (Data.Text.Internal.Text,
                                                   Database.Bolt.Value.Type.Value)
-                                               (Neo4jHelpers.storeUserNodeNeo9,
+                                               (Neo4jHelpers.storeRepoNodeNeo12,
                                                 Database.Bolt.Value.Type.T ww5)
                                                (GHC.Types.:
                                                   @ (Data.Text.Internal.Text,
                                                      Database.Bolt.Value.Type.Value)
-                                                  (Neo4jHelpers.storeUserNodeNeo8,
-                                                   Database.Bolt.Value.Type.T ww6)
+                                                  (Neo4jHelpers.storeRepoNodeNeo11,
+                                                   Database.Bolt.Value.Type.B ww6)
                                                   (GHC.Types.:
                                                      @ (Data.Text.Internal.Text,
                                                         Database.Bolt.Value.Type.Value)
-                                                     (Neo4jHelpers.storeUserNodeNeo7,
-                                                      Database.Bolt.Value.Type.B ww7)
+                                                     (Neo4jHelpers.storeRepoNodeNeo10,
+                                                      Database.Bolt.Value.Type.T ww7)
                                                      (GHC.Types.:
                                                         @ (Data.Text.Internal.Text,
                                                            Database.Bolt.Value.Type.Value)
-                                                        (Neo4jHelpers.storeUserNodeNeo6,
-                                                         Database.Bolt.Value.Type.T ww8)
+                                                        (Neo4jHelpers.storeRepoNodeNeo9,
+                                                         Database.Bolt.Value.Type.I ww8)
                                                         (GHC.Types.:
                                                            @ (Data.Text.Internal.Text,
                                                               Database.Bolt.Value.Type.Value)
-                                                           (Neo4jHelpers.storeUserNodeNeo5,
+                                                           (Neo4jHelpers.storeRepoNodeNeo8,
                                                             Database.Bolt.Value.Type.I ww9)
                                                            (GHC.Types.:
                                                               @ (Data.Text.Internal.Text,
                                                                  Database.Bolt.Value.Type.Value)
-                                                              (Neo4jHelpers.storeUserNodeNeo4,
+                                                              (Neo4jHelpers.storeRepoNodeNeo7,
                                                                Database.Bolt.Value.Type.I ww10)
                                                               (GHC.Types.:
                                                                  @ (Data.Text.Internal.Text,
                                                                     Database.Bolt.Value.Type.Value)
-                                                                 (Neo4jHelpers.storeUserNodeNeo3,
+                                                                 (Neo4jHelpers.storeRepoNodeNeo6,
                                                                   Database.Bolt.Value.Type.I ww11)
                                                                  (GHC.Types.:
                                                                     @ (Data.Text.Internal.Text,
                                                                        Database.Bolt.Value.Type.Value)
-                                                                    (Neo4jHelpers.storeUserNodeNeo2,
+                                                                    (Neo4jHelpers.storeRepoNodeNeo5,
                                                                      Database.Bolt.Value.Type.I
                                                                        ww12)
-                                                                    (GHC.Types.[]
+                                                                    (GHC.Types.:
                                                                        @ (Data.Text.Internal.Text,
-                                                                          Database.Bolt.Value.Type.Value)))))))))))))))))
+                                                                          Database.Bolt.Value.Type.Value)
+                                                                       (Neo4jHelpers.storeRepoNodeNeo4,
+                                                                        Database.Bolt.Value.Type.I
+                                                                          ww13)
+                                                                       (GHC.Types.:
+                                                                          @ (Data.Text.Internal.Text,
+                                                                             Database.Bolt.Value.Type.Value)
+                                                                          (Neo4jHelpers.storeRepoNodeNeo3,
+                                                                           Database.Bolt.Value.Type.I
+                                                                             ww14)
+                                                                          (GHC.Types.:
+                                                                             @ (Data.Text.Internal.Text,
+                                                                                Database.Bolt.Value.Type.Value)
+                                                                             (Neo4jHelpers.storeRepoNodeNeo2,
+                                                                              Database.Bolt.Value.Type.I
+                                                                                ww15)
+                                                                             (GHC.Types.[]
+                                                                                @ (Data.Text.Internal.Text,
+                                                                                   Database.Bolt.Value.Type.Value))))))))))))))))))))
                          `cast`
                        (Control.Monad.Trans.Reader.N:ReaderT[0]
                             <*>_N
@@ -479,15 +478,131 @@ ec4c2c3ee6be6e30476f832da7ff6a09
                       (GHC.Types.N:IO[0] <[Database.Bolt.Record.Record]>_R)
                         ipv of ds2 { (#,#) ipv2 ipv3 ->
                  case ipv1 of wild { Database.Bolt.Connection.Type.Pipe ds3 ds4 ->
-                 case ds3 of ww13 { Network.Socket.Types.MkSocket ww14 ww15 ww16 ww17 ww18 ->
-                 case ww18 of ww19 { GHC.MVar.MVar ww20 ->
+                 case ds3 of ww16 { Network.Socket.Types.MkSocket ww17 ww18 ww19 ww20 ww21 ->
+                 case ww21 of ww22 { GHC.MVar.MVar ww23 ->
                  case Network.Socket.$wclose
-                        ww14
-                        ww20
+                        ww17
+                        ww23
                         ipv2 of ds5 { (#,#) ipv4 ipv5 ->
                  (# ipv4,
                     GHC.List.null @ Database.Bolt.Record.Record ipv3 #) } } } } } }) -}
-f04b4a9c2ad5877e9af1311c774b67f2
+9a8199cadbba9b1dfe1a0ea250f1b415
+  $wstoreUserNodeNeo ::
+    Data.Text.Internal.Text
+    -> GHC.Types.Int
+    -> Data.Text.Internal.Text
+    -> Data.Text.Internal.Text
+    -> Data.Text.Internal.Text
+    -> Data.Text.Internal.Text
+    -> Data.Text.Internal.Text
+    -> Data.Text.Internal.Text
+    -> GHC.Types.Int
+    -> GHC.Types.Int
+    -> GHC.Types.Int
+    -> GHC.Types.Int
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, GHC.Types.Bool #)
+  {- Arity: 13,
+     Strictness: <L,U><L,U><L,U><L,U><L,U><L,U><L,U><L,U><L,U><L,U><L,U><L,U><S,U>,
+     Inline: [0],
+     Unfolding: (\ (ww :: Data.Text.Internal.Text)
+                   (ww1 :: GHC.Types.Int)
+                   (ww2 :: Data.Text.Internal.Text)
+                   (ww3 :: Data.Text.Internal.Text)
+                   (ww4 :: Data.Text.Internal.Text)
+                   (ww5 :: Data.Text.Internal.Text)
+                   (ww6 :: Data.Text.Internal.Text)
+                   (ww7 :: Data.Text.Internal.Text)
+                   (ww8 :: GHC.Types.Int)
+                   (ww9 :: GHC.Types.Int)
+                   (ww10 :: GHC.Types.Int)
+                   (ww11 :: GHC.Types.Int)
+                   (w :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case Neo4jHelpers.getRepoByFullNameNeo7
+                        `cast`
+                      (GHC.Types.N:IO[0] <Database.Bolt.Connection.Type.Pipe>_R)
+                        w of ds1 { (#,#) ipv ipv1 ->
+                 case ((Neo4jHelpers.getRepoByFullNameNeo6
+                          Neo4jHelpers.storeUserNodeNeo14
+                          (Neo4jHelpers.$sfromList
+                             @ Database.Bolt.Value.Type.Value
+                             (GHC.Types.:
+                                @ (Data.Text.Internal.Text, Database.Bolt.Value.Type.Value)
+                                (Neo4jHelpers.storeUserNodeNeo13, Database.Bolt.Value.Type.T ww)
+                                (GHC.Types.:
+                                   @ (Data.Text.Internal.Text, Database.Bolt.Value.Type.Value)
+                                   (Neo4jHelpers.storeUserNodeNeo12, Database.Bolt.Value.Type.I ww1)
+                                   (GHC.Types.:
+                                      @ (Data.Text.Internal.Text, Database.Bolt.Value.Type.Value)
+                                      (Neo4jHelpers.storeUserNodeNeo11,
+                                       Database.Bolt.Value.Type.T ww2)
+                                      (GHC.Types.:
+                                         @ (Data.Text.Internal.Text, Database.Bolt.Value.Type.Value)
+                                         (Neo4jHelpers.storeUserNodeNeo10,
+                                          Database.Bolt.Value.Type.T ww3)
+                                         (GHC.Types.:
+                                            @ (Data.Text.Internal.Text,
+                                               Database.Bolt.Value.Type.Value)
+                                            (Neo4jHelpers.storeUserNodeNeo9,
+                                             Database.Bolt.Value.Type.T ww4)
+                                            (GHC.Types.:
+                                               @ (Data.Text.Internal.Text,
+                                                  Database.Bolt.Value.Type.Value)
+                                               (Neo4jHelpers.storeUserNodeNeo8,
+                                                Database.Bolt.Value.Type.T ww5)
+                                               (GHC.Types.:
+                                                  @ (Data.Text.Internal.Text,
+                                                     Database.Bolt.Value.Type.Value)
+                                                  (Neo4jHelpers.storeUserNodeNeo7,
+                                                   Database.Bolt.Value.Type.T ww6)
+                                                  (GHC.Types.:
+                                                     @ (Data.Text.Internal.Text,
+                                                        Database.Bolt.Value.Type.Value)
+                                                     (Neo4jHelpers.storeUserNodeNeo6,
+                                                      Database.Bolt.Value.Type.T ww7)
+                                                     (GHC.Types.:
+                                                        @ (Data.Text.Internal.Text,
+                                                           Database.Bolt.Value.Type.Value)
+                                                        (Neo4jHelpers.storeUserNodeNeo5,
+                                                         Database.Bolt.Value.Type.I ww8)
+                                                        (GHC.Types.:
+                                                           @ (Data.Text.Internal.Text,
+                                                              Database.Bolt.Value.Type.Value)
+                                                           (Neo4jHelpers.storeUserNodeNeo4,
+                                                            Database.Bolt.Value.Type.I ww9)
+                                                           (GHC.Types.:
+                                                              @ (Data.Text.Internal.Text,
+                                                                 Database.Bolt.Value.Type.Value)
+                                                              (Neo4jHelpers.storeUserNodeNeo3,
+                                                               Database.Bolt.Value.Type.I ww10)
+                                                              (GHC.Types.:
+                                                                 @ (Data.Text.Internal.Text,
+                                                                    Database.Bolt.Value.Type.Value)
+                                                                 (Neo4jHelpers.storeUserNodeNeo2,
+                                                                  Database.Bolt.Value.Type.I ww11)
+                                                                 (GHC.Types.[]
+                                                                    @ (Data.Text.Internal.Text,
+                                                                       Database.Bolt.Value.Type.Value))))))))))))))))
+                         `cast`
+                       (Control.Monad.Trans.Reader.N:ReaderT[0]
+                            <*>_N
+                            <Database.Bolt.Connection.Type.Pipe>_R
+                            <GHC.Types.IO>_R
+                            <[Database.Bolt.Record.Record]>_N)
+                         ipv1)
+                        `cast`
+                      (GHC.Types.N:IO[0] <[Database.Bolt.Record.Record]>_R)
+                        ipv of ds2 { (#,#) ipv2 ipv3 ->
+                 case ipv1 of wild { Database.Bolt.Connection.Type.Pipe ds3 ds4 ->
+                 case ds3 of ww12 { Network.Socket.Types.MkSocket ww13 ww14 ww15 ww16 ww17 ->
+                 case ww17 of ww18 { GHC.MVar.MVar ww19 ->
+                 case Network.Socket.$wclose
+                        ww13
+                        ww19
+                        ipv2 of ds5 { (#,#) ipv4 ipv5 ->
+                 (# ipv4,
+                    GHC.List.null @ Database.Bolt.Record.Record ipv3 #) } } } } } }) -}
+79f5ad0a5282210b2c015c25d5b44ef1
   getRepoByFullNameNeo ::
     Data.Text.Internal.Text -> GHC.Types.IO Data.Text.Internal.Text
   {- Arity: 2, Strictness: <L,U><S,U>,
@@ -496,7 +611,7 @@ f04b4a9c2ad5877e9af1311c774b67f2
                   `cast`
                 (<Data.Text.Internal.Text>_R
                  ->_R Sym (GHC.Types.N:IO[0] <Data.Text.Internal.Text>_R)) -}
-a1027ac207a817eab1dedc9d27e07044
+baa65547f949ad706f3828d392b9bc95
   getRepoByFullNameNeo1 ::
     Data.Text.Internal.Text
     -> GHC.Prim.State# GHC.Prim.RealWorld
@@ -566,7 +681,7 @@ a1027ac207a817eab1dedc9d27e07044
                              ww18
                              ipv8 of ds9 { (#,#) ipv10 ipv11 ->
                       (# ipv10,
-                         case ipv11 of ww19 { CommonResources.RepoData ww20 ww21 ww22 ww23 ww24 ww8 ww9 ww10 ww25 ww26 ww27 ww28 ww29 ww30 ww31 ww32 ww33 ww34 ww35 ww36 ->
+                         case ipv11 of ww19 { CommonResources.RepoData ww20 ww21 ww22 ww23 ww24 ww8 ww9 ww10 ww25 ww26 ww27 ww28 ww29 ww30 ww31 ww32 ->
                          case CommonResources.$w$cshowsPrec2
                                 0#
                                 ww20
@@ -585,10 +700,6 @@ a1027ac207a817eab1dedc9d27e07044
                                 ww30
                                 ww31
                                 ww32
-                                ww33
-                                ww34
-                                ww35
-                                ww36
                                 (GHC.Types.[] @ GHC.Types.Char) of dt { DEFAULT ->
                          case GHC.Magic.runRW#
                                 @ 'GHC.Types.PtrRepLifted
@@ -653,7 +764,7 @@ eb27ecd14a3958220a6c7ea116b3d147
 0ea2dc8c748ce2fd6439ce9222f55470
   getRepoByFullNameNeo9 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString# "GaryGunn94"#) -}
-56f7e5666f45bf367aeca6f70747f659
+c338335443c14d466c59d889b11f35cf
   nodeToRepoData ::
     Database.Bolt.Value.Type.Node
     -> GHC.Types.IO CommonResources.RepoData
@@ -663,7 +774,7 @@ eb27ecd14a3958220a6c7ea116b3d147
                   `cast`
                 (<Database.Bolt.Value.Type.Node>_R
                  ->_R Sym (GHC.Types.N:IO[0] <CommonResources.RepoData>_R)) -}
-2aef8cad066c891945283987a25d9b1d
+5441e87ae789c9560cd264f02bea69a7
   nodeToRepoData1 ::
     Database.Bolt.Value.Type.Node
     -> GHC.Prim.State# GHC.Prim.RealWorld
@@ -739,28 +850,162 @@ dbfdf73299674442add310a44029df34
                    `cast`
                  (GHC.Types.N:IO[0] <Database.Bolt.Value.Type.Node>_R)
                    ipv } }) -}
-b61d2875be8401fa080a34aff879fd98
+5c6974b2978b62825fc2089175a20ccc
+  storeCollabLinkNeo ::
+    Data.Text.Internal.Text
+    -> Data.Text.Internal.Text -> GHC.Types.IO GHC.Types.Bool
+  {- Arity: 3, Strictness: <L,U><L,U><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Neo4jHelpers.storeCollabLinkNeo1
+                  `cast`
+                (<Data.Text.Internal.Text>_R
+                 ->_R <Data.Text.Internal.Text>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <GHC.Types.Bool>_R)) -}
+e7b78e8a779a0abafeb7021d7356012f
+  storeCollabLinkNeo1 ::
+    Data.Text.Internal.Text
+    -> Data.Text.Internal.Text
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, GHC.Types.Bool #)
+  {- Arity: 3, Strictness: <L,U><L,U><S,U>,
+     Unfolding: (\ (userName :: Data.Text.Internal.Text)
+                   (repoName :: Data.Text.Internal.Text)
+                   (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case Neo4jHelpers.getRepoByFullNameNeo7
+                        `cast`
+                      (GHC.Types.N:IO[0] <Database.Bolt.Connection.Type.Pipe>_R)
+                        eta of ds1 { (#,#) ipv ipv1 ->
+                 case ((Neo4jHelpers.getRepoByFullNameNeo6
+                          Neo4jHelpers.storeCollabLinkNeo4
+                          (Neo4jHelpers.$sfromList
+                             @ Database.Bolt.Value.Type.Value
+                             (GHC.Types.:
+                                @ (Data.Text.Internal.Text, Database.Bolt.Value.Type.Value)
+                                (Neo4jHelpers.storeCollabLinkNeo3,
+                                 Database.Bolt.Value.Type.T userName)
+                                (GHC.Types.:
+                                   @ (Data.Text.Internal.Text, Database.Bolt.Value.Type.Value)
+                                   (Neo4jHelpers.storeCollabLinkNeo2,
+                                    Database.Bolt.Value.Type.T repoName)
+                                   (GHC.Types.[]
+                                      @ (Data.Text.Internal.Text,
+                                         Database.Bolt.Value.Type.Value))))))
+                         `cast`
+                       (Control.Monad.Trans.Reader.N:ReaderT[0]
+                            <*>_N
+                            <Database.Bolt.Connection.Type.Pipe>_R
+                            <GHC.Types.IO>_R
+                            <[Database.Bolt.Record.Record]>_N)
+                         ipv1)
+                        `cast`
+                      (GHC.Types.N:IO[0] <[Database.Bolt.Record.Record]>_R)
+                        ipv of ds2 { (#,#) ipv2 ipv3 ->
+                 case ipv1 of wild { Database.Bolt.Connection.Type.Pipe ds3 ds4 ->
+                 case ds3 of ww { Network.Socket.Types.MkSocket ww1 ww2 ww3 ww4 ww5 ->
+                 case ww5 of ww6 { GHC.MVar.MVar ww7 ->
+                 case Network.Socket.$wclose
+                        ww1
+                        ww7
+                        ipv2 of ds5 { (#,#) ipv4 ipv5 ->
+                 (# ipv4,
+                    GHC.List.null @ Database.Bolt.Record.Record ipv3 #) } } } } } }) -}
+3165a441a16b6b32dbee922edf413b84
+  storeCollabLinkNeo2 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString# "repoName"#) -}
+ebd30bdf84d631b1544bbaef964d3342
+  storeCollabLinkNeo3 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString# "userName"#) -}
+e48d68072458294aebb7dc8a046af84e
+  storeCollabLinkNeo4 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString#
+                   "MATCH (u:User {u_login: {userName}}), (r:Repo {r_html_url: {repoName}}) \n\
+                   \ CREATE (u)-[:IS_COLLABORATOR]->(r)"#) -}
+b275edb5c8d487e7a4045ee12461d437
+  storeOwnerLinkNeo ::
+    Data.Text.Internal.Text
+    -> Data.Text.Internal.Text -> GHC.Types.IO GHC.Types.Bool
+  {- Arity: 3, Strictness: <L,U><L,U><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Neo4jHelpers.storeOwnerLinkNeo1
+                  `cast`
+                (<Data.Text.Internal.Text>_R
+                 ->_R <Data.Text.Internal.Text>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <GHC.Types.Bool>_R)) -}
+9e0c3c81e682dc8eb298219e2d0a5455
+  storeOwnerLinkNeo1 ::
+    Data.Text.Internal.Text
+    -> Data.Text.Internal.Text
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, GHC.Types.Bool #)
+  {- Arity: 3, Strictness: <L,U><L,U><S,U>,
+     Unfolding: (\ (userName :: Data.Text.Internal.Text)
+                   (repoName :: Data.Text.Internal.Text)
+                   (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case Neo4jHelpers.getRepoByFullNameNeo7
+                        `cast`
+                      (GHC.Types.N:IO[0] <Database.Bolt.Connection.Type.Pipe>_R)
+                        eta of ds1 { (#,#) ipv ipv1 ->
+                 case ((Neo4jHelpers.getRepoByFullNameNeo6
+                          Neo4jHelpers.storeOwnerLinkNeo2
+                          (Neo4jHelpers.$sfromList
+                             @ Database.Bolt.Value.Type.Value
+                             (GHC.Types.:
+                                @ (Data.Text.Internal.Text, Database.Bolt.Value.Type.Value)
+                                (Neo4jHelpers.storeCollabLinkNeo3,
+                                 Database.Bolt.Value.Type.T userName)
+                                (GHC.Types.:
+                                   @ (Data.Text.Internal.Text, Database.Bolt.Value.Type.Value)
+                                   (Neo4jHelpers.storeCollabLinkNeo2,
+                                    Database.Bolt.Value.Type.T repoName)
+                                   (GHC.Types.[]
+                                      @ (Data.Text.Internal.Text,
+                                         Database.Bolt.Value.Type.Value))))))
+                         `cast`
+                       (Control.Monad.Trans.Reader.N:ReaderT[0]
+                            <*>_N
+                            <Database.Bolt.Connection.Type.Pipe>_R
+                            <GHC.Types.IO>_R
+                            <[Database.Bolt.Record.Record]>_N)
+                         ipv1)
+                        `cast`
+                      (GHC.Types.N:IO[0] <[Database.Bolt.Record.Record]>_R)
+                        ipv of ds2 { (#,#) ipv2 ipv3 ->
+                 case ipv1 of wild { Database.Bolt.Connection.Type.Pipe ds3 ds4 ->
+                 case ds3 of ww { Network.Socket.Types.MkSocket ww1 ww2 ww3 ww4 ww5 ->
+                 case ww5 of ww6 { GHC.MVar.MVar ww7 ->
+                 case Network.Socket.$wclose
+                        ww1
+                        ww7
+                        ipv2 of ds5 { (#,#) ipv4 ipv5 ->
+                 (# ipv4,
+                    GHC.List.null @ Database.Bolt.Record.Record ipv3 #) } } } } } }) -}
+7bcd5a3c3cb33cd671ee9d2e6102cbc7
+  storeOwnerLinkNeo2 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString#
+                   "MATCH (u:User {u_login: {userName}}), (r:Repo {r_html_url: {repoName}}) \n\
+                   \ CREATE (u)-[:IS_OWNER]->(r)"#) -}
+57007b9df001cd432d0cb82b313f228d
   storeRepoNodeNeo ::
     CommonResources.RepoData -> GHC.Types.IO GHC.Types.Bool
   {- Arity: 2,
-     Strictness: <S,1*U(U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1*U)><S,U>,
+     Strictness: <S,1*U(U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U)><S,U>,
      Unfolding: InlineRule (0, True, True)
                 Neo4jHelpers.storeRepoNodeNeo1
                   `cast`
                 (<CommonResources.RepoData>_R
                  ->_R Sym (GHC.Types.N:IO[0] <GHC.Types.Bool>_R)) -}
-00e7fe0e00b5be96b5ad235d7e4dbb08
+074a3b53623efb04c2448a884b65bc19
   storeRepoNodeNeo1 ::
     CommonResources.RepoData
     -> GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, GHC.Types.Bool #)
   {- Arity: 2,
-     Strictness: <S,1*U(U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,1*U)><S,U>,
+     Strictness: <S,1*U(U,U,U,U,U,U,U,U,U,U,U,U,U,U,U,U)><S,U>,
      Inline: INLINE[0],
      Unfolding: InlineRule (2, True, False)
                 (\ (w :: CommonResources.RepoData)
                    (w1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
-                 case w of ww { CommonResources.RepoData ww1 ww2 ww3 ww4 ww5 ww6 ww7 ww8 ww9 ww10 ww11 ww12 ww13 ww14 ww15 ww16 ww17 ww18 ww19 ww20 ->
+                 case w of ww { CommonResources.RepoData ww1 ww2 ww3 ww4 ww5 ww6 ww7 ww8 ww9 ww10 ww11 ww12 ww13 ww14 ww15 ww16 ->
                  Neo4jHelpers.$wstoreRepoNodeNeo
                    ww1
                    ww2
@@ -778,31 +1023,74 @@ b61d2875be8401fa080a34aff879fd98
                    ww14
                    ww15
                    ww16
-                   ww17
-                   ww18
-                   ww19
-                   ww20
                    w1 }) -}
-a651416531894cded4ccf0b79421fcac
+d2dc71e17e5a542b5d7e2cf0ad31f2f5
+  storeRepoNodeNeo10 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString# "r_html_url"#) -}
+0bcb10e2105c0885bce61c933ca4e54a
+  storeRepoNodeNeo11 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString# "r_is_private"#) -}
+b1070653a9510e087354456e588ab850
+  storeRepoNodeNeo12 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString# "r_description"#) -}
+9ba0a6b54c50b92b659413fe179e2c7c
+  storeRepoNodeNeo13 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString# "r_owner_id"#) -}
+c3913094bfbd43e843d8ea43215918df
+  storeRepoNodeNeo14 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString# "r_owner_name"#) -}
+db406996601c504ee906b4b4cd2d416b
+  storeRepoNodeNeo15 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString# "r_id"#) -}
+5b29ed600e46bb32df97c3a4b182a1e1
+  storeRepoNodeNeo16 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString# "r_last_updated"#) -}
+e38d6f3d8424cb7c9c6181b09b3bd952
+  storeRepoNodeNeo17 :: Data.Text.Internal.Text
+f687366f478e75d7c4bc699b887ae70b
+  storeRepoNodeNeo2 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString# "r_updated_at"#) -}
+328e6a7ad1c683d624f4f6e58e9b9972
+  storeRepoNodeNeo3 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString# "r_created_at"#) -}
+48ce4c4c60060df2df050318f463df1d
+  storeRepoNodeNeo4 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString# "r_pushed_at"#) -}
+0b0f539a195e416425365afb8c51fc06
+  storeRepoNodeNeo5 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString# "r_open_issues"#) -}
+25de84969eeec520fb22f617302e206c
+  storeRepoNodeNeo6 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString# "r_size"#) -}
+c689328f43eb4cfb59639960ffd26d78
+  storeRepoNodeNeo7 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString# "r_watchers"#) -}
+5e6452d5cf2e0f560e2e4186df996027
+  storeRepoNodeNeo8 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString# "r_stargazers"#) -}
+c4e5c483a8c6a38bd5793c60b2b65a64
+  storeRepoNodeNeo9 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString# "r_forks"#) -}
+43b576606e2ec32637ab1ae5a606773d
   storeUserNodeNeo ::
     CommonResources.UserData -> GHC.Types.IO GHC.Types.Bool
-  {- Arity: 2, Strictness: <S,1*U(U,U,U,U,U,U,U,U,U,U,U,U,U)><S,U>,
+  {- Arity: 2, Strictness: <S,1*U(U,U,U,U,U,U,U,U,U,U,U,U)><S,U>,
      Unfolding: InlineRule (0, True, True)
                 Neo4jHelpers.storeUserNodeNeo1
                   `cast`
                 (<CommonResources.UserData>_R
                  ->_R Sym (GHC.Types.N:IO[0] <GHC.Types.Bool>_R)) -}
-addc7aa221a4dcdf53932cf4e8aac3ec
+38ddee5339d3d4a2e60e8221bcea6d95
   storeUserNodeNeo1 ::
     CommonResources.UserData
     -> GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, GHC.Types.Bool #)
-  {- Arity: 2, Strictness: <S,1*U(U,U,U,U,U,U,U,U,U,U,U,U,U)><S,U>,
+  {- Arity: 2, Strictness: <S,1*U(U,U,U,U,U,U,U,U,U,U,U,U)><S,U>,
      Inline: INLINE[0],
      Unfolding: InlineRule (2, True, False)
                 (\ (w :: CommonResources.UserData)
                    (w1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
-                 case w of ww { CommonResources.UserData ww1 ww2 ww3 ww4 ww5 ww6 ww7 ww8 ww9 ww10 ww11 ww12 ww13 ->
+                 case w of ww { CommonResources.UserData ww1 ww2 ww3 ww4 ww5 ww6 ww7 ww8 ww9 ww10 ww11 ww12 ->
                  Neo4jHelpers.$wstoreUserNodeNeo
                    ww1
                    ww2
@@ -816,25 +1104,21 @@ addc7aa221a4dcdf53932cf4e8aac3ec
                    ww10
                    ww11
                    ww12
-                   ww13
                    w1 }) -}
-3151e5feed55dfb2177312ff3e0909dc
+e351aedf86bb389e7a186461c8d3d984
   storeUserNodeNeo10 :: Data.Text.Internal.Text
-  {- Unfolding: (Data.Text.Show.unpackCString# "u_company"#) -}
-d00a6564d314cc74f794a43cf64cbc64
-  storeUserNodeNeo11 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString# "u_name"#) -}
-0cce2552eb95db2c38123c895b27c779
-  storeUserNodeNeo12 :: Data.Text.Internal.Text
+47912069c197261cc0abf9ea4ed33560
+  storeUserNodeNeo11 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString# "u_url"#) -}
-a8dce1e1805c73a65ea0e377f0bac463
-  storeUserNodeNeo13 :: Data.Text.Internal.Text
+3bb7e1f8f75ccc7108e2a0517cd1d808
+  storeUserNodeNeo12 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString# "u_id"#) -}
-3b58fafb2f22b3ce6f927c14f7c154d1
-  storeUserNodeNeo14 :: Data.Text.Internal.Text
+2e40055b95957484d8e65cc7e95ccae2
+  storeUserNodeNeo13 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString# "u_login"#) -}
-4ce72b5c2637867fa0d959e7b0005e93
-  storeUserNodeNeo15 :: Data.Text.Internal.Text
+284e4e7617662e210dffb6810718a7f1
+  storeUserNodeNeo14 :: Data.Text.Internal.Text
 8d278569353f84e8004719a2715a2b08
   storeUserNodeNeo2 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString# "u_following"#) -}
@@ -850,15 +1134,15 @@ a8dce1e1805c73a65ea0e377f0bac463
 22940524d008fe410a19e66cd3b3a897
   storeUserNodeNeo6 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString# "u_bio"#) -}
-ac175f5a47eb224fcc34eb377047b852
+b7928302ca12ab8d2d83e942ce9afc98
   storeUserNodeNeo7 :: Data.Text.Internal.Text
-  {- Unfolding: (Data.Text.Show.unpackCString# "u_hireable"#) -}
-c010e96d877f21981977f91e5c4d1db2
-  storeUserNodeNeo8 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString# "u_email"#) -}
-454f718267aaee831294a846bedbe0ea
-  storeUserNodeNeo9 :: Data.Text.Internal.Text
+a3ee30a29c51e47f257ffbeeb6b40429
+  storeUserNodeNeo8 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString# "u_location"#) -}
+c4b8fdc06555973d96a3da06fa845455
+  storeUserNodeNeo9 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString# "u_company"#) -}
 1481f0aabe3ecf288f5fd3be53de8cbb
   toNode ::
     Database.Bolt.Record.Record
