@@ -19,6 +19,26 @@ import qualified Data.List as DL
 import CommonResources
 
 
+storeLanguagelink :: DT.Text -> DT.Text -> IO Bool
+storeLanguagelink language repoHtml = do
+  let neo_conf = Neo.def { Neo.user = "neo4j", Neo.password = "GaryGunn94" }
+  neo_pipe <- Neo.connect $ neo_conf 
+
+  -- -- Add node
+  records <- Neo.run neo_pipe $ Neo.queryP (DT.pack cypher) params
+
+  Neo.close neo_pipe
+
+  let isEmpty = null records
+  return isEmpty
+
+  where cypher = "MATCH (u:Repo {r_html_url: {repoHtml}}), (r:Language {language: {language}}) \n CREATE (u)-[:IS_WRITTEN_IN]->(r)" --14
+
+        params = DM.fromList [
+            ("language", Neo.T language),
+            ("repoHtml", Neo.T repoHtml)]
+
+
 storeOwnerLinkNeo :: DT.Text -> DT.Text-> IO Bool
 storeOwnerLinkNeo userName repoName = do
   let neo_conf = Neo.def { Neo.user = "neo4j", Neo.password = "GaryGunn94" }
@@ -56,6 +76,26 @@ storeCollabLinkNeo userName repoName = do
         params = DM.fromList [
             ("userName", Neo.T userName),
             ("repoName", Neo.T repoName)]
+
+storeLanguageNode :: DT.Text -> IO Bool
+storeLanguageNode language = do
+  let neo_conf = Neo.def { Neo.user = "neo4j", Neo.password = "GaryGunn94" }
+  neo_pipe <- Neo.connect $ neo_conf 
+
+  -- -- Add node
+  records <- Neo.run neo_pipe $ Neo.queryP (DT.pack cypher) params
+
+  Neo.close neo_pipe
+
+  let isEmpty = null records
+  return isEmpty
+
+  where cypher = "CREATE (n:Language { " ++
+            " language: {language} } )" --14
+
+        params = DM.fromList [
+            ("language", Neo.T language)]
+
 
 storeUserNodeNeo :: UserData -> IO Bool
 storeUserNodeNeo (UserData

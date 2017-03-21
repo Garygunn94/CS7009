@@ -231,6 +231,21 @@ formatRepo auth uname state hops repo = do
       --let link = (Link (unpack uname) (unpack repoHTML) "1")
       --liftIO $ MongodbHelpers.withMongoDbConnection $ upsert (select ["source" =: (unpack uname), "target" =: (unpack repoHTML)] "Link_RECORD") $ toBSON link	
       let language = formatLanguage (GHDR.repoLanguage repo)
+      seen_already <- atomically $ lookupNode state language
+      case seen_already of
+      	Just seen -> do
+      		link <- storeLanguagelink language repoHTML
+      		case link of
+      			False -> putStrLn ("Could not store link: " ++ (DT.unpack repoHTML) ++ " Written in " ++ (DT.unpack language))
+      			True -> putStrLn ("Stored link: " ++ (DT.unpack repoHTML) ++ " Written in " ++ (DT.unpack language))
+      	Nothing -> do
+      		let nodeData = (Node (unpack language) (unpack language))
+      		atomically $ addNode state nodeData language
+      		stored <- storeLanguageNode language
+      		link <- storeLanguagelink language repoHTML
+      		case link of
+      			False -> putStrLn ("Could not store link: " ++ (DT.unpack repoHTML) ++ " Written in " ++ (DT.unpack language))
+      			True -> putStrLn ("Stored link: " ++ (DT.unpack repoHTML) ++ " Written in " ++ (DT.unpack language))
       putStrLn (unpack repoHTML)
       let repodata = Node (unpack repoHTML) (unpack language)
       atomically $ addNode state repodata repoHTML
@@ -285,7 +300,7 @@ userformat auth state prev_repo hops contributer@(Github.KnownContributor contri
       return ()
 
 formatLanguage (Just language) = getLanguage language
-formatLanguage Nothing = ""
+formatLanguage Nothing = DT.pack ""
 
 
 

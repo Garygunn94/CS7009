@@ -1,9 +1,9 @@
 
 ==================== FINAL INTERFACE ====================
-2017-03-20 18:03:32.159996 UTC
+2017-03-21 15:56:23.055846 UTC
 
 interface Crawler-0.1.0.0-4TlNtDNo36iBcoKkT3lNJl:Crawler [orphan module] [family instance module] 8001
-  interface hash: 225cdbe7eecd49d0f097f9c0f1322095
+  interface hash: 3a90c76db365e723ddc670ab3ee48164
   ABI hash: 999da349e982475b16c0b60394526186
   export-list hash: e5f1f7d02bb0435b73c53b24339784fa
   orphan hash: 27a33cc415e17c993fa09b15cd2becde
@@ -302,7 +302,7 @@ family instance modules: CommonResources-0.1.0.0@CommonResources-0.1.0.0-BsMSFzQ
                          zlib-0.6.1.2@zlib-0.6.1.2-4CWLN1T27kOJhNvXgy46ZV:Codec.Compression.Zlib.Stream
 import  -/  CommonResources-0.1.0.0@CommonResources-0.1.0.0-BsMSFzQQ7hXDT6ERpBbAsv:CommonResources 08ddf06b6b4042b5908c606ed109b0c7
 import  -/  CommonResources-0.1.0.0@CommonResources-0.1.0.0-BsMSFzQQ7hXDT6ERpBbAsv:MongodbHelpers 69b9f46b1818526df2f64e029be8f49d
-import  -/  CommonResources-0.1.0.0@CommonResources-0.1.0.0-BsMSFzQQ7hXDT6ERpBbAsv:Neo4jHelpers 5dbea2452606acfb50727a2a55a395fa
+import  -/  CommonResources-0.1.0.0@CommonResources-0.1.0.0-BsMSFzQQ7hXDT6ERpBbAsv:Neo4jHelpers ed1d85261643974bbfe8fa1ca89ce97e
 import  -/  aeson-0.11.2.1@aeson-0.11.2.1-5ZQWuTFmffALcfpzDCXoOz:Data.Aeson 94b59824488f369f190c261b6e39e7ba
 import  -/  aeson-0.11.2.1@aeson-0.11.2.1-5ZQWuTFmffALcfpzDCXoOz:Data.Aeson.TH 869262ef224a0287f5d5fc093506acd2
 import  -/  aeson-0.11.2.1@aeson-0.11.2.1-5ZQWuTFmffALcfpzDCXoOz:Data.Aeson.Types.Class c9d74667288c52e23279e16b75c64023
