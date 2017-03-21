@@ -218,6 +218,26 @@ storeRepoNodeNeo (RepoData
             ("r_created_at", Neo.I r_created_at),
             ("r_updated_at", Neo.I r_updated_at)]
 
+getSocialGraph :: IO SocialGraph
+getSocialGraph = do
+  let neo_conf = Neo.def { Neo.user = "neo4j", Neo.password = "GaryGunn94" }
+  neo_pipe <- Neo.connect $ neo_conf
+  
+  -- -- Add node
+  record_nodes <- Neo.run neo_pipe $ Neo.query "MATCH (n:User) RETURN n.u_login as name, HEAD(Labels(n)) as group UNION MATCH (n:Repo) RETURN n.r_html_url as name, HEAD(Labels(n)) as group UNION MATCH (n:Language) RETURN n.language as name, HEAD(Labels(n)) as group"
+  record_links <- Neo.run neo_pipe $ Neo.query "MATCH (n:User)-[r]->(x:Repo) RETURN n.u_login as source,Type(r) as type,x.r_html_url as target UNION MATCH (n:Repo)-[r]->(x:Language) RETURN n.r_html_url as source, Type(r) as type, x.language as target"
+
+
+  Neo.close neo_pipe
+  
+  node_nodes <- (mapM recordToNode) record_nodes
+  node_links <- (mapM recordToNode) record_links
+
+  nodes <- (mapM nodeToNode) node_nodes
+  links <- (mapM nodeToLink) node_links
+
+  return (SocialGraph nodes links)
+
 --getRepoByNameNeo :: Text -> IO RepoData
 getRepoByFullNameNeo :: DT.Text -> IO DT.Text
 --getRepoByNameNeo :: Text -> IO [Text]
@@ -255,6 +275,25 @@ recordToNode r = do
   node :: Neo.Node <- (r `Neo.at` "n") >>= Neo.exact
   return node
  
+nodeToNode :: Neo.Node -> IO CommonResources.Node
+nodeToNode node = do
+	let props = Neo.nodeProps node
+
+	name :: DT.Text <- (props `Neo.at` "name") >>= Neo.exact
+	group :: DT.Text <- (props `Neo.at` "group") >>= Neo.exact 
+
+	return (Node (DT.unpack name) (DT.unpack group))
+
+nodeToLink :: Neo.Node -> IO CommonResources.Link
+nodeToLink node = do
+	let props = Neo.nodeProps node
+
+	source :: DT.Text <- (props `Neo.at` "source") >>= Neo.exact
+	target :: DT.Text <- (props `Neo.at` "target") >>= Neo.exact
+	group :: DT.Text <- (props `Neo.at` "type") >>= Neo.exact
+
+	return (Link (DT.unpack source) (DT.unpack target) (DT.unpack group))
+
 nodeToRepoData :: Neo.Node -> IO RepoData
 nodeToRepoData node = do
   let props = Neo.nodeProps node

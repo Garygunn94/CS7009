@@ -1,11 +1,11 @@
 
 ==================== FINAL INTERFACE ====================
-2017-03-03 16:06:07.679719 UTC
+2017-03-21 18:32:39.16309 UTC
 
 interface main@main:Main 8001
-  interface hash: b0d831d13b955cef134ce63c1c462977
-  ABI hash: 83e2c0cbaa5bd01a516be0ef94dff05b
-  export-list hash: 68e40a5b9668f4fe83c3451d125179af
+  interface hash: 5943822d2732d77c4280536213c0536f
+  ABI hash: 9b538e365684272770de4bb42a0f3418
+  export-list hash: e7d04f7906f710e9462714a8d38c2d1b
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: bc8dedadbcabd782a2b80845aea955ab
   sig of: Nothing
@@ -14,9 +14,9 @@ interface main@main:Main 8001
 exports:
   Main.main
 module dependencies:
-package dependencies: CommonResources-0.1.0.0@CommonResources-0.1.0.0-9oGhjaAGZvDFMay6riBguH
+package dependencies: CommonResources-0.1.0.0@CommonResources-0.1.0.0-4OjH7SZdJLA1AQ6TeYSEKS
                       MonadRandom-0.4.2.3@MonadRandom-0.4.2.3-8TfCm6PGvGYB7omozORhov
-                      Search-0.1.0.0@Search-0.1.0.0-1DjOwK0NIga9yxix8ruoSo
+                      Search-0.1.0.0@Search-0.1.0.0-Px6lqHM5od5UIoTXAPFJV
                       StateVar-1.1.0.4@StateVar-1.1.0.4-CJpWsiXJdd89SnV9dZtTwc
                       adjunctions-4.3@adjunctions-4.3-3ol9sWZt3In19pwXwPv3Xc
                       aeson-1.1.0.0@aeson-1.1.0.0-6czAS50gW4ueCUtDYEEe5
@@ -54,7 +54,11 @@ package dependencies: CommonResources-0.1.0.0@CommonResources-0.1.0.0-9oGhjaAGZv
                       cryptohash-0.11.9@cryptohash-0.11.9-9KNu0EEbreBFrmNJAeHgYz
                       cryptonite-0.19@cryptonite-0.19-G9PYO4oOEqhDTta2u9rAaU
                       data-binary-ieee754-0.4.4@data-binary-ieee754-0.4.4-F1HjhwdV1xx5grS0eMjeg2
+                      data-default-0.7.1.1@data-default-0.7.1.1-5uix4eIzBY9IcVb4V2HbW3
                       data-default-class-0.1.2.0@data-default-class-0.1.2.0-FYQpjIylblBDctdkHAFeXA
+                      data-default-instances-containers-0.0.1@data-default-instances-containers-0.0.1-B3LqdWnlDzL8N7WtQnkQ3T
+                      data-default-instances-dlist-0.0.1@data-default-instances-dlist-0.0.1-7EnnOuRxBMR4O5lm1rpRqD
+                      data-default-instances-old-locale-0.0.1@data-default-instances-old-locale-0.0.1-LPOHPEJCJUa53W1ZYaHB84
                       deepseq-1.4.2.0@deepseq-1.4.2.0 directory-1.2.6.2@directory-1.2.6.2
                       distributive-0.5.0.2@distributive-0.5.0.2-Cdz2vLOk85j1doGXLcictT
                       dlist-0.8.0.2@dlist-0.8.0.2-GWAMmbX9rLg3tqrbOizHGv
@@ -65,6 +69,7 @@ package dependencies: CommonResources-0.1.0.0@CommonResources-0.1.0.0-9oGhjaAGZv
                       filepath-1.4.1.0@filepath-1.4.1.0
                       free-4.12.4@free-4.12.4-Etm59Dm8iExFxAy1L49Ovd
                       ghc-boot-th-8.0.1@ghc-boot-th-8.0.1 ghc-prim-0.5.0.0
+                      hasbolt-0.1.0.9@hasbolt-0.1.0.9-HRDIXdMg4lSHI3BsCx0D9q
                       hashable-1.2.4.0@hashable-1.2.4.0-EMu4H7FB10MAl6hwKw992G
                       hashtables-1.2.1.0@hashtables-1.2.1.0-97BixhaJIWTIDAaThqJujl
                       hslogger-1.2.10@hslogger-1.2.10-6Ih3VN3QBbAJ6pLH6h3KNu
@@ -85,6 +90,7 @@ package dependencies: CommonResources-0.1.0.0@CommonResources-0.1.0.0-9oGhjaAGZv
                       mongoDB-2.1.1.1@mongoDB-2.1.1.1-5wYXyk7zdwHHB6m4bwUEQN
                       mtl-2.2.1@mtl-2.2.1-6qsR1PHUy5lL47Hpoa4jCM
                       network-2.6.3.1@network-2.6.3.1-G4Up1CPKbp7DeFsnywOnGG
+                      network-simple-0.4.0.5@network-simple-0.4.0.5-GYZUluFttYr8Wpd9K6hpGa
                       network-uri-2.6.1.0@network-uri-2.6.1.0-DDHh2FNiPirBRgkuU9DEt2
                       nonce-1.0.2@nonce-1.0.2-187zSgt2OIA84d9i9xgwRX
                       old-locale-1.0.0.7@old-locale-1.0.0.7-6glXNhHF891B41ZfuI8hU8
@@ -136,7 +142,7 @@ package dependencies: CommonResources-0.1.0.0@CommonResources-0.1.0.0-9oGhjaAGZv
                       warp-3.2.11@warp-3.2.11-EqWoeK75b7sENnTnGPN6ko
                       word8-0.1.2@word8-0.1.2-2E1SgvvAV2fK8vZPDHbRan
                       zlib-0.6.1.2@zlib-0.6.1.2-4CWLN1T27kOJhNvXgy46ZV
-orphans: CommonResources-0.1.0.0@CommonResources-0.1.0.0-9oGhjaAGZvDFMay6riBguH:CommonResources
+orphans: CommonResources-0.1.0.0@CommonResources-0.1.0.0-4OjH7SZdJLA1AQ6TeYSEKS:CommonResources
          MonadRandom-0.4.2.3@MonadRandom-0.4.2.3-8TfCm6PGvGYB7omozORhov:Control.Monad.Random
          attoparsec-0.13.1.0@attoparsec-0.13.1.0-5Olk1S76r1CDYzFS6V3sZR:Data.Attoparsec.ByteString.Char8
          attoparsec-0.13.1.0@attoparsec-0.13.1.0-5Olk1S76r1CDYzFS6V3sZR:Data.Attoparsec.Text.Internal
@@ -144,6 +150,12 @@ orphans: CommonResources-0.1.0.0@CommonResources-0.1.0.0-9oGhjaAGZvDFMay6riBguH:
          binary-0.8.3.0@binary-0.8.3.0:Data.Binary.Generic
          bson-generic-0.0.8@bson-generic-0.0.8-DtORpoUHwQhDReLJ5Keop0:Data.Bson.Generic
          bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Builder
+         data-default-instances-containers-0.0.1@data-default-instances-containers-0.0.1-B3LqdWnlDzL8N7WtQnkQ3T:Data.Default.Instances.Containers
+         data-default-instances-dlist-0.0.1@data-default-instances-dlist-0.0.1-7EnnOuRxBMR4O5lm1rpRqD:Data.Default.Instances.DList
+         data-default-instances-old-locale-0.0.1@data-default-instances-old-locale-0.0.1-LPOHPEJCJUa53W1ZYaHB84:Data.Default.Instances.OldLocale
+         hasbolt-0.1.0.9@hasbolt-0.1.0.9-HRDIXdMg4lSHI3BsCx0D9q:Database.Bolt.Connection.Instances
+         hasbolt-0.1.0.9@hasbolt-0.1.0.9-HRDIXdMg4lSHI3BsCx0D9q:Database.Bolt.Value.Instances
+         hasbolt-0.1.0.9@hasbolt-0.1.0.9-HRDIXdMg4lSHI3BsCx0D9q:Database.Bolt.Value.Structure
          hashable-1.2.4.0@hashable-1.2.4.0-EMu4H7FB10MAl6hwKw992G:Data.Hashable.Generic
          http-client-0.4.31.2@http-client-0.4.31.2-81NyMkNcWWADaJ0Cq5FYRE:Network.HTTP.Client.Request
          mongoDB-2.1.1.1@mongoDB-2.1.1.1-5wYXyk7zdwHHB6m4bwUEQN:Database.MongoDB.Internal.Util
@@ -160,7 +172,7 @@ orphans: CommonResources-0.1.0.0@CommonResources-0.1.0.0-9oGhjaAGZvDFMay6riBguH:
          unix-time-0.3.7@unix-time-0.3.7-HcxGsrnTmTlC98pyanzoMW:Data.UnixTime.Diff
          vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Fusion.Bundle
          vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Unboxed
-family instance modules: CommonResources-0.1.0.0@CommonResources-0.1.0.0-9oGhjaAGZvDFMay6riBguH:CommonResources
+family instance modules: CommonResources-0.1.0.0@CommonResources-0.1.0.0-4OjH7SZdJLA1AQ6TeYSEKS:CommonResources
                          adjunctions-4.3@adjunctions-4.3-3ol9sWZt3In19pwXwPv3Xc:Data.Functor.Rep
                          attoparsec-0.13.1.0@attoparsec-0.13.1.0-5Olk1S76r1CDYzFS6V3sZR:Data.Attoparsec.Internal.Types
                          base-4.9.0.0:Control.Applicative base-4.9.0.0:Data.Complex
@@ -233,7 +245,7 @@ family instance modules: CommonResources-0.1.0.0@CommonResources-0.1.0.0-9oGhjaA
                          vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Unboxed
                          vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Unboxed.Base
                          zlib-0.6.1.2@zlib-0.6.1.2-4CWLN1T27kOJhNvXgy46ZV:Codec.Compression.Zlib.Stream
-import  -/  Search-0.1.0.0@Search-0.1.0.0-1DjOwK0NIga9yxix8ruoSo:Search 8f5a75f589ecc2802d0a6aaae2e8f511
+import  -/  Search-0.1.0.0@Search-0.1.0.0-Px6lqHM5od5UIoTXAPFJV:Search 1cff3981c062aa732f351ecb4a789495
 import  -/  base-4.9.0.0:Prelude b9bddb97799837fe67a8d00939a5b6c3
 import  -/  ghc-prim-0.5.0.0:GHC.Types 7378e41b7749213c8c88ceb6b0665d4c
 d6831ef04cb9301b090dfae6f7bb7ec7
@@ -248,12 +260,12 @@ d6831ef04cb9301b090dfae6f7bb7ec7
   $trModule2 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "main"#) -}
-4ca090027471dd4a14b66398509b3451
+5bf0a7076cdc36811a06f4e56a5dcbef
   main :: GHC.Types.IO ()
   {- Arity: 1, Strictness: <S,U>,
      Unfolding: InlineRule (0, True, True)
                 Search.mkApp1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
-970ca30a828787eeea0d85f69b24d979
+fee8b14da141b64cc5da48c130949207
   main1 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)

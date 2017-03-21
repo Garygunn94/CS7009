@@ -231,7 +231,7 @@
   (major1) == 2 && (major2) <  26 || \
   (major1) == 2 && (major2) == 26 && (minor) <= 0)
 
-#define CURRENT_COMPONENT_ID "Search-0.1.0.0-1DjOwK0NIga9yxix8ruoSo"
+#define CURRENT_COMPONENT_ID "Search-0.1.0.0-Px6lqHM5od5UIoTXAPFJV"
 
-#define CURRENT_PACKAGE_KEY "Search-0.1.0.0-1DjOwK0NIga9yxix8ruoSo"
+#define CURRENT_PACKAGE_KEY "Search-0.1.0.0-Px6lqHM5od5UIoTXAPFJV"
 

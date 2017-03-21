@@ -1,0 +1,6 @@
+MATCH (n:User)
+RETURN n.u_login as name
+UNION MATCH (n:Repo)
+RETURN n.r_html_url as name
+UNION MATCH (n:Language)
+RETUEN n.language as name

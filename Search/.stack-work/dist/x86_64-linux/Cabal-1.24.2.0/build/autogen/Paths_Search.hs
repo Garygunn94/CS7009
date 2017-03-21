@@ -30,7 +30,7 @@ version = Version [0,1,0,0] []
 bindir, libdir, dynlibdir, datadir, libexecdir, sysconfdir :: FilePath
 
 bindir     = "/home/ggunn/CS7009/Search/.stack-work/install/x86_64-linux/lts-7.13/8.0.1/bin"
-libdir     = "/home/ggunn/CS7009/Search/.stack-work/install/x86_64-linux/lts-7.13/8.0.1/lib/x86_64-linux-ghc-8.0.1/Search-0.1.0.0-1DjOwK0NIga9yxix8ruoSo"
+libdir     = "/home/ggunn/CS7009/Search/.stack-work/install/x86_64-linux/lts-7.13/8.0.1/lib/x86_64-linux-ghc-8.0.1/Search-0.1.0.0-Px6lqHM5od5UIoTXAPFJV"
 dynlibdir  = "/home/ggunn/CS7009/Search/.stack-work/install/x86_64-linux/lts-7.13/8.0.1/lib/x86_64-linux-ghc-8.0.1"
 datadir    = "/home/ggunn/CS7009/Search/.stack-work/install/x86_64-linux/lts-7.13/8.0.1/share/x86_64-linux-ghc-8.0.1/Search-0.1.0.0"
 libexecdir = "/home/ggunn/CS7009/Search/.stack-work/install/x86_64-linux/lts-7.13/8.0.1/libexec"

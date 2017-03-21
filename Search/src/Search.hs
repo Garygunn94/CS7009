@@ -34,6 +34,7 @@ import CommonResources
 import MongodbHelpers
 import Database.MongoDB
 import Network.Wai.Middleware.Cors
+import Neo4jHelpers
 import Servant.JS
 
 type ApiHandler = ExceptT ServantErr IO
@@ -51,8 +52,7 @@ www :: FilePath
 www = "www"
 
 server :: Server SearchApi
-server = 
-    getSocialGraph
+server = Search.getSocialGraph
 
 server' :: Server SearchApi'
 server' = server
@@ -71,7 +71,9 @@ mkApp = do
 getSocialGraph :: ApiHandler SocialGraph
 getSocialGraph = liftIO $ do
 	putStrLn ("Fetching Node data")
-	nodes <- MongodbHelpers.withMongoDbConnection $ do
+	sg <- Neo4jHelpers.getSocialGraph
+        return sg
+	{--nodes <- MongodbHelpers.withMongoDbConnection $ do
 		docs <- find (select [] "Node_RECORD") >>= drainCursor
 		return $ catMaybes $ DL.map (\ b -> fromBSON b :: Maybe Node) docs
         putStrLn ("Fetching Link Data")
@@ -79,5 +81,5 @@ getSocialGraph = liftIO $ do
 		docs <- find (select [] "Link_RECORD") >>= drainCursor
 		return $ catMaybes $ DL.map (\ b -> fromBSON b :: Maybe CommonResources.Link) docs
         let socialGraph = (SocialGraph nodes links)
-        return socialGraph
+        return socialGraph-}
 

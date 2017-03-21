@@ -10,6 +10,7 @@ packages:
 extra-deps:
 - aeson-1.1.0.0
 - fast-logger-2.4.10
+- hasbolt-0.1.0.9
 - http-api-data-0.3.2
 - servant-0.9.1.1
 - servant-client-0.9.1.1

@@ -1,12 +1,12 @@
 
 ==================== FINAL INTERFACE ====================
-2017-03-16 18:22:20.125893 UTC
+2017-03-21 18:27:36.667423 UTC
 
-interface CommonResources-0.1.0.0-BsMSFzQQ7hXDT6ERpBbAsv:MongodbHelpers 8001
-  interface hash: d94b1752c0e31fd23950a1a5a1a9c603
-  ABI hash: 69b9f46b1818526df2f64e029be8f49d
-  export-list hash: 01bfd076439a6903a5ab2403c1e5471b
-  orphan hash: d979f01b1d751b7d02fadd2b8cc608aa
+interface CommonResources-0.1.0.0-4OjH7SZdJLA1AQ6TeYSEKS:MongodbHelpers 8001
+  interface hash: 2c0b31d7dfb8a38a8d6e42722267c907
+  ABI hash: 2015227cf0c130f7b208cb71af808f8b
+  export-list hash: f3cca124ce2f3aa1d13fd77861fdcd6e
+  orphan hash: 9be3c20bf57de011e8c8bd8bbe5e23b6
   flag hash: ab1dddaa39fb8a9e594899798c275a0c
   sig of: Nothing
   used TH splices: False
@@ -127,7 +127,7 @@ import  -/  resourcet-1.1.8.1@resourcet-1.1.8.1-1XWaZ7RmVde330DM5PRI3Z:Control.M
 import  -/  text-1.2.2.1@text-1.2.2.1-5QpmrLQApEZ4Ly9nMHWY0s:Data.Text 6515f3179e27a91345842b6e634f584c
 import  -/  time-1.6.0.1@time-1.6.0.1:Data.Time.Clock b91051c7767d1f23314064be1d4311d7
 import  -/  time-1.6.0.1@time-1.6.0.1:Data.Time.Format b6d4cc5df3f9159b1156baa52a254cf6
-43b8750bfb7b141c54eb486def65c7fa
+d8a5391da6d956dff823ac24746e3739
   $sread :: GHC.Base.String -> GHC.Integer.Type.Integer
   {- Arity: 1, Strictness: <L,U>,
      Unfolding: InlineRule (1, True, False)
@@ -142,22 +142,22 @@ import  -/  time-1.6.0.1@time-1.6.0.1:Data.Time.Format b6d4cc5df3f9159b1156baa52
                         @ GHC.Integer.Type.Integer
                         x
                    Data.Either.Right y -> y }) -}
-8b3724217b626f49ff8a75789484a127
+f288392f4fd443697c84051e26613043
   $trModule :: GHC.Types.Module
   {- HasNoCafRefs, Strictness: m,
      Unfolding: (GHC.Types.Module
                    MongodbHelpers.$trModule2
                    MongodbHelpers.$trModule1) -}
-c297ce46eaef96d1053b7e9b60bdf316
+f2554db2105163f249579de2a1cf7a56
   $trModule1 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "MongodbHelpers"#) -}
-f6ea0749088a5c451515316fa7d3fd27
+d1f7d3758addcbfbcbe2322dca64922b
   $trModule2 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS
-                   "CommonResources-0.1.0.0-BsMSFzQQ7hXDT6ERpBbAsv"#) -}
-5d1e6cddadad702d05a458e0c9cbbeb1
+                   "CommonResources-0.1.0.0-4OjH7SZdJLA1AQ6TeYSEKS"#) -}
+4a61d9de17f63007c51b681324c05345
   $wouter ::
     Data.Text.Array.MArray GHC.Prim.RealWorld
     -> GHC.Types.Int
@@ -168,7 +168,7 @@ f6ea0749088a5c451515316fa7d3fd27
           Data.Text.Internal.Text #)
   {- Arity: 5, Strictness: <L,U(U)><L,U(U)><S,1*U><S,U><S,U>,
      Inline: [0] -}
-66cf87ff1bceb88680a288ad2a5129c6
+eb6828f753f92bc7e1ae79efb5a468be
   defEnv ::
     GHC.Show.Show a =>
     GHC.Base.String
@@ -184,7 +184,7 @@ f6ea0749088a5c451515316fa7d3fd27
                  ->_R <a>_R
                  ->_R <GHC.Types.Bool>_R
                  ->_R Sym (GHC.Types.N:IO[0] <a>_R)) -}
-ebe0d8a2b958bf4c615538324348588d
+72cc6eefb8c9a0eab31eb3beb702867e
   defEnv1 ::
     GHC.Show.Show a =>
     GHC.Base.String
@@ -219,7 +219,7 @@ ebe0d8a2b958bf4c615538324348588d
                  case ipv3 of wild1 {
                    GHC.Base.Nothing -> (# ipv2, def #)
                    GHC.Base.Just s -> (# ipv2, fn s #) } } } }) -}
-d1cf1add4c6ccecccad54603fd01f49e
+eb230dd433db11a954710b2ab0e0c931
   drainCursor ::
     Database.MongoDB.Query.Cursor
     -> Database.MongoDB.Query.Action GHC.Types.IO [Data.Bson.Document]
@@ -229,7 +229,7 @@ d1cf1add4c6ccecccad54603fd01f49e
                  MongodbHelpers.drainCursor_drainCursor'
                    cur
                    (GHC.Types.[] @ Data.Bson.Document)) -}
-7da322ed47d7b98749bd0af269999411
+39935608baf5e5809c230edb8a4a0e70
   drainCursor_drainCursor' ::
     Database.MongoDB.Query.Cursor
     -> [Data.Bson.Document]
@@ -238,14 +238,14 @@ d1cf1add4c6ccecccad54603fd01f49e
          GHC.Types.IO
          [Data.Bson.Document]
   {- Arity: 2, Strictness: <L,U><L,U> -}
-9c2ba931930037a1fcac9c97942844f7
+39692489f4d71cbf05616bdd2893d399
   logLevel :: GHC.Types.IO GHC.Base.String
   {- Arity: 1, Strictness: <S,U>,
      Unfolding: InlineRule (0, True, True)
                 MongodbHelpers.logLevel1
                   `cast`
                 (Sym (GHC.Types.N:IO[0] <[GHC.Types.Char]>_R)) -}
-5a08f91942e108ed1407de1b5e8fe796
+7e4aa6165ec78cf5fd49360eaefc41d2
   logLevel1 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, [GHC.Types.Char] #)
@@ -269,20 +269,20 @@ d1cf1add4c6ccecccad54603fd01f49e
                  case ipv3 of wild1 {
                    GHC.Base.Nothing -> (# ipv2, MongodbHelpers.logLevel2 #)
                    GHC.Base.Just s -> (# ipv2, s #) } } } }) -}
-ca6f72eefa4bec95dfb14835ce815009
+b3e67426bd82bde8657956036fc0a515
   logLevel2 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "DEBUG"#) -}
-d5ef69ddf43ae1f511d9d8cefec57d79
+229b3b26ea43c9376e1aaf1b196f4c00
   logLevel3 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "LOG_LEVEL"#) -}
-c3a1765bc091846686e2164e8b4aed28
+c0999b3f63d1168dacb5472dac76cf4d
   mongoDbDatabase :: GHC.Types.IO GHC.Base.String
   {- Arity: 1, Strictness: <S,U>,
      Unfolding: InlineRule (0, True, True)
                 MongodbHelpers.mongoDbDatabase1
                   `cast`
                 (Sym (GHC.Types.N:IO[0] <[GHC.Types.Char]>_R)) -}
-0ca27184486a5e0c3006dde1e8129ca1
+a3d081af7bc22a35d6848b03a43b9066
   mongoDbDatabase1 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, [GHC.Types.Char] #)
@@ -306,20 +306,20 @@ c3a1765bc091846686e2164e8b4aed28
                  case ipv3 of wild1 {
                    GHC.Base.Nothing -> (# ipv2, MongodbHelpers.mongoDbDatabase2 #)
                    GHC.Base.Just s -> (# ipv2, s #) } } } }) -}
-fce8b9dff0069986ec795b1d4444e881
+8995d6d0551fcc028f8678794ca604e8
   mongoDbDatabase2 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "USEHASKELLDB"#) -}
-5aa77a5d0d2d0c1d3349d6a4138b42dd
+5ba4e660465d9f800770b6ddc7aab2a1
   mongoDbDatabase3 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "MONGODB_DATABASE"#) -}
-f85c50932f9aa58fb4682cfdde1d7936
+8513f9ef5f042992ed53c1b0fc1f0a45
   mongoDbIp :: GHC.Types.IO GHC.Base.String
   {- Arity: 1, Strictness: <S,U>,
      Unfolding: InlineRule (0, True, True)
                 MongodbHelpers.mongoDbIp1
                   `cast`
                 (Sym (GHC.Types.N:IO[0] <[GHC.Types.Char]>_R)) -}
-79fbbf1f791a071f0bac7a98aafacc5d
+7fa45c6204d8437480c21df3ac208e48
   mongoDbIp1 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, [GHC.Types.Char] #)
@@ -343,20 +343,20 @@ f85c50932f9aa58fb4682cfdde1d7936
                  case ipv3 of wild1 {
                    GHC.Base.Nothing -> (# ipv2, MongodbHelpers.mongoDbIp2 #)
                    GHC.Base.Just s -> (# ipv2, s #) } } } }) -}
-c59f48e2b4ccb43f0159acf211b8a3e0
+662b3c807f3e3c3f37d3409b671c53ca
   mongoDbIp2 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "127.0.0.1"#) -}
-4e4acdcd7de869e6393c396147bc07ab
+9ec636898a581dc887a4a1dfd259ae92
   mongoDbIp3 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "MONGODB_IP"#) -}
-e8cfcad4320da0411af2b7e1d6b1a690
+4957f7d3c93b65c163fbdc2f0196b062
   mongoDbPort :: GHC.Types.IO GHC.Integer.Type.Integer
   {- Arity: 1, Strictness: <S,U>,
      Unfolding: InlineRule (0, True, True)
                 MongodbHelpers.mongoDbPort1
                   `cast`
                 (Sym (GHC.Types.N:IO[0] <GHC.Integer.Type.Integer>_R)) -}
-e33a86f47f3c46c42f2dc95f6e06baa7
+37173a4e1ea130ff44e93787db52a2a9
   mongoDbPort1 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld,
@@ -381,13 +381,13 @@ e33a86f47f3c46c42f2dc95f6e06baa7
                  case ipv3 of wild1 {
                    GHC.Base.Nothing -> (# ipv2, MongodbHelpers.mongoDbPort2 #)
                    GHC.Base.Just s -> (# ipv2, MongodbHelpers.$sread s #) } } } }) -}
-785543b28ff246bfba62ae9a307e156d
+0e2262ea959a53fe648458ee5139664e
   mongoDbPort2 :: GHC.Integer.Type.Integer
   {- HasNoCafRefs, Unfolding: (27017) -}
-6ebc2697b79cf74b1d92766c7f1cf1f4
+d4a19932814943465a882545b919c8da
   mongoDbPort3 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "MONGODB_PORT"#) -}
-4096e0594398534d3d949b5bb293e189
+728b024777e9e8cd534cdc1980c9659d
   withMongoDbConnection ::
     Database.MongoDB.Query.Action GHC.Types.IO a -> GHC.Types.IO a
   {- Arity: 2, Strictness: <L,1*C1(U)><S,U>,
@@ -397,7 +397,7 @@ e33a86f47f3c46c42f2dc95f6e06baa7
                 (forall (a :: <*>_N).
                  <Database.MongoDB.Query.Action GHC.Types.IO a>_R
                  ->_R Sym (GHC.Types.N:IO[0] <a>_R)) -}
-517efa97801f6b6ae9ce72a5e9ad737d
+8d57989222dd8a21628af6b6ec65788f
   withMongoDbConnection1 ::
     Database.MongoDB.Query.Action GHC.Types.IO a
     -> GHC.Prim.State# GHC.Prim.RealWorld
@@ -542,11 +542,11 @@ e33a86f47f3c46c42f2dc95f6e06baa7
                  case ipv3 of wild1 {
                    GHC.Base.Nothing -> $j ipv2 MongodbHelpers.mongoDbIp2
                    GHC.Base.Just s -> $j ipv2 s } } } }) -}
-be62bcdcb7b009a7b7909ecccade158d
+a3b6bd4d345f6a7f53ff8ee2f9d86388
   withMongoDbConnection2 :: GHC.Exception.SomeException
   {- Unfolding: (GHC.IO.Exception.$fExceptionAsyncException_$ctoException
                    GHC.IO.Exception.ThreadKilled) -}
-794f935d2163ab003818194ac9532ee8
+3a6bcfd07d41cb077b33631fe485d61b
   withMongoDbConnection3 :: GHC.Types.Int
   {- HasNoCafRefs, Unfolding: (GHC.Types.I# 4#) -}
 "SPEC/MongodbHelpers read @ Integer" [ALWAYS] forall ($dRead :: GHC.Read.Read

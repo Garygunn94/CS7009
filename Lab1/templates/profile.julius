@@ -44,7 +44,7 @@ function SocialGraph() {
                 .selectAll("line")
                 .data(response.links)
                 .enter().append("line")
-                  .attr("stroke-width", function(d) { return Math.sqrt(d.value); });
+                  .attr("stroke-width", function(d) { return Math.sqrt(1); });
 
               var node = svg.append("g")
                   .attr("class", "nodes")
