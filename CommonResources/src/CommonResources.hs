@@ -36,7 +36,13 @@ type CrawlerApi =
     "kill" :> ReqBody '[JSON] User :> Post '[JSON] Response
 
 type SearchApi =
-	"socialGraph" :> Get '[JSON] SocialGraph
+	"socialGraph" :> Get '[JSON] SocialGraph :<|>
+  "languageChart" :> Get '[JSON] LanguageChart
+
+data LanguageChart = LanguageChart{
+  language :: [String],
+  frequency :: [Int]
+} deriving(ToJSON, FromJSON, Generic, Eq, Show)
 
 data Node = Node{
   id :: String,

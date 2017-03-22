@@ -11,6 +11,7 @@
 
 
     <input type="button" value="Social Graph" id="MyButton" onclick="SocialGraph();">
+    <input type="button" value="Most Popular Languages" id="MyButton" onclick="LanguageRank();">
     
     <svg width="960" height="600">
     <script src="https://d3js.org/d3.v4.min.js">

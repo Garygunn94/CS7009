@@ -1,23 +1,26 @@
 
 ==================== FINAL INTERFACE ====================
-2017-03-21 18:22:10.484459 UTC
+2017-03-21 23:55:18.744332 UTC
 
 interface Commo_IbhiHxA014wDFh8GUHMJgL:Neo4jHelpers 7103
-  interface hash: 8563a0061294c3742265590f94260112
-  ABI hash: f6aeefceb88466c14b5d65edc05ec85c
-  export-list hash: 16a08c58a436513c415b80a759639725
+  interface hash: acc19da6f26b9e9cdd8c22fefbac9d5a
+  ABI hash: 893b7cf415d79e42b05865acc6e723db
+  export-list hash: 54f83844b6438a74a27ecfba01865555
   orphan hash: 2213ecfe966586940b730e5876ee3f0b
   flag hash: 4b584c3b44f4a16459cfcf3d3accdac3
   sig of: Nothing
   used TH splices: False
   where
 exports:
+  Neo4jHelpers.getLanguageChart
   Neo4jHelpers.getRepoByFullNameNeo
   Neo4jHelpers.getSocialGraph
   Neo4jHelpers.nodeToLink
   Neo4jHelpers.nodeToNode
   Neo4jHelpers.nodeToRepoData
   Neo4jHelpers.nodeToText
+  Neo4jHelpers.recordToFreq
+  Neo4jHelpers.recordToLang
   Neo4jHelpers.recordToNode
   Neo4jHelpers.storeCollabLinkNeo
   Neo4jHelpers.storeLanguageNode
@@ -167,18 +170,20 @@ family instance modules: Commo_IbhiHxA014wDFh8GUHMJgL:CommonResources
                          vector-0.11.0.0@vecto_LmZ3LQW4ivu8MsQuVgukln:Data.Vector.Unboxed
                          vector-0.11.0.0@vecto_LmZ3LQW4ivu8MsQuVgukln:Data.Vector.Unboxed.Base
                          zlib-0.6.1.2@zlib_6IYWBckbsXNBJ9KOMHaE3y:Codec.Compression.Zlib.Stream
-import  -/  CommonResources f13d4cdf0858f5600b857a3aceecf007
-  exports: 1191d58c5d18167069c2991e4bc5b913
-  Link 42ee26bdfb2923326872f8a4909a6710
-  Link 034c3a6aac14203ca1e0b3d0dec5de8b
-  Node 42c74e727048b251f301950d364703fc
-  Node ccccfcb4c37e894426dd1e7b7e8e18c9
-  RepoData 0da61dae057a012b1757eb3b51e4a618
-  RepoData 1bc9b8171ff3e268d6d6423ddb36a4ee
-  SocialGraph e207484889978293e2b18719b61683ed
-  SocialGraph c4763379a10df41cde92da3bad7897de
-  UserData 808e1f6cfd4fbfd75fa2560fa9e137b9
-  UserData dcc5833b1335de9b0db8e5ce31e6f7bd
+import  -/  CommonResources ce239de8e2b2d34efac3103306c2ec99
+  exports: 72c3b68686a6c14e56e88c75e7c14cc0
+  LanguageChart 8d72c71dbd8ace750b894ecce33f144c
+  LanguageChart 6272edf692dd7b06fb81b34511c7b1a0
+  Link 076ac1b056f74d7b5c2f5ceeb9f3f8b0
+  Link 6335e1cc976f53236f59cf61d18df576
+  Node 4e109246335839eeb6c36a4a3b70dee8
+  Node 1d24901f45eed052a0b5fb30b89aa800
+  RepoData 9bb0544fae7bff075fee9933afd60efc
+  RepoData a233730059c6e72717ca3e8f7166a08e
+  SocialGraph da44dba71b8a20ccec7cd93fb007e175
+  SocialGraph fec64f4c4b698089e4d816cde049561b
+  UserData 056aa589121ed9b639a58efd99659285
+  UserData 327530f1aad3207b3f7663be36a6fd9a
 import  -/  base-4.8.2.0:Data.Foldable 2ce969969ad5231eb40bd713f94f05ad
 import  -/  base-4.8.2.0:Data.List 3f0782c8d4bf50eecefcd5ea1798aac8
 import  -/  base-4.8.2.0:Data.Traversable 7576318f4ef8587ad947f87012b65abf
@@ -266,7 +271,7 @@ d068ea7e30aba6508a0187f8497d271a
     -> Data.Map.Base.Map Data.Text.Internal.Text a1
   {- Arity: 5, Strictness: <L,U><L,U><L,U><L,U><S,1*U>,
      Inline: [0] -}
-72b9108104e5bfd2f2dfa8ced357de66
+298ae53e95b3650fe6f6632b4a4378c1
   $wa ::
     Data.Map.Base.Map
       Data.Text.Internal.Text Database.Bolt.Value.Type.Value
@@ -274,22 +279,8 @@ d068ea7e30aba6508a0187f8497d271a
     -> (# GHC.Prim.State# GHC.Prim.RealWorld,
           CommonResources.RepoData #)
   {- Arity: 2, Strictness: <S,1*U><L,U>, Inline: [0] -}
-d3e5199d21eeb1368c8fe8803e8ba48b
+ad09593e3e2c14a319f7f697c4edc1b4
   $wa1 ::
-    Data.Map.Base.Map
-      Data.Text.Internal.Text Database.Bolt.Value.Type.Value
-    -> GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld, CommonResources.Link #)
-  {- Arity: 2, Strictness: <S,1*U><L,U>, Inline: [0] -}
-9f8d9a01135dea390e9991993ce92c0b
-  $wa2 ::
-    Data.Map.Base.Map
-      Data.Text.Internal.Text Database.Bolt.Value.Type.Value
-    -> GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld, CommonResources.Node #)
-  {- Arity: 2, Strictness: <S,1*U><L,U>, Inline: [0] -}
-3f38eb1db9953dfc038310f59a0a9f3f
-  $wa3 ::
     Data.Map.Base.Map
       Data.Text.Internal.Text Database.Bolt.Value.Type.Value
     -> GHC.Prim.State# GHC.Prim.RealWorld
@@ -329,8 +320,8 @@ d3e5199d21eeb1368c8fe8803e8ba48b
                              Neo4jHelpers.nodeToText2
                              w
                         Database.Bolt.Value.Type.T t -> (# w, t #) } } }) -}
-9faf03947046452449ebc73166f40280
-  $wa4 ::
+7c41be826a980c04ad53d8fa58f00fb0
+  $wa2 ::
     GHC.Types.Int
     -> GHC.Types.Int
     -> Data.Text.Internal.Text
@@ -369,11 +360,11 @@ d3e5199d21eeb1368c8fe8803e8ba48b
                    ww14 :: GHC.Types.Int
                    ww15 :: GHC.Types.Int
                    w :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
-                 case Neo4jHelpers.getRepoByFullNameNeo13
+                 case Neo4jHelpers.getRepoByFullNameNeo12
                         `cast`
                       (GHC.Types.NTCo:IO[0] <Database.Bolt.Connection.Type.Pipe>_R)
                         w of ds1 { (#,#) ipv ipv1 ->
-                 case ((Neo4jHelpers.getRepoByFullNameNeo12
+                 case ((Neo4jHelpers.getLanguageChart5
                           Neo4jHelpers.storeRepoNodeNeo17
                           (Neo4jHelpers.$sfromList
                              @ Database.Bolt.Value.Type.Value
@@ -472,8 +463,8 @@ d3e5199d21eeb1368c8fe8803e8ba48b
                  case Network.Socket.$wa4 ww17 ww21 ipv2 of ds5 { (#,#) ipv4 ipv5 ->
                  (# ipv4,
                     GHC.List.null @ Database.Bolt.Record.Record ipv3 #) } } } } }) -}
-ffd8f1184b2fcf87b75683c6c1b79d21
-  $wa5 ::
+476170b3cb804763734189ffbb7d0607
+  $wa3 ::
     Data.Text.Internal.Text
     -> GHC.Types.Int
     -> Data.Text.Internal.Text
@@ -504,11 +495,11 @@ ffd8f1184b2fcf87b75683c6c1b79d21
                    ww10 :: GHC.Types.Int
                    ww11 :: GHC.Types.Int
                    w :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
-                 case Neo4jHelpers.getRepoByFullNameNeo13
+                 case Neo4jHelpers.getRepoByFullNameNeo12
                         `cast`
                       (GHC.Types.NTCo:IO[0] <Database.Bolt.Connection.Type.Pipe>_R)
                         w of ds1 { (#,#) ipv ipv1 ->
-                 case ((Neo4jHelpers.getRepoByFullNameNeo12
+                 case ((Neo4jHelpers.getLanguageChart5
                           Neo4jHelpers.storeUserNodeNeo14
                           (Neo4jHelpers.$sfromList
                              @ Database.Bolt.Value.Type.Value
@@ -590,7 +581,93 @@ e5c4beb790dea55e6158996f628e77cb
     -> [(Data.Text.Internal.Text, a)]
     -> Data.Map.Base.Map Data.Text.Internal.Text a
   {- Arity: 3, Strictness: <L,U><S,1*U><S,1*U>, Inline: [0] -}
-be2dbb5087b4c9005f10e7352282f3dc
+e260889fd4b638a6804160c54807d331
+  getLanguageChart :: GHC.Types.IO CommonResources.LanguageChart
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Neo4jHelpers.getLanguageChart1
+                  `cast`
+                (Sym (GHC.Types.NTCo:IO[0] <CommonResources.LanguageChart>_R)) -}
+7243204df9a8bc57e1dd8b296164b1a7
+  getLanguageChart1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          CommonResources.LanguageChart #)
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: (\ s :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
+                 case (Database.Bolt.Connection.Pipe.connect
+                         @ GHC.Types.IO
+                         Control.Monad.IO.Class.$fMonadIOIO
+                         Neo4jHelpers.getLanguageChart6)
+                        `cast`
+                      (GHC.Types.NTCo:IO[0] <Database.Bolt.Connection.Type.Pipe>_R)
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 case ((Neo4jHelpers.getLanguageChart5
+                          Neo4jHelpers.getLanguageChart4
+                          (Data.Map.Base.Tip
+                             @ Data.Text.Internal.Text
+                             @ Database.Bolt.Value.Type.Value))
+                         `cast`
+                       (Control.Monad.Trans.Reader.NTCo:ReaderT[0]
+                            <Database.Bolt.Connection.Type.Pipe>_R
+                            <GHC.Types.IO>_R
+                            <[Database.Bolt.Record.Record]>_N)
+                         ipv1)
+                        `cast`
+                      (GHC.Types.NTCo:IO[0] <[Database.Bolt.Record.Record]>_R)
+                        ipv of ds2 { (#,#) ipv2 ipv3 ->
+                 case Neo4jHelpers.getLanguageChart3
+                        ipv3
+                        ipv2 of ds3 { (#,#) ipv4 ipv5 ->
+                 case Neo4jHelpers.getLanguageChart2
+                        ipv3
+                        ipv4 of ds4 { (#,#) ipv6 ipv7 ->
+                 (# ipv6, CommonResources.LanguageChart ipv5 ipv7 #) } } } }) -}
+20a50b46d12572c6c244607c2d655c26
+  getLanguageChart2 ::
+    [Database.Bolt.Record.Record]
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, [GHC.Types.Int] #)
+  {- Arity: 2, Strictness: <S,1*U><L,U> -}
+a56e2820bb139635a3b278f96cbfafff
+  getLanguageChart3 ::
+    [Database.Bolt.Record.Record]
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, [GHC.Base.String] #)
+  {- Arity: 2, Strictness: <S,1*U><L,U> -}
+d842b2fcdcd20010c4dad55ed29e5357
+  getLanguageChart4 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString#
+                   "MATCH (n)-[r:IS_WRITTEN_IN]->(x) RETURN x.language as language, COUNT(r) as frequency ORDER BY COUNT(r) DESC"#) -}
+c431dafc78960e5b60d7a3c39d1793d6
+  getLanguageChart5 ::
+    Data.Text.Internal.Text
+    -> Data.Map.Base.Map
+         Data.Text.Internal.Text Database.Bolt.Value.Type.Value
+    -> Database.Bolt.Connection.BoltActionT
+         GHC.Types.IO [Database.Bolt.Record.Record]
+  {- Unfolding: (Database.Bolt.Connection.queryP
+                   @ GHC.Types.IO
+                   Control.Monad.IO.Class.$fMonadIOIO) -}
+69173c459b1b99f082318f39d147b4d0
+  getLanguageChart6 :: Database.Bolt.Connection.Type.BoltCfg
+  {- Unfolding: (Database.Bolt.Connection.Type.BoltCfg
+                   Database.Bolt.Connection.Type.$fDefaultBoltCfg7
+                   Database.Bolt.Connection.Type.$fDefaultBoltCfg6
+                   Database.Bolt.Connection.Type.$fDefaultBoltCfg5
+                   Database.Bolt.Connection.Type.$fDefaultBoltCfg4
+                   Database.Bolt.Connection.Type.$fDefaultBoltCfg3
+                   Database.Bolt.Connection.Type.$fDefaultBoltCfg2
+                   Database.Bolt.Connection.Type.$fDefaultBoltCfg1
+                   Neo4jHelpers.getLanguageChart8
+                   Neo4jHelpers.getLanguageChart7) -}
+bed861cc50710c5bbfb95d7fa4c3e58a
+  getLanguageChart7 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString# "GaryGunn94"#) -}
+3530a6c4c9938765649c7ea05bafcf2d
+  getLanguageChart8 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString# "neo4j"#) -}
+b411afcd3db9adfad29e6d255e29fdee
   getRepoByFullNameNeo ::
     Data.Text.Internal.Text -> GHC.Types.IO Data.Text.Internal.Text
   {- Arity: 2, Strictness: <L,U><L,U>,
@@ -599,7 +676,7 @@ be2dbb5087b4c9005f10e7352282f3dc
                   `cast`
                 (<Data.Text.Internal.Text>_R
                  ->_R Sym (GHC.Types.NTCo:IO[0] <Data.Text.Internal.Text>_R)) -}
-0be903656b109d5814a5222ac23918fb
+74bee1597d1c09e49d75227610ad1c68
   getRepoByFullNameNeo1 ::
     Data.Text.Internal.Text
     -> GHC.Prim.State# GHC.Prim.RealWorld
@@ -608,11 +685,11 @@ be2dbb5087b4c9005f10e7352282f3dc
   {- Arity: 2, Strictness: <L,U><L,U>,
      Unfolding: (\ r_name :: Data.Text.Internal.Text
                    eta :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
-                 case Neo4jHelpers.getRepoByFullNameNeo13
+                 case Neo4jHelpers.getRepoByFullNameNeo12
                         `cast`
                       (GHC.Types.NTCo:IO[0] <Database.Bolt.Connection.Type.Pipe>_R)
                         eta of ds1 { (#,#) ipv ipv1 ->
-                 case ((Neo4jHelpers.getRepoByFullNameNeo12
+                 case ((Neo4jHelpers.getLanguageChart5
                           Neo4jHelpers.getRepoByFullNameNeo11
                           (Neo4jHelpers.$sfromList
                              @ Database.Bolt.Value.Type.Value
@@ -641,7 +718,7 @@ be2dbb5087b4c9005f10e7352282f3dc
                  case Neo4jHelpers.$wa ww10 ipv6 of ds7 { (#,#) ipv8 ipv9 ->
                  (# ipv8,
                     case ipv9 of ww11 { CommonResources.RepoData ww12 ww13 ww14 ww6 ww15 ww16 ww17 ww18 ww19 ww20 ww21 ww22 ww23 ww24 ww25 ww26 ->
-                    case CommonResources.$w$cshowsPrec2
+                    case CommonResources.$w$cshowsPrec3
                            0
                            ww12
                            ww13
@@ -678,41 +755,13 @@ be2dbb5087b4c9005f10e7352282f3dc
   getRepoByFullNameNeo11 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString#
                    "MATCH (n:Repo) WHERE n.r_full_name = {r_full_name} RETURN n LIMIT 1"#) -}
-9eab315be8ad8bf2e159d42df56b026d
+6343bb7671cf905701f39ec9e201ca13
   getRepoByFullNameNeo12 ::
-    Data.Text.Internal.Text
-    -> Data.Map.Base.Map
-         Data.Text.Internal.Text Database.Bolt.Value.Type.Value
-    -> Database.Bolt.Connection.BoltActionT
-         GHC.Types.IO [Database.Bolt.Record.Record]
-  {- Unfolding: (Database.Bolt.Connection.queryP
-                   @ GHC.Types.IO
-                   Control.Monad.IO.Class.$fMonadIOIO) -}
-a5c57f68c66ee55b3ce3399e1ef0dc83
-  getRepoByFullNameNeo13 ::
     GHC.Types.IO Database.Bolt.Connection.Type.Pipe
   {- Unfolding: (Database.Bolt.Connection.Pipe.connect
                    @ GHC.Types.IO
                    Control.Monad.IO.Class.$fMonadIOIO
-                   Neo4jHelpers.getRepoByFullNameNeo14) -}
-bd2af8f913111b40695d2333adfd519d
-  getRepoByFullNameNeo14 :: Database.Bolt.Connection.Type.BoltCfg
-  {- Unfolding: (Database.Bolt.Connection.Type.BoltCfg
-                   Database.Bolt.Connection.Type.$fDefaultBoltCfg7
-                   Database.Bolt.Connection.Type.$fDefaultBoltCfg6
-                   Database.Bolt.Connection.Type.$fDefaultBoltCfg5
-                   Database.Bolt.Connection.Type.$fDefaultBoltCfg4
-                   Database.Bolt.Connection.Type.$fDefaultBoltCfg3
-                   Database.Bolt.Connection.Type.$fDefaultBoltCfg2
-                   Database.Bolt.Connection.Type.$fDefaultBoltCfg1
-                   Neo4jHelpers.getRepoByFullNameNeo16
-                   Neo4jHelpers.getRepoByFullNameNeo15) -}
-c3c806c65016fe2230134f49c65ec42a
-  getRepoByFullNameNeo15 :: Data.Text.Internal.Text
-  {- Unfolding: (Data.Text.Show.unpackCString# "GaryGunn94"#) -}
-1b54aa4926629ddf96364ba663f3288f
-  getRepoByFullNameNeo16 :: Data.Text.Internal.Text
-  {- Unfolding: (Data.Text.Show.unpackCString# "neo4j"#) -}
+                   Neo4jHelpers.getLanguageChart6) -}
 32da082c08f492c698364d781f352805
   getRepoByFullNameNeo2 :: GHC.Types.Int
   {- HasNoCafRefs, Unfolding: (GHC.Types.I# 4) -}
@@ -804,14 +853,14 @@ ae7b124531751b225f0b6103f293388e
 0b8eed7349a4b65959177aa708b9bc78
   getRepoByFullNameNeo9 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString# "n"#) -}
-c5d34c26983435c8f490834e192a1f82
+3d9bc0625e77d2322d834e8733ff7a48
   getSocialGraph :: GHC.Types.IO CommonResources.SocialGraph
   {- Arity: 1, Strictness: <L,U>,
      Unfolding: InlineRule (0, True, True)
                 Neo4jHelpers.getSocialGraph1
                   `cast`
                 (Sym (GHC.Types.NTCo:IO[0] <CommonResources.SocialGraph>_R)) -}
-63ed790c52897634ef6f55f3c5749c15
+8ebf77f17c138f964c2ed386218e2e9f
   getSocialGraph1 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld,
@@ -821,12 +870,12 @@ c5d34c26983435c8f490834e192a1f82
                  case (Database.Bolt.Connection.Pipe.connect
                          @ GHC.Types.IO
                          Control.Monad.IO.Class.$fMonadIOIO
-                         Neo4jHelpers.getRepoByFullNameNeo14)
+                         Neo4jHelpers.getLanguageChart6)
                         `cast`
                       (GHC.Types.NTCo:IO[0] <Database.Bolt.Connection.Type.Pipe>_R)
                         s of ds1 { (#,#) ipv ipv1 ->
-                 case ((Neo4jHelpers.getRepoByFullNameNeo12
-                          Neo4jHelpers.getSocialGraph7
+                 case ((Neo4jHelpers.getLanguageChart5
+                          Neo4jHelpers.getSocialGraph5
                           (Data.Map.Base.Tip
                              @ Data.Text.Internal.Text
                              @ Database.Bolt.Value.Type.Value))
@@ -839,8 +888,8 @@ c5d34c26983435c8f490834e192a1f82
                         `cast`
                       (GHC.Types.NTCo:IO[0] <[Database.Bolt.Record.Record]>_R)
                         ipv of ds2 { (#,#) ipv2 ipv3 ->
-                 case ((Neo4jHelpers.getRepoByFullNameNeo12
-                          Neo4jHelpers.getSocialGraph6
+                 case ((Neo4jHelpers.getLanguageChart5
+                          Neo4jHelpers.getSocialGraph4
                           (Data.Map.Base.Tip
                              @ Data.Text.Internal.Text
                              @ Database.Bolt.Value.Type.Value))
@@ -856,97 +905,65 @@ c5d34c26983435c8f490834e192a1f82
                  case ipv1 of wild { Database.Bolt.Connection.Type.Pipe ds4 ds5 ->
                  case ds4 of ww { Network.Socket.Types.MkSocket ww1 ww2 ww3 ww4 ww5 ->
                  case Network.Socket.$wa4 ww1 ww5 ipv4 of ds6 { (#,#) ipv6 ipv7 ->
-                 case Neo4jHelpers.getSocialGraph5
+                 case Neo4jHelpers.getSocialGraph3
                         ipv3
                         ipv6 of ds7 { (#,#) ipv8 ipv9 ->
-                 case Neo4jHelpers.getSocialGraph4
+                 case Neo4jHelpers.getSocialGraph2
                         ipv5
                         ipv8 of ds8 { (#,#) ipv10 ipv11 ->
-                 case Neo4jHelpers.getSocialGraph3
-                        ipv9
-                        ipv10 of ds9 { (#,#) ipv12 ipv13 ->
-                 case Neo4jHelpers.getSocialGraph2
-                        ipv11
-                        ipv12 of ds10 { (#,#) ipv14 ipv15 ->
-                 (# ipv14,
-                    CommonResources.SocialGraph ipv13 ipv15 #) } } } } } } } } } }) -}
-769fa46806d1ad2c0f33f01d546857fd
+                 (# ipv10,
+                    CommonResources.SocialGraph ipv9 ipv11 #) } } } } } } } }) -}
+3be06e6a3fd16fea4d702f15ac61a9a5
   getSocialGraph2 ::
-    [Database.Bolt.Value.Type.Node]
+    [Database.Bolt.Record.Record]
     -> GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, [CommonResources.Link] #)
   {- Arity: 2, Strictness: <S,1*U><L,U> -}
-775583a8dfd8e113e379befa4364ad59
+233ee60ec1c032485c5da91df82d7186
   getSocialGraph3 ::
-    [Database.Bolt.Value.Type.Node]
+    [Database.Bolt.Record.Record]
     -> GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, [CommonResources.Node] #)
   {- Arity: 2, Strictness: <S,1*U><L,U> -}
-2c554794cbe6ff4f0e1718668d03dfd7
-  getSocialGraph4 ::
-    [Database.Bolt.Record.Record]
-    -> GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
-          [Database.Bolt.Value.Type.Node] #)
-  {- Arity: 2, Strictness: <S,1*U><L,U> -}
-50c00ff8b693d2f3d99bce9853dfb9fd
-  getSocialGraph5 ::
-    [Database.Bolt.Record.Record]
-    -> GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
-          [Database.Bolt.Value.Type.Node] #)
-  {- Arity: 2, Strictness: <S,1*U><L,U> -}
-fc4cab188978e4d6c1e1c4867588343a
-  getSocialGraph6 :: Data.Text.Internal.Text
+03df2ecb66847ca3eacf7dc7f067ceba
+  getSocialGraph4 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString#
                    "MATCH (n:User)-[r]->(x:Repo) RETURN n.u_login as source,Type(r) as type,x.r_html_url as target UNION MATCH (n:Repo)-[r]->(x:Language) RETURN n.r_html_url as source, Type(r) as type, x.language as target"#) -}
-160a10758b192d095b58fe38f8175990
-  getSocialGraph7 :: Data.Text.Internal.Text
+01de3e0c185dc6f7f349fe9ef3ef41d2
+  getSocialGraph5 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString#
                    "MATCH (n:User) RETURN n.u_login as name, HEAD(Labels(n)) as group UNION MATCH (n:Repo) RETURN n.r_html_url as name, HEAD(Labels(n)) as group UNION MATCH (n:Language) RETURN n.language as name, HEAD(Labels(n)) as group"#) -}
-b01bf7464996577a58d4237ca9be9e15
+61d4519d652514a9409af8b823f29127
   nodeToLink ::
-    Database.Bolt.Value.Type.Node -> GHC.Types.IO CommonResources.Link
-  {- Arity: 2, Strictness: <S(LLS),1*U(A,A,1*U)><L,U>,
+    Database.Bolt.Record.Record -> GHC.Types.IO CommonResources.Link
+  {- Arity: 2, Strictness: <S,U><L,U>,
      Unfolding: InlineRule (0, True, True)
                 Neo4jHelpers.nodeToLink1
                   `cast`
-                (<Database.Bolt.Value.Type.Node>_R
+                (<Database.Bolt.Record.Record>_R
                  ->_R Sym (GHC.Types.NTCo:IO[0] <CommonResources.Link>_R)) -}
-9c08de8c6c1b6f430d24d3bccf3dacd6
+dcfc8dc83e44c6ce0953e7ba0cc119d2
   nodeToLink1 ::
-    Database.Bolt.Value.Type.Node
+    Database.Bolt.Record.Record
     -> GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, CommonResources.Link #)
-  {- Arity: 2, Strictness: <S(LLS),1*U(A,A,1*U)><L,U>,
-     Inline: INLINE[0],
-     Unfolding: InlineRule (2, True, False)
-                (\ w :: Database.Bolt.Value.Type.Node
-                   w1 :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
-                 case w of ww { Database.Bolt.Value.Type.Node ww1 ww2 ww3 ->
-                 Neo4jHelpers.$wa1 ww3 w1 }) -}
-058ab997f9df972504c6c479684f4000
+  {- Arity: 2, Strictness: <S,U><L,U> -}
+362cbf49e180e6cf546403fba1ef595e
   nodeToNode ::
-    Database.Bolt.Value.Type.Node -> GHC.Types.IO CommonResources.Node
-  {- Arity: 2, Strictness: <S(LLS),1*U(A,A,1*U)><L,U>,
+    Database.Bolt.Record.Record -> GHC.Types.IO CommonResources.Node
+  {- Arity: 2, Strictness: <S,U><L,U>,
      Unfolding: InlineRule (0, True, True)
                 Neo4jHelpers.nodeToNode1
                   `cast`
-                (<Database.Bolt.Value.Type.Node>_R
+                (<Database.Bolt.Record.Record>_R
                  ->_R Sym (GHC.Types.NTCo:IO[0] <CommonResources.Node>_R)) -}
-039543cea200ea929633a1e55d35825e
+cd00f7a678ad1c99c21f494ffa840bd2
   nodeToNode1 ::
-    Database.Bolt.Value.Type.Node
+    Database.Bolt.Record.Record
     -> GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, CommonResources.Node #)
-  {- Arity: 2, Strictness: <S(LLS),1*U(A,A,1*U)><L,U>,
-     Inline: INLINE[0],
-     Unfolding: InlineRule (2, True, False)
-                (\ w :: Database.Bolt.Value.Type.Node
-                   w1 :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
-                 case w of ww { Database.Bolt.Value.Type.Node ww1 ww2 ww3 ->
-                 Neo4jHelpers.$wa2 ww3 w1 }) -}
-0ce2c8cd4d69409ba93d58be2bb3232b
+  {- Arity: 2, Strictness: <S,U><L,U> -}
+bb4c95d94b1fd222e156c3bf77b49200
   nodeToRepoData ::
     Database.Bolt.Value.Type.Node
     -> GHC.Types.IO CommonResources.RepoData
@@ -956,7 +973,7 @@ b01bf7464996577a58d4237ca9be9e15
                   `cast`
                 (<Database.Bolt.Value.Type.Node>_R
                  ->_R Sym (GHC.Types.NTCo:IO[0] <CommonResources.RepoData>_R)) -}
-25a3789ac91bb967bc76cc476de6faef
+8ee80ea67dee0324703b089b747eb2cf
   nodeToRepoData1 ::
     Database.Bolt.Value.Type.Node
     -> GHC.Prim.State# GHC.Prim.RealWorld
@@ -969,7 +986,7 @@ b01bf7464996577a58d4237ca9be9e15
                    w1 :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
                  case w of ww { Database.Bolt.Value.Type.Node ww1 ww2 ww3 ->
                  Neo4jHelpers.$wa ww3 w1 }) -}
-f52f1a9e7201d94af6afa7726c3bfa01
+36ad52423581196593d38f7116cf6db2
   nodeToText ::
     Database.Bolt.Value.Type.Node
     -> GHC.Types.IO Data.Text.Internal.Text
@@ -979,7 +996,7 @@ f52f1a9e7201d94af6afa7726c3bfa01
                   `cast`
                 (<Database.Bolt.Value.Type.Node>_R
                  ->_R Sym (GHC.Types.NTCo:IO[0] <Data.Text.Internal.Text>_R)) -}
-457852c4c86836e97fe45076cab696d1
+dd2e668348d8945bd9a12debff79a945
   nodeToText1 ::
     Database.Bolt.Value.Type.Node
     -> GHC.Prim.State# GHC.Prim.RealWorld
@@ -991,7 +1008,7 @@ f52f1a9e7201d94af6afa7726c3bfa01
                 (\ w :: Database.Bolt.Value.Type.Node
                    w1 :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
                  case w of ww { Database.Bolt.Value.Type.Node ww1 ww2 ww3 ->
-                 Neo4jHelpers.$wa3 ww3 w1 }) -}
+                 Neo4jHelpers.$wa1 ww3 w1 }) -}
 7c01d38ec073744e59516a4843b54f7d
   nodeToText2 :: GHC.Exception.SomeException
   {- Unfolding: (GHC.IO.Exception.$fExceptionIOException_$ctoException
@@ -1008,6 +1025,174 @@ f52f1a9e7201d94af6afa7726c3bfa01
 3adc56e65c19dc7a834aeccc9d4ef19a
   nodeToText4 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString# "name"#) -}
+3be7ed910f899c838f4a433c165d5a87
+  recordToFreq ::
+    Database.Bolt.Record.Record -> GHC.Types.IO GHC.Types.Int
+  {- Arity: 2, Strictness: <S,U><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Neo4jHelpers.recordToFreq1
+                  `cast`
+                (<Database.Bolt.Record.Record>_R
+                 ->_R Sym (GHC.Types.NTCo:IO[0] <GHC.Types.Int>_R)) -}
+d4e3e8d9bcc8c7dc81036470634d10ed
+  recordToFreq1 ::
+    Database.Bolt.Record.Record
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, GHC.Types.Int #)
+  {- Arity: 2, Strictness: <S,U><L,U>,
+     Unfolding: (\ record :: Database.Bolt.Record.Record
+                   s :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
+                 case Neo4jHelpers.recordToFreq4 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
+                 case Database.Bolt.Record.$wpoly_go1
+                        @ Database.Bolt.Value.Type.Value
+                        ww1
+                        ww2
+                        ww3
+                        record of wild {
+                   GHC.Types.False
+                   -> case GHC.Prim.raiseIO#
+                             @ GHC.Exception.SomeException
+                             @ Database.Bolt.Value.Type.Value
+                             Neo4jHelpers.getRepoByFullNameNeo7
+                             s
+                      ret_ty (# GHC.Prim.State# GHC.Prim.RealWorld, GHC.Types.Int #)
+                      of {}
+                   GHC.Types.True
+                   -> case Database.Bolt.Record.$wpoly_go10
+                             @ Database.Bolt.Value.Type.Value
+                             ww1
+                             ww2
+                             ww3
+                             record of wild1 {
+                        DEFAULT
+                        -> GHC.Prim.raiseIO#
+                             @ GHC.Exception.SomeException
+                             @ GHC.Types.Int
+                             Neo4jHelpers.recordToFreq2
+                             s
+                        Database.Bolt.Value.Type.I i -> (# s, i #) } } }) -}
+4d931302b528fb07c2edb2d4a8e6dfc7
+  recordToFreq2 :: GHC.Exception.SomeException
+  {- Unfolding: (GHC.IO.Exception.$fExceptionIOException_$ctoException
+                   Neo4jHelpers.recordToFreq3) -}
+38890cff9246daf1f17a8ad5fa26268f
+  recordToFreq3 :: GHC.IO.Exception.IOException
+  {- Unfolding: (GHC.IO.Exception.IOError
+                   (GHC.Base.Nothing @ GHC.IO.Handle.Types.Handle)
+                   GHC.IO.Exception.UserError
+                   (GHC.Types.[] @ GHC.Types.Char)
+                   Database.Bolt.Record.$fRecordValueInt1
+                   (GHC.Base.Nothing @ Foreign.C.Types.CInt)
+                   (GHC.Base.Nothing @ GHC.IO.FilePath)) -}
+1e3b8e1a7228e628c1fe74d89a3beef9
+  recordToFreq4 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString# "frequency"#) -}
+e798acd3404eb12fa419ddb130cee049
+  recordToLang ::
+    Database.Bolt.Record.Record -> GHC.Types.IO GHC.Base.String
+  {- Arity: 2, Strictness: <S,U><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Neo4jHelpers.recordToLang1
+                  `cast`
+                (<Database.Bolt.Record.Record>_R
+                 ->_R Sym (GHC.Types.NTCo:IO[0] <GHC.Base.String>_R)) -}
+8fec643b87e40504573203acc0fddc7e
+  recordToLang1 ::
+    Database.Bolt.Record.Record
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, GHC.Base.String #)
+  {- Arity: 2, Strictness: <S,U><L,U>,
+     Unfolding: (\ record :: Database.Bolt.Record.Record
+                   s :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
+                 case Neo4jHelpers.recordToLang2 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
+                 case Database.Bolt.Record.$wpoly_go1
+                        @ Database.Bolt.Value.Type.Value
+                        ww1
+                        ww2
+                        ww3
+                        record of wild {
+                   GHC.Types.False
+                   -> case GHC.Prim.raiseIO#
+                             @ GHC.Exception.SomeException
+                             @ Database.Bolt.Value.Type.Value
+                             Neo4jHelpers.getRepoByFullNameNeo7
+                             s
+                      ret_ty (# GHC.Prim.State# GHC.Prim.RealWorld, GHC.Base.String #)
+                      of {}
+                   GHC.Types.True
+                   -> case Database.Bolt.Record.$wpoly_go10
+                             @ Database.Bolt.Value.Type.Value
+                             ww1
+                             ww2
+                             ww3
+                             record of wild1 {
+                        DEFAULT
+                        -> case GHC.Prim.raiseIO#
+                                  @ GHC.Exception.SomeException
+                                  @ Data.Text.Internal.Text
+                                  Neo4jHelpers.nodeToText2
+                                  s
+                           ret_ty (# GHC.Prim.State# GHC.Prim.RealWorld, GHC.Base.String #)
+                           of {}
+                        Database.Bolt.Value.Type.T t
+                        -> (# s,
+                              case t of wild2 { Data.Text.Internal.Text dt dt1 dt2 ->
+                              let {
+                                a3 :: GHC.Prim.Int# = GHC.Prim.+# dt1 dt2
+                              } in
+                              letrec {
+                                $wunfold :: GHC.Prim.Int# -> [GHC.Types.Char]
+                                  {- Arity: 1, Strictness: <L,U>, Inline: [0] -}
+                                = \ ww4 :: GHC.Prim.Int# ->
+                                  case GHC.Prim.tagToEnum#
+                                         @ GHC.Types.Bool
+                                         (GHC.Prim.>=# ww4 a3) of wild3 {
+                                    GHC.Types.False
+                                    -> case GHC.Prim.indexWord16Array# dt ww4 of r# { DEFAULT ->
+                                       case GHC.Prim.tagToEnum#
+                                              @ GHC.Types.Bool
+                                              (GHC.Prim.geWord# r# __word 55296) of wild4 {
+                                         GHC.Types.False
+                                         -> GHC.Types.:
+                                              @ GHC.Types.Char
+                                              (GHC.Types.C# (GHC.Prim.chr# (GHC.Prim.word2Int# r#)))
+                                              ($wunfold (GHC.Prim.+# ww4 1))
+                                         GHC.Types.True
+                                         -> case GHC.Prim.tagToEnum#
+                                                   @ GHC.Types.Bool
+                                                   (GHC.Prim.leWord# r# __word 56319) of wild5 {
+                                              GHC.Types.False
+                                              -> GHC.Types.:
+                                                   @ GHC.Types.Char
+                                                   (GHC.Types.C#
+                                                      (GHC.Prim.chr# (GHC.Prim.word2Int# r#)))
+                                                   ($wunfold (GHC.Prim.+# ww4 1))
+                                              GHC.Types.True
+                                              -> case GHC.Prim.indexWord16Array#
+                                                        dt
+                                                        (GHC.Prim.+# ww4 1) of r#1 { DEFAULT ->
+                                                 GHC.Types.:
+                                                   @ GHC.Types.Char
+                                                   (GHC.Types.C#
+                                                      (GHC.Prim.chr#
+                                                         (GHC.Prim.+#
+                                                            (GHC.Prim.+#
+                                                               (GHC.Prim.uncheckedIShiftL#
+                                                                  (GHC.Prim.-#
+                                                                     (GHC.Prim.word2Int# r#)
+                                                                     55296)
+                                                                  10)
+                                                               (GHC.Prim.-#
+                                                                  (GHC.Prim.word2Int# r#1)
+                                                                  56320))
+                                                            65536)))
+                                                   ($wunfold (GHC.Prim.+# ww4 2)) } } } }
+                                    GHC.Types.True -> GHC.Types.[] @ GHC.Types.Char }
+                              } in
+                              $wunfold dt1 } #) } } }) -}
+33907c252a3b8e07c82d95bdbd220fb7
+  recordToLang2 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString# "language"#) -}
 c628253c049bd83e011570037c284ef4
   recordToNode ::
     Database.Bolt.Record.Record
@@ -1019,7 +1204,7 @@ c628253c049bd83e011570037c284ef4
                 (<Database.Bolt.Record.Record>_R
                  ->_R Sym (GHC.Types.NTCo:IO[0]
                                <Database.Bolt.Value.Type.Node>_R)) -}
-b086e79a302a4f2dda8fceb3091f4e48
+57ecc30f74fe5f9e2184865dac4bdfdc
   storeCollabLinkNeo ::
     Data.Text.Internal.Text
     -> Data.Text.Internal.Text -> GHC.Types.IO GHC.Types.Bool
@@ -1030,7 +1215,7 @@ b086e79a302a4f2dda8fceb3091f4e48
                 (<Data.Text.Internal.Text>_R
                  ->_R <Data.Text.Internal.Text>_R
                  ->_R Sym (GHC.Types.NTCo:IO[0] <GHC.Types.Bool>_R)) -}
-d786a222d37b62591d78ed0629a1ed9c
+64c5be3781773a1f2ff4475274f7461e
   storeCollabLinkNeo1 ::
     Data.Text.Internal.Text
     -> Data.Text.Internal.Text
@@ -1040,11 +1225,11 @@ d786a222d37b62591d78ed0629a1ed9c
      Unfolding: (\ userName :: Data.Text.Internal.Text
                    repoName :: Data.Text.Internal.Text
                    eta :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
-                 case Neo4jHelpers.getRepoByFullNameNeo13
+                 case Neo4jHelpers.getRepoByFullNameNeo12
                         `cast`
                       (GHC.Types.NTCo:IO[0] <Database.Bolt.Connection.Type.Pipe>_R)
                         eta of ds1 { (#,#) ipv ipv1 ->
-                 case ((Neo4jHelpers.getRepoByFullNameNeo12
+                 case ((Neo4jHelpers.getLanguageChart5
                           Neo4jHelpers.storeCollabLinkNeo4
                           (Neo4jHelpers.$sfromList
                              @ Database.Bolt.Value.Type.Value
@@ -1084,7 +1269,7 @@ c3da1da36ec0c927384d111ab223900d
   {- Unfolding: (Data.Text.Show.unpackCString#
                    "MATCH (u:User {u_login: {userName}}), (r:Repo {r_html_url: {repoName}}) \n\
                    \ CREATE (u)-[:IS_COLLABORATOR]->(r)"#) -}
-f79e3a3f9a7c99275de1a95a44f09a6b
+d94eae4473e9585f4ee262ba827b5357
   storeLanguageNode ::
     Data.Text.Internal.Text -> GHC.Types.IO GHC.Types.Bool
   {- Arity: 2, Strictness: <L,U><L,U>,
@@ -1093,7 +1278,7 @@ f79e3a3f9a7c99275de1a95a44f09a6b
                   `cast`
                 (<Data.Text.Internal.Text>_R
                  ->_R Sym (GHC.Types.NTCo:IO[0] <GHC.Types.Bool>_R)) -}
-3cbedbde521248572f9e7974883e35bd
+c72b246db5879ea63cbb57af727dda1d
   storeLanguageNode1 ::
     Data.Text.Internal.Text
     -> GHC.Prim.State# GHC.Prim.RealWorld
@@ -1101,18 +1286,17 @@ f79e3a3f9a7c99275de1a95a44f09a6b
   {- Arity: 2, Strictness: <L,U><L,U>,
      Unfolding: (\ language :: Data.Text.Internal.Text
                    eta :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
-                 case Neo4jHelpers.getRepoByFullNameNeo13
+                 case Neo4jHelpers.getRepoByFullNameNeo12
                         `cast`
                       (GHC.Types.NTCo:IO[0] <Database.Bolt.Connection.Type.Pipe>_R)
                         eta of ds1 { (#,#) ipv ipv1 ->
-                 case ((Neo4jHelpers.getRepoByFullNameNeo12
-                          Neo4jHelpers.storeLanguageNode3
+                 case ((Neo4jHelpers.getLanguageChart5
+                          Neo4jHelpers.storeLanguageNode2
                           (Neo4jHelpers.$sfromList
                              @ Database.Bolt.Value.Type.Value
                              (GHC.Types.:
                                 @ (Data.Text.Internal.Text, Database.Bolt.Value.Type.Value)
-                                (Neo4jHelpers.storeLanguageNode2,
-                                 Database.Bolt.Value.Type.T language)
+                                (Neo4jHelpers.recordToLang2, Database.Bolt.Value.Type.T language)
                                 (GHC.Types.[]
                                    @ (Data.Text.Internal.Text, Database.Bolt.Value.Type.Value)))))
                          `cast`
@@ -1129,14 +1313,11 @@ f79e3a3f9a7c99275de1a95a44f09a6b
                  case Network.Socket.$wa4 ww1 ww5 ipv2 of ds5 { (#,#) ipv4 ipv5 ->
                  (# ipv4,
                     GHC.List.null @ Database.Bolt.Record.Record ipv3 #) } } } } }) -}
-95b837d261ef8a70ec061c4c46f134a6
+03eeec152c100ee1dc580fb511a93129
   storeLanguageNode2 :: Data.Text.Internal.Text
-  {- Unfolding: (Data.Text.Show.unpackCString# "language"#) -}
-2c0ee410f8458fafacf6d45d28f8b5d5
-  storeLanguageNode3 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString#
                    "CREATE (n:Language {  language: {language} } )"#) -}
-0207ad694b5eef89dd9bb8b06c4e148b
+89c2b5c0f5cc599e44406682c2c1d9c8
   storeLanguagelink ::
     Data.Text.Internal.Text
     -> Data.Text.Internal.Text -> GHC.Types.IO GHC.Types.Bool
@@ -1147,7 +1328,7 @@ f79e3a3f9a7c99275de1a95a44f09a6b
                 (<Data.Text.Internal.Text>_R
                  ->_R <Data.Text.Internal.Text>_R
                  ->_R Sym (GHC.Types.NTCo:IO[0] <GHC.Types.Bool>_R)) -}
-36d372c936819d425c2b56988bfdd7fc
+e35dd34b4fb6b35f16103bcd79577ccb
   storeLanguagelink1 ::
     Data.Text.Internal.Text
     -> Data.Text.Internal.Text
@@ -1157,18 +1338,17 @@ f79e3a3f9a7c99275de1a95a44f09a6b
      Unfolding: (\ language :: Data.Text.Internal.Text
                    repoHtml :: Data.Text.Internal.Text
                    eta :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
-                 case Neo4jHelpers.getRepoByFullNameNeo13
+                 case Neo4jHelpers.getRepoByFullNameNeo12
                         `cast`
                       (GHC.Types.NTCo:IO[0] <Database.Bolt.Connection.Type.Pipe>_R)
                         eta of ds1 { (#,#) ipv ipv1 ->
-                 case ((Neo4jHelpers.getRepoByFullNameNeo12
+                 case ((Neo4jHelpers.getLanguageChart5
                           Neo4jHelpers.storeLanguagelink3
                           (Neo4jHelpers.$sfromList
                              @ Database.Bolt.Value.Type.Value
                              (GHC.Types.:
                                 @ (Data.Text.Internal.Text, Database.Bolt.Value.Type.Value)
-                                (Neo4jHelpers.storeLanguageNode2,
-                                 Database.Bolt.Value.Type.T language)
+                                (Neo4jHelpers.recordToLang2, Database.Bolt.Value.Type.T language)
                                 (GHC.Types.:
                                    @ (Data.Text.Internal.Text, Database.Bolt.Value.Type.Value)
                                    (Neo4jHelpers.storeLanguagelink2,
@@ -1198,7 +1378,7 @@ f79e3a3f9a7c99275de1a95a44f09a6b
   {- Unfolding: (Data.Text.Show.unpackCString#
                    "MATCH (u:Repo {r_html_url: {repoHtml}}), (r:Language {language: {language}}) \n\
                    \ CREATE (u)-[:IS_WRITTEN_IN]->(r)"#) -}
-73d300f6378cb339b7285e0aac49add1
+4aa21a909ba4302f2a1d1edb268f4af8
   storeOwnerLinkNeo ::
     Data.Text.Internal.Text
     -> Data.Text.Internal.Text -> GHC.Types.IO GHC.Types.Bool
@@ -1209,7 +1389,7 @@ f79e3a3f9a7c99275de1a95a44f09a6b
                 (<Data.Text.Internal.Text>_R
                  ->_R <Data.Text.Internal.Text>_R
                  ->_R Sym (GHC.Types.NTCo:IO[0] <GHC.Types.Bool>_R)) -}
-5a4b335cf5c44ea47de6bb757a1e4c96
+4b7bc83dedbdff1b3ce11632ec29c883
   storeOwnerLinkNeo1 ::
     Data.Text.Internal.Text
     -> Data.Text.Internal.Text
@@ -1219,11 +1399,11 @@ f79e3a3f9a7c99275de1a95a44f09a6b
      Unfolding: (\ userName :: Data.Text.Internal.Text
                    repoName :: Data.Text.Internal.Text
                    eta :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
-                 case Neo4jHelpers.getRepoByFullNameNeo13
+                 case Neo4jHelpers.getRepoByFullNameNeo12
                         `cast`
                       (GHC.Types.NTCo:IO[0] <Database.Bolt.Connection.Type.Pipe>_R)
                         eta of ds1 { (#,#) ipv ipv1 ->
-                 case ((Neo4jHelpers.getRepoByFullNameNeo12
+                 case ((Neo4jHelpers.getLanguageChart5
                           Neo4jHelpers.storeOwnerLinkNeo2
                           (Neo4jHelpers.$sfromList
                              @ Database.Bolt.Value.Type.Value
@@ -1257,7 +1437,7 @@ f79e3a3f9a7c99275de1a95a44f09a6b
   {- Unfolding: (Data.Text.Show.unpackCString#
                    "MATCH (u:User {u_login: {userName}}), (r:Repo {r_html_url: {repoName}}) \n\
                    \ CREATE (u)-[:IS_OWNER]->(r)"#) -}
-e6ea6c484ead5cb8633e7215f23447d8
+dc76d113648f7230b6c2b5eb7096a469
   storeRepoNodeNeo ::
     CommonResources.RepoData -> GHC.Types.IO GHC.Types.Bool
   {- Arity: 2,
@@ -1267,7 +1447,7 @@ e6ea6c484ead5cb8633e7215f23447d8
                   `cast`
                 (<CommonResources.RepoData>_R
                  ->_R Sym (GHC.Types.NTCo:IO[0] <GHC.Types.Bool>_R)) -}
-9be469956955e2b36ad8f0d6b6a5e249
+ba62ef808e3c441da3dfe459a04d698b
   storeRepoNodeNeo1 ::
     CommonResources.RepoData
     -> GHC.Prim.State# GHC.Prim.RealWorld
@@ -1279,7 +1459,7 @@ e6ea6c484ead5cb8633e7215f23447d8
                 (\ w :: CommonResources.RepoData
                    w1 :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
                  case w of ww { CommonResources.RepoData ww1 ww2 ww3 ww4 ww5 ww6 ww7 ww8 ww9 ww10 ww11 ww12 ww13 ww14 ww15 ww16 ->
-                 Neo4jHelpers.$wa4
+                 Neo4jHelpers.$wa2
                    ww1
                    ww2
                    ww3
@@ -1344,7 +1524,7 @@ edebeeeafae74c542b7637ac0044f277
 3304a4ea675dfc8affe4676455da09da
   storeRepoNodeNeo9 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString# "r_forks"#) -}
-69166145e59b802291027ffbc07d115d
+b3df07439142f88fba8d4dea57c1b2b6
   storeUserNodeNeo ::
     CommonResources.UserData -> GHC.Types.IO GHC.Types.Bool
   {- Arity: 2, Strictness: <S,1*U(U,U,U,U,U,U,U,U,U,U,U,U)><L,U>,
@@ -1353,7 +1533,7 @@ edebeeeafae74c542b7637ac0044f277
                   `cast`
                 (<CommonResources.UserData>_R
                  ->_R Sym (GHC.Types.NTCo:IO[0] <GHC.Types.Bool>_R)) -}
-e8120e050df204ef037bfe193d271527
+35f9b66adb24d77bc1f52813a0d0b3be
   storeUserNodeNeo1 ::
     CommonResources.UserData
     -> GHC.Prim.State# GHC.Prim.RealWorld
@@ -1364,7 +1544,7 @@ e8120e050df204ef037bfe193d271527
                 (\ w :: CommonResources.UserData
                    w1 :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
                  case w of ww { CommonResources.UserData ww1 ww2 ww3 ww4 ww5 ww6 ww7 ww8 ww9 ww10 ww11 ww12 ->
-                 Neo4jHelpers.$wa5
+                 Neo4jHelpers.$wa3
                    ww1
                    ww2
                    ww3

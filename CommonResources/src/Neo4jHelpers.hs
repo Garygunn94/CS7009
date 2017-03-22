@@ -230,13 +230,40 @@ getSocialGraph = do
 
   Neo.close neo_pipe
   
-  node_nodes <- (mapM recordToNode) record_nodes
-  node_links <- (mapM recordToNode) record_links
+  --node_nodes <- (mapM recordToNode) record_nodes
+  --node_links <- (mapM recordToNode) record_links
 
-  nodes <- (mapM nodeToNode) node_nodes
-  links <- (mapM nodeToLink) node_links
+  nodes <- (mapM nodeToNode) record_nodes
+  links <- (mapM nodeToLink) record_links
 
   return (SocialGraph nodes links)
+
+getLanguageChart :: IO LanguageChart
+getLanguageChart = do
+    let neo_conf = Neo.def { Neo.user = "neo4j", Neo.password = "GaryGunn94" }
+    neo_pipe <- Neo.connect $ neo_conf
+
+    record_languageTable <- Neo.run neo_pipe $ Neo.query "MATCH (n)-[r:IS_WRITTEN_IN]->(x) RETURN x.language as language, COUNT(r) as frequency ORDER BY COUNT(r) DESC"
+    
+    languages <- (mapM recordToLang) record_languageTable
+    frequencies <- (mapM recordToFreq) record_languageTable
+
+    return (LanguageChart languages frequencies)
+
+recordToLang :: Neo.Record -> IO String
+recordToLang record = do
+	language :: DT.Text <- (record `Neo.at` "language") >>= Neo.exact
+	--frequency :: Int <- (record `Neo.at` "frequency") >>= Neo.exact 
+
+	return (DT.unpack language)
+
+recordToFreq :: Neo.Record -> IO Int
+recordToFreq record = do
+	frequency :: Int <- (record `Neo.at` "frequency") >>= Neo.exact
+	--frequency :: Int <- (record `Neo.at` "frequency") >>= Neo.exact 
+
+	return frequency
+
 
 --getRepoByNameNeo :: Text -> IO RepoData
 getRepoByFullNameNeo :: DT.Text -> IO DT.Text
@@ -275,22 +302,22 @@ recordToNode r = do
   node :: Neo.Node <- (r `Neo.at` "n") >>= Neo.exact
   return node
  
-nodeToNode :: Neo.Node -> IO CommonResources.Node
+nodeToNode :: Neo.Record -> IO CommonResources.Node
 nodeToNode node = do
-	let props = Neo.nodeProps node
+	--let props = Neo.nodeProps node
 
-	name :: DT.Text <- (props `Neo.at` "name") >>= Neo.exact
-	group :: DT.Text <- (props `Neo.at` "group") >>= Neo.exact 
+	name :: DT.Text <- (node `Neo.at` "name") >>= Neo.exact
+	group :: DT.Text <- (node `Neo.at` "group") >>= Neo.exact 
 
 	return (Node (DT.unpack name) (DT.unpack group))
 
-nodeToLink :: Neo.Node -> IO CommonResources.Link
+nodeToLink :: Neo.Record -> IO CommonResources.Link
 nodeToLink node = do
-	let props = Neo.nodeProps node
+	--let props = Neo.nodeProps node
 
-	source :: DT.Text <- (props `Neo.at` "source") >>= Neo.exact
-	target :: DT.Text <- (props `Neo.at` "target") >>= Neo.exact
-	group :: DT.Text <- (props `Neo.at` "type") >>= Neo.exact
+	source :: DT.Text <- (node `Neo.at` "source") >>= Neo.exact
+	target :: DT.Text <- (node `Neo.at` "target") >>= Neo.exact
+	group :: DT.Text <- (node `Neo.at` "type") >>= Neo.exact
 
 	return (Link (DT.unpack source) (DT.unpack target) (DT.unpack group))
 

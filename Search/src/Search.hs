@@ -52,7 +52,8 @@ www :: FilePath
 www = "www"
 
 server :: Server SearchApi
-server = Search.getSocialGraph
+server = Search.getSocialGraph :<|> Search.getLanguageChart
+
 
 server' :: Server SearchApi'
 server' = server
@@ -68,9 +69,15 @@ mkApp = do
     run (read (searchport) ::Int) searchApp 
 
 
+getLanguageChart :: ApiHandler LanguageChart
+getLanguageChart = liftIO $ do
+	putStrLn "Fetching Language Chart"
+	lc <- Neo4jHelpers.getLanguageChart
+	return lc
+
 getSocialGraph :: ApiHandler SocialGraph
 getSocialGraph = liftIO $ do
-	putStrLn ("Fetching Node data")
+	putStrLn ("Fetching SocialGraph")
 	sg <- Neo4jHelpers.getSocialGraph
         return sg
 	{--nodes <- MongodbHelpers.withMongoDbConnection $ do

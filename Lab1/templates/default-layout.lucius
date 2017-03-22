@@ -81,3 +81,17 @@
   stroke: #fff;
   stroke-width: 1.5px;
 }
+
+.bar {
+  fill: steelblue;
+}
+
+.bar:hover {
+  fill: brown;
+}
+
+.axis--x path {
+  display: none;
+}
+
+
