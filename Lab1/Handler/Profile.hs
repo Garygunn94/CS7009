@@ -52,7 +52,7 @@ getProfileR = do
     	sess <- getSession
     	let access_token = DBC.unpack (fromJust $ Import.lookup "access_token" sess)
     	let uname = DBC.unpack (fromJust $ Import.lookup "login" sess)
-        let userdata = CommonResources.User (uname) (access_token) 2
+        let userdata = CommonResources.User (uname) (access_token) 3
         liftIO $ makeApiCall userdata
         setTitle . toHtml $ (DT.pack uname) <> "'s User page"
         $(widgetFile "profile")

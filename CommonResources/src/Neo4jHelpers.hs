@@ -32,11 +32,30 @@ storeLanguagelink language repoHtml = do
   let isEmpty = null records
   return isEmpty
 
-  where cypher = "MATCH (u:Repo {r_html_url: {repoHtml}}), (r:Language {language: {language}}) \n CREATE (u)-[:IS_WRITTEN_IN]->(r)" --14
+  where cypher = "MATCH (u:Repo {r_html_url: {repoHtml}}), (r:Language {name: {language}}) \n CREATE (u)-[:IS_WRITTEN_IN]->(r)" --14
 
         params = DM.fromList [
             ("language", Neo.T language),
             ("repoHtml", Neo.T repoHtml)]
+
+storeKnowslink :: DT.Text -> DT.Text -> IO Bool
+storeKnowslink language userName = do
+  let neo_conf = Neo.def { Neo.user = "neo4j", Neo.password = "GaryGunn94" }
+  neo_pipe <- Neo.connect $ neo_conf 
+
+  -- -- Add node
+  records <- Neo.run neo_pipe $ Neo.queryP (DT.pack cypher) params
+
+  Neo.close neo_pipe
+
+  let isEmpty = null records
+  return isEmpty
+
+  where cypher = "MATCH (u:User {u_login: {userName}}), (r:Language {name: {language}}) \n CREATE UNIQUE (u)-[:KNOWS]->(r)" --14
+
+        params = DM.fromList [
+            ("language", Neo.T language),
+            ("userName", Neo.T userName)]
 
 
 storeOwnerLinkNeo :: DT.Text -> DT.Text-> IO Bool
@@ -91,7 +110,7 @@ storeLanguageNode language = do
   return isEmpty
 
   where cypher = "CREATE (n:Language { " ++
-            " language: {language} } )" --14
+            " name: {language} } )" --14
 
         params = DM.fromList [
             ("language", Neo.T language)]
@@ -125,6 +144,7 @@ storeUserNodeNeo (UserData
   return isEmpty
 
   where cypher = "CREATE (n:User { " ++
+            " name: {u_login}, " ++
             " u_login: {u_login}, " ++
             " u_url: {u_url}, " ++
             " u_name: {u_name}, " ++
@@ -183,6 +203,7 @@ storeRepoNodeNeo (RepoData
   return isEmpty
   
   where cypher = "MERGE (n:Repo { " ++
+            " name: {r_html_url}, " ++
             " r_last_updated: {r_last_updated}, " ++
             " r_id: {r_id}, " ++
             " r_owner_name: {r_owner_name}, " ++
@@ -218,14 +239,15 @@ storeRepoNodeNeo (RepoData
             ("r_created_at", Neo.I r_created_at),
             ("r_updated_at", Neo.I r_updated_at)]
 
-getSocialGraph :: IO SocialGraph
-getSocialGraph = do
+getSocialGraph :: DT.Text -> IO SocialGraph
+getSocialGraph username = do
+  putStrLn (DT.unpack username)
   let neo_conf = Neo.def { Neo.user = "neo4j", Neo.password = "GaryGunn94" }
   neo_pipe <- Neo.connect $ neo_conf
   
   -- -- Add node
-  record_nodes <- Neo.run neo_pipe $ Neo.query "MATCH (n:User) RETURN n.u_login as name, HEAD(Labels(n)) as group UNION MATCH (n:Repo) RETURN n.r_html_url as name, HEAD(Labels(n)) as group UNION MATCH (n:Language) RETURN n.language as name, HEAD(Labels(n)) as group"
-  record_links <- Neo.run neo_pipe $ Neo.query "MATCH (n:User)-[r]->(x:Repo) RETURN n.u_login as source,Type(r) as type,x.r_html_url as target UNION MATCH (n:Repo)-[r]->(x:Language) RETURN n.r_html_url as source, Type(r) as type, x.language as target"
+  record_nodes <- Neo.run neo_pipe $ Neo.queryP node_cypher node_params
+  record_links <- Neo.run neo_pipe $ Neo.queryP link_cypher link_params
 
 
   Neo.close neo_pipe
@@ -236,19 +258,60 @@ getSocialGraph = do
   nodes <- (mapM nodeToNode) record_nodes
   links <- (mapM nodeToLink) record_links
 
+
   return (SocialGraph nodes links)
+
+  where link_cypher = "MATCH (n) WHERE n.name = {username} OPTIONAL MATCH path=(n)-[*1..2]-(c) WITH rels(path) AS rels UNWIND rels AS rel WITH DISTINCT rel RETURN startnode(rel).name as source, endnode(rel).name as target, type(rel) as type"
+        node_params = DM.fromList [("username", Neo.T username)]
+        node_cypher = "MATCH (n) WHERE n.name = {username} OPTIONAL MATCH path=(n)-[*1..2]-(c) RETURN DISTINCT c.name as name, HEAD(LABELS(c)) as group"
+        link_params = DM.fromList [("username", Neo.T username)]
 
 getLanguageChart :: IO LanguageChart
 getLanguageChart = do
     let neo_conf = Neo.def { Neo.user = "neo4j", Neo.password = "GaryGunn94" }
     neo_pipe <- Neo.connect $ neo_conf
 
-    record_languageTable <- Neo.run neo_pipe $ Neo.query "MATCH (n)-[r:IS_WRITTEN_IN]->(x) RETURN x.language as language, COUNT(r) as frequency ORDER BY COUNT(r) DESC"
+    record_languageTable <- Neo.run neo_pipe $ Neo.query "MATCH (n)-[r:IS_WRITTEN_IN]->(x) RETURN x.name as language, COUNT(r) as frequency ORDER BY COUNT(r) DESC"
     
     languages <- (mapM recordToLang) record_languageTable
     frequencies <- (mapM recordToFreq) record_languageTable
 
     return (LanguageChart languages frequencies)
+
+getRepoSizeChart :: IO RepoSizeChart
+getRepoSizeChart = do
+    let neo_conf = Neo.def { Neo.user = "neo4j", Neo.password = "GaryGunn94" }
+    neo_pipe <- Neo.connect $ neo_conf
+
+    record_RepoTable <- Neo.run neo_pipe $ Neo.query "MATCH (p:Language)-[s:IS_WRITTEN_IN]-(r:Repo)-[l:IS_OWNER|:IS_COLLABORATOR]-(b) RETURN r.name as Name, r.r_size as Repo_Size, count(l) as Associated_Users, p.name as language"
+    
+    repos <- (mapM recordToRepoSize) record_RepoTable
+    users <- (mapM recordToAssUser) record_RepoTable
+    repon <- (mapM recordToRepoName) record_RepoTable
+    languager <- (mapM recordToLang) record_RepoTable
+
+    return (RepoSizeChart repos users repon languager)
+
+recordToRepoSize :: Neo.Record -> IO Int
+recordToRepoSize record = do
+	repoSize :: Int <- (record `Neo.at` "Repo_Size") >>= Neo.exact
+	--frequency :: Int <- (record `Neo.at` "frequency") >>= Neo.exact 
+
+	return (repoSize)
+
+recordToRepoName:: Neo.Record -> IO String
+recordToRepoName record = do
+	repoName :: DT.Text <- (record `Neo.at` "Name") >>= Neo.exact
+	--frequency :: Int <- (record `Neo.at` "frequency") >>= Neo.exact 
+
+	return (DT.unpack repoName)
+
+recordToAssUser :: Neo.Record -> IO Int
+recordToAssUser record = do
+	users :: Int <- (record `Neo.at` "Associated_Users") >>= Neo.exact
+	--frequency :: Int <- (record `Neo.at` "frequency") >>= Neo.exact 
+
+	return users
 
 recordToLang :: Neo.Record -> IO String
 recordToLang record = do

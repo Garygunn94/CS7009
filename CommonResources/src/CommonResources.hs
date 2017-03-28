@@ -36,12 +36,20 @@ type CrawlerApi =
     "kill" :> ReqBody '[JSON] User :> Post '[JSON] Response
 
 type SearchApi =
-	"socialGraph" :> Get '[JSON] SocialGraph :<|>
-  "languageChart" :> Get '[JSON] LanguageChart
+	"socialGraph" :> Capture "username" String :> Get '[JSON] SocialGraph :<|>
+  "languageChart" :> Get '[JSON] LanguageChart :<|>
+  "RepoSizeChart" :> Get '[JSON] RepoSizeChart
 
 data LanguageChart = LanguageChart{
   language :: [String],
   frequency :: [Int]
+} deriving(ToJSON, FromJSON, Generic, Eq, Show)
+
+data RepoSizeChart = RepoSizeChart{
+  repo :: [Int],
+  user :: [Int],
+  name :: [String],
+  languager :: [String]
 } deriving(ToJSON, FromJSON, Generic, Eq, Show)
 
 data Node = Node{

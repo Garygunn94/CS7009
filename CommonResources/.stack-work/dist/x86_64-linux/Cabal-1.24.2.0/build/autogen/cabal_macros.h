@@ -7,12 +7,12 @@
   (major1) == 0 && (major2) <  1 || \
   (major1) == 0 && (major2) == 1 && (minor) <= 0)
 
-/* package aeson-1.1.0.0 */
-#define VERSION_aeson "1.1.0.0"
+/* package aeson-0.11.2.1 */
+#define VERSION_aeson "0.11.2.1"
 #define MIN_VERSION_aeson(major1,major2,minor) (\
-  (major1) <  1 || \
-  (major1) == 1 && (major2) <  1 || \
-  (major1) == 1 && (major2) == 1 && (minor) <= 0)
+  (major1) <  0 || \
+  (major1) == 0 && (major2) <  11 || \
+  (major1) == 0 && (major2) == 11 && (minor) <= 2)
 
 /* package base-4.9.0.0 */
 #define VERSION_base "4.9.0.0"
@@ -98,12 +98,12 @@
   (major1) == 3 && (major2) <  2 || \
   (major1) == 3 && (major2) == 2 && (minor) <= 1)
 
-/* package warp-3.2.11 */
-#define VERSION_warp "3.2.11"
+/* package warp-3.2.9 */
+#define VERSION_warp "3.2.9"
 #define MIN_VERSION_warp(major1,major2,minor) (\
   (major1) <  3 || \
   (major1) == 3 && (major2) <  2 || \
-  (major1) == 3 && (major2) == 2 && (minor) <= 11)
+  (major1) == 3 && (major2) == 2 && (minor) <= 9)
 
 /* tool alex-3.1.6 */
 #define TOOL_VERSION_alex "3.1.6"
@@ -189,7 +189,7 @@
   (major1) == 2 && (major2) <  26 || \
   (major1) == 2 && (major2) == 26 && (minor) <= 0)
 
-#define CURRENT_COMPONENT_ID "CommonResources-0.1.0.0-4OjH7SZdJLA1AQ6TeYSEKS"
+#define CURRENT_COMPONENT_ID "CommonResources-0.1.0.0-BsMSFzQQ7hXDT6ERpBbAsv"
 
-#define CURRENT_PACKAGE_KEY "CommonResources-0.1.0.0-4OjH7SZdJLA1AQ6TeYSEKS"
+#define CURRENT_PACKAGE_KEY "CommonResources-0.1.0.0-BsMSFzQQ7hXDT6ERpBbAsv"
 

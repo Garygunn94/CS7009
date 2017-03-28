@@ -114,7 +114,7 @@ initialize (CommonResources.User username authToken num_hops) = liftIO $ do
 			MongodbHelpers.withMongoDbConnection $ upsert (select ["tskUsername" =: username] "USER_TASK_RECORD") $ toBSON task
 			state <- liftIO $ newState
 			let auth = Just $ MainGitHub.OAuth $ (DBC.pack authToken)
-		        liftIO $ forkIO $ getrepos (DT.pack username) auth state num_hops
+		        liftIO $ forkIO $ getrepos (DT.pack "mbostock") auth state num_hops
 		        let resp = (Response "Started")
 		        return resp
 
@@ -253,10 +253,10 @@ formatRepo auth uname state hops repo = do
       contributers <- Github.contributors' auth (mkOwnerName $ untagName $ simpleOwnerLogin (GHDR.repoOwner repo)) (GHDR.repoName repo)
       case contributers of
         (Left error) -> putStrLn $ "Error: " DL.++ (show error)
-        (Right contribs) -> mapM_ (userformat auth state repoHTML hops) contribs
+        (Right contribs) -> mapM_ (userformat auth state repoHTML hops language) contribs
 
-userformat :: Maybe GHD.Auth -> State -> Text -> Int -> GHDR.Contributor -> IO()
-userformat auth state prev_repo hops contributer@(Github.KnownContributor contributions _ _ _ _ _) = do
+userformat :: Maybe GHD.Auth -> State -> Text -> Int -> Text -> GHDR.Contributor -> IO()
+userformat auth state prev_repo hops language contributer@(Github.KnownContributor contributions _ _ _ _ _) = do
   --let contrib = contributer
   let userrLogin = untagName $ simpleUserLogin $ fromJust $ contributorToSimpleUser contributer
   putStrLn (unpack userrLogin)
@@ -267,6 +267,11 @@ userformat auth state prev_repo hops contributer@(Github.KnownContributor contri
   seen_already <- atomically $ lookupNode state userrLogin
   case seen_already of
     Just u -> do
+    	linkKnows <- storeKnowslink language userrLogin
+    	case linkKnows of
+    		False -> putStrLn ("Failed to store link: " ++ (DT.unpack userrLogin) ++ " knows " ++ (DT.unpack language))
+  	        True -> putStrLn ("Stored link: " ++ (DT.unpack userrLogin) ++ " knows " ++ (DT.unpack language))
+
         link <- storeCollabLinkNeo userrLogin prev_repo
         case link of
   	        False -> putStrLn ("Failed to store link: " ++ (DT.unpack userrLogin) ++ " is_collab " ++ (DT.unpack prev_repo))
@@ -290,7 +295,12 @@ userformat auth state prev_repo hops contributer@(Github.KnownContributor contri
   	  	        case stored of
   	  	        	False -> putStrLn "False"
   	  	        	True -> putStrLn "True"
+      
       --liftIO $ MongodbHelpers.withMongoDbConnection $ upsert (select ["id" =: (unpack userLogin)] "Node_RECORD") $ toBSON userData
+      linkKnows <- storeKnowslink language userrLogin
+      case linkKnows of
+    		False -> putStrLn ("Failed to store link: " ++ (DT.unpack userrLogin) ++ " knows " ++ (DT.unpack language))
+  	        True -> putStrLn ("Stored link: " ++ (DT.unpack userrLogin) ++ " knows " ++ (DT.unpack language))
       link <- storeCollabLinkNeo userrLogin prev_repo
       case link of
   	    False -> putStrLn ("Failed to store link: " ++ (DT.unpack userrLogin) ++ " is_collab " ++ (DT.unpack prev_repo))

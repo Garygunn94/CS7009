@@ -27,6 +27,7 @@ import           Servant.API
 import           Servant.Client
 import           System.IO
 import qualified Data.List as DL hiding (find)
+import qualified Data.Text as DT
 import Data.Maybe (catMaybes, fromJust)
 import Control.Monad (when, liftM)
 import Network.HTTP.Client (newManager, defaultManagerSettings)
@@ -52,7 +53,7 @@ www :: FilePath
 www = "www"
 
 server :: Server SearchApi
-server = Search.getSocialGraph :<|> Search.getLanguageChart
+server = Search.getSocialGraph :<|> Search.getLanguageChart :<|> Search.getRepoSizeChart
 
 
 server' :: Server SearchApi'
@@ -75,10 +76,16 @@ getLanguageChart = liftIO $ do
 	lc <- Neo4jHelpers.getLanguageChart
 	return lc
 
-getSocialGraph :: ApiHandler SocialGraph
-getSocialGraph = liftIO $ do
+getRepoSizeChart :: ApiHandler RepoSizeChart
+getRepoSizeChart = liftIO $ do
+	putStrLn "Fetching RepoSize Chart"
+	lc <- Neo4jHelpers.getRepoSizeChart
+	return lc
+
+getSocialGraph :: String -> ApiHandler SocialGraph
+getSocialGraph username = liftIO $ do
 	putStrLn ("Fetching SocialGraph")
-	sg <- Neo4jHelpers.getSocialGraph
+	sg <- Neo4jHelpers.getSocialGraph (DT.pack username)
         return sg
 	{--nodes <- MongodbHelpers.withMongoDbConnection $ do
 		docs <- find (select [] "Node_RECORD") >>= drainCursor

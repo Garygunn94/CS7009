@@ -7,11 +7,12 @@
       This page is protected and access is allowed only for authenticated users.
 
     <p>
-      Your data is protected with us <strong><span class="username">#{show "deets"}</span></strong>!
+      Your data is protected with us <strong><span class="username">#{DT.pack uname}</span></strong>!
 
 
-    <input type="button" value="Social Graph" id="MyButton" onclick="SocialGraph();">
+    <input type="button" value="Social Graph" id="MyButton" onclick="SocialGraph(#{show uname});">
     <input type="button" value="Most Popular Languages" id="MyButton" onclick="LanguageRank();">
+    <input type="button" value="Repo Size/Users" id="MyButton" onclick="RepoSize();">
     
     <svg width="960" height="600">
     <script src="https://d3js.org/d3.v4.min.js">
