@@ -1,10 +1,10 @@
 
 ==================== FINAL INTERFACE ====================
-2017-03-28 17:10:16.310376 UTC
+2017-04-01 14:01:06.815626 UTC
 
 interface CommonResources-0.1.0.0-BsMSFzQQ7hXDT6ERpBbAsv:Neo4jHelpers 8001
-  interface hash: 823b5076b8f56262cb5c1828527cdacd
-  ABI hash: 7ec3d1924ce8fa1984486f3202c8845b
+  interface hash: 046715611de18bff218f578d661d48cc
+  ABI hash: 9a3b57c0dd926eaf2e5dd9cd9eadb9e7
   export-list hash: 5375aeda4852b81a0c3d71290bd6efee
   orphan hash: d299bc92b6b8d83bb93b6fc5b13f9c21
   flag hash: 475ddb1266f979e9bd5d545258b369df
@@ -1575,46 +1575,55 @@ c4d7f70248928786f1896e3e37a5a538
 ef74b16ebe541b99fc93dcd9126a85a6
   recordToRepoSize2 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString# "Repo_Size"#) -}
-976cead1f1e8147e4029ce6105aee908
+15b487a6a54fa52ff3fbe19d2c99b677
   storeCollabLinkNeo ::
     Data.Text.Internal.Text
-    -> Data.Text.Internal.Text -> GHC.Types.IO GHC.Types.Bool
-  {- Arity: 3, Strictness: <L,U><L,U><S,U>,
+    -> Data.Text.Internal.Text
+    -> GHC.Types.Int
+    -> GHC.Types.IO GHC.Types.Bool
+  {- Arity: 4, Strictness: <L,U><L,U><L,U><S,U>,
      Unfolding: InlineRule (0, True, True)
                 Neo4jHelpers.storeCollabLinkNeo1
                   `cast`
                 (<Data.Text.Internal.Text>_R
                  ->_R <Data.Text.Internal.Text>_R
+                 ->_R <GHC.Types.Int>_R
                  ->_R Sym (GHC.Types.N:IO[0] <GHC.Types.Bool>_R)) -}
-bdd217c35d8f248a799d5904623fb554
+da244a8b793c86483a8485de5bd164df
   storeCollabLinkNeo1 ::
     Data.Text.Internal.Text
     -> Data.Text.Internal.Text
+    -> GHC.Types.Int
     -> GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, GHC.Types.Bool #)
-  {- Arity: 3, Strictness: <L,U><L,U><S,U>,
+  {- Arity: 4, Strictness: <L,U><L,U><L,U><S,U>,
      Unfolding: (\ (userName :: Data.Text.Internal.Text)
                    (repoName :: Data.Text.Internal.Text)
+                   (commits :: GHC.Types.Int)
                    (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
                  case Neo4jHelpers.getRepoByFullNameNeo6
                         `cast`
                       (GHC.Types.N:IO[0] <Database.Bolt.Connection.Type.Pipe>_R)
                         eta of ds1 { (#,#) ipv ipv1 ->
                  case ((Neo4jHelpers.getLanguageChart5
-                          Neo4jHelpers.storeCollabLinkNeo4
+                          Neo4jHelpers.storeCollabLinkNeo5
                           (Neo4jHelpers.$sfromList
                              @ Database.Bolt.Value.Type.Value
                              (GHC.Types.:
                                 @ (Data.Text.Internal.Text, Database.Bolt.Value.Type.Value)
-                                (Neo4jHelpers.storeCollabLinkNeo3,
+                                (Neo4jHelpers.storeCollabLinkNeo4,
                                  Database.Bolt.Value.Type.T userName)
                                 (GHC.Types.:
                                    @ (Data.Text.Internal.Text, Database.Bolt.Value.Type.Value)
-                                   (Neo4jHelpers.storeCollabLinkNeo2,
+                                   (Neo4jHelpers.storeCollabLinkNeo3,
                                     Database.Bolt.Value.Type.T repoName)
-                                   (GHC.Types.[]
-                                      @ (Data.Text.Internal.Text,
-                                         Database.Bolt.Value.Type.Value))))))
+                                   (GHC.Types.:
+                                      @ (Data.Text.Internal.Text, Database.Bolt.Value.Type.Value)
+                                      (Neo4jHelpers.storeCollabLinkNeo2,
+                                       Database.Bolt.Value.Type.I commits)
+                                      (GHC.Types.[]
+                                         @ (Data.Text.Internal.Text,
+                                            Database.Bolt.Value.Type.Value)))))))
                          `cast`
                        (Control.Monad.Trans.Reader.N:ReaderT[0]
                             <*>_N
@@ -1634,18 +1643,21 @@ bdd217c35d8f248a799d5904623fb554
                         ipv2 of ds5 { (#,#) ipv4 ipv5 ->
                  (# ipv4,
                     GHC.List.null @ Database.Bolt.Record.Record ipv3 #) } } } } } }) -}
-3165a441a16b6b32dbee922edf413b84
+49b8aa18e42fec10dd9ae0407edecee8
   storeCollabLinkNeo2 :: Data.Text.Internal.Text
-  {- Unfolding: (Data.Text.Show.unpackCString# "repoName"#) -}
-ebd30bdf84d631b1544bbaef964d3342
+  {- Unfolding: (Data.Text.Show.unpackCString# "commits"#) -}
+95111cd1dcf2df7d7cf6a6744fa41def
   storeCollabLinkNeo3 :: Data.Text.Internal.Text
-  {- Unfolding: (Data.Text.Show.unpackCString# "userName"#) -}
-e48d68072458294aebb7dc8a046af84e
+  {- Unfolding: (Data.Text.Show.unpackCString# "repoName"#) -}
+22dd463d2e986569d2ae753a8b492f74
   storeCollabLinkNeo4 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString# "userName"#) -}
+0c24b78c448951103451aeed1bd78c2c
+  storeCollabLinkNeo5 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString#
                    "MATCH (u:User {u_login: {userName}}), (r:Repo {r_html_url: {repoName}}) \n\
-                   \ CREATE (u)-[:IS_COLLABORATOR]->(r)"#) -}
-d73ca4d885238ef999dfa6674e75ca34
+                   \ CREATE (u)-[c:IS_COLLABORATOR {commits: {commits}}]->(r)"#) -}
+7c12eb79452a86255064960b1287c594
   storeKnowslink ::
     Data.Text.Internal.Text
     -> Data.Text.Internal.Text -> GHC.Types.IO GHC.Types.Bool
@@ -1656,7 +1668,7 @@ d73ca4d885238ef999dfa6674e75ca34
                 (<Data.Text.Internal.Text>_R
                  ->_R <Data.Text.Internal.Text>_R
                  ->_R Sym (GHC.Types.N:IO[0] <GHC.Types.Bool>_R)) -}
-601c1018c94ef0a46fca174066a957d7
+fa8cef7c032f67363404c6a6f97b5995
   storeKnowslink1 ::
     Data.Text.Internal.Text
     -> Data.Text.Internal.Text
@@ -1679,7 +1691,7 @@ d73ca4d885238ef999dfa6674e75ca34
                                 (Neo4jHelpers.recordToLang2, Database.Bolt.Value.Type.T language)
                                 (GHC.Types.:
                                    @ (Data.Text.Internal.Text, Database.Bolt.Value.Type.Value)
-                                   (Neo4jHelpers.storeCollabLinkNeo3,
+                                   (Neo4jHelpers.storeCollabLinkNeo4,
                                     Database.Bolt.Value.Type.T userName)
                                    (GHC.Types.[]
                                       @ (Data.Text.Internal.Text,
@@ -1827,7 +1839,7 @@ d1a3ba81251cc91d4a0acfaf6d662c69
   {- Unfolding: (Data.Text.Show.unpackCString#
                    "MATCH (u:Repo {r_html_url: {repoHtml}}), (r:Language {name: {language}}) \n\
                    \ CREATE (u)-[:IS_WRITTEN_IN]->(r)"#) -}
-4764b970d60777377cd271e4edb43d5c
+14bb4340bc07d794c4185db50db55d52
   storeOwnerLinkNeo ::
     Data.Text.Internal.Text
     -> Data.Text.Internal.Text -> GHC.Types.IO GHC.Types.Bool
@@ -1838,7 +1850,7 @@ d1a3ba81251cc91d4a0acfaf6d662c69
                 (<Data.Text.Internal.Text>_R
                  ->_R <Data.Text.Internal.Text>_R
                  ->_R Sym (GHC.Types.N:IO[0] <GHC.Types.Bool>_R)) -}
-cf7227a2be294d6a254a7a9c3240886f
+694ef7285fff8607095db71104d100a3
   storeOwnerLinkNeo1 ::
     Data.Text.Internal.Text
     -> Data.Text.Internal.Text
@@ -1858,11 +1870,11 @@ cf7227a2be294d6a254a7a9c3240886f
                              @ Database.Bolt.Value.Type.Value
                              (GHC.Types.:
                                 @ (Data.Text.Internal.Text, Database.Bolt.Value.Type.Value)
-                                (Neo4jHelpers.storeCollabLinkNeo3,
+                                (Neo4jHelpers.storeCollabLinkNeo4,
                                  Database.Bolt.Value.Type.T userName)
                                 (GHC.Types.:
                                    @ (Data.Text.Internal.Text, Database.Bolt.Value.Type.Value)
-                                   (Neo4jHelpers.storeCollabLinkNeo2,
+                                   (Neo4jHelpers.storeCollabLinkNeo3,
                                     Database.Bolt.Value.Type.T repoName)
                                    (GHC.Types.[]
                                       @ (Data.Text.Internal.Text,

@@ -272,7 +272,7 @@ userformat auth state prev_repo hops language contributer@(Github.KnownContribut
     		False -> putStrLn ("Failed to store link: " ++ (DT.unpack userrLogin) ++ " knows " ++ (DT.unpack language))
   	        True -> putStrLn ("Stored link: " ++ (DT.unpack userrLogin) ++ " knows " ++ (DT.unpack language))
 
-        link <- storeCollabLinkNeo userrLogin prev_repo
+        link <- storeCollabLinkNeo userrLogin prev_repo contributions
         case link of
   	        False -> putStrLn ("Failed to store link: " ++ (DT.unpack userrLogin) ++ " is_collab " ++ (DT.unpack prev_repo))
   	        True -> putStrLn ("Stored link: " ++ (DT.unpack userrLogin) ++ " is_collab " ++ (DT.unpack prev_repo))
@@ -301,7 +301,7 @@ userformat auth state prev_repo hops language contributer@(Github.KnownContribut
       case linkKnows of
     		False -> putStrLn ("Failed to store link: " ++ (DT.unpack userrLogin) ++ " knows " ++ (DT.unpack language))
   	        True -> putStrLn ("Stored link: " ++ (DT.unpack userrLogin) ++ " knows " ++ (DT.unpack language))
-      link <- storeCollabLinkNeo userrLogin prev_repo
+      link <- storeCollabLinkNeo userrLogin prev_repo contributions
       case link of
   	    False -> putStrLn ("Failed to store link: " ++ (DT.unpack userrLogin) ++ " is_collab " ++ (DT.unpack prev_repo))
   	    True -> putStrLn ("Stored link: " ++ (DT.unpack userrLogin) ++ " is_collab " ++ (DT.unpack prev_repo))

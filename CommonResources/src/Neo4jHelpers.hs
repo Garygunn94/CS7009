@@ -77,8 +77,8 @@ storeOwnerLinkNeo userName repoName = do
             ("userName", Neo.T userName),
             ("repoName", Neo.T repoName)]
 
-storeCollabLinkNeo :: DT.Text -> DT.Text-> IO Bool
-storeCollabLinkNeo userName repoName = do
+storeCollabLinkNeo :: DT.Text -> DT.Text-> Int -> IO Bool
+storeCollabLinkNeo userName repoName commits = do
   let neo_conf = Neo.def { Neo.user = "neo4j", Neo.password = "GaryGunn94" }
   neo_pipe <- Neo.connect $ neo_conf 
 
@@ -90,11 +90,12 @@ storeCollabLinkNeo userName repoName = do
   let isEmpty = null records
   return isEmpty
 
-  where cypher = "MATCH (u:User {u_login: {userName}}), (r:Repo {r_html_url: {repoName}}) \n CREATE (u)-[:IS_COLLABORATOR]->(r)" --14
+  where cypher = "MATCH (u:User {u_login: {userName}}), (r:Repo {r_html_url: {repoName}}) \n CREATE (u)-[c:IS_COLLABORATOR {commits: {commits}}]->(r)" --14
 
         params = DM.fromList [
             ("userName", Neo.T userName),
-            ("repoName", Neo.T repoName)]
+            ("repoName", Neo.T repoName),
+            ("commits", Neo.I commits)]
 
 storeLanguageNode :: DT.Text -> IO Bool
 storeLanguageNode language = do
