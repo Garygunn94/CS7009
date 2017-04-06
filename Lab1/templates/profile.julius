@@ -1,3 +1,234 @@
+function CompanyBubble() {
+  d3.select("svg").selectAll("*").remove();
+  var e=document.getElementsByName("CompanyBubble")[0];
+  var responsei = $.ajax({
+          url: "http://localhost:8081/companyBubble/".concat(e.value),
+          type: "get",
+          contentType: "text/plain",
+          dataType: "json",
+          crossDomain:true,
+          success: function( datar ) {
+              console.log(datar)
+              var data = [];
+              for(var i = 0; i<datar.id_ub.length; i++) {
+                
+                      data[i] = {id: (datar.id_ub[i]), value: (datar.value_ub[i]), class: (datar.id_ub[i])}   
+                 }
+              var svg = d3.select("svg"),
+                  width = +svg.attr("width"),
+                  height = +svg.attr("height");
+
+              var color = d3.scaleOrdinal(d3.schemeCategory20);
+
+              var simulation = d3.forceSimulation()
+                  .force('charge', d3.forceManyBody())
+                  .force("center", d3.forceCenter(width / 2, height / 2));
+
+
+              var node = svg.append("g")
+                  .attr("class", "nodes")
+                .selectAll("circle")
+                .data(data)
+                .enter().append("circle")
+                  .attr("r", function(d) {return Math.sqrt(d.value);})
+                  .attr("fill", function(d) { return color(d.id); })
+                  .call(d3.drag()
+                      .on("start", dragstarted)
+                      .on("drag", dragged)
+                      .on("end", dragended));
+
+              node.append("title")
+                  .text(function(d) { return (d.id.concat(", ").concat(d.value)); });
+
+              simulation
+                  .nodes(data)
+                  .on("tick", ticked);
+
+            
+
+              function ticked() {
+                node
+                    .attr("cx", function(d) { return d.x; })
+                    .attr("cy", function(d) { return d.y; });
+              }
+
+            function dragstarted(d) {
+              if (!d3.event.active) simulation.alphaTarget(0.3).restart();
+              d.fx = d.x;
+              d.fy = d.y;
+            }
+
+            function dragged(d) {
+              d.fx = d3.event.x;
+              d.fy = d3.event.y;
+            }
+
+            function dragended(d) {
+              if (!d3.event.active) simulation.alphaTarget(0);
+              d.fx = null;
+              d.fy = null;
+            }
+        },
+        error: function( status ) {
+          console.log("failed");
+        }
+  })
+}
+
+function LocationBubble() {
+  d3.select("svg").selectAll("*").remove();
+  var e=document.getElementsByName("LocationBubble")[0];
+  var responsei = $.ajax({
+          url: "http://localhost:8081/locationBubble/".concat(e.value),
+          type: "get",
+          contentType: "text/plain",
+          dataType: "json",
+          crossDomain:true,
+          success: function( datar ) {
+              console.log(datar)
+              var data = [];
+              for(var i = 0; i<datar.id_ub.length; i++) {
+                
+                      data[i] = {id: (datar.id_ub[i]), value: (datar.value_ub[i]), class: (datar.id_ub[i])}   
+                 }
+              var svg = d3.select("svg"),
+                  width = +svg.attr("width"),
+                  height = +svg.attr("height");
+
+              var color = d3.scaleOrdinal(d3.schemeCategory20);
+
+              var simulation = d3.forceSimulation()
+                  .force('charge', d3.forceManyBody())
+                  .force("center", d3.forceCenter(width / 2, height / 2));
+
+
+              var node = svg.append("g")
+                  .attr("class", "nodes")
+                .selectAll("circle")
+                .data(data)
+                .enter().append("circle")
+                  .attr("r", function(d) {return Math.sqrt(d.value);})
+                  .attr("fill", function(d) { return color(d.id); })
+                  .call(d3.drag()
+                      .on("start", dragstarted)
+                      .on("drag", dragged)
+                      .on("end", dragended));
+
+              node.append("title")
+                  .text(function(d) { return (d.id.concat(", ").concat(d.value)); });
+
+              simulation
+                  .nodes(data)
+                  .on("tick", ticked);
+
+            
+
+              function ticked() {
+                node
+                    .attr("cx", function(d) { return d.x; })
+                    .attr("cy", function(d) { return d.y; });
+              }
+
+            function dragstarted(d) {
+              if (!d3.event.active) simulation.alphaTarget(0.3).restart();
+              d.fx = d.x;
+              d.fy = d.y;
+            }
+
+            function dragged(d) {
+              d.fx = d3.event.x;
+              d.fy = d3.event.y;
+            }
+
+            function dragended(d) {
+              if (!d3.event.active) simulation.alphaTarget(0);
+              d.fx = null;
+              d.fy = null;
+            }
+        },
+        error: function( status ) {
+          console.log("failed");
+        }
+  })
+}
+
+function UserBubble() {
+  d3.select("svg").selectAll("*").remove();
+  var e=document.getElementsByName("UserBubble")[0];
+  var responsei = $.ajax({
+          url: "http://localhost:8081/userBubble/".concat(e.value),
+          type: "get",
+          contentType: "text/plain",
+          dataType: "json",
+          crossDomain:true,
+          success: function( datar ) {
+              console.log(datar)
+              var data = [];
+              for(var i = 0; i<datar.id_ub.length; i++) {
+                
+                      data[i] = {id: (datar.id_ub[i]), value: (datar.value_ub[i]), class: (datar.id_ub[i])}   
+                 }
+              var svg = d3.select("svg"),
+                  width = +svg.attr("width"),
+                  height = +svg.attr("height");
+
+              var color = d3.scaleOrdinal(d3.schemeCategory20);
+
+              var simulation = d3.forceSimulation()
+                  .force('charge', d3.forceManyBody())
+                  .force("center", d3.forceCenter(width / 2, height / 2));
+
+
+              var node = svg.append("g")
+                  .attr("class", "nodes")
+                .selectAll("circle")
+                .data(data)
+                .enter().append("circle")
+                  .attr("r", function(d) {return Math.sqrt(d.value);})
+                  .attr("fill", function(d) { return color(d.id); })
+                  .call(d3.drag()
+                      .on("start", dragstarted)
+                      .on("drag", dragged)
+                      .on("end", dragended));
+
+              node.append("title")
+                  .text(function(d) { return (d.id.concat(", ").concat(d.value)); });
+
+              simulation
+                  .nodes(data)
+                  .on("tick", ticked);
+
+            
+
+              function ticked() {
+                node
+                    .attr("cx", function(d) { return d.x; })
+                    .attr("cy", function(d) { return d.y; });
+              }
+
+            function dragstarted(d) {
+              if (!d3.event.active) simulation.alphaTarget(0.3).restart();
+              d.fx = d.x;
+              d.fy = d.y;
+            }
+
+            function dragged(d) {
+              d.fx = d3.event.x;
+              d.fy = d3.event.y;
+            }
+
+            function dragended(d) {
+              if (!d3.event.active) simulation.alphaTarget(0);
+              d.fx = null;
+              d.fy = null;
+            }
+        },
+        error: function( status ) {
+          console.log("failed");
+        }
+  })
+}
+
 function LanguageRank() {
   d3.select("svg").selectAll("*").remove();
   var responsei = $.ajax({

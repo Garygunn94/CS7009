@@ -53,7 +53,12 @@ www :: FilePath
 www = "www"
 
 server :: Server SearchApi
-server = Search.getSocialGraph :<|> Search.getLanguageChart :<|> Search.getRepoSizeChart
+server = Search.getSocialGraph :<|>
+         Search.getLanguageChart :<|> 
+         Search.getRepoSizeChart :<|> 
+         Search.getUserBubbleChart :<|>
+         Search.getLocationBubbleChart :<|>
+         Search.getCompanyBubbleChart
 
 
 server' :: Server SearchApi'
@@ -86,6 +91,24 @@ getSocialGraph :: String -> ApiHandler SocialGraph
 getSocialGraph username = liftIO $ do
 	putStrLn ("Fetching SocialGraph")
 	sg <- Neo4jHelpers.getSocialGraph (DT.pack username)
+        return sg
+
+getUserBubbleChart :: String -> ApiHandler UserBubbleChart
+getUserBubbleChart language = liftIO $ do
+	putStrLn ("Fetching UserBubbleChart")
+	sg <- Neo4jHelpers.getUserBubbleChart (DT.pack language)
+        return sg
+
+getLocationBubbleChart :: String -> ApiHandler UserBubbleChart
+getLocationBubbleChart language = liftIO $ do
+	putStrLn ("Fetching LocationBubbleChart")
+	sg <- Neo4jHelpers.getLocationBubbleChart (DT.pack language)
+        return sg
+
+getCompanyBubbleChart :: String -> ApiHandler UserBubbleChart
+getCompanyBubbleChart language = liftIO $ do
+	putStrLn ("Fetching CompanyBubbleChart")
+	sg <- Neo4jHelpers.getCompanyBubbleChart (DT.pack language)
         return sg
 	{--nodes <- MongodbHelpers.withMongoDbConnection $ do
 		docs <- find (select [] "Node_RECORD") >>= drainCursor

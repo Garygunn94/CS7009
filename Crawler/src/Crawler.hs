@@ -114,7 +114,7 @@ initialize (CommonResources.User username authToken num_hops) = liftIO $ do
 			MongodbHelpers.withMongoDbConnection $ upsert (select ["tskUsername" =: username] "USER_TASK_RECORD") $ toBSON task
 			state <- liftIO $ newState
 			let auth = Just $ MainGitHub.OAuth $ (DBC.pack authToken)
-		        liftIO $ forkIO $ getrepos (DT.pack "mbostock") auth state num_hops
+		        liftIO $ forkIO $ getrepos (DT.pack username) auth state num_hops
 		        let resp = (Response "Started")
 		        return resp
 

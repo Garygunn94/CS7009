@@ -28,3 +28,33 @@ var getRepoSizeChart = function(onSuccess, onError)
     , type: 'GET'
     });
 }
+
+var getUserBubbleByLanguage = function(language, onSuccess, onError)
+{
+  $.ajax(
+    { url: '/userBubble/' + encodeURIComponent(language) + ''
+    , success: onSuccess
+    , error: onError
+    , type: 'GET'
+    });
+}
+
+var getLocationBubbleByLanguage = function(language, onSuccess, onError)
+{
+  $.ajax(
+    { url: '/locationBubble/' + encodeURIComponent(language) + ''
+    , success: onSuccess
+    , error: onError
+    , type: 'GET'
+    });
+}
+
+var getCompanyBubbleByLanguage = function(language, onSuccess, onError)
+{
+  $.ajax(
+    { url: '/companyBubble/' + encodeURIComponent(language) + ''
+    , success: onSuccess
+    , error: onError
+    , type: 'GET'
+    });
+}

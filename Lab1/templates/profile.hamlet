@@ -13,6 +13,39 @@
     <input type="button" value="Social Graph" id="MyButton" onclick="SocialGraph(#{show uname});">
     <input type="button" value="Most Popular Languages" id="MyButton" onclick="LanguageRank();">
     <input type="button" value="Repo Size/Users" id="MyButton" onclick="RepoSize();">
+    User/Language
+    <select name="UserBubble" property="language" size="1" onchange="UserBubble();">
+      <option selected="selected"> </option> 
+      <option value="JavaScript">JavaScript</option>
+      <option value="Java">Java</option>
+      <option value="haskell">haskell</option>
+      <option value="Python">Python</option>
+      <option value="C++">C++</option>
+      <option value="Ruby">Ruby</option>
+      <option value="C#">C#</option>
+
+    Location/Lanaguage
+    <select name="LocationBubble" property="language" size="1" onchange="LocationBubble();">
+      <option selected="selected"> </option> 
+      <option value="JavaScript">JavaScript</option>
+      <option value="Java">Java</option>
+      <option value="haskell">haskell</option>
+      <option value="Python">Python</option>
+      <option value="C++">C++</option>
+      <option value="Ruby">Ruby</option>
+      <option value="C#">C#</option>
+
+    Company/Lanaguage
+    <select name="CompanyBubble" property="language" size="1" onchange="CompanyBubble();">
+      <option selected="selected"> </option> 
+      <option value="JavaScript">JavaScript</option>
+      <option value="Java">Java</option>
+      <option value="haskell">haskell</option>
+      <option value="Python">Python</option>
+      <option value="C++">C++</option>
+      <option value="Ruby">Ruby</option>
+      <option value="C#">C#</option>
+   
     
     <svg width="960" height="600">
     <script src="https://d3js.org/d3.v4.min.js">

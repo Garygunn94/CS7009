@@ -272,7 +272,7 @@ getLanguageChart = do
     let neo_conf = Neo.def { Neo.user = "neo4j", Neo.password = "GaryGunn94" }
     neo_pipe <- Neo.connect $ neo_conf
 
-    record_languageTable <- Neo.run neo_pipe $ Neo.query "MATCH (n)-[r:IS_WRITTEN_IN]->(x) RETURN x.name as language, COUNT(r) as frequency ORDER BY COUNT(r) DESC"
+    record_languageTable <- Neo.run neo_pipe $ Neo.query "MATCH (n)-[r:IS_WRITTEN_IN]->(x) RETURN x.name as language, COUNT(r) as frequency ORDER BY COUNT(r) DESC LIMIT 20"
     
     languages <- (mapM recordToLang) record_languageTable
     frequencies <- (mapM recordToFreq) record_languageTable
@@ -284,7 +284,7 @@ getRepoSizeChart = do
     let neo_conf = Neo.def { Neo.user = "neo4j", Neo.password = "GaryGunn94" }
     neo_pipe <- Neo.connect $ neo_conf
 
-    record_RepoTable <- Neo.run neo_pipe $ Neo.query "MATCH (p:Language)-[s:IS_WRITTEN_IN]-(r:Repo)-[l:IS_OWNER|:IS_COLLABORATOR]-(b) RETURN r.name as Name, r.r_size as Repo_Size, count(l) as Associated_Users, p.name as language"
+    record_RepoTable <- Neo.run neo_pipe $ Neo.query "MATCH (p:Language)-[s:IS_WRITTEN_IN]-(r:Repo)-[l:IS_OWNER|:IS_COLLABORATOR]-(b) RETURN r.name as Name, r.r_size as Repo_Size, count(l) as Associated_Users, p.name as language LIMIT 100"
     
     repos <- (mapM recordToRepoSize) record_RepoTable
     users <- (mapM recordToAssUser) record_RepoTable
@@ -292,6 +292,54 @@ getRepoSizeChart = do
     languager <- (mapM recordToLang) record_RepoTable
 
     return (RepoSizeChart repos users repon languager)
+
+getUserBubbleChart :: DT.Text -> IO UserBubbleChart
+getUserBubbleChart language = do
+    let neo_conf = Neo.def { Neo.user = "neo4j", Neo.password = "GaryGunn94" }
+    neo_pipe <- Neo.connect $ neo_conf
+
+    records <- Neo.run neo_pipe $ Neo.queryP cypher params
+
+
+    users <- (mapM recordToRepoName) records
+    value <- (mapM recordToFreq) records
+
+    return (UserBubbleChart users value)
+
+    where cypher = "MATCH (p:User)-[i:IS_COLLABORATOR]-(l:Repo)-[:IS_WRITTEN_IN]-(h:Language) WHERE h.name = {language} Return p.u_login as Name, SUM(i.commits) as frequency ORDER BY SUM(i.commits) DESC LIMIT 250"
+          params = DM.fromList [("language", Neo.T language)]
+
+getLocationBubbleChart :: DT.Text -> IO UserBubbleChart
+getLocationBubbleChart language = do
+    let neo_conf = Neo.def { Neo.user = "neo4j", Neo.password = "GaryGunn94" }
+    neo_pipe <- Neo.connect $ neo_conf
+
+    records <- Neo.run neo_pipe $ Neo.queryP cypher params
+
+
+    users <- (mapM recordToRepoName) records
+    value <- (mapM recordToFreq) records
+
+    return (UserBubbleChart users value)
+
+    where cypher = "MATCH (p:User)-[i:IS_COLLABORATOR]-(l:Repo)-[:IS_WRITTEN_IN]-(h:Language) WHERE h.name = {language} Return p.u_location as Name, SUM(i.commits) as frequency ORDER BY SUM(i.commits) DESC LIMIT 250"
+          params = DM.fromList [("language", Neo.T language)]
+
+getCompanyBubbleChart :: DT.Text -> IO UserBubbleChart
+getCompanyBubbleChart language = do
+    let neo_conf = Neo.def { Neo.user = "neo4j", Neo.password = "GaryGunn94" }
+    neo_pipe <- Neo.connect $ neo_conf
+
+    records <- Neo.run neo_pipe $ Neo.queryP cypher params
+
+
+    users <- (mapM recordToRepoName) records
+    value <- (mapM recordToFreq) records
+
+    return (UserBubbleChart users value)
+
+    where cypher = "MATCH (p:User)-[i:IS_COLLABORATOR]-(l:Repo)-[:IS_WRITTEN_IN]-(h:Language) WHERE h.name = {language} Return p.u_company as Name, SUM(i.commits) as frequency ORDER BY SUM(i.commits) DESC LIMIT 250"
+          params = DM.fromList [("language", Neo.T language)]
 
 recordToRepoSize :: Neo.Record -> IO Int
 recordToRepoSize record = do

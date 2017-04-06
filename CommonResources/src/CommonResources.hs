@@ -38,7 +38,10 @@ type CrawlerApi =
 type SearchApi =
 	"socialGraph" :> Capture "username" String :> Get '[JSON] SocialGraph :<|>
   "languageChart" :> Get '[JSON] LanguageChart :<|>
-  "RepoSizeChart" :> Get '[JSON] RepoSizeChart
+  "RepoSizeChart" :> Get '[JSON] RepoSizeChart :<|>
+  "userBubble" :> Capture "language" String :> Get '[JSON] UserBubbleChart :<|>
+  "locationBubble" :> Capture "language" String :> Get '[JSON] UserBubbleChart  :<|>
+  "companyBubble" :> Capture "language" String :> Get '[JSON] UserBubbleChart
 
 data LanguageChart = LanguageChart{
   language :: [String],
@@ -68,6 +71,11 @@ data Link = Link{
 data SocialGraph = SocialGraph{
 	nodes :: [Node],
 	links :: [CommonResources.Link]
+}deriving(ToJSON, FromJSON, Generic, Eq, Show)
+
+data UserBubbleChart = UserBubbleChart{
+  id_ub :: [String],
+  value_ub :: [Int]
 }deriving(ToJSON, FromJSON, Generic, Eq, Show)
 
 data User = User{
