@@ -262,9 +262,9 @@ getSocialGraph username = do
 
   return (SocialGraph nodes links)
 
-  where link_cypher = "MATCH (n) WHERE n.name = {username} OPTIONAL MATCH path=(n)-[*1..2]-(c) WITH rels(path) AS rels UNWIND rels AS rel WITH DISTINCT rel RETURN startnode(rel).name as source, endnode(rel).name as target, type(rel) as type"
+  where link_cypher = "MATCH (n) WHERE n.name = {username} OPTIONAL MATCH path=(n)-[r*1..2]-(c) where NONE( rel in r WHERE type(rel)='KNOWS') WITH rels(path) AS rels UNWIND rels AS rel WITH DISTINCT rel RETURN startnode(rel).name as source, endnode(rel).name as target, type(rel) as type"
         node_params = DM.fromList [("username", Neo.T username)]
-        node_cypher = "MATCH (n) WHERE n.name = {username} OPTIONAL MATCH path=(n)-[*1..2]-(c) RETURN DISTINCT c.name as name, HEAD(LABELS(c)) as group"
+        node_cypher = "MATCH (n) WHERE n.name = {username} OPTIONAL MATCH path=(n)-[r*1..2]-(c) where NONE( rel in r WHERE type(rel)='KNOWS') RETURN DISTINCT c.name as name, HEAD(LABELS(c)) as group"
         link_params = DM.fromList [("username", Neo.T username)]
 
 getLanguageChart :: IO LanguageChart
