@@ -1,12 +1,12 @@
 
 ==================== FINAL INTERFACE ====================
-2017-04-07 12:08:27.618522 UTC
+2017-04-10 14:07:38.683222 UTC
 
-interface CommonResources-0.1.0.0-4OjH7SZdJLA1AQ6TeYSEKS:Neo4jHelpers 8001
-  interface hash: 3f0522456c99f7cd733eee7e7cd5297d
-  ABI hash: 269a9b79056aa747264afeb1b3c5547c
-  export-list hash: 11ec06bfbd6f62ff8c53aa4372030442
-  orphan hash: 6e34eb1f10a450818bd90d934115f26f
+interface CommonResources-0.1.0.0-BsMSFzQQ7hXDT6ERpBbAsv:Neo4jHelpers 8001
+  interface hash: 5fcc8fc9623378e89d199bff403626cf
+  ABI hash: c8a7747659e7d2b66eacd9c4dfc88969
+  export-list hash: 9ab4370077f8ad7eeabc646b00415c3d
+  orphan hash: d299bc92b6b8d83bb93b6fc5b13f9c21
   flag hash: 475ddb1266f979e9bd5d545258b369df
   sig of: Nothing
   used TH splices: False
@@ -38,7 +38,7 @@ exports:
   Neo4jHelpers.storeUserNodeNeo
   Neo4jHelpers.toNode
 module dependencies: CommonResources
-package dependencies: aeson-1.1.0.0@aeson-1.1.0.0-6czAS50gW4ueCUtDYEEe5
+package dependencies: aeson-0.11.2.1@aeson-0.11.2.1-5ZQWuTFmffALcfpzDCXoOz
                       array-0.5.1.1@array-0.5.1.1
                       attoparsec-0.13.1.0@attoparsec-0.13.1.0-5Olk1S76r1CDYzFS6V3sZR
                       base-4.9.0.0
@@ -86,8 +86,8 @@ package dependencies: aeson-1.1.0.0@aeson-1.1.0.0-6czAS50gW4ueCUtDYEEe5
                       primitive-0.6.1.0@primitive-0.6.1.0-Ip44DqhfCp21tTUYbecwa
                       random-1.1@random-1.1-54KmMHXjttlERYcr1mvsAe
                       scientific-0.3.4.9@scientific-0.3.4.9-6oTYuCcx6H5BsTGU7D2Gk3
-                      servant-0.9.1.1@servant-0.9.1.1-K9ahC09oD89MBCHlAonoV
-                      servant-server-0.9.1.1@servant-server-0.9.1.1-6fE3wtv6auuH79gRNCgFxD
+                      servant-0.9.1.1@servant-0.9.1.1-JzVvK9yk6sQ1E4UZympEK1
+                      servant-server-0.9.1.1@servant-server-0.9.1.1-66M2tFOHqQqK0MqMhFZVCd
                       stm-2.4.4.1@stm-2.4.4.1-4z2NRWnB0NIIUvSJsHW0kF
                       string-conversions-0.4@string-conversions-0.4-8T0UFmRDEly2gsNJzmHrNQ
                       tagged-0.8.5@tagged-0.8.5-CtgV6EcN0do8F92i1S6iYx
@@ -104,10 +104,12 @@ package dependencies: aeson-1.1.0.0@aeson-1.1.0.0-6czAS50gW4ueCUtDYEEe5
                       vault-0.3.0.6@vault-0.3.0.6-CA9Xj82tAPe9nD32xVMgDG
                       vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6
                       wai-3.2.1.1@wai-3.2.1.1-f77bMYZGLQBAD3XJrvGiW
-                      wai-app-static-3.1.6.1@wai-app-static-3.1.6.1-6uVsjqM0bxT6W7deJrFYLe
+                      wai-app-static-3.1.6.1@wai-app-static-3.1.6.1-Y5BgITaOwCDdLFeUawo4r
                       word8-0.1.2@word8-0.1.2-2E1SgvvAV2fK8vZPDHbRan
                       zlib-0.6.1.2@zlib-0.6.1.2-4CWLN1T27kOJhNvXgy46ZV
-orphans: CommonResources-0.1.0.0-4OjH7SZdJLA1AQ6TeYSEKS:CommonResources
+orphans: CommonResources-0.1.0.0-BsMSFzQQ7hXDT6ERpBbAsv:CommonResources
+         aeson-0.11.2.1@aeson-0.11.2.1-5ZQWuTFmffALcfpzDCXoOz:Data.Aeson.Types.Generic
+         aeson-0.11.2.1@aeson-0.11.2.1-5ZQWuTFmffALcfpzDCXoOz:Data.Aeson.Types.Instances
          attoparsec-0.13.1.0@attoparsec-0.13.1.0-5Olk1S76r1CDYzFS6V3sZR:Data.Attoparsec.ByteString.Char8
          attoparsec-0.13.1.0@attoparsec-0.13.1.0-5Olk1S76r1CDYzFS6V3sZR:Data.Attoparsec.Text.Internal
          base-4.9.0.0:GHC.Base base-4.9.0.0:GHC.Float
@@ -132,17 +134,17 @@ orphans: CommonResources-0.1.0.0-4OjH7SZdJLA1AQ6TeYSEKS:CommonResources
          transformers-0.5.2.0@transformers-0.5.2.0:Control.Monad.Trans.Error
          vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Fusion.Bundle
          vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Unboxed
-family instance modules: CommonResources-0.1.0.0-4OjH7SZdJLA1AQ6TeYSEKS:CommonResources
+family instance modules: CommonResources-0.1.0.0-BsMSFzQQ7hXDT6ERpBbAsv:CommonResources
                          attoparsec-0.13.1.0@attoparsec-0.13.1.0-5Olk1S76r1CDYzFS6V3sZR:Data.Attoparsec.Internal.Types
                          base-4.9.0.0:Control.Applicative base-4.9.0.0:Data.Complex
                          base-4.9.0.0:Data.Either base-4.9.0.0:Data.Functor.Compose
                          base-4.9.0.0:Data.Functor.Const base-4.9.0.0:Data.Functor.Identity
-                         base-4.9.0.0:Data.Functor.Product base-4.9.0.0:Data.Functor.Sum
-                         base-4.9.0.0:Data.List.NonEmpty base-4.9.0.0:Data.Monoid
-                         base-4.9.0.0:Data.Semigroup base-4.9.0.0:Data.Type.Equality
-                         base-4.9.0.0:Data.Version base-4.9.0.0:Data.Void
-                         base-4.9.0.0:GHC.Exts base-4.9.0.0:GHC.Generics
-                         base-4.9.0.0:GHC.IO.Exception base-4.9.0.0:GHC.TypeLits
+                         base-4.9.0.0:Data.Functor.Product base-4.9.0.0:Data.List.NonEmpty
+                         base-4.9.0.0:Data.Monoid base-4.9.0.0:Data.Semigroup
+                         base-4.9.0.0:Data.Type.Equality base-4.9.0.0:Data.Version
+                         base-4.9.0.0:Data.Void base-4.9.0.0:GHC.Exts
+                         base-4.9.0.0:GHC.Generics base-4.9.0.0:GHC.IO.Exception
+                         base-4.9.0.0:GHC.TypeLits
                          bson-generic-0.0.8@bson-generic-0.0.8-DtORpoUHwQhDReLJ5Keop0:Data.Bson.Generic
                          containers-0.5.7.1@containers-0.5.7.1:Data.IntMap.Base
                          containers-0.5.7.1@containers-0.5.7.1:Data.IntSet.Base
@@ -156,12 +158,12 @@ family instance modules: CommonResources-0.1.0.0-4OjH7SZdJLA1AQ6TeYSEKS:CommonRe
                          pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.Annotated.HughesPJ
                          pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.HughesPJ
                          primitive-0.6.1.0@primitive-0.6.1.0-Ip44DqhfCp21tTUYbecwa:Control.Monad.Primitive
-                         servant-0.9.1.1@servant-0.9.1.1-K9ahC09oD89MBCHlAonoV:Servant.API.ContentTypes
-                         servant-0.9.1.1@servant-0.9.1.1-K9ahC09oD89MBCHlAonoV:Servant.API.IsSecure
-                         servant-0.9.1.1@servant-0.9.1.1-K9ahC09oD89MBCHlAonoV:Servant.API.Verbs
-                         servant-0.9.1.1@servant-0.9.1.1-K9ahC09oD89MBCHlAonoV:Servant.Utils.Links
-                         servant-server-0.9.1.1@servant-server-0.9.1.1-6fE3wtv6auuH79gRNCgFxD:Servant.Server.Internal
-                         servant-server-0.9.1.1@servant-server-0.9.1.1-6fE3wtv6auuH79gRNCgFxD:Servant.Server.Internal.BasicAuth
+                         servant-0.9.1.1@servant-0.9.1.1-JzVvK9yk6sQ1E4UZympEK1:Servant.API.ContentTypes
+                         servant-0.9.1.1@servant-0.9.1.1-JzVvK9yk6sQ1E4UZympEK1:Servant.API.IsSecure
+                         servant-0.9.1.1@servant-0.9.1.1-JzVvK9yk6sQ1E4UZympEK1:Servant.API.Verbs
+                         servant-0.9.1.1@servant-0.9.1.1-JzVvK9yk6sQ1E4UZympEK1:Servant.Utils.Links
+                         servant-server-0.9.1.1@servant-server-0.9.1.1-66M2tFOHqQqK0MqMhFZVCd:Servant.Server.Internal
+                         servant-server-0.9.1.1@servant-server-0.9.1.1-66M2tFOHqQqK0MqMhFZVCd:Servant.Server.Internal.BasicAuth
                          tagged-0.8.5@tagged-0.8.5-CtgV6EcN0do8F92i1S6iYx:Data.Tagged
                          template-haskell-2.11.0.0:Language.Haskell.TH.Syntax
                          text-1.2.2.1@text-1.2.2.1-5QpmrLQApEZ4Ly9nMHWY0s:Data.Text
@@ -177,24 +179,24 @@ family instance modules: CommonResources-0.1.0.0-4OjH7SZdJLA1AQ6TeYSEKS:CommonRe
                          vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Unboxed
                          vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Unboxed.Base
                          zlib-0.6.1.2@zlib-0.6.1.2-4CWLN1T27kOJhNvXgy46ZV:Codec.Compression.Zlib.Stream
-import  -/  CommonResources 51d4edcde2a04c06a0d5b0c6b4bf7f17
-  exports: 5e0cea43b54cde5df54f140bc9e6c4c5
-  LanguageChart 8ef11ba7dea6a4595958e03ce2eb8964
-  LanguageChart 1585aeb8fd220492a86b7cfacedf3aa3
-  Link 28206426bafd2a94f56d03461f01988d
-  Link c33348b28f6db748a06cde6c38a8fc8d
-  Node 0e3a27ac5500d357d0966afb8607dc7b
-  Node 74559d3e1f7eb6d638cfa8bf88a02ab3
-  RepoData a1b5a2adeaf2f3957891609be1cd9749
-  RepoData bba1e0225eb784912a2c9a45e6f850f4
-  RepoSizeChart f279701ff44e2864b7213df719f97f10
-  RepoSizeChart 4c594b0624c63646c4628516beaef170
-  SocialGraph a5aad97838205953f266a2a5bcd6ad97
-  SocialGraph c33348b28f6db748a06cde6c38a8fc8d
-  UserBubbleChart 9e30b304261f7b133ba39ec25a3ab663
-  UserBubbleChart 4cd4213fb4fe3a9ed6f91757aa53700d
-  UserData a7412eeb79bbd65a8ba1393ac587e72b
-  UserData 49ab6ff650ce5d7fe6eeaacae9cfe2d1
+import  -/  CommonResources 8b112e79806ebb8fde63c4589c6319e2
+  exports: b95464a33ecb876f7dae6790188ce017
+  LanguageChart 3e14fdfdf449c09301aefe503db9c41c
+  LanguageChart a334617d5db80e94e6158549cb5dfa93
+  Link 2ec12322be91f64c09b338d95ff5c4fa
+  Link ff52f4155026f183ce5b6d04aaba46fc
+  Node 005f5a36f53d421c0213caca343d439c
+  Node e736e9750caac222ed3152d46a12ff57
+  RepoData a7a7c628756bc322097eb0b688951741
+  RepoData 557307d9ddb9e256102678e249f89241
+  RepoSizeChart 31c38ac9e926a83bb9b5b844b1102c2b
+  RepoSizeChart da66a176a7204b9fd25842cc8a4c6588
+  SocialGraph 79e80813859b61bb16c403034e3a8813
+  SocialGraph ff52f4155026f183ce5b6d04aaba46fc
+  UserBubbleChart 15882b4d3744f4e5f38872142de649bf
+  UserBubbleChart 644f4876ee34d908c48a3db434361cf6
+  UserData 6df1a8cc075e0d921478b29093925db7
+  UserData a69f2170273f31847e14985ed5997120
 import  -/  base-4.9.0.0:Data.Foldable 8aeb682f6c74f97fcf0ace0d608a43ea
 import  -/  base-4.9.0.0:Data.List 49b86831b79b49ce5d4d9416ecba61df
 import  -/  base-4.9.0.0:Data.Traversable 7ce5b7ee67475ac3d03ae825b86efd9f
@@ -216,7 +218,7 @@ import  -/  hasbolt-0.1.0.9@hasbolt-0.1.0.9-HRDIXdMg4lSHI3BsCx0D9q:Database.Bolt
 import  -/  text-1.2.2.1@text-1.2.2.1-5QpmrLQApEZ4Ly9nMHWY0s:Data.Text 6515f3179e27a91345842b6e634f584c
 import  -/  text-1.2.2.1@text-1.2.2.1-5QpmrLQApEZ4Ly9nMHWY0s:Data.Text.Internal 530216acfbfab25df053b0caac6d6a57
 import  -/  text-1.2.2.1@text-1.2.2.1-5QpmrLQApEZ4Ly9nMHWY0s:Data.Text.Show c6fc4b1a4431943028eb6eb78b495e09
-d2d93195f4df0b056c14f5bfc36f2f15
+eb63091e0b86d057c4d72782b9853a87
   $sfromList ::
     [(Data.Text.Internal.Text, a)]
     -> Data.Map.Base.Map Data.Text.Internal.Text a
@@ -267,28 +269,28 @@ d2d93195f4df0b056c14f5bfc36f2f15
                                      (Data.Map.Base.Tip @ Data.Text.Internal.Text @ a)
                                      (Data.Map.Base.Tip @ Data.Text.Internal.Text @ a))
                                   wild2 } } } } } } }) -}
-e2ac857af28086a4c922d3aff05a400b
+7a54ebce069844fbd82bfb1aad1701aa
   $sfromList1 ::
     Data.Map.Base.Map Data.Text.Internal.Text a1
     -> [(Data.Text.Internal.Text, a1)]
     -> Data.Map.Base.Map Data.Text.Internal.Text a1
   {- Arity: 2, Strictness: <S,1*U><S,1*U> -}
-a3964c3b7734c57b11bf8ee98ee1bda2
+e965c1f980fd2e203ba3bab81ec08665
   $trModule :: GHC.Types.Module
   {- HasNoCafRefs, Strictness: m,
      Unfolding: (GHC.Types.Module
                    Neo4jHelpers.$trModule2
                    Neo4jHelpers.$trModule1) -}
-31c2cac44fd3737d82962e1fd45c0eff
+3bcd9102108a4baa25c98789e2d5320a
   $trModule1 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "Neo4jHelpers"#) -}
-02c7e55957ac661a5313f44c795eef1d
+da121771a92e4beabac3cf03bb6b4e42
   $trModule2 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS
-                   "CommonResources-0.1.0.0-4OjH7SZdJLA1AQ6TeYSEKS"#) -}
-2c02a5cdae6ecb1e41b2e4da6088b199
+                   "CommonResources-0.1.0.0-BsMSFzQQ7hXDT6ERpBbAsv"#) -}
+3e17c8f3b63f6f8109ae0c66ba161f0e
   $w$sgo10 ::
     GHC.Prim.ByteArray#
     -> GHC.Prim.Int#
@@ -298,7 +300,7 @@ a3964c3b7734c57b11bf8ee98ee1bda2
     -> Data.Map.Base.Map Data.Text.Internal.Text a1
   {- Arity: 5, Strictness: <L,U><L,U><L,U><L,U><S,1*U>,
      Inline: [0] -}
-2914c023b9b66c1a21b7a36de5230eec
+95addb217a946ec5d77f48b4746e0aa5
   $wnodeToRepoData ::
     Data.Map.Base.Map
       Data.Text.Internal.Text Database.Bolt.Value.Type.Value
@@ -306,7 +308,7 @@ a3964c3b7734c57b11bf8ee98ee1bda2
     -> (# GHC.Prim.State# GHC.Prim.RealWorld,
           CommonResources.RepoData #)
   {- Arity: 2, Strictness: <S,1*U><S,U>, Inline: [0] -}
-0f613ea7a421b292de8c151005a0f8ab
+f2f178958b9b5abee57f09f3f96a54b3
   $wnodeToText ::
     Data.Map.Base.Map
       Data.Text.Internal.Text Database.Bolt.Value.Type.Value
@@ -349,7 +351,7 @@ a3964c3b7734c57b11bf8ee98ee1bda2
                               (GHC.Base.Nothing @ GHC.IO.FilePath)))
                         ipv
                    Database.Bolt.Value.Type.T t -> (# ipv, t #) } } }) -}
-3afc74e74224703158eafccf8335aa93
+46409ddb56d4578991c35a79d9aa1c6d
   $wouter ::
     Data.Text.Array.MArray GHC.Prim.RealWorld
     -> GHC.Types.Int
@@ -360,14 +362,14 @@ a3964c3b7734c57b11bf8ee98ee1bda2
           Data.Text.Internal.Text #)
   {- Arity: 5, Strictness: <L,U(U)><L,U(U)><S,1*U><S,U><S,U>,
      Inline: [0] -}
-698e2b507de81cf55dc6ab65dcdb524f
+9a95c13cc2713a24639299f4699a0b3a
   $wpoly_go10 ::
     GHC.Prim.Int#
     -> Data.Map.Base.Map Data.Text.Internal.Text a
     -> [(Data.Text.Internal.Text, a)]
     -> Data.Map.Base.Map Data.Text.Internal.Text a
   {- Arity: 3, Strictness: <L,U><S,1*U><S,1*U>, Inline: [0] -}
-fc4e6f1665314cff4a1e8e3703e07e4a
+174084006c4c60af8c86ade7b3db34a4
   $wstoreRepoNodeNeo ::
     GHC.Types.Int
     -> GHC.Types.Int
@@ -515,7 +517,7 @@ fc4e6f1665314cff4a1e8e3703e07e4a
                         ipv2 of ds5 { (#,#) ipv4 ipv5 ->
                  (# ipv4,
                     GHC.List.null @ Database.Bolt.Record.Record ipv3 #) } } } } } }) -}
-c501b968ea16427c6e044493b7778eca
+2dab3485a9c8a8da4643e47e082d7f86
   $wstoreUserNodeNeo ::
     Data.Text.Internal.Text
     -> GHC.Types.Int
@@ -631,7 +633,7 @@ c501b968ea16427c6e044493b7778eca
                         ipv2 of ds5 { (#,#) ipv4 ipv5 ->
                  (# ipv4,
                     GHC.List.null @ Database.Bolt.Record.Record ipv3 #) } } } } } }) -}
-4a87f91819fcd7fe9265bd446d49f36a
+3a097111eaf35ff3b647ed7f857bcd7d
   getCompanyBubbleChart ::
     Data.Text.Internal.Text
     -> GHC.Types.IO CommonResources.UserBubbleChart
@@ -642,7 +644,7 @@ c501b968ea16427c6e044493b7778eca
                 (<Data.Text.Internal.Text>_R
                  ->_R Sym (GHC.Types.N:IO[0]
                                <CommonResources.UserBubbleChart>_R)) -}
-7d0a36401bd7f7e704f1eb408e5e2efa
+5d8f29ab2847c86c9a83335f1467c6c7
   getCompanyBubbleChart1 ::
     Data.Text.Internal.Text
     -> GHC.Prim.State# GHC.Prim.RealWorld
@@ -682,22 +684,22 @@ c501b968ea16427c6e044493b7778eca
                         ipv3
                         ipv4 of ds4 { (#,#) ipv6 ipv7 ->
                  (# ipv6, CommonResources.UserBubbleChart ipv5 ipv7 #) } } } }) -}
-a2fde50c10bc12728139917c0f5c1c87
+fe3d413cd578b17dcf7d61a9a4a5a5b6
   getCompanyBubbleChart2 ::
     [Database.Bolt.Record.Record]
     -> GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, [GHC.Types.Int] #)
   {- Arity: 2, Strictness: <S,1*U><S,U> -}
-b00ea60a6f51220753c6cf7fe2e6c1dc
+6a4f29502573f3651a3fe1b20c9c801e
   getCompanyBubbleChart3 ::
     [Database.Bolt.Record.Record]
     -> GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, [GHC.Base.String] #)
   {- Arity: 2, Strictness: <S,1*U><S,U> -}
-fbf2f48c99378659c704da4d26e8b3d3
+d6e536c13a5423158357d35bec6cb65c
   getCompanyBubbleChart4 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString# "language"#) -}
-b783f26f13999a3c78f9e6c707013942
+68f9e949dbf15231a6ae6b90c639b816
   getCompanyBubbleChart5 ::
     Data.Text.Internal.Text
     -> Data.Map.Base.Map
@@ -707,14 +709,14 @@ b783f26f13999a3c78f9e6c707013942
   {- Unfolding: (Database.Bolt.Connection.queryP
                    @ GHC.Types.IO
                    Control.Monad.IO.Class.$fMonadIOIO) -}
-2c0016420a3d358bb6954c9938b81e6c
+29acc3915050d619ea915fd0d2592eef
   getCompanyBubbleChart6 ::
     GHC.Types.IO Database.Bolt.Connection.Type.Pipe
   {- Unfolding: (Database.Bolt.Connection.Pipe.connect
                    @ GHC.Types.IO
                    Control.Monad.IO.Class.$fMonadIOIO
                    Neo4jHelpers.getCompanyBubbleChart7) -}
-07e7ccea1050963bc158765e1adec359
+2b660cd4bc1903c6885d285879df291c
   getCompanyBubbleChart7 :: Database.Bolt.Connection.Type.BoltCfg
   {- Unfolding: (Database.Bolt.Connection.Type.BoltCfg
                    Database.Bolt.Connection.Type.$fDefaultBoltCfg7
@@ -726,24 +728,24 @@ b783f26f13999a3c78f9e6c707013942
                    Database.Bolt.Connection.Type.$fDefaultBoltCfg1
                    Neo4jHelpers.getCompanyBubbleChart9
                    Neo4jHelpers.getCompanyBubbleChart8) -}
-55a4e0beff40c62fe903b72e4b05769a
+5051b354a144e1963f5031d4779019b3
   getCompanyBubbleChart8 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString# "GaryGunn94"#) -}
-be638901e328d7d1edd21ba451b07087
+4c5634dd3307d50d11dbb0b9d8906940
   getCompanyBubbleChart9 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString# "neo4j"#) -}
-8b833d982f4578a17e2e82ab4989a2e6
+a8521efabba67939e4578f704e167acf
   getCompanyBubbleChart_cypher :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString#
                    "MATCH (p:User)-[i:IS_COLLABORATOR]-(l:Repo)-[:IS_WRITTEN_IN]-(h:Language) WHERE h.name = {language} Return p.u_company as Name, SUM(i.commits) as frequency ORDER BY SUM(i.commits) DESC LIMIT 250"#) -}
-6a2efd051d0326527b6ba27b69c6ccfd
+5bf32c8c97a7069556875ba4ed613163
   getLanguageChart :: GHC.Types.IO CommonResources.LanguageChart
   {- Arity: 1, Strictness: <S,U>,
      Unfolding: InlineRule (0, True, True)
                 Neo4jHelpers.getLanguageChart1
                   `cast`
                 (Sym (GHC.Types.N:IO[0] <CommonResources.LanguageChart>_R)) -}
-991f98a19ac688f0e741fce7cac47b37
+6d0868434795e6a30c4c604477810039
   getLanguageChart1 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld,
@@ -779,23 +781,23 @@ be638901e328d7d1edd21ba451b07087
                         ipv3
                         ipv4 of ds4 { (#,#) ipv6 ipv7 ->
                  (# ipv6, CommonResources.LanguageChart ipv5 ipv7 #) } } } }) -}
-b2a6b9dda5875477574e65417551b4a8
+d193fdb1199b2d0a79f65cf5fcaf1ac1
   getLanguageChart2 ::
     [Database.Bolt.Record.Record]
     -> GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, [GHC.Types.Int] #)
   {- Arity: 2, Strictness: <S,1*U><S,U> -}
-181891d7b286f46fd2d9e2d6721757d3
+dc9cc1d017317799e3f1f23b9dd37202
   getLanguageChart3 ::
     [Database.Bolt.Record.Record]
     -> GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, [GHC.Base.String] #)
   {- Arity: 2, Strictness: <S,1*U><S,U> -}
-5375626c443d09cdddffe1635574a0ff
+9f944d8ffad1e0ef30d040e180773ceb
   getLanguageChart4 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString#
                    "MATCH (n)-[r:IS_WRITTEN_IN]->(x) RETURN x.name as language, COUNT(r) as frequency ORDER BY COUNT(r) DESC LIMIT 20"#) -}
-8b2d830248aae70482ef3e5a59ba76ed
+2ea3cbe8bb8c977f9a6aa292e4706d06
   getLocationBubbleChart ::
     Data.Text.Internal.Text
     -> GHC.Types.IO CommonResources.UserBubbleChart
@@ -806,7 +808,7 @@ b2a6b9dda5875477574e65417551b4a8
                 (<Data.Text.Internal.Text>_R
                  ->_R Sym (GHC.Types.N:IO[0]
                                <CommonResources.UserBubbleChart>_R)) -}
-c8a520d5b8d7959cecb70b129ffb85d5
+18e3a87254d2d1b1828d14ebfdaa8fe4
   getLocationBubbleChart1 ::
     Data.Text.Internal.Text
     -> GHC.Prim.State# GHC.Prim.RealWorld
@@ -846,23 +848,23 @@ c8a520d5b8d7959cecb70b129ffb85d5
                         ipv3
                         ipv4 of ds4 { (#,#) ipv6 ipv7 ->
                  (# ipv6, CommonResources.UserBubbleChart ipv5 ipv7 #) } } } }) -}
-0a80024535a9b5f700b90430c77bfa03
+8c0f9481fdf3d38de168752723c227b6
   getLocationBubbleChart2 ::
     [Database.Bolt.Record.Record]
     -> GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, [GHC.Types.Int] #)
   {- Arity: 2, Strictness: <S,1*U><S,U> -}
-1a41dd663b6ff1b244d50456105b2197
+54b2fa6edf03a2e3f7de037bc689ff9e
   getLocationBubbleChart3 ::
     [Database.Bolt.Record.Record]
     -> GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, [GHC.Base.String] #)
   {- Arity: 2, Strictness: <S,1*U><S,U> -}
-9d2ec10a2461cffa49dbb7dc19cd7b11
+0831a9015a7458e0a418b073d08dce9b
   getLocationBubbleChart_cypher :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString#
                    "MATCH (p:User)-[i:IS_COLLABORATOR]-(l:Repo)-[:IS_WRITTEN_IN]-(h:Language) WHERE h.name = {language} Return p.u_location as Name, SUM(i.commits) as frequency ORDER BY SUM(i.commits) DESC LIMIT 250"#) -}
-58b7e36275f669166950b37cfdefad78
+98c6d99759ff5a7df01997d3c9056cca
   getRepoByFullNameNeo ::
     Data.Text.Internal.Text -> GHC.Types.IO Data.Text.Internal.Text
   {- Arity: 2, Strictness: <L,U><S,U>,
@@ -871,7 +873,7 @@ c8a520d5b8d7959cecb70b129ffb85d5
                   `cast`
                 (<Data.Text.Internal.Text>_R
                  ->_R Sym (GHC.Types.N:IO[0] <Data.Text.Internal.Text>_R)) -}
-6fcfe040c6f322e8de57f8510ff2c0ae
+b779b577e7be53e882fee477ed642d7f
   getRepoByFullNameNeo1 ::
     Data.Text.Internal.Text
     -> GHC.Prim.State# GHC.Prim.RealWorld
@@ -976,27 +978,27 @@ c8a520d5b8d7959cecb70b129ffb85d5
                                    0#
                                    ipv12 }) of ds10 { (#,#) ipv12 ipv13 ->
                          ipv13 } } } #) } } } } } } } } } } } }) -}
-32efc88af06f8907e7e6f641330be28e
+059d1ee90da38f770d6c996ff38db822
   getRepoByFullNameNeo2 :: GHC.Types.Int
   {- HasNoCafRefs, Unfolding: (GHC.Types.I# 4#) -}
-3271ae79d92835581c0a46609debd717
+0c713cd84ff5d46a07ddcc8e1a280cae
   getRepoByFullNameNeo3 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString# "n"#) -}
-b003605c925e46524a19a7b4529f756b
+e17e2a1acc4f325acd16ed22c2743d88
   getRepoByFullNameNeo4 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString# "r_name"#) -}
-0989ad5657ae55a5cb58e2b93fef2a6e
+44b4664824caa73b80682b3a767865bf
   getRepoByFullNameNeo5 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString#
                    "MATCH (n:Repo) WHERE n.r_full_name = {r_full_name} RETURN n LIMIT 1"#) -}
-6f337a8f294edfb63ce15cf53e7a8386
+038206c8b9f457ee4084c3bb6477f0fb
   getRepoSizeChart :: GHC.Types.IO CommonResources.RepoSizeChart
   {- Arity: 1, Strictness: <S,U>,
      Unfolding: InlineRule (0, True, True)
                 Neo4jHelpers.getRepoSizeChart1
                   `cast`
                 (Sym (GHC.Types.N:IO[0] <CommonResources.RepoSizeChart>_R)) -}
-2473c339b5a4ec76907e452c9738c78d
+a38bad46347ba978eb99e6b61fb18bd1
   getRepoSizeChart1 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld,
@@ -1043,35 +1045,35 @@ b003605c925e46524a19a7b4529f756b
                       ipv7
                       ipv9
                       ipv11 #) } } } } } }) -}
-e733c6fd45dfe54d2ddc344af5983435
+74241e71334fc76bcfe8b2709f048299
   getRepoSizeChart2 ::
     [Database.Bolt.Record.Record]
     -> GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, [GHC.Base.String] #)
   {- Arity: 2, Strictness: <S,1*U><S,U> -}
-c7d7a540128e27683786227c563e7f7b
+a88c110cc8417c81087065204928bb13
   getRepoSizeChart3 ::
     [Database.Bolt.Record.Record]
     -> GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, [GHC.Base.String] #)
   {- Arity: 2, Strictness: <S,1*U><S,U> -}
-e3578eaaf9d420e506721d155dbbcf62
+316e3b0ba9ce7c012a7b283b84afbc51
   getRepoSizeChart4 ::
     [Database.Bolt.Record.Record]
     -> GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, [GHC.Types.Int] #)
   {- Arity: 2, Strictness: <S,1*U><S,U> -}
-909994e0bd10469575844fc7a340cd9b
+acf509fe1a77961ced1dd4c9f29d16ad
   getRepoSizeChart5 ::
     [Database.Bolt.Record.Record]
     -> GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, [GHC.Types.Int] #)
   {- Arity: 2, Strictness: <S,1*U><S,U> -}
-a6478a811e505a0dadd03d5eaf1e7db6
+c4429be6db2537ab0aa5b6a7a3327161
   getRepoSizeChart6 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString#
                    "MATCH (p:Language)-[s:IS_WRITTEN_IN]-(r:Repo)-[l:IS_OWNER|:IS_COLLABORATOR]-(b) RETURN r.name as Name, r.r_size as Repo_Size, count(l) as Associated_Users, p.name as language LIMIT 100"#) -}
-00e29a51822d307691ec10d15b141bdd
+0393df19c9139cebd48bf822ed8d50a1
   getSocialGraph ::
     Data.Text.Internal.Text -> GHC.Types.IO CommonResources.SocialGraph
   {- Arity: 2, Strictness: <L,U(U,U,U)><S,U>,
@@ -1080,7 +1082,7 @@ a6478a811e505a0dadd03d5eaf1e7db6
                   `cast`
                 (<Data.Text.Internal.Text>_R
                  ->_R Sym (GHC.Types.N:IO[0] <CommonResources.SocialGraph>_R)) -}
-ca998269ed193b0efd6350d7720ccd98
+337bc658be06b642718800f0a697d8d2
   getSocialGraph1 ::
     Data.Text.Internal.Text
     -> GHC.Prim.State# GHC.Prim.RealWorld
@@ -1203,30 +1205,30 @@ ca998269ed193b0efd6350d7720ccd98
                         ipv10 of ds9 { (#,#) ipv12 ipv13 ->
                  (# ipv12,
                     CommonResources.SocialGraph ipv11 ipv13 #) } } } } } } } } } }) -}
-bca318b4c6e6ea278e76f81bd15a4547
+293840778712848905a1a35a4aa7068d
   getSocialGraph2 ::
     [Database.Bolt.Record.Record]
     -> GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, [CommonResources.Link] #)
   {- Arity: 2, Strictness: <S,1*U><S,U> -}
-3351bc72a3f3dc7c55e7953edb2de4a5
+fc76d087aabf6853aeddd4c963d49b95
   getSocialGraph3 ::
     [Database.Bolt.Record.Record]
     -> GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, [CommonResources.Node] #)
   {- Arity: 2, Strictness: <S,1*U><S,U> -}
-ae530f2205dc17d81de250708e51f8d8
+4ee2c520f659dfa80bbb79cc5128bd70
   getSocialGraph4 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString# "username"#) -}
-a6f2dd104ee28c1bc1495e9072dfa8dd
+c0a65ee9eb8b6191919899880f3f5c94
   getSocialGraph_link_cypher :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString#
                    "MATCH (n) WHERE n.name = {username} OPTIONAL MATCH path=(n)-[r*1..2]-(c) where NONE( rel in r WHERE type(rel)='KNOWS') WITH rels(path) AS rels UNWIND rels AS rel WITH DISTINCT rel RETURN startnode(rel).name as source, endnode(rel).name as target, type(rel) as type"#) -}
-05503e8f1d62839bec562357149c3235
+26b5669605677b2bf222a2ff7dc68837
   getSocialGraph_node_cypher :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString#
                    "MATCH (n) WHERE n.name = {username} OPTIONAL MATCH path=(n)-[r*1..2]-(c) where NONE( rel in r WHERE type(rel)='KNOWS') RETURN DISTINCT c.name as name, HEAD(LABELS(c)) as group"#) -}
-963ebb6a28b7cee46af5563c226784d9
+5692b65dc89f99bb5fd983a6e2619d3a
   getUserBubbleChart ::
     Data.Text.Internal.Text
     -> GHC.Types.IO CommonResources.UserBubbleChart
@@ -1237,7 +1239,7 @@ a6f2dd104ee28c1bc1495e9072dfa8dd
                 (<Data.Text.Internal.Text>_R
                  ->_R Sym (GHC.Types.N:IO[0]
                                <CommonResources.UserBubbleChart>_R)) -}
-f725b65906d088d7524d0522e54e28e8
+bafeb9a99890116ad71f67a4de1a0571
   getUserBubbleChart1 ::
     Data.Text.Internal.Text
     -> GHC.Prim.State# GHC.Prim.RealWorld
@@ -1277,23 +1279,23 @@ f725b65906d088d7524d0522e54e28e8
                         ipv3
                         ipv4 of ds4 { (#,#) ipv6 ipv7 ->
                  (# ipv6, CommonResources.UserBubbleChart ipv5 ipv7 #) } } } }) -}
-5961fd873e1ab2f17e6341841744f98a
+02adf793662d13ded78241586cfa1b1a
   getUserBubbleChart2 ::
     [Database.Bolt.Record.Record]
     -> GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, [GHC.Types.Int] #)
   {- Arity: 2, Strictness: <S,1*U><S,U> -}
-2a1bf0f64de06b5b80a14dd0241c5410
+3b871df151b7b56ff082b46e04179b2d
   getUserBubbleChart3 ::
     [Database.Bolt.Record.Record]
     -> GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, [GHC.Base.String] #)
   {- Arity: 2, Strictness: <S,1*U><S,U> -}
-8366e83b05342fa7d742760208624e0f
+36b395b1e5873c77910000b7a966d8cd
   getUserBubbleChart_cypher :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString#
                    "MATCH (p:User)-[i:IS_COLLABORATOR]-(l:Repo)-[:IS_WRITTEN_IN]-(h:Language) WHERE h.name = {language} Return p.u_login as Name, SUM(i.commits) as frequency ORDER BY SUM(i.commits) DESC LIMIT 250"#) -}
-27410482b7dd92e5e39099b0ed56aee5
+f706f67c158e4af1ba53133304f78459
   nodeToLink ::
     Database.Bolt.Record.Record -> GHC.Types.IO CommonResources.Link
   {- Arity: 2, Strictness: <S,U><S,U>,
@@ -1302,13 +1304,13 @@ f725b65906d088d7524d0522e54e28e8
                   `cast`
                 (<Database.Bolt.Record.Record>_R
                  ->_R Sym (GHC.Types.N:IO[0] <CommonResources.Link>_R)) -}
-2886f66867b880ee4cf575804960e20d
+300b615f65492e4f07577edcd138b4cd
   nodeToLink1 ::
     Database.Bolt.Record.Record
     -> GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, CommonResources.Link #)
   {- Arity: 2, Strictness: <S,U><S,U> -}
-a994b88937e4e0573cb2b33ef9df0ee2
+e3f358998a37baa5ed9105dc91e28f95
   nodeToNode ::
     Database.Bolt.Record.Record -> GHC.Types.IO CommonResources.Node
   {- Arity: 2, Strictness: <S,U><S,U>,
@@ -1317,13 +1319,13 @@ a994b88937e4e0573cb2b33ef9df0ee2
                   `cast`
                 (<Database.Bolt.Record.Record>_R
                  ->_R Sym (GHC.Types.N:IO[0] <CommonResources.Node>_R)) -}
-d2a727408768bde93dfe30a47c2d61fe
+9d30e45e976f5da7bbae30fc17445b4e
   nodeToNode1 ::
     Database.Bolt.Record.Record
     -> GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, CommonResources.Node #)
   {- Arity: 2, Strictness: <S,U><S,U> -}
-ebd60e89509dcec6f47f4e80f5ae0c0e
+1919a3b8f293e7dc2c22c1c3caf6a8c2
   nodeToRepoData ::
     Database.Bolt.Value.Type.Node
     -> GHC.Types.IO CommonResources.RepoData
@@ -1333,7 +1335,7 @@ ebd60e89509dcec6f47f4e80f5ae0c0e
                   `cast`
                 (<Database.Bolt.Value.Type.Node>_R
                  ->_R Sym (GHC.Types.N:IO[0] <CommonResources.RepoData>_R)) -}
-7a179326d6d5c7fa71c6d6ba0ea60423
+99dc1a82fa9bc097150521746f6e74c6
   nodeToRepoData1 ::
     Database.Bolt.Value.Type.Node
     -> GHC.Prim.State# GHC.Prim.RealWorld
@@ -1346,7 +1348,7 @@ ebd60e89509dcec6f47f4e80f5ae0c0e
                    (w1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
                  case w of ww { Database.Bolt.Value.Type.Node ww1 ww2 ww3 ->
                  Neo4jHelpers.$wnodeToRepoData ww3 w1 }) -}
-f5f896d8c60b19c8c3f4518a1ff32892
+f5766c6fff63638ef9abb9b1fd463a44
   nodeToText ::
     Database.Bolt.Value.Type.Node
     -> GHC.Types.IO Data.Text.Internal.Text
@@ -1356,7 +1358,7 @@ f5f896d8c60b19c8c3f4518a1ff32892
                   `cast`
                 (<Database.Bolt.Value.Type.Node>_R
                  ->_R Sym (GHC.Types.N:IO[0] <Data.Text.Internal.Text>_R)) -}
-d71167e93f8117c852fd8e1296c772cb
+8f8198515998e8b42abc44608ce4ebac
   nodeToText1 ::
     Database.Bolt.Value.Type.Node
     -> GHC.Prim.State# GHC.Prim.RealWorld
@@ -1369,10 +1371,10 @@ d71167e93f8117c852fd8e1296c772cb
                    (w1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
                  case w of ww { Database.Bolt.Value.Type.Node ww1 ww2 ww3 ->
                  Neo4jHelpers.$wnodeToText ww3 w1 }) -}
-a5fcb4793fe7f66baf4a78accf910228
+dbfdf73299674442add310a44029df34
   nodeToText2 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString# "name"#) -}
-7839a55329763e7d09f621bb3c742164
+74bfe34a91c1833468d8393a7c89e82a
   recordToAssUser ::
     Database.Bolt.Record.Record -> GHC.Types.IO GHC.Types.Int
   {- Arity: 2, Strictness: <S,1*U><S,U>,
@@ -1381,7 +1383,7 @@ a5fcb4793fe7f66baf4a78accf910228
                   `cast`
                 (<Database.Bolt.Record.Record>_R
                  ->_R Sym (GHC.Types.N:IO[0] <GHC.Types.Int>_R)) -}
-2a73c4cca69e93c1c125c12a1c521000
+b824fcce7290dbe84f0097a0cadcfde9
   recordToAssUser1 ::
     Database.Bolt.Record.Record
     -> GHC.Prim.State# GHC.Prim.RealWorld
@@ -1421,11 +1423,11 @@ a5fcb4793fe7f66baf4a78accf910228
                               (GHC.Base.Nothing @ GHC.IO.FilePath)))
                         ipv
                    Database.Bolt.Value.Type.I i -> (# ipv, i #) } } }) -}
-407bf26f98637c7ed0cbb4b95d1cdf15
+d46c7dfa201882c931eb943020c44731
   recordToAssUser2 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString#
                    "Associated_Users"#) -}
-1b7952c7c991231f771afde3e554cb25
+0c762edd77aa697391e2111700088a7d
   recordToFreq ::
     Database.Bolt.Record.Record -> GHC.Types.IO GHC.Types.Int
   {- Arity: 2, Strictness: <S,1*U><S,U>,
@@ -1434,7 +1436,7 @@ a5fcb4793fe7f66baf4a78accf910228
                   `cast`
                 (<Database.Bolt.Record.Record>_R
                  ->_R Sym (GHC.Types.N:IO[0] <GHC.Types.Int>_R)) -}
-8c44c5eeef0308e5c0f891d4eb30c8a0
+b6024ede4d2b6e609184a07a9b25ccb3
   recordToFreq1 ::
     Database.Bolt.Record.Record
     -> GHC.Prim.State# GHC.Prim.RealWorld
@@ -1474,10 +1476,10 @@ a5fcb4793fe7f66baf4a78accf910228
                               (GHC.Base.Nothing @ GHC.IO.FilePath)))
                         ipv
                    Database.Bolt.Value.Type.I i -> (# ipv, i #) } } }) -}
-1d035eaf29f2108d3b4ac56862f64a01
+fd51f33c8875b74cd5e790201980885e
   recordToFreq2 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString# "frequency"#) -}
-1fdd60f602c5bf466fb6fd238bd849c1
+e7839a5a2aaf21bc65055753361a4d26
   recordToLang ::
     Database.Bolt.Record.Record -> GHC.Types.IO GHC.Base.String
   {- Arity: 2, Strictness: <S,1*U><S,U>,
@@ -1486,7 +1488,7 @@ a5fcb4793fe7f66baf4a78accf910228
                   `cast`
                 (<Database.Bolt.Record.Record>_R
                  ->_R Sym (GHC.Types.N:IO[0] <GHC.Base.String>_R)) -}
-497b990860384f11102b77d03a02b22f
+e923c00e4c2505d6cc93007fa02659d2
   recordToLang1 ::
     Database.Bolt.Record.Record
     -> GHC.Prim.State# GHC.Prim.RealWorld
@@ -1582,7 +1584,7 @@ a5fcb4793fe7f66baf4a78accf910228
                                GHC.Types.True -> GHC.Types.[] @ GHC.Types.Char }
                          } in
                          $wunfold dt1 } #) } } }) -}
-7581813dcc956ab16789e0224e789a63
+3b38c5e668211790dfb966d17e7adcf6
   recordToNode ::
     Database.Bolt.Record.Record
     -> GHC.Types.IO Database.Bolt.Value.Type.Node
@@ -1592,7 +1594,7 @@ a5fcb4793fe7f66baf4a78accf910228
                   `cast`
                 (<Database.Bolt.Record.Record>_R
                  ->_R Sym (GHC.Types.N:IO[0] <Database.Bolt.Value.Type.Node>_R)) -}
-8fd6baf648d5b1e95813e6d4ce71034b
+647c109c3aa5213d0024527dfb219ea8
   recordToNode1 ::
     Database.Bolt.Record.Record
     -> GHC.Prim.State# GHC.Prim.RealWorld
@@ -1619,7 +1621,7 @@ a5fcb4793fe7f66baf4a78accf910228
                    `cast`
                  (GHC.Types.N:IO[0] <Database.Bolt.Value.Type.Node>_R)
                    ipv } }) -}
-f944c77bcf405d85598530068215b8c8
+425631a7ba742f3e8ce68c78f599fc7f
   recordToRepoName ::
     Database.Bolt.Record.Record -> GHC.Types.IO GHC.Base.String
   {- Arity: 2, Strictness: <S,1*U><S,U>,
@@ -1628,7 +1630,7 @@ f944c77bcf405d85598530068215b8c8
                   `cast`
                 (<Database.Bolt.Record.Record>_R
                  ->_R Sym (GHC.Types.N:IO[0] <GHC.Base.String>_R)) -}
-2b8f367c6f1ea908a15ec52ad7c79de8
+65c0f0fddb471f76690c03096dd0660a
   recordToRepoName1 ::
     Database.Bolt.Record.Record
     -> GHC.Prim.State# GHC.Prim.RealWorld
@@ -1724,10 +1726,10 @@ f944c77bcf405d85598530068215b8c8
                                GHC.Types.True -> GHC.Types.[] @ GHC.Types.Char }
                          } in
                          $wunfold dt1 } #) } } }) -}
-ef5cd4612610740d33e94df04404a8d6
+c4d7f70248928786f1896e3e37a5a538
   recordToRepoName2 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString# "Name"#) -}
-3cd8d429738c7567eda65a13c2657564
+35b139d2a780ab96f0f8080b9c372992
   recordToRepoSize ::
     Database.Bolt.Record.Record -> GHC.Types.IO GHC.Types.Int
   {- Arity: 2, Strictness: <S,1*U><S,U>,
@@ -1736,7 +1738,7 @@ ef5cd4612610740d33e94df04404a8d6
                   `cast`
                 (<Database.Bolt.Record.Record>_R
                  ->_R Sym (GHC.Types.N:IO[0] <GHC.Types.Int>_R)) -}
-7f3243f2f6b9d9221ac4b227a7dae8bf
+79fd1e8aa9827c9a124a33abf425303e
   recordToRepoSize1 ::
     Database.Bolt.Record.Record
     -> GHC.Prim.State# GHC.Prim.RealWorld
@@ -1776,10 +1778,10 @@ ef5cd4612610740d33e94df04404a8d6
                               (GHC.Base.Nothing @ GHC.IO.FilePath)))
                         ipv
                    Database.Bolt.Value.Type.I i -> (# ipv, i #) } } }) -}
-4e6b5f52c930cec357a26ed11239631a
+ef74b16ebe541b99fc93dcd9126a85a6
   recordToRepoSize2 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString# "Repo_Size"#) -}
-49e4b7dad5111a7ee95a39d8e6515db7
+c06e1c99c4091cf1c5f47ac2770d0989
   storeCollabLinkNeo ::
     Data.Text.Internal.Text
     -> Data.Text.Internal.Text
@@ -1793,7 +1795,7 @@ ef5cd4612610740d33e94df04404a8d6
                  ->_R <Data.Text.Internal.Text>_R
                  ->_R <GHC.Types.Int>_R
                  ->_R Sym (GHC.Types.N:IO[0] <GHC.Types.Bool>_R)) -}
-97807d436c8911ec95ca9b90f13b9543
+8feded66bd6c60ee431d7f390efbd89e
   storeCollabLinkNeo1 ::
     Data.Text.Internal.Text
     -> Data.Text.Internal.Text
@@ -1847,21 +1849,21 @@ ef5cd4612610740d33e94df04404a8d6
                         ipv2 of ds5 { (#,#) ipv4 ipv5 ->
                  (# ipv4,
                     GHC.List.null @ Database.Bolt.Record.Record ipv3 #) } } } } } }) -}
-d96fea020c6cefcd2d69ac3065f83e01
+49b8aa18e42fec10dd9ae0407edecee8
   storeCollabLinkNeo2 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString# "commits"#) -}
-77b387d728ce287f9a6fa663992b306e
+95111cd1dcf2df7d7cf6a6744fa41def
   storeCollabLinkNeo3 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString# "repoName"#) -}
-ede1760bea623dd19d634e0bd1367d49
+22dd463d2e986569d2ae753a8b492f74
   storeCollabLinkNeo4 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString# "userName"#) -}
-b852cc437972a4719565d3c49896f6a4
+0c24b78c448951103451aeed1bd78c2c
   storeCollabLinkNeo5 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString#
                    "MATCH (u:User {u_login: {userName}}), (r:Repo {r_html_url: {repoName}}) \n\
                    \ CREATE (u)-[c:IS_COLLABORATOR {commits: {commits}}]->(r)"#) -}
-4d79a17bed41ba8af0a50837e3aa0f2f
+b8de73826de3dca20fcdc864f1d5f407
   storeKnowslink ::
     Data.Text.Internal.Text
     -> Data.Text.Internal.Text -> GHC.Types.IO GHC.Types.Bool
@@ -1872,7 +1874,7 @@ b852cc437972a4719565d3c49896f6a4
                 (<Data.Text.Internal.Text>_R
                  ->_R <Data.Text.Internal.Text>_R
                  ->_R Sym (GHC.Types.N:IO[0] <GHC.Types.Bool>_R)) -}
-1604a9ca2b634a150252150e8b613648
+3ac7fd7a46ba56bcb31bdef3b07dc085
   storeKnowslink1 ::
     Data.Text.Internal.Text
     -> Data.Text.Internal.Text
@@ -1920,12 +1922,12 @@ b852cc437972a4719565d3c49896f6a4
                         ipv2 of ds5 { (#,#) ipv4 ipv5 ->
                  (# ipv4,
                     GHC.List.null @ Database.Bolt.Record.Record ipv3 #) } } } } } }) -}
-bef05099f765473c19a0b18f1d82ca8d
+c28f2854de983e10e1e5996763efc0e2
   storeKnowslink2 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString#
                    "MATCH (u:User {u_login: {userName}}), (r:Language {name: {language}}) \n\
                    \ CREATE UNIQUE (u)-[:KNOWS]->(r)"#) -}
-1734d9b3ffa64b814d7eb7205e914321
+6c3bc9eb3c1a46678f031f997d6a7008
   storeLanguageNode ::
     Data.Text.Internal.Text -> GHC.Types.IO GHC.Types.Bool
   {- Arity: 2, Strictness: <L,U><S,U>,
@@ -1934,7 +1936,7 @@ bef05099f765473c19a0b18f1d82ca8d
                   `cast`
                 (<Data.Text.Internal.Text>_R
                  ->_R Sym (GHC.Types.N:IO[0] <GHC.Types.Bool>_R)) -}
-bdc82970920a242b84bcab08872e3430
+14a649defd90d0d97b493f512f4ebd3e
   storeLanguageNode1 ::
     Data.Text.Internal.Text
     -> GHC.Prim.State# GHC.Prim.RealWorld
@@ -1975,11 +1977,11 @@ bdc82970920a242b84bcab08872e3430
                         ipv2 of ds5 { (#,#) ipv4 ipv5 ->
                  (# ipv4,
                     GHC.List.null @ Database.Bolt.Record.Record ipv3 #) } } } } } }) -}
-d0eff4c126c36ccf91aacbaed111dcf7
+9ed147bf44c16b6c86be2dc3de61ba63
   storeLanguageNode2 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString#
                    "CREATE (n:Language {  name: {language} } )"#) -}
-0f6a575ad7d151968e8c172d80509029
+1ed470de69214736ebd6c18dd0f5ddb7
   storeLanguagelink ::
     Data.Text.Internal.Text
     -> Data.Text.Internal.Text -> GHC.Types.IO GHC.Types.Bool
@@ -1990,7 +1992,7 @@ d0eff4c126c36ccf91aacbaed111dcf7
                 (<Data.Text.Internal.Text>_R
                  ->_R <Data.Text.Internal.Text>_R
                  ->_R Sym (GHC.Types.N:IO[0] <GHC.Types.Bool>_R)) -}
-fd964c413299572ba18db2b370396ca1
+59909ea574dfbffccd9997af6cf392e8
   storeLanguagelink1 ::
     Data.Text.Internal.Text
     -> Data.Text.Internal.Text
@@ -2038,15 +2040,15 @@ fd964c413299572ba18db2b370396ca1
                         ipv2 of ds5 { (#,#) ipv4 ipv5 ->
                  (# ipv4,
                     GHC.List.null @ Database.Bolt.Record.Record ipv3 #) } } } } } }) -}
-53cb230cd2cb7ed37ee1fa233a426f9e
+d1a3ba81251cc91d4a0acfaf6d662c69
   storeLanguagelink2 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString# "repoHtml"#) -}
-744eeff02023e79c92504cde71205c48
+088b82c9c09e63a41da48ef7cbbfd04b
   storeLanguagelink3 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString#
                    "MATCH (u:Repo {r_html_url: {repoHtml}}), (r:Language {name: {language}}) \n\
                    \ CREATE (u)-[:IS_WRITTEN_IN]->(r)"#) -}
-baf3e34cd0cc5edf9d1fca6b81346a40
+4ecee4b54552241e37dff409f5e3302c
   storeOwnerLinkNeo ::
     Data.Text.Internal.Text
     -> Data.Text.Internal.Text -> GHC.Types.IO GHC.Types.Bool
@@ -2057,7 +2059,7 @@ baf3e34cd0cc5edf9d1fca6b81346a40
                 (<Data.Text.Internal.Text>_R
                  ->_R <Data.Text.Internal.Text>_R
                  ->_R Sym (GHC.Types.N:IO[0] <GHC.Types.Bool>_R)) -}
-6b0032d5c5103762122adcd0d9b35c53
+d5ea9e64743bbdb75a17c89c1e96dd70
   storeOwnerLinkNeo1 ::
     Data.Text.Internal.Text
     -> Data.Text.Internal.Text
@@ -2105,12 +2107,12 @@ baf3e34cd0cc5edf9d1fca6b81346a40
                         ipv2 of ds5 { (#,#) ipv4 ipv5 ->
                  (# ipv4,
                     GHC.List.null @ Database.Bolt.Record.Record ipv3 #) } } } } } }) -}
-1863a61dbedf538b1fbb429c7dfca217
+7bcd5a3c3cb33cd671ee9d2e6102cbc7
   storeOwnerLinkNeo2 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString#
                    "MATCH (u:User {u_login: {userName}}), (r:Repo {r_html_url: {repoName}}) \n\
                    \ CREATE (u)-[:IS_OWNER]->(r)"#) -}
-b099f534a297ecbda0a73e774da400d3
+24923d40b63e27e89c7719161c05477d
   storeRepoNodeNeo ::
     CommonResources.RepoData -> GHC.Types.IO GHC.Types.Bool
   {- Arity: 2,
@@ -2120,7 +2122,7 @@ b099f534a297ecbda0a73e774da400d3
                   `cast`
                 (<CommonResources.RepoData>_R
                  ->_R Sym (GHC.Types.N:IO[0] <GHC.Types.Bool>_R)) -}
-5ec4d036ec55e4da8ddee10c4a055629
+3a47f2e105067e449a9fc822a6f600ef
   storeRepoNodeNeo1 ::
     CommonResources.RepoData
     -> GHC.Prim.State# GHC.Prim.RealWorld
@@ -2150,54 +2152,54 @@ b099f534a297ecbda0a73e774da400d3
                    ww15
                    ww16
                    w1 }) -}
-55bf08b3451fec0b5b0118535d2b1668
+d2dc71e17e5a542b5d7e2cf0ad31f2f5
   storeRepoNodeNeo10 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString# "r_html_url"#) -}
-67231b7af774d97246b647636ec9a95f
+0bcb10e2105c0885bce61c933ca4e54a
   storeRepoNodeNeo11 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString# "r_is_private"#) -}
-bdd0dd80b2f3f10244ce0ff7ad9fa331
+b1070653a9510e087354456e588ab850
   storeRepoNodeNeo12 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString# "r_description"#) -}
-4baa1299a8e5c3cc84f034b3c11d77ba
+9ba0a6b54c50b92b659413fe179e2c7c
   storeRepoNodeNeo13 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString# "r_owner_id"#) -}
-132083ee63c37b40247f2d42b03b703b
+c3913094bfbd43e843d8ea43215918df
   storeRepoNodeNeo14 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString# "r_owner_name"#) -}
-96443dfaeb12e6564f049481fd879016
+db406996601c504ee906b4b4cd2d416b
   storeRepoNodeNeo15 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString# "r_id"#) -}
-a05129873e4bf75fe930a425efd5eac4
+5b29ed600e46bb32df97c3a4b182a1e1
   storeRepoNodeNeo16 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString# "r_last_updated"#) -}
-f64bd4a410231a68771b1477bf05e605
+e38d6f3d8424cb7c9c6181b09b3bd952
   storeRepoNodeNeo17 :: Data.Text.Internal.Text
-993ea6ef5d056e138a070b10b96ca9d1
+f687366f478e75d7c4bc699b887ae70b
   storeRepoNodeNeo2 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString# "r_updated_at"#) -}
-91fbc50b06df8623b5ec80ab529d5254
+328e6a7ad1c683d624f4f6e58e9b9972
   storeRepoNodeNeo3 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString# "r_created_at"#) -}
-e82a9fe71cbb83cbc3a1bb83eb27e2de
+48ce4c4c60060df2df050318f463df1d
   storeRepoNodeNeo4 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString# "r_pushed_at"#) -}
-eb78c7a9e0f3fba13a336e9f2b507737
+0b0f539a195e416425365afb8c51fc06
   storeRepoNodeNeo5 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString# "r_open_issues"#) -}
-748d5b0959b59f5fb1215564ca1b31c5
+25de84969eeec520fb22f617302e206c
   storeRepoNodeNeo6 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString# "r_size"#) -}
-e1cabde0a0c8fdb2d8f156e46d3a70e8
+c689328f43eb4cfb59639960ffd26d78
   storeRepoNodeNeo7 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString# "r_watchers"#) -}
-c77ddc636c625191ae6d4d2f61583304
+5e6452d5cf2e0f560e2e4186df996027
   storeRepoNodeNeo8 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString# "r_stargazers"#) -}
-e2bbaee4c8865f27234bfd8e5df259e1
+c4e5c483a8c6a38bd5793c60b2b65a64
   storeRepoNodeNeo9 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString# "r_forks"#) -}
-80abf042ad822bf70f977b22cb8d5db6
+e54812e56d6f6ab93b2b865fa0fda466
   storeUserNodeNeo ::
     CommonResources.UserData -> GHC.Types.IO GHC.Types.Bool
   {- Arity: 2, Strictness: <S,1*U(U,U,U,U,U,U,U,U,U,U,U,U)><S,U>,
@@ -2206,7 +2208,7 @@ e2bbaee4c8865f27234bfd8e5df259e1
                   `cast`
                 (<CommonResources.UserData>_R
                  ->_R Sym (GHC.Types.N:IO[0] <GHC.Types.Bool>_R)) -}
-3bdcbd590ef9077b30f19bbfb6ea08a1
+7bbd7dd2167e9c13e5f25d03911ca9f5
   storeUserNodeNeo1 ::
     CommonResources.UserData
     -> GHC.Prim.State# GHC.Prim.RealWorld
@@ -2231,45 +2233,45 @@ e2bbaee4c8865f27234bfd8e5df259e1
                    ww11
                    ww12
                    w1 }) -}
-e40b3ab091d6eeae576e4770c7e14ce1
+e351aedf86bb389e7a186461c8d3d984
   storeUserNodeNeo10 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString# "u_name"#) -}
-48926f894c28a8465888843bcc554219
+47912069c197261cc0abf9ea4ed33560
   storeUserNodeNeo11 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString# "u_url"#) -}
-782e55f3d15663c63f97c6e9d33da9b0
+3bb7e1f8f75ccc7108e2a0517cd1d808
   storeUserNodeNeo12 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString# "u_id"#) -}
-62873de0b249214d618e6197b648d35a
+2e40055b95957484d8e65cc7e95ccae2
   storeUserNodeNeo13 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString# "u_login"#) -}
-1477e34c299a99d0e153b8b21e4c68c1
+284e4e7617662e210dffb6810718a7f1
   storeUserNodeNeo14 :: Data.Text.Internal.Text
-710f9e3af2cf4b5257679ef2c2c483c8
+8d278569353f84e8004719a2715a2b08
   storeUserNodeNeo2 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString# "u_following"#) -}
-4118926b529e8cbbc501090dfc366b2e
+9948fb88639b8cdb9a17b8ae14dfd96d
   storeUserNodeNeo3 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString# "u_followers"#) -}
-0918ebd6d3a82f9dc35191b050ab9cdc
+6b8a093ecc7a07b21e7f323a7c5a87c0
   storeUserNodeNeo4 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString# "u_public_gists"#) -}
-2c16aed9ea15e13cbc034b697b5908d9
+3540f2575df416b77f1181065dafd7f1
   storeUserNodeNeo5 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString# "u_public_repos"#) -}
-ba9f6170694d74bc35b91bb0bd77438a
+22940524d008fe410a19e66cd3b3a897
   storeUserNodeNeo6 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString# "u_bio"#) -}
-829633718912a68a007542d69c38dd46
+b7928302ca12ab8d2d83e942ce9afc98
   storeUserNodeNeo7 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString# "u_email"#) -}
-5bae1cc7733f7118a145a20d81eced86
+a3ee30a29c51e47f257ffbeeb6b40429
   storeUserNodeNeo8 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString# "u_location"#) -}
-cfade2cab0a1586a7de1e471808bdd22
+c4b8fdc06555973d96a3da06fa845455
   storeUserNodeNeo9 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString# "u_company"#) -}
-1122e2f23d695b0a2e262011f9573f08
+1481f0aabe3ecf288f5fd3be53de8cbb
   toNode ::
     Database.Bolt.Record.Record
     -> GHC.Types.IO Database.Bolt.Value.Type.Node

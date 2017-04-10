@@ -1,10 +1,10 @@
 
 ==================== FINAL INTERFACE ====================
-2017-04-06 14:15:25.029782 UTC
+2017-04-10 14:08:10.661963 UTC
 
 interface Commo_IbhiHxA014wDFh8GUHMJgL:Neo4jHelpers 7103
-  interface hash: 8bfc8e6b8b262c0b5ed1b091fdb5de77
-  ABI hash: b36997eae2b76470262b9482a0ff0e06
+  interface hash: 4c28255b0629334801abe33e385fa698
+  ABI hash: f34aabbb4ec05a1cc46c8fe48fa0ab3e
   export-list hash: f80aa4e9e6febf29b36bf49551cac059
   orphan hash: 2213ecfe966586940b730e5876ee3f0b
   flag hash: 4b584c3b44f4a16459cfcf3d3accdac3
@@ -1082,7 +1082,7 @@ cfc74b5e264504ba08d0c67f68764166
   getRepoSizeChart6 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString#
                    "MATCH (p:Language)-[s:IS_WRITTEN_IN]-(r:Repo)-[l:IS_OWNER|:IS_COLLABORATOR]-(b) RETURN r.name as Name, r.r_size as Repo_Size, count(l) as Associated_Users, p.name as language LIMIT 100"#) -}
-33c1f90343470af6a8445c188805ea61
+9709b4888bb954c35f1b4eab19b73dd7
   getSocialGraph ::
     Data.Text.Internal.Text -> GHC.Types.IO CommonResources.SocialGraph
   {- Arity: 2, Strictness: <L,U(U,U,U)><L,U>,
@@ -1091,7 +1091,7 @@ cfc74b5e264504ba08d0c67f68764166
                   `cast`
                 (<Data.Text.Internal.Text>_R
                  ->_R Sym (GHC.Types.NTCo:IO[0] <CommonResources.SocialGraph>_R)) -}
-ce4b7bd77c44bf02c83bd81eef5988d8
+03e0966e4658f0a1e43ac5134c26361a
   getSocialGraph1 ::
     Data.Text.Internal.Text
     -> GHC.Prim.State# GHC.Prim.RealWorld
@@ -1223,14 +1223,14 @@ f7a4bb5e8ce8f48487b9715efc9c40f2
 4c4ba2067b55c0e6ca5b9e6dae40ebe5
   getSocialGraph4 :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString# "username"#) -}
-12590e3d61da75de40acdd994e2a36b6
+beedef40a0f799b8d7251b2224d17963
   getSocialGraph_link_cypher :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString#
-                   "MATCH (n) WHERE n.name = {username} OPTIONAL MATCH path=(n)-[*1..2]-(c) WITH rels(path) AS rels UNWIND rels AS rel WITH DISTINCT rel RETURN startnode(rel).name as source, endnode(rel).name as target, type(rel) as type"#) -}
-da2be5f8e8b2a6d4e0179d0b4170abb6
+                   "MATCH (n) WHERE n.name = {username} OPTIONAL MATCH path=(n)-[r*1..2]-(c) where NONE( rel in r WHERE type(rel)='KNOWS') WITH rels(path) AS rels UNWIND rels AS rel WITH DISTINCT rel RETURN startnode(rel).name as source, endnode(rel).name as target, type(rel) as type"#) -}
+227434686f061e8c5d4a844c47e40778
   getSocialGraph_node_cypher :: Data.Text.Internal.Text
   {- Unfolding: (Data.Text.Show.unpackCString#
-                   "MATCH (n) WHERE n.name = {username} OPTIONAL MATCH path=(n)-[*1..2]-(c) RETURN DISTINCT c.name as name, HEAD(LABELS(c)) as group"#) -}
+                   "MATCH (n) WHERE n.name = {username} OPTIONAL MATCH path=(n)-[r*1..2]-(c) where NONE( rel in r WHERE type(rel)='KNOWS') RETURN DISTINCT c.name as name, HEAD(LABELS(c)) as group"#) -}
 8316989f47a322b4dffb61434763d200
   getUserBubbleChart ::
     Data.Text.Internal.Text
