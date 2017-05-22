@@ -22,7 +22,7 @@ This document will focus on the usage of the yesod web-service detailing how the
 
 # Yesod Web-Service
 The yesod web-service provides a user interface with which users can interact with data extracted from their github acount. When a user goes to the web-service they will be met by the splash screen seen in the screengrab below.
-![](images/splash.png?raw=true)
+![](images/splash.png)
 Notice the Login button located at the top right of the web page. This login button takes you to the login screen seen below:
 ![](images/login.png?raw=true)
 The login screen, as can be seen in the URL above is located at the endpoint named \auth\login. Clicking on the button titled 'login via github' redirects the user to a GitHub login page. The redirection to the GitHub login page is achieved by utalizing O-auth implemented in the 'Yesod.Auth.OAuth2.GitHub' library.
