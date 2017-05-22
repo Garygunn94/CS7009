@@ -4,19 +4,19 @@ Project description - Gary Gunn - 12306421
 This readme will detail the functionality of the project, describing how the separate components are integrated into one web service that provides an analysis of GitHub data collected from users' GitHub accounts.
 
 The main components in this projects are:
-* Yesod based web-service*
-* GitHub API Crawler*
-* Neo4J graph data storage*
-* MongoDB data storage*
-* Search API for data extraction*
+* Yesod based web-service
+* GitHub API Crawler
+* Neo4J graph data storage
+* MongoDB data storage
+* Search API for data extraction
 
 Thigs to note:
-* Lab1 contains the yesod web-service*
-* Javascript used contained in Lab1/templates/profile.hamlet and Lab1/templates/profile.julius*
-* Code for Crawler contained in Cralwer/src/Crawler.hs*
-* Code for Search contained in Search/src/Search.hs*
-* Common datatypes, API definitions and functions are documented in CommonResources/src/CommonResources.hs*
-* Neo4j functions for storing and retrieving information located in CommonResource/src/Neo4jHelpers.hs*
+* Lab1 contains the yesod web-service
+* Javascript used contained in Lab1/templates/profile.hamlet and Lab1/templates/profile.julius
+* Code for Crawler contained in Cralwer/src/Crawler.hs
+* Code for Search contained in Search/src/Search.hs
+* Common datatypes, API definitions and functions are documented in CommonResources/src/CommonResources.hs
+* Neo4j functions for storing and retrieving information located in CommonResource/src/Neo4jHelpers.hs
 
 This document will focus on the usage of the yesod web-service detailing how the other components are used to present data to the user.
 
@@ -47,21 +47,21 @@ The moment a user navigates to the 'Profile' tab an API request is sent to a sep
 Assuming the user is new to the service, a new instance will be stored in the mongoDB instance saying that a crawl of this users GitHub should now be carried out. The crawler API makes use of forked computing so that it does not hold up the yesod web-service. A fork is created for the crawl of this users data, and a response is sent back to the yesod web-service telling it that a cralw for this user is underway. Forked computing is necessary as otherwise, the web-service would have to wait for the crawl for the users data to end before the 'Profile' page could be loaded.
 
 The Crawler API makes use of the 'GitHub' Haskell library which provides a haskell interface to the GitHub API through multiple, well defined endpoints. The crawling process can be condensed as follows:
-* First, in-memory local lists of repos and users are initialised to keep track of which users and repos have been crawled previously.*
-* A function, 'getrepos' recieves the username, authentification details, a reference to the previously defined lists and the number of hops to crawl away from the user.*
-* This function then checks the in memory list to see if this user has already been crawled, if the user hasn't, their details are then stored as a node in the neo4j instance.*
-* A list of all repos linked to this user are then collected via the GitHub API*
-* For each repo in this list, the repo name, the current user, authentification details and a reference to the in-memory lists are all passed to a function named 'formatrepo'*
-* In this function, the repo name is first checked against the in-memory list to see if it has been seen before, if so a link between the user and the repo is stored in the neo4j instance, if not the program continues.*
-* Details about this repo, are then extracted using the GitHub API and are stored in the neo4j instance as a node.*
-* Then a link between the user and repo is stored in neo4j also*
-* The programming language the repo is written in is then extracted. If the language has not been seen before it is stored as a node in the neo4j instance*
-* A link between the repo and the programming language is then stored in the neo4j instance.*
-* Finally a list of contributers is then extracted from the repo using the GitHub API and for each contributer, authentication details, a reference to the in-memory lists, the current repo, the number of remaining hops, the language the repo is written in, and details about the contributer are sent to a function called 'userformat'*
-* This function then first checks is a contributer has been seen already bu checking the in-memory lists, if the contributer has been seen before, a link is created between the contributer and the language the repo was written in, and a link between the contributer and the repo which also contains the number of commits they have made to the repo.*
-* If the contributer has not been seen before, a node is created in the neo4j instance ith their details, and the same links are created between the contributer and the language/repo.*
-* Then the details for this contributer are circled back to the first 'getrepos' function where the number of hops is reduced before the rest of the 'getrepos' function is executed*
-* This cycle continues until the number of hops hits zero, at which point all repos and users connected to those repos within the original number of hops will have been stored in the neo4j instance. *
+* First, in-memory local lists of repos and users are initialised to keep track of which users and repos have been crawled previously.
+* A function, 'getrepos' recieves the username, authentification details, a reference to the previously defined lists and the number of hops to crawl away from the user.
+* This function then checks the in memory list to see if this user has already been crawled, if the user hasn't, their details are then stored as a node in the neo4j instance.
+* A list of all repos linked to this user are then collected via the GitHub API
+* For each repo in this list, the repo name, the current user, authentification details and a reference to the in-memory lists are all passed to a function named 'formatrepo'
+* In this function, the repo name is first checked against the in-memory list to see if it has been seen before, if so a link between the user and the repo is stored in the neo4j instance, if not the program continues.
+* Details about this repo, are then extracted using the GitHub API and are stored in the neo4j instance as a node.
+* Then a link between the user and repo is stored in neo4j also
+* The programming language the repo is written in is then extracted. If the language has not been seen before it is stored as a node in the neo4j instance
+* A link between the repo and the programming language is then stored in the neo4j instance.
+* Finally a list of contributers is then extracted from the repo using the GitHub API and for each contributer, authentication details, a reference to the in-memory lists, the current repo, the number of remaining hops, the language the repo is written in, and details about the contributer are sent to a function called 'userformat'
+* This function then first checks is a contributer has been seen already bu checking the in-memory lists, if the contributer has been seen before, a link is created between the contributer and the language the repo was written in, and a link between the contributer and the repo which also contains the number of commits they have made to the repo.
+* If the contributer has not been seen before, a node is created in the neo4j instance ith their details, and the same links are created between the contributer and the language/repo.
+* Then the details for this contributer are circled back to the first 'getrepos' function where the number of hops is reduced before the rest of the 'getrepos' function is executed
+* This cycle continues until the number of hops hits zero, at which point all repos and users connected to those repos within the original number of hops will have been stored in the neo4j instance. 
 
 Once the crawl is completed, the instace relating to the original user in the mongoDB instance is updated to say that the crawlf for that user has been completed.
 
@@ -71,10 +71,10 @@ The neo4j graph database was used due to its specialisation in modelling relatio
 ![](images/neo4j.png?raw=true)
 
 As can be seen in the screen grab above, this project makes use of three types of node; Language nodes, User nodes and Repo nodes. The relationships that connect them are as follows:
-* User -> IS_OWNER -> Repo*
-* User -> IS_COLLABORATOR -> Repo (This link also carries the number of commit made by the user)*
-* User -> KNOWS -> Language*
-* Repo -> WRITTEN_IN -> Language*
+* User -> IS_OWNER -> Repo
+* User -> IS_COLLABORATOR -> Repo (This link also carries the number of commit made by the user)
+* User -> KNOWS -> Language
+* Repo -> WRITTEN_IN -> Language
 
 The variables relating to each of the nodes can also be seen in the screengrab above. Any variable starting with 'u_' is exclusive to a user node while any with 'r_' are exclusive to repo nodes. The 'name' variable is common to all nodes. 
 
