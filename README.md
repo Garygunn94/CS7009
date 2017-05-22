@@ -22,15 +22,21 @@ This document will focus on the usage of the yesod web-service detailing how the
 
 # Yesod Web-Service
 The yesod web-service provides a user interface with which users can interact with data extracted from their github acount. When a user goes to the web-service they will be met by the splash screen seen in the screengrab below.
-![](images/splash.png)
+
+![](images/splash.png?raw=true)
+
 Notice the Login button located at the top right of the web page. This login button takes you to the login screen seen below:
+
 ![](images/login.png?raw=true)
+
 The login screen, as can be seen in the URL above is located at the endpoint named \auth\login. Clicking on the button titled 'login via github' redirects the user to a GitHub login page. The redirection to the GitHub login page is achieved by utalizing O-auth implemented in the 'Yesod.Auth.OAuth2.GitHub' library.
 
 Pending successful login, the user is then redirected back to the original splash page, however a banner now appears to let the user know they are now logged in.
+
 ![](images/loggedin.png?raw=true)
 
 In order to access the web-service, the user should navigate to the 'Profile' tab in order view the GitHub data analysis presented in this project.
+
 ![](images/profile.png?raw=true)
 
 The screengrab above shows the landing page when a user navigates to the 'Profile' tab. Users will notice six buttons, all of which provide an abstraction of data crawled from their, and other users GitHub accounts. However, before more detail is provided about these analyses, the functionality behind them should be explained.
@@ -61,6 +67,7 @@ Once the crawl is completed, the instace relating to the original user in the mo
 
 # Neo4J
 The neo4j graph database was used due to its specialisation in modelling relationships between nodes.
+
 ![](images/neo4j.png?raw=true)
 
 As can be seen in the screen grab above, this project makes use of three types of node; Language nodes, User nodes and Repo nodes. The relationships that connect them are as follows:
@@ -76,14 +83,18 @@ In order to supply a lot of data for the analyses described later, a crawl was m
 # Analyses & Search API
 Social Graph:
 The first analysis available for users in the 'Profile' tab is the social graph. This is a first order data abstraction from teh neo4j instance and creates a social graph between users and nodes two hops from the user using the web-service.
+
 ![](images/social_graph.png?raw=true)
+
 The screengrab above shows my own social graph for two hops. Languages were left out as the social graph becomes too large as every user and repo stored who have links to each language will be within two hops creating a social graph too large for the web-service which causes crashing. The social graph was created using the d3.js library.
 
 The data is retreived from the neo4j instance using a servant API known as the search API. The search API retreives all user and nodes two hops from the original user using the 'bolt' haskell library. All methods that interface with the neo4j instance are located in the common resources folder. The search API endpoint for the social graph is accessed via AJAX in the javascript running underneath the web-service. The data is returned from the search API via JSON which is then interpreted by the d3.js methods to form the social graph.   
 
 Most popular languages:
 The second analysis of the GitHub data available is a bar chart which shows the number of repos written in each language, with number of repos on the y-axis and the languages on the x-axis.
+
 ![](images/mostpop.png?raw=true)
+
 The screengrab above shows the bar chart generated using my own crawled data as well as data collected from the crawl on the d3.js data. As can be seen in the chart, Javascript and Haskell are the two most popular language repos are written in based on the data in the neo4j instance.
 
 This data is again obtained via the Search API which uses methods that interface with the neo4j instance located in the common resources folder. In order to make the calculations seen in this bar chart, for each language, the number of links of type "IS_WRITTEN_IN" are counted as these links model the relationship between repos and language. By counting the number of links each of these language have, a bar chart can easily be generated.
@@ -96,6 +107,7 @@ Similarly to the social graph, the data is obtained by the web-service by using 
 
 RepoSize - User Chart:
 This scatter plot was devised to investigate whether there was a correlation between the size of repos (mb) and the number of users contributing the repo. The size of the repo is represented on the x-axis and the number of users on the y-axis
+
 ![](images/reposize.png?raw=true)
 
 he points are different colours depending on which language the node is written in. It is clear by observing the graph that there is little to no correlation between the size of a repo and the number of users who contribute to it. Although no correlation was found, this analysis is still valuable due to the fact that it gives a very definte answer that having more users contributing to a repo does not make it larger.
@@ -113,7 +125,9 @@ The final three analyses that users can interact with are very similar, however 
 
 Most influential user per language:
 For this bubble chart, each bubble represents a single GitHub user and the size of the bubbles is representitive of the number of commits each user has made to repos written in that language.
+
 ![](images/userlanguage.png?raw=true)
+
 The screengrab above shows the most influential users for the JAVA language however more languages are available in a drop down menu. In this screengrab, the mouse is highlighting the user who appears to have the bubble with the largest radius. From this, we can conclude that this user has made the most commits to repos written in that language.
 
 The data is extracted from the neo4j instance using the Search API. The query used to extract this data is as follows:
@@ -124,7 +138,9 @@ Where "{language}" is the language selected from the dropdown menu which is pass
 
 Most influential location per language:
 For this bubble chart, each bubble represents a location and the size of the bubbles is representitive of the total number of commits made by users from each location to repos written in each language.
+
 ![](images/locationbubble.png?raw=true)
+
 The screengrab above shows the most influential locations for the JAVA language however more languages are available in a drop down menu. In this screengrab, the mouse is highlighting portugal which appears to have the bubble with the largest radius. From this, we can conclude that portugal is the location that contributes the most to repos written in Java. However, this is based purely on the data crawled from GitHub and is not necessarily representitive of the whole of GitHub.
 
 The data is extracted from the neo4j instance using the Search API. The query used to extract this data is as follows:
@@ -135,7 +151,9 @@ Where "{language}" is the language selected from the dropdown menu which is pass
 
 Most influential company per language:
 For this bubble chart, each bubble represents a company and the size of the bubbles is representitive of the total number of commits made by users associated with companies to repos written in each language.
+
 ![](images/companybubble.png?raw=true)
+
 The screengrab above shows the most influential companies for the Haskell language however more languages are available in a drop down menu. In this screengrab, the mouse is highlighting Facebook which appears to be one of the bubble with the largest radius. The bigger blue bubble in the background accounts for all users who have contributed to repos written in Haskell that do not have their company listed. This was left so users can see the proportion of users who are not associated with a company.
 
 The data is extracted from the neo4j instance using the Search API. The query used to extract this data is as follows:
